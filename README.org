@@ -1,0 +1,72 @@
+#+TITLE: BME 252 Biomechanics
+#+SUBTITLE: Spring 2024
+#+AUTHOR: Fethi Okyar
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3>
+#+OPTIONS: timestamp:nil toc:1 num:nil
+#+REVEAL_EXTRA_CSS: ./mystyle.css
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+
+* Syllabus
+** Course learning objectives (CLOs)
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+1. [X] to use basic vector algebra operations in biomechanics
+2. [X] to identify the forces appearing as a result of body isolation
+3. [X] to determine the center of gravity of single or connected bodies
+4. [X] to simplify a system of forces into single force-moment pair
+5. [X] to convert the principles of equilibrium into equations
+6. [X] to use algebraic manipulations in solving linear equation(s)
+7. [X] to solve statics of basic human articulations
+8. [X] to apply conversions between internal forces and stresses
+9. [ ] to use simple constitutive relations between stress and strain
+10. [ ] to have basic knowledge about material properties of biological tissues
+
+** Weekly outline
+#+REVEAL_HTML: <div style="font-size: 80%;">
+| Week | Lectures (Tuesday)              | Lectures (Thursday)                    |
+|------+---------------------------------+----------------------------------------|
+|    1 | Course conduct                  | Concept of Force                       |
+|    2 | No lecture (Research Meeting)   | Newton's Laws                          |
+|    3 | Friction Forces                 | No lecture (Overseas Travel)           |
+|    4 | Moment (area)                   | Concept of Torque (Moment)             |
+|    5 | Displacing Forces               | Reduction of Force Systems             |
+|    6 | Statical Equilibrium Conditions | Free-body Diagrams, Analysis Procedure |
+|    7 | Constraints & Reactions         | Traction Devices, Built-in Structures  |
+|    8 | Bayram                          | Bayram                                 |
+|    9 | More Examples                   | Midterm Exam                           |
+|   10 | 23 Nisan                        | Skeletal Joints and Muscles, the Elbow |
+|   11 | The Shoulder Joint              | The spine and the Lower Extremity      |
+|   12 | The Knee and the Ankle          | Deformable Body Mechanics              |
+|   13 | Quiz-2                          | Internal Forces and Stresses           |
+|   14 | Normal and Shear Strains        | Material Elastic Response to Stress    |
+|   15 | Mechanical Properties of        | Biological Tissues                     |
+#+REVEAL_HTML: <div>
+
+** Resources
+#+REVEAL_HTML: <div style="font-size: 60%;">
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- ~README.org~ for each lecture
+- [[https://link.springer.com/book/10.1007/978-1-4614-8576-6][2014 Okuno (rigid)]]
+- [[https://link.springer.com/book/10.1007/978-3-319-44738-4][2017 Özkaya (rigid and deformable)]]
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- Software
+  #+ATTR_REVEAL: :frag (appear appear appear ...)
+  + Online Octave
+  + Octave: https://octave.org/download
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- Web Resources
+  #+ATTR_REVEAL: :frag (appear appear appear ...)
+  + [[https://silver.neep.wisc.edu/~lakes/BME315Fr.html][BME 315 Biomechanics, University of Wisconsin]]
+#+REVEAL_HTML: <div>
+
+** Assesment
+#+REVEAL_HTML: <div style="font-size: 90%;">
+| In-term studies | Count # | Percentage (%) |
+|-----------------+---------+----------------|
+| Midterm         |       1 |             35 |
+| Quiz            |       3 |             15 |
+| Final           |       1 |             50 |
+#+REVEAL_HTML: <div>
+

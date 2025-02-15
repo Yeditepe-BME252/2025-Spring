@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>BME Lecture 1: Force</title>
+<meta name="author" content="Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../style.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>BME Lecture 1: Force</h2> <h3>Readings from Okuna, Chapter 1</h3> <h4>2024-02-19</h4>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-org508879b">Why does this course exist?</a></li>
+<li><a href="#/slide-orgc89e975">Course conduct</a></li>
+<li><a href="#/slide-orgf20dec2">How to get updates about this course?</a></li>
+<li><a href="#/slide-orgd5bffeb">Concept of a Force</a></li>
+<li><a href="#/slide-org69bffb8">questions for next session</a></li>
+<li><a href="#/slide-orgc85c264">Deliverables</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<section id="slide-org508879b">
+<h2 id="org508879b">Why does this course exist?</h2>
+<p>
+The <b>first course in Biomechanics</b> offered by the Biomedical Engineering Department aims to enhance the understading of the science of motion and the concept of force, although only the motion of rigid bodies, and a very brief introduction into deformable bodies and their motion.
+</p>
+
+<p class="fragment (appear)">
+The acquired skills and knowledge include,
+</p>
+<ul>
+<li class="fragment appear">performing algebraic manipulation of vectors</li>
+<li class="fragment appear">drawing isolated body equilibrium diagrams</li>
+<li class="fragment appear">solve systems of linear equations for mechanical unknowns</li>
+<li class="fragment ...">describe the state of stress in a body under static loading</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc89e975">
+<h2 id="orgc89e975">Course conduct</h2>
+<p>
+Course is composed of a few activities,
+</p>
+<ul>
+<li class="fragment appear">Lectures
+<ul>
+<li class="fragment appear">Listening and taking notes in the lecture</li>
+<li class="fragment appear">Preparation for lectures using <b>openAI</b> if study questions were provided</li>
+
+</ul></li>
+<li class="fragment appear">Attendence through Yulearn check-in</li>
+<li class="fragment appear">Quizzes
+<ul>
+<li class="fragment appear"><b>Github classroom</b></li>
+<li class="fragment appear">In-class delivery</li>
+
+</ul></li>
+<li class="fragment ...">Midterms</li>
+<li class="fragment ...">Final</li>
+
+</ul>
+
+</section>
+<section id="slide-org644f217">
+<h3 id="org644f217">Lectures</h3>
+<ul>
+<li class="fragment appear">The board, projector, and supplementary materials will be utilized.</li>
+<li class="fragment appear"><span class="underline">Asking questions</span>, and <span class="underline">taking notes</span> are encouraged.</li>
+<li class="fragment appear">The lecture notes are shared on Yulearn.
+<ul>
+<li class="fragment appear">Contents of <code>README.org</code>, and <code>README.html</code> are same, but presented differently. In lectures, <code>README.html</code> is projected, and you can read the content of <code>README.org</code> in the corresponding repository page.</li>
+<li class="fragment appear">For example, the documentation of the first week&rsquo;s lecture will be <code>Spring2024-ES117-4-6/lecture-1/README.org</code> and <code>Spring2024-ES117-4-6/lecture-1/README.html</code></li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section id="slide-org9c931a8">
+<h3 id="org9c931a8">Quizzes</h3>
+<p>
+Three quizzes, half-an-hour with a single question each, will be given during the one-hour lecture during the semester.
+</p>
+
+</section>
+<section id="slide-org5f9f72c">
+<h3 id="org5f9f72c">Midterm</h3>
+<p>
+This will be a two-hour exam.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf20dec2">
+<h2 id="orgf20dec2">How to get updates about this course?</h2>
+<ul>
+<li class="fragment appear">Yulearn course page</li>
+<li class="fragment appear">OBS course announcements</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgd5bffeb">
+<h2 id="orgd5bffeb">Concept of a Force</h2>
+<ul>
+<li class="fragment appear">A force is merely an abstraction of the mechanical effect bodies exert upon each other.</li>
+<li class="fragment appear">It is the mathematical &ldquo;abstraction&rdquo; of a physical ocurrence.</li>
+<li class="fragment appear">It is one of the main actors in the field of mechanics.</li>
+<li class="fragment ...">Others are - <b>moment</b>, <b>traction</b>, <b>stress</b>, <b>strain</b>, etc.</li>
+
+</ul>
+</section>
+<section id="slide-orgab88173">
+<h3 id="orgab88173">Preliminaries</h3>
+<div class="outline-text-3" id="text-orgab88173">
+</div>
+</section>
+<section id="slide-org5b84680">
+<h4 id="org5b84680">Units</h4>
+<p>
+What is the unit of force?
+</p>
+<ul>
+<li class="fragment appear">The fundamental units required to define the unit of force are the following
+<ul>
+<li class="fragment appear">Length [L]</li>
+<li class="fragment appear">Mass [M]</li>
+<li class="fragment appear">Time [T]</li>
+
+</ul></li>
+<li class="fragment appear">International System of Units, Newton, dyne, etc.</li>
+<li class="fragment appear">Anglo-saxon System of Units, lb-f</li>
+<li class="fragment ...">the formal definition will be given after visiting Newton&rsquo;s laws</li>
+
+</ul>
+</section>
+<section id="slide-org4913c2d">
+<h3 id="org4913c2d">Force Vectors</h3>
+<div class="outline-text-3" id="text-org4913c2d">
+</div>
+</section>
+<section id="slide-orgf5a676c">
+<h4 id="orgf5a676c">Symbolic Representation of Vectors</h4>
+<p>
+A force is usually represented with an uppercase case letter with a right arrow over it:
+\[ \vec{F} \]
+or a tilda symbol as in:
+\[ \tilde{F} \] 
+</p>
+</section>
+<section id="slide-orge838295">
+<h4 id="orge838295">Graphical Representation of Vectors</h4>
+
+<div id="org93b2ef2" class="figure">
+<p><img src="../images/fig.1-3.png" alt="fig.1-3.png" width="600px" />
+</p>
+</div>
+</section>
+<section id="slide-org0652d0f">
+<h4 id="org0652d0f">Notion of Coordinates</h4>
+<ul>
+<li class="fragment appear">Coordinate systems (linear, orthogonal, polar, spherical, curvilinear, etc)</li>
+<li class="fragment appear">measuring position</li>
+<li class="fragment appear">measuring force</li>
+
+</ul>
+</section>
+<section id="slide-orgae43987">
+<h4 id="orgae43987">Vector Components</h4>
+
+<div id="org7cbcf92" class="figure">
+<p><img src="../images/fig.1-4.png" alt="fig.1-4.png" style="align:center" width="500px" />
+</p>
+</div>
+
+<p>
+Various formulas involving trigonometric functions can be generated
+\[ \tan\theta = \frac{F_y}{F_x} \]
+\[ \sin\theta = \frac{F_y}{F} \]
+etc.
+</p>
+</section>
+<section id="slide-org0468427">
+<h4 id="org0468427">Vector Algebra</h4>
+<ul>
+<li class="fragment appear">negation</li>
+<li class="fragment appear">multiplication by a scalar</li>
+<li class="fragment appear">commutative property of addition</li>
+<li class="fragment ...">distributive property of addition</li>
+
+</ul>
+</section>
+<section id="slide-org400190a">
+<h4 id="org400190a">Force Resultant</h4>
+
+<div id="org728d70f" class="figure">
+<p><img src="../images/fig.1-6.png" alt="fig.1-6.png" style="align:center" width="800px" />
+</p>
+</div>
+</section>
+<section id="slide-orgfc53d03">
+<h4 id="orgfc53d03">Adding by Components</h4>
+
+<div id="orgf4d7a64" class="figure">
+<p><img src="../images/fig.1-7.png" alt="fig.1-7.png" style="align:center" width="1000px" />
+</p>
+</div>
+</section>
+<section id="slide-orgca9f5c9">
+<h4 id="orgca9f5c9">Exercise 1.1</h4>
+<p>
+Find the resultant force applied to the patient&rsquo;s leg by the traction device as a function of angle \(\theta\) and the hanging weight.
+</p>
+
+<div id="org5f22a6b" class="figure">
+<p><img src="../images/fig.ex.1-1.png" alt="fig.ex.1-1.png" style="align:center" width="1000px" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org69bffb8">
+<h2 id="org69bffb8">questions for next session</h2>
+<p>
+Ask AI:
+</p>
+<ul>
+<li>to describe the role of vector algebra in Newtonian mechanics</li>
+<li>Is this the only way to express the fundamental laws of mechanics? Is there any alternative?</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgc85c264">
+<h2 id="orgc85c264">Deliverables</h2>
+<p>
+Students should be able to:
+</p>
+<ol>
+<li>provide the relative position vector from a point P to a point Q.</li>
+<li>find the unit vector that points in the direction of a given vector.</li>
+<li>write the force vector for a cable sustaining a given tension, T.</li>
+<li>solve for equilibrium of a planar concurrent system of forces.</li>
+
+</ol>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>

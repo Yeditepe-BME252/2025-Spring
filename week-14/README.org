@@ -1,0 +1,43 @@
+#+TITLE: BME Lecture 13: Beyond BME 252
+#+AUTHOR: Fethi Okyar
+#+DATE: 2024-05-28
+#+SUBTITLE: Readings from [[./2015_Humphrey_continuumbiomechanics.pdf][Humphrey, J (2015) Continuum Biomechanics]]
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil
+#+REVEAL_EXTRA_CSS: ../style.css
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+
+* From the last lecture
+#+ATTR_REVEAL: :frag (appear)
+Ask *AI*:
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- Under which conditions does a material portray elastic behavior?
+- Is elastic model sufficient to characterize hard biological tissues? How about soft biological tissues? What is the role of viscoelasticity and poroelasticity in the characterization of soft tissue?
+  
+* What lies next?
+#+ATTR_REVEAL: :frag (appear)
+- Having reached an understanding of basic concepts in statical rigid-body mechanics, what lies next? 
+- Learn more mechanics? 
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+ + ME 211 Thermodynamics
+ + ME 244 Dynamics of Rigid Bodies
+ + ME 246 Deformable (Bio) Solids
+ + ME 331 (Bio)Fluid Mechanics
+ + ME 324 Heat Transfer
+ + ME 352 System Dynamics and Control Theory
+ + ME 445 Theory of Vibrations
+ + ME 477 The Finite Element Method
+ + etc.
+
+* Mechanotransduction
+#+ATTR_REVEAL: :frag (appear)
+This is a major discovery concerning expression of different genes (i.e., perform different
+functions) in response to even small changes in the mechanical environment of biological organisms.
+ 
+* On the future of Biomedical Engineering Education
+#+ATTR_REVEAL: :frag (appear)
+Biomedical Engineering is an interdisciplinary field with diverse and complex disciplines from natural sciences, engineering and medicine. With Dr Turgut Batuhan Baturalp from Texas Tech University, we discussed whether the future of Biomedical Engineering Education is transdisciplinary in a topical debate moderated by Prof Clive Baldock from the University of Western Sydney. The topical debate has [[https://link.springer.com/article/10.1007/s13246-024-01442-9][recently been published]] in Physical and Engineering Sciences in Medicine.
+It gives pride to note that these two young scholars have obtained their M.Sc. degrees from the Faculty of Engineering Faculty (M.Sc. in M.E.) at Yeditepe University.

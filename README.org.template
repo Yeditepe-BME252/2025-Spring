@@ -1,0 +1,71 @@
+#+TITLE: BME Lecture 6: Static Equilibrium
+#+AUTHOR: Fethi Okyar
+#+DATE: 2024-03-24
+#+SUBTITLE: Readings from [[https://yulearn.yeditepe.edu.tr/mod/resource/view.php?id=215169][Özkaya et al., Chapter 4]]
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil
+#+REVEAL_EXTRA_CSS: ../style.css
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+
+* From the last lecture
+#+ATTR_REVEAL: :frag (appear)
+Ask *AI*:
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- how can a system of forces (acting on a rigid body) can simply be replaced with a force-couple pair?
+- why is it important to move the forces to a common location from an equilibrium perspective?
+  
+* Topic title
+#+ATTR_REVEAL: :frag (appear)
+Question?
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- 
+
+** subtopic
+#+ATTR_REVEAL: :frag (appear)
+statement
+#+ATTR_REVEAL: :frag (appear appear appear ...)
++ 
+  #+ATTR_HTML: :width 400px
+   [[./fig-2.16_pushpull.png]]
+  
+** subtopic
+#+ATTR_REVEAL: :frag (appear)
+...
+#+ATTR_REVEAL: :frag (appear appear appear ...)
++ 
+
+** subtopic
+#+ATTR_REVEAL: :frag (appear)
+...
+#+ATTR_REVEAL: :frag (appear appear appear ...)
++ 
+
+* Break
+#+ATTR_REVEAL: :frag (appear)
+On a blank sheet of paper solve the following problems by yourself or in a group study session. 
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- 
+
+* Topic title
+#+ATTR_REVEAL: :frag (appear)
+.
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- 
+  #+ATTR_HTML: :width 350px
+  [[./fig-3.27_generalFS.png]]
+
+** Subtopic
+#+ATTR_HTML: :width 300px
+[[./fig-3.XX.png]]
+
+* Questions for next session
+Ask *AI*:
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- 
+* Deliverables
+By the end of this lecture students should be able to:
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+1. 

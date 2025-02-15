@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>BME Lecture 2: Newtonian Mechanics</title>
+<meta name="author" content="Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../style.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>BME Lecture 2: Newtonian Mechanics</h2> <h3>Readings from <a href="https://yulearn.yeditepe.edu.tr/mod/resource/view.php?id=215168">Okuna, Chapter 1</a></h3> <h4>2024-02-29</h4>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-orgc93d247">From the last lecture</a></li>
+<li><a href="#/slide-orgd35b982">Newton&rsquo;s interpretation of the laws of dull motion</a></li>
+<li><a href="#/slide-orgee1a8f1">Some Specific Forces</a></li>
+<li><a href="#/slide-orga89fe40">Questions for next session</a></li>
+<li><a href="#/slide-org393a413">Deliverables</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<section id="slide-orgc93d247">
+<h2 id="orgc93d247">From the last lecture</h2>
+<p class="fragment (appear)">
+Ask <b>AI</b>:
+</p>
+<ul>
+<li class="fragment appear">describe the role of vector algebra in Newtonian mechanics</li>
+<li class="fragment appear">Is this the only way to express the fundamental laws of mechanics? Does an alternative exist?</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgd35b982">
+<h2 id="orgd35b982">Newton&rsquo;s interpretation of the laws of dull motion</h2>
+<ol>
+<li class="fragment appear">The state of motionlessness or steady motion</li>
+<li class="fragment appear">Mass relating the force and acceleration</li>
+<li class="fragment appear">the result of physical interaction between two objects (bodies)</li>
+
+</ol>
+</section>
+<section id="slide-org1822ed7">
+<h3 id="org1822ed7">Newton&rsquo;s first principle</h3>
+<p>
+States that &#x2026;
+</p>
+</section>
+<section id="slide-orge5db428">
+<h4 id="orge5db428">Equilibrium in concurrent force systems</h4>
+
+<div id="orge53c112" class="figure">
+<p><img src="./images/fig-ex-1-3.png" alt="fig-ex-1-3.png" style="align:center" width="900px" />
+</p>
+</div>
+
+<p>
+A vertical upward traction force of 60 N, shown in the figure of Exercise 1.3, is applied on a head of a person standing straight. Suppose that the weight of the head is 45 N. Determine the resultant force on the head.
+</p>
+</section>
+<section id="slide-org55deebf">
+<h3 id="org55deebf">Newt&rsquo;s second</h3>
+<p>
+States that &#x2026;
+\[ \boldsymbol{a} = \frac{1}{m} \boldsymbol{F} \]
+\[ \boldsymbol{a} = \lim_{\Delta t\rightarrow 0} \frac{\Delta \boldsymbol{v}}{\Delta t}  = \frac{\mathrm{d} \boldsymbol{v}}{\mathrm{d} t}  \]
+</p>
+</section>
+<section id="slide-org0dd226b">
+<h4 id="org0dd226b">the principle of conservation of linear momentum</h4>
+<p>
+\[ \frac{\mathrm{d} \boldsymbol{L}}{\mathrm{d} t} = \mathbf{F} \]
+\[ \boldsymbol{L} = m \boldsymbol{v} \]
+</p>
+<p class="fragment (appear)">
+allows us to solve problems like:
+</p>
+<p class="fragment (appear appear appear ...)">
+<b>Exercise 1.4</b> What force should act on a ball of 0.6 kg mass, through a kick, to acquire an acceleration of 40 m/s\(^2\)?
+</p>
+</section>
+<section id="slide-orgb6606a6">
+<h3 id="orgb6606a6">Newt&rsquo;s third</h3>
+<p>
+when two bodies physically interact with one another &#x2026;
+ACTION brings an equal an opposite REACTION
+</p>
+</section>
+<section id="slide-orge9d398b">
+<h4 id="orge9d398b">identification of the reaction from a support</h4>
+<p>
+<b>Exercise 1.5</b> In high jumping, an athlete exerts a force of 3000 N = \(3\times  10^3\) N = 3 kN against the ground during impulsion. Find the force exerted by the ground on the athlete. Discuss the nature of this force.
+</p>
+</section>
+<section id="slide-org5c676dd">
+<h4 id="org5c676dd">another example</h4>
+
+<div id="orge2bb70c" class="figure">
+<p><img src="./images/fig-1-11.png" alt="fig-1-11.png" style="align:center" width="1300px" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgee1a8f1">
+<h2 id="orgee1a8f1">Some Specific Forces</h2>
+<div class="outline-text-2" id="text-orgee1a8f1">
+</div>
+</section>
+<section id="slide-orgd8f5d22">
+<h3 id="orgd8f5d22">Weight</h3>
+<div class="outline-text-3" id="text-orgd8f5d22">
+</div>
+</section>
+<section id="slide-orge31977c">
+<h4 id="orge31977c"></h4>
+
+<div id="orgbf546a9" class="figure">
+<p><img src="./images/fig-1-10.png" alt="fig-1-10.png" style="align:center" width="900px" />
+</p>
+</div>
+</section>
+<section id="slide-org82b96a8">
+<h3 id="org82b96a8">Muscle Forces</h3>
+<div class="outline-text-3" id="text-org82b96a8">
+</div>
+</section>
+<section id="slide-orge716cb8">
+<h4 id="orge716cb8"></h4>
+
+<div id="orgefebdcc" class="figure">
+<p><img src="./images/fig-1-10a.png" alt="fig-1-10a.png" style="align:center" width="900px" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orga89fe40">
+<h2 id="orga89fe40">Questions for next session</h2>
+<p>
+Ask <b>AI</b>:
+</p>
+<ul>
+<li>What is the effect of the force of friction in how we move around?</li>
+<li>which devices would not operate without friction?</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org393a413">
+<h2 id="org393a413">Deliverables</h2>
+<p>
+By the end of this lecture students should be able to:
+</p>
+<ol>
+<li>apply the first law (equilibrium of a force system)</li>
+<li>apply the principle of conservation of momentum</li>
+<li>determine the normal and tangential reaction components</li>
+<li>describe the nature of reaction forces</li>
+
+</ol>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>

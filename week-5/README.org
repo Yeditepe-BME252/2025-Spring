@@ -1,0 +1,105 @@
+#+TITLE: BME Lecture 5: Relocating a Force
+#+AUTHOR: Fethi Okyar
+#+DATE: 2024-03-17
+#+SUBTITLE: Readings from [[https://yulearn.yeditepe.edu.tr/mod/resource/view.php?id=215199][Özkaya et al., Chapter 3]]
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil
+#+REVEAL_EXTRA_CSS: ../style.css
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+
+* From the last lecture
+#+ATTR_REVEAL: :frag (appear)
+Ask *AI*:
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- what is the difference between particle and rigid-body mechanics
+  
+* Relocating a force or a moment
+#+ATTR_REVEAL: :frag (appear)
+Does it make a difference to push or pull something?
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- When a force is moved on it's line of action, the effect produced does not change (for a particle or a rigid body).
+- But when that force is moved away from it's line of action, that's a different story.
+- And yet a force couple (a pure moment) can be relocated arbitrarily without altering the mechanical system.
+
+** move force on it's LOA
+#+ATTR_REVEAL: :frag (appear)
+(In rigid-body mechanics) moving a force along it's LOA has no change in terms of the effect produced by the force
+#+ATTR_REVEAL: :frag (appear appear appear ...)
++
+  #+ATTR_HTML: :width 400px
+   [[./fig-2.16_pushpull.png]]
+  
+** move force off it's LOA
+#+ATTR_REVEAL: :frag (appear)
+(In rigid-body mechanics) the effect of moving a force off it's LOA needs to be taken into account by adding an appropriate moment action
+#+ATTR_REVEAL: :frag (appear appear appear ...)
++
+  #+ATTR_HTML: :width 400px
+   [[./fig-3.22_relocateforce.png]]
+
+** what about moving a moment?
+#+ATTR_REVEAL: :frag (appear)
+Will moving a couple moment from it's existing location to another (on or off it's LOA) result in a change in the mechanical effect produced?
+#+ATTR_REVEAL: :frag (appear appear appear ...)
++
+  #+ATTR_HTML: :width 400px
+   [[./fig-3.21_couple.png]]
+
+* Quiz #1 (CLO 1)
+#+ATTR_REVEAL: :frag (appear)
+On a blank sheet of paper (probably distributed in class) write the course name, the semester, your name, and the question (including the sketch) that you will see in the following moments. 
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- 
+   #+ATTR_HTML: :width 400px
+   [[./quiz1.png]]
+- The point locations in plane $A$ are given: $O=\{-0.18,0.05,0.21\}$ , $R=\{0.01,0.30,0.09\}$, $P=\{-0.29,0.36,0.13\}$
+- Determine the vector representation (the cartesian coordinates) of $\boldsymbol{F}$, given it has a magnitude of 50 N.
+- Determine the moment $\boldsymbol{M}$ of this force at point $O$.
+
+* General Force Systems
+#+ATTR_REVEAL: :frag (appear)
+A rigid body or a system of bodies connected with articulations under a general force system  implies one or more forces and/or couple moments with arbitrary components (not necessarily confined to a particular plane or axis), applied at arbitrary locations (points that are not necessarily lying along a particular axis or plane).
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- These forces can be relocated to a common location by applying the principle of moment about a point for each and every force in the system.
+- The relocation of moments does not require any specific operation, they can just be moved.
+-
+  #+ATTR_HTML: :width 350px
+  [[./fig-3.27_generalFS.png]]
+
+** Relocation of the force from C to A
+#+ATTR_HTML: :width 300px
+[[./fig-3.28_reducingGFS.png]]
+
+* Coplanar Force Systems
+#+ATTR_REVEAL: :frag (appear)
+When the forces and motion are constrained to occur within a single plane (such as the gait cycle in the saggital plane, arm/leg abduction in the frontal plane, or twisting the spine by forces in the transverse plane), the problem dimensionality may be reduced from three to two. In that case: 
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- two coordinates will be necessary and sufficient to describe the planar configuration of the mechanical system,
+- each force will have only two components residing in that particular plane, and,
+- the moments produced by the planar forces will necesarily be perpendicular to this plane.
+
+** Lower leg extension about the knee
+Determine the resultant moment produced by the loads about the knee joint, possibly with a plot for $\theta\in(0,90)$
+  #+ATTR_HTML: :width 400px
+[[./fig-3.15_legCFS.png]]
+
+** Horizontal abduction of arms about the shoulder
+Determine the resultant moment produced by the loads about the shoulder joint, possibly with a plot for $\theta\in(0,90)$
+#+ATTR_HTML: :width 400px
+[[./fig-3.18_armCFS.png]]
+
+* Questions for next session
+Ask *AI*:
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- how can a system of forces (acting on a rigid body) can simply be replaced with a force-couple pair?
+- why is it important to move the forces to a common location from an equilibrium perspective?
+* Deliverables
+By the end of this lecture students should be able to:
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+1. to explain the mechanical effect produced by moving a force away from its line of action
+2. to describe a force couple (a pure moment)
+3. to determine the resultant moment produced by one or more forces about a point
+4. to identify a system of coplanar forces and reduce them at a given location
