@@ -1,7 +1,7 @@
-#+TITLE: BME Lecture 1: Force
+#+TITLE: BME Lecture 1: vector algebra
 #+AUTHOR: Fethi Okyar
-#+DATE: 2024-02-19
-#+SUBTITLE: Readings from Okuna, Chapter 1
+#+DATE: 2025-02-20
+#+SUBTITLE: Readings from Stuart and Gonzales, Chapter 1
 #+STARTUP: overview
 #+REVEAL_THEME: simple
 #+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
@@ -19,7 +19,6 @@ The acquired skills and knowledge include,
 - performing algebraic manipulation of vectors
 - drawing isolated body equilibrium diagrams
 - solve systems of linear equations for mechanical unknowns
-- describe the state of stress in a body under static loading
   
 * Course conduct
 Course is composed of a few activities,
@@ -30,10 +29,7 @@ Course is composed of a few activities,
   + Preparation for lectures using *openAI* if study questions were provided
 - Attendence through Yulearn check-in
 - Quizzes
-  #+ATTR_REVEAL: :frag (appear appear appear ...)
-  + *Github classroom*
-  + In-class delivery
-- Midterms
+- Exit Survey Questions
 - Final
 
 ** Lectures
@@ -46,10 +42,10 @@ Course is composed of a few activities,
   + For example, the documentation of the first week's lecture will be ~Spring2024-ES117-4-6/lecture-1/README.org~ and ~Spring2024-ES117-4-6/lecture-1/README.html~
 
 ** Quizzes
-Three quizzes, half-an-hour with a single question each, will be given during the one-hour lecture during the semester.
+Three or four quizzes, half-an-hour with a single question each, will be given during the semester.
 
-** Midterm
-This will be a two-hour exam.
+** Exit Survey Questions
+Eight of nine such questions shall be asked to students during the last 5 minutes of lectures during the semester.
 
 * How to get updates about this course?
 #+ATTR_REVEAL: :frag (appear appear appear ...)
@@ -116,6 +112,7 @@ Find the resultant force applied to the patient's leg by the traction device as 
 #+ATTR_HTML: :width 1000px
 #+ATTR_HTML: :style align:center
 [[../images/fig.ex.1-1.png]]
+
 * questions for next session
 Ask AI:
 - to describe the role of vector algebra in Newtonian mechanics

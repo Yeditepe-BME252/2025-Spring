@@ -28,7 +28,7 @@
 #+REVEAL_HTML: <div style="font-size: 80%;">
 | Week | Lectures (Tuesday)                | Lectures (Thursday)                                           |
 |------+-----------------------------------+---------------------------------------------------------------|
-|    1 | No lecture                        | Course Conduct, Vector Algebra, bases, projections            |
+|    1 | No lecture                        | [[./lecture-slides/w1-vector-algebra.html][Course Conduct, Vector Algebra, bases, projections]]      |
 |    2 | Motivation: Point of Departure    | Indicial Notation, kroenecker delta and permutation           |
 |    3 | Second Order Tensors              | Change of Basis, Trace, Determinant                           |
 |    4 | Eigenvalues, principal invariants | Tensor calculus, gradient operator, divergence, curl          |
@@ -51,8 +51,6 @@
 - [[https://educons.edu.rs/wp-content/uploads/2020/05/2015-An-Introduction-To-Biomechanics.pdf][2015 Humphrey (continuum)]] (Main text, weeks 8-15)
 - [[https://www.cambridge.org/core/books/first-course-in-continuum-mechanics/DC9A87155531958AD5EFC66AEB981DAE][2008 Gonzales and Stuart]] (Main text, weeks 1-7)
 - [[https://archive.org/details/biomechanicsmech0000fung][2004 Fung:mechanical properties]]
-- [[https://link.springer.com/book/10.1007/978-1-4614-8576-6][2014 Okuno (rigid)]] depracated
-- [[https://link.springer.com/book/10.1007/978-3-319-44738-4][2017 Özkaya (rigid and deformable)]] depracated
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - Software
   #+ATTR_REVEAL: :frag (appear appear appear ...)
