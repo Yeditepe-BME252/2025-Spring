@@ -1,5 +1,5 @@
 #+TITLE: BME 252 Biomechanics
-#+SUBTITLE: Spring 2024
+#+SUBTITLE: Spring 2025
 #+AUTHOR: Fethi Okyar
 #+STARTUP: overview
 #+REVEAL_THEME: simple
@@ -10,46 +10,49 @@
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
 
 * Syllabus
-** Course learning objectives (CLOs)
+** Course learning objectives-CLOs
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-1. [X] to use basic vector algebra operations in biomechanics
-2. [X] to identify the forces appearing as a result of body isolation
-3. [X] to determine the center of gravity of single or connected bodies
-4. [X] to simplify a system of forces into single force-moment pair
-5. [X] to convert the principles of equilibrium into equations
-6. [X] to use algebraic manipulations in solving linear equation(s)
-7. [X] to solve statics of basic human articulations
-8. [X] to apply conversions between internal forces and stresses
-9. [ ] to use simple constitutive relations between stress and strain
-10. [ ] to have basic knowledge about material properties of biological tissues
+1. [ ] locate biomechanical state variables that appear in conservation principles
+2. [ ] exemplify some basic biomechanical phenomenon that arise in living tissue
+3. [ ] read the mechanical variables and expressions using the indicial notation 
+4. [ ] perform vector algebraic operations on mechanical variables and expressions 
+5. [ ] differentiate between the global and local forms of conservation principles
+6. [ ] define the surface traction, stress and force concepts in a mechanical context
+7. [ ] identify the role of divergence theorem between the global and local forms
+8. [ ] read vector calculus operations appearing in the conservation principles
+9. [ ] differentiate between the use of cartesian and curvilinear coordinates 
+10. [ ] define concepts related to velocity and acceleration in the context of kinematics
+11. [ ] solve for a mechanical variable using the conservation principles
 
 ** Weekly outline
 #+REVEAL_HTML: <div style="font-size: 80%;">
-| Week | Lectures (Tuesday)              | Lectures (Thursday)                    |
-|------+---------------------------------+----------------------------------------|
-|    1 | Course conduct                  | Concept of Force                       |
-|    2 | No lecture (Research Meeting)   | Newton's Laws                          |
-|    3 | Friction Forces                 | No lecture (Overseas Travel)           |
-|    4 | Moment (area)                   | Concept of Torque (Moment)             |
-|    5 | Displacing Forces               | Reduction of Force Systems             |
-|    6 | Statical Equilibrium Conditions | Free-body Diagrams, Analysis Procedure |
-|    7 | Constraints & Reactions         | Traction Devices, Built-in Structures  |
-|    8 | Bayram                          | Bayram                                 |
-|    9 | More Examples                   | Midterm Exam                           |
-|   10 | 23 Nisan                        | Skeletal Joints and Muscles, the Elbow |
-|   11 | The Shoulder Joint              | The spine and the Lower Extremity      |
-|   12 | The Knee and the Ankle          | Deformable Body Mechanics              |
-|   13 | Quiz-2                          | Internal Forces and Stresses           |
-|   14 | Normal and Shear Strains        | Material Elastic Response to Stress    |
-|   15 | Mechanical Properties of        | Biological Tissues                     |
-#+REVEAL_HTML: <div>
+| Week | Lectures (Tuesday)                | Lectures (Thursday)                                           |
+|------+-----------------------------------+---------------------------------------------------------------|
+|    1 | No lecture                        | Course Conduct, Vector Algebra, bases, projections            |
+|    2 | Motivation: Point of Departure    | Indicial Notation, kroenecker delta and permutation           |
+|    3 | Second Order Tensors              | Change of Basis, Trace, Determinant                           |
+|    4 | Eigenvalues, principal invariants | Tensor calculus, gradient operator, divergence, curl          |
+|    5 | Divergence theorem, localization  | Mass and force concepts, surface traction and stress          |
+|    6 | Condition of statical equilibrium | Configurations and Deformation, Displacement, Strain          |
+|    7 | Bayram                            | Kinematics and Motion, Velocity, Acceleration, Vorticity, etc |
+|    8 | Balance Laws, global forms        | Local Forms, Biosolid Simple Constitutive Equations           |
+|    9 | Axially tethered structures       | TBA                                                           |
+|   10 | Thin-Walled Pressurized Tubes     | Biofluidic Mechanics: Constitution of an Ideal Flow           |
+|   11 | Newtonian and Non-Newtonian Flows | Worker's Day Holiday (1 Mayıs)                                |
+|   12 | Navier-Stokes Equations           | Cone-Plate Viscometry                                         |
+|   13 | Bernoulli Equation                | Application of the Bernoulli Equation                         |
+|   14 | Measurement of Flow and Pressure  | Navier-Stokes Worksheets: Formulation of Problems             |
+|   15 | Flow Between Flat Plates          | Steady Flow in Circular Tubes                                 |
 
 ** Resources
 #+REVEAL_HTML: <div style="font-size: 60%;">
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - ~README.org~ for each lecture
-- [[https://link.springer.com/book/10.1007/978-1-4614-8576-6][2014 Okuno (rigid)]]
-- [[https://link.springer.com/book/10.1007/978-3-319-44738-4][2017 Özkaya (rigid and deformable)]]
+- [[https://educons.edu.rs/wp-content/uploads/2020/05/2015-An-Introduction-To-Biomechanics.pdf][2015 Humphrey (continuum)]] (Main text, weeks 8-15)
+- [[https://www.cambridge.org/core/books/first-course-in-continuum-mechanics/DC9A87155531958AD5EFC66AEB981DAE][2008 Gonzales and Stuart]] (Main text, weeks 1-7)
+- [[https://archive.org/details/biomechanicsmech0000fung][2004 Fung:mechanical properties]]
+- [[https://link.springer.com/book/10.1007/978-1-4614-8576-6][2014 Okuno (rigid)]] depracated
+- [[https://link.springer.com/book/10.1007/978-3-319-44738-4][2017 Özkaya (rigid and deformable)]] depracated
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - Software
   #+ATTR_REVEAL: :frag (appear appear appear ...)
@@ -65,8 +68,16 @@
 #+REVEAL_HTML: <div style="font-size: 90%;">
 | In-term studies | Count # | Percentage (%) |
 |-----------------+---------+----------------|
-| Midterm         |       1 |             35 |
-| Quiz            |       3 |             15 |
-| Final           |       1 |             50 |
+| Exit-Surveys    |       9 |             35 |
+| Quizzes         |       4 |             35 |
+| Final           |       1 |             30 |
 #+REVEAL_HTML: <div>
 
+* Code of Conduct & Ethics
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- The interpersonal communication in class is based on a level of minimum respect towards each other
+- The class is a communal space, it is not a stage to show off (except for the instructor)
+- Students are expected to arrive to class on a voluntary basis, involuntary participation is strongly discouraged
+- Mechanics requires a direct teaching model where the role of the student is usually limited to a receiver, however, the students are encouraged to ask questions and participate in the learning process
+#+REVEAL_HTML: <div>
+- Here’s a fascinating account of ethics (in Turkish): [[https://www.youtube.com/watch?v=Q88NhXSmK_I][Etik Değerler ve Eğitimi]] by Prof. Ioanna Kuçuradi (Maltepe University)
