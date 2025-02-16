@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>BME 252 Biomechanics</title>
+<meta name="author" content="Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="./mystyle.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>BME 252 Biomechanics</h2> <h3>Spring 2025</h3>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-orgb37fc2f">Syllabus</a></li>
+<li><a href="#/slide-orgeb33806">Code of Conduct &amp; Ethics</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<section id="slide-orgb37fc2f">
+<h2 id="orgb37fc2f">Syllabus</h2>
+<div class="outline-text-2" id="text-orgb37fc2f">
+</div>
+</section>
+<section id="slide-org4a22215">
+<h3 id="org4a22215">Course learning objectives-CLOs</h3>
+<ol>
+<li class="fragment appear"><code>[&#xa0;]</code> locate biomechanical state variables that appear in conservation principles</li>
+<li class="fragment appear"><code>[&#xa0;]</code> exemplify some basic biomechanical phenomenon that arise in living tissue</li>
+<li class="fragment appear"><code>[&#xa0;]</code> read the mechanical variables and expressions using the indicial notation</li>
+<li class="fragment ..."><code>[&#xa0;]</code> perform vector algebraic operations on mechanical variables and expressions</li>
+<li class="fragment ..."><code>[&#xa0;]</code> differentiate between the global and local forms of conservation principles</li>
+<li class="fragment ..."><code>[&#xa0;]</code> define the surface traction, stress and force concepts in a mechanical context</li>
+<li class="fragment ..."><code>[&#xa0;]</code> identify the role of divergence theorem between the global and local forms</li>
+<li class="fragment ..."><code>[&#xa0;]</code> read vector calculus operations appearing in the conservation principles</li>
+<li class="fragment ..."><code>[&#xa0;]</code> differentiate between the use of cartesian and curvilinear coordinates</li>
+<li class="fragment ..."><code>[&#xa0;]</code> define concepts related to velocity and acceleration in the context of kinematics</li>
+<li class="fragment ..."><code>[&#xa0;]</code> solve for a mechanical variable using the conservation principles</li>
+
+</ol>
+
+</section>
+<section id="slide-org35a7413">
+<h3 id="org35a7413">Weekly outline</h3>
+<div style="font-size: 80%;">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Week</th>
+<th scope="col" class="org-left">Lectures (Tuesday)</th>
+<th scope="col" class="org-left">Lectures (Thursday)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">No lecture</td>
+<td class="org-left"><a href="./lecture-slides/w1-vector-algebra.html">Course Conduct, Vector Algebra, bases, projections</a></td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">Motivation: Point of Departure</td>
+<td class="org-left">Indicial Notation, kroenecker delta and permutation</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">Second Order Tensors</td>
+<td class="org-left">Change of Basis, Trace, Determinant</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">Eigenvalues, principal invariants</td>
+<td class="org-left">Tensor calculus, gradient operator, divergence, curl</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">Divergence theorem, localization</td>
+<td class="org-left">Mass and force concepts, surface traction and stress</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">Condition of statical equilibrium</td>
+<td class="org-left">Configurations and Deformation, Displacement, Strain</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">Bayram</td>
+<td class="org-left">Kinematics and Motion, Velocity, Acceleration, Vorticity, etc</td>
+</tr>
+
+<tr>
+<td class="org-right">8</td>
+<td class="org-left">Balance Laws, global forms</td>
+<td class="org-left">Local Forms, Biosolid Simple Constitutive Equations</td>
+</tr>
+
+<tr>
+<td class="org-right">9</td>
+<td class="org-left">Axially tethered structures</td>
+<td class="org-left">TBA</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-left">Thin-Walled Pressurized Tubes</td>
+<td class="org-left">Biofluidic Mechanics: Constitution of an Ideal Flow</td>
+</tr>
+
+<tr>
+<td class="org-right">11</td>
+<td class="org-left">Newtonian and Non-Newtonian Flows</td>
+<td class="org-left">Worker&rsquo;s Day Holiday (1 Mayıs)</td>
+</tr>
+
+<tr>
+<td class="org-right">12</td>
+<td class="org-left">Navier-Stokes Equations</td>
+<td class="org-left">Cone-Plate Viscometry</td>
+</tr>
+
+<tr>
+<td class="org-right">13</td>
+<td class="org-left">Bernoulli Equation</td>
+<td class="org-left">Application of the Bernoulli Equation</td>
+</tr>
+
+<tr>
+<td class="org-right">14</td>
+<td class="org-left">Measurement of Flow and Pressure</td>
+<td class="org-left">Navier-Stokes Worksheets: Formulation of Problems</td>
+</tr>
+
+<tr>
+<td class="org-right">15</td>
+<td class="org-left">Flow Between Flat Plates</td>
+<td class="org-left">Steady Flow in Circular Tubes</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-orgf7ea0b4">
+<h3 id="orgf7ea0b4">Resources</h3>
+<div style="font-size: 60%;">
+<ul>
+<li class="fragment appear"><code>README.org</code> for each lecture</li>
+<li class="fragment appear"><a href="https://link.springer.com/book/10.1007/978-1-4939-2623-7">2015 Humphrey (continuum)</a> (Main text, weeks 8-15)</li>
+<li class="fragment appear"><a href="https://www.cambridge.org/core/books/first-course-in-continuum-mechanics/DC9A87155531958AD5EFC66AEB981DAE">2008 Gonzales and Stuart</a> (Main text, weeks 1-7)</li>
+<li class="fragment ..."><a href="https://archive.org/details/biomechanicsmech0000fung">2004 Fung:mechanical properties</a></li>
+
+</ul>
+<ul>
+<li class="fragment appear">Software
+<ul>
+<li class="fragment appear">Online Octave</li>
+<li class="fragment appear">Octave: <a href="https://octave.org/download">https://octave.org/download</a></li>
+
+</ul></li>
+
+</ul>
+<ul>
+<li class="fragment appear">Web Resources
+<ul>
+<li class="fragment appear"><a href="https://silver.neep.wisc.edu/~lakes/BME315Fr.html">BME 315 Biomechanics, University of Wisconsin</a></li>
+
+</ul></li>
+
+</ul>
+<div>
+
+</section>
+<section id="slide-org1556a49">
+<h3 id="org1556a49">Assesment</h3>
+<div style="font-size: 90%;">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">In-term studies</th>
+<th scope="col" class="org-right">Count #</th>
+<th scope="col" class="org-right">Percentage (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Exit-Surveys</td>
+<td class="org-right">9</td>
+<td class="org-right">35</td>
+</tr>
+
+<tr>
+<td class="org-left">Quizzes</td>
+<td class="org-right">4</td>
+<td class="org-right">35</td>
+</tr>
+
+<tr>
+<td class="org-left">Final</td>
+<td class="org-right">1</td>
+<td class="org-right">30</td>
+</tr>
+</tbody>
+</table>
+<div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgeb33806">
+<h2 id="orgeb33806">Code of Conduct &amp; Ethics</h2>
+<ul>
+<li class="fragment appear">The interpersonal communication in class is based on a level of minimum respect towards each other</li>
+<li class="fragment appear">The class is a communal space, it is not a stage to show off (except for the instructor)</li>
+<li class="fragment appear">Students are expected to arrive to class on a voluntary basis, involuntary participation is strongly discouraged</li>
+<li class="fragment ...">Mechanics requires a direct teaching model where the role of the student is usually limited to a receiver, however, the students are encouraged to ask questions and participate in the learning process</li>
+
+</ul>
+<div>
+<ul>
+<li>Here’s a fascinating account of ethics (in Turkish): <a href="https://www.youtube.com/watch?v=Q88NhXSmK_I">Etik Değerler ve Eğitimi</a> by Prof. Ioanna Kuçuradi (Maltepe University)</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>

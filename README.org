@@ -48,7 +48,7 @@
 #+REVEAL_HTML: <div style="font-size: 60%;">
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - ~README.org~ for each lecture
-- [[https://educons.edu.rs/wp-content/uploads/2020/05/2015-An-Introduction-To-Biomechanics.pdf][2015 Humphrey (continuum)]] (Main text, weeks 8-15)
+- [[https://link.springer.com/book/10.1007/978-1-4939-2623-7][2015 Humphrey (continuum)]] (Main text, weeks 8-15)
 - [[https://www.cambridge.org/core/books/first-course-in-continuum-mechanics/DC9A87155531958AD5EFC66AEB981DAE][2008 Gonzales and Stuart]] (Main text, weeks 1-7)
 - [[https://archive.org/details/biomechanicsmech0000fung][2004 Fung:mechanical properties]]
 #+ATTR_REVEAL: :frag (appear appear appear ...)
