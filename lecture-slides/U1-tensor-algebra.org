@@ -1,0 +1,111 @@
+#+TITLE: BME Unit 1: Tensor Algebra
+#+AUTHOR: Fethi Okyar
+#+DATE: 2025-02-20
+#+SUBTITLE: Reading: [AFCiCM/08] [[../textbook_excerpts/1_TensorAlgebra.pdf][Chapter 1]]
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil
+#+REVEAL_EXTRA_CSS: ../style.css
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+
+* Preliminaries
+*** Units
+What is the unit of force?
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- The fundamental units required to define the unit of force are the following
+  #+ATTR_REVEAL: :frag (appear appear appear ...)
+  + Length [L]
+  + Mass [M]
+  + Time [T]
+- International System of Units, Newton, dyne, etc.
+- Anglo-saxon System of Units, lb-f
+
+* ($\S 1.1$) Vectors 
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- A vector (or a first-order tensor, in general) is merely an abstraction/representation of a mechanical effect (a force, velocity, displacement, linear momentum, gradient of a scalar field variable, etc.).
+- It is one of the main actors in the field of mechanics (apart from others such as scalars, or higher-order tensors).
+
+*** Symbolic Representation of Vectors
+#+ATTR_REVEAL: :frag (appear)
+- A vector/tensor is usually represented by placing a right arrow over the letter: $$ \vec{F},\; \vec{a},\,\, \vec{\nabla}\phi $$
+- or a tilde symbol below as in: $$ \underset{\sim}{F},\; \underset{\sim}{a},\; \underset{\sim}{\nabla}\phi $$
+- or simply using boldface if one has access to a modern typesetting system (such as latex) $$ \boldsymbol{F},\; \boldsymbol{a},\; \boldsymbol{\nabla}\phi $$
+- the difference of the $\nabla$ is that it is an operator which requires an argument, for example a scalar field variable such as the temperature $T$ $$ \boldsymbol{\nabla}{T} $$
+- represents the gradient of the temperature field.
+  
+*** Graphical Representation of Vectors
+#+ATTR_HTML: :width 900px
+[[../images/AFC-1.1.png]]
+#+ATTR_REVEAL: :frag (appear)
+- Simplest algebraic operations such as addition or subtraction of two vectors, or the multiplication of a vector by a scalar can be performed graphically.
+- By letting $\mathcal{V}$ be the set of all vectors, then it should be TRUE that $$ \boldsymbol{u} + \boldsymbol{v} \in \mathcal{V} \;\; \forall \boldsymbol{u},\,\boldsymbol{v} \in \mathcal{V} \;\; \mathrm{and}\;\; \alpha\boldsymbol{v} \in \mathcal{V} \;\; \forall \alpha \in \mathbb{R},\; \boldsymbol{v} \in \mathcal{V}\,.$$
+
+** ($\S 1.1.2$) Scalar and Vector Products
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- The scalar or dot product is defined as the product of the magnitudes of both arguments, and cosine of the acute angle $\theta \in [0,\pi]$ subtended between the argument vectors placed tail to tail.
+- The vector product  is defined by a vector pointing normal to the plane formed by the argument vectors, in the sense shown by turning from the first argument towards the second using the right hand, having a magnitude equal to the products of the magnitudes of the argument vectors and the sine of the same angle, $\theta \in [0,\pi]$.
+- you can figure out the triple scalar product between three vectors. (Resulting in the volume of the parallelpiped formed by the three arguments.)
+  
+** ($\S 1.1.3$) Projections, Bases and Coordinate Frames
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- Any vector $\boldsymbol{v}$ can be decomposed into two vectors, one of which  ($\boldsymbol{v}_{e\parallel}$) is parallel to a given direction (unit vector) $\boldsymbol{e}$, and the other  ($\boldsymbol{v}_{e\perp}$) perpendicular to $\boldsymbol{e}$.
+- A right handed orthonormal basis ($\boldsymbol{i}, \boldsymbol{j}, \boldsymbol{k}$ or $\boldsymbol{e}_1, \boldsymbol{e}_2, \boldsymbol{e}_3$) is one relative to which vectors can be decomposed into components along the three coordinate axes (a Cartesian coordinate system).
+- Respective vector components $v_1,\,v_2,\,v_3$ are found by taking the dot product between the vector $\boldsymbol{v}$ and each one of the unit vectors $\boldsymbol{e}_i,\,i=1,2,3$.
+- And the vector can be written as a sum of its projections onto the three coordinate axes (the classical notation).
+- An alternate way of expressing the vector $\boldsymbol{v}$ is the matrix notation. There the vector components are written as an ordered triplet listed in a column. 
+
+#+REVEAL: split 
+#+ATTR_HTML: :width 900px
+[[../images/AFC-1.3.png]]
+
+Let there be two bases $\{\boldsymbol{e}_i\}$ and $\{\boldsymbol{e}'_i\}$, the primed system rotated about the third axis in the positive sense by 45 degrees. A vector $\boldsymbol{v}$ which has components $[1,1,0]$ in the first system will have what components in the primed system?
+
+** Questions for next session
+Ask AI:
+- Explain the indicial notation from physics
+** Deliverables
+Students should be able to:
+- [ ] perform simple algebraic operations with vectors 
+
+* ($\S 1.2$) Index Notation
+#+ATTR_REVEAL: :frag (appear)
+- This is the way to code mechanics in a computational setting (such as Octave/matlab, or a finite element method tool).
+- It simplifies the scalar (inner) product operation greatly.
+- It provides a new tool for cyclic permutation.
+  
+** ($\S 1.2.1$)Summation Convention
+#+ATTR_REVEAL: :frag (appear)
+- Instead of summing over the dimensions by rewriting each term for every other repeating dimension, a *repeating (/dummy/) index* implies summation (thus eliminating the need to write three terms explicitly), examples,
+  + $\boldsymbol{a}$,
+  + $\boldsymbol{a}\cdot\boldsymbol{b}$,
+  + $\boldsymbol{a} = (\boldsymbol{c}\cdot\boldsymbol{b})\,\boldsymbol{b}$, etc.
+- An index may not repeat more than twice,
+- Non-repeating indices are called as *free indices*,
+- A valid expression according to summation convention should have the same free indices appearing at each term.
+- Work out some examples...
+  
+** ($\S 1.2.2$) Kroenecker's Delta and Permutation Symbols
+#+ATTR_REVEAL: :frag (appear)
+- The Kroenecker delta symbol, $\delta_{ij}$, is defined the dot (inner) product of base vectors.
+- It is also known as an *index shifter* ($\boldsymbol{e}_i = \delta_{ij}\boldsymbol{e}_j$).
+- The *permutation (/alternator/) symbol*, $\epsilon_{ijk}$, is defined from the cyclic permutation that appears in the cross-product operation ($\boldsymbol{e}_i\times \boldsymbol{e}_j = \epsilon_{ijk}\boldsymbol{e}_k$)
+- The permutation symbol also proves useful in representing the determinant of a second-order tensor.
+  
+** Exercises: ($\S 1.2.4$) Vector Operations in Components
+#+ATTR_REVEAL: :frag (appear)
+- the scalar (inner) product
+- the vector (cross) product
+- the triple scalar product
+- the triple vector product
+
+** Questions for next session
+Ask AI:
+- what is a second order tensor?
+** Deliverables
+Students should be able to:
+- [ ] read and verify expressions written in the indicial notation
+
+* ($\S 1.3$) Second-Order Tensors
+Undergoing work

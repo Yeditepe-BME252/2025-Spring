@@ -5,77 +5,138 @@
 #+REVEAL_THEME: simple
 #+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
 #+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3>
-#+OPTIONS: timestamp:nil toc:1 num:nil
+#+OPTIONS: timestamp:nil toc:1 num:nil split:t
+#+ATTR_REVEAL: :split true
 #+REVEAL_EXTRA_CSS: ./mystyle.css
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
 
+* Why does this course exist?
+The *first course in Biomechanics* offered by the Biomedical Engineering Department aims to enhance the understanding of the science of motion and mechanical interactions between living tissue.
+#+ATTR_REVEAL: :frag (appear)
+*Essential reading*: Chapter 1 of [[IB:SFAD/15][IB:SFAD/15]]
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- Point of Departure, the development of biomechanics
+- Health Care Applications, complex mechanical phenomenon in living organisms
+- What Is Continuum Mechanics?
+- A Brief on Cell Biology, 
+- The Extracellular Matrix
+- Mechanotransduction in Cells
+  
 * Syllabus
 ** Course learning objectives-CLOs
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-1. [ ] locate biomechanical state variables that appear in conservation principles
-2. [ ] exemplify some basic biomechanical phenomenon that arise in living tissue
-3. [ ] read the mechanical variables and expressions using the indicial notation 
-4. [ ] perform vector algebraic operations on mechanical variables and expressions 
-5. [ ] differentiate between the global and local forms of conservation principles
-6. [ ] define the surface traction, stress and force concepts in a mechanical context
-7. [ ] identify the role of divergence theorem between the global and local forms
-8. [ ] read vector calculus operations appearing in the conservation principles
-9. [ ] differentiate between the use of cartesian and curvilinear coordinates 
-10. [ ] define concepts related to velocity and acceleration in the context of kinematics
-11. [ ] solve for a mechanical variable using the conservation principles
+1. [ ] exemplify some basic biomechanical phenomenon that arise in living tissues ()
+2. [ ] perform simple algebraic operations with vectors
+3. [ ] read and verify expressions written in the indicial notation
+4. [ ] convert expressions between their tensor and indicial forms
+5. [ ] transform vectors linearly via second-order tensors
+6. [ ] convert expressions between their tensor and matrix forms
+7. [ ] perform skew-symmetric decomposition of a second-order tensor
+8. [ ] perform change of basis of vector components
+9. [ ] calculate the determinant of a second-order tensor
+10. [ ] calculate the eigenvalues and eigenvectors of a second-order tensor
+11. [ ] provide examples of scalar and vector fields
+12. [ ] apply the gradient operator to  a scalar field
+13. [ ] apply the gradient operator to a vector field
+14. [ ] identify divergence, curl and laplacian operators in cartesian coordinates
+15. [ ] differentiate between formulations using cartesian and curvilinear coordinates
+#+REVEAL: split
+#+ATTR_HTML: :start 16
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+16. [ ] apply the divergence theorem to integral forms
+17. [ ] use density to find continuum mass and center of mass
+18. [ ] differentiate surface and body forces
+19. [ ] provide an example to the surface traction vector
+20. [ ] relate the surface traction vector and the stress tensor
+21. [ ] write the condition of static equilibrium in global form
+22. [ ] obtain the local form of static equilibrium using the divergence theorem
+23. [ ] derive deformation gradient and strain from a given deformation map
+24. [ ] differentiate between the total rates of stationary and moving fields
+25. [ ] provide examples of the total rate of change of field variables
+26. [ ] state the balance laws for a system of particles
+27. [ ] state the balance laws for a continuum (integral form)
+28. [ ] identify mechanical variables in the first law of thermodynamics
+29. [ ] state the local (differential) form of balance laws for a continuum 
+30. [ ] convert between classical type formulations and their indicial forms
+31. [ ] solve for a mechanical variable using the balance laws
 
 ** Weekly outline
 #+REVEAL_HTML: <div style="font-size: 80%;">
-| Week | Lectures (Tuesday)                | Lectures (Thursday)                                           |
-|------+-----------------------------------+---------------------------------------------------------------|
-|    1 | No lecture                        | [[./lecture-slides/w1-vector-algebra.html][Course Conduct, Vector Algebra, bases, projections]]      |
-|    2 | Motivation: Point of Departure    | Indicial Notation, kroenecker delta and permutation           |
-|    3 | Second Order Tensors              | Change of Basis, Trace, Determinant                           |
-|    4 | Eigenvalues, principal invariants | Tensor calculus, gradient operator, divergence, curl          |
-|    5 | Divergence theorem, localization  | Mass and force concepts, surface traction and stress          |
-|    6 | Condition of statical equilibrium | Configurations and Deformation, Displacement, Strain          |
-|    7 | Bayram                            | Kinematics and Motion, Velocity, Acceleration, Vorticity, etc |
-|    8 | Balance Laws, global forms        | Local Forms, Biosolid Simple Constitutive Equations           |
-|    9 | Axially tethered structures       | TBA                                                           |
-|   10 | Thin-Walled Pressurized Tubes     | Biofluidic Mechanics: Constitution of an Ideal Flow           |
-|   11 | Newtonian and Non-Newtonian Flows | Worker's Day Holiday (1 Mayıs)                                |
-|   12 | Navier-Stokes Equations           | Cone-Plate Viscometry                                         |
-|   13 | Bernoulli Equation                | Application of the Bernoulli Equation                         |
-|   14 | Measurement of Flow and Pressure  | Navier-Stokes Worksheets: Formulation of Problems             |
-|   15 | Flow Between Flat Plates          | Steady Flow in Circular Tubes                                 |
+| Week | Lectures (Tuesday)                | Lectures (Thursday)                                       |
+|------+-----------------------------------+-----------------------------------------------------------|
+|    1 | No lecture                        | Course Conduct, [[./lecture-slides/U1-tensor-algebra.html][Tensor Algebra]] bases, projections         |
+|    2 | Motivation: Point of Departure    | Indicial Notation, kroenecker delta and permutation       |
+|    3 | Second Order Tensors              | Change of Basis, Trace, Determinant                       |
+|    4 | Eigenvalues, principal invariants | [[./lecture-slides/U2-tensor-calculus.html][Tensor calculus]], gradient operator, divergence, curl      |
+|    5 | Divergence theorem, localization  | [[./lecture-slides/U3-mass-force.html][Mass and force concepts]], surface traction and stress      |
+|    6 | Condition of statical equilibrium | [[./lecture-slides/U4-kinematics.html][Kinematics]], Deformation, Displacement, Strain             |
+|    7 | Bayram                            | Velocity, Velocity Gradient, Acceleration, Vorticity, etc |
+|    8 | [[./lecture-slides/U5-balance-laws.html][Balance Laws]], global forms        | Local Forms, Biosolid Simple Constitutive Equations       |
+|    9 | Axially tethered structures       | TBA                                                       |
+|   10 | Thin-Walled Pressurized Tubes     | Biofluidic Mechanics: Constitution of an Ideal Flow       |
+|   11 | Newtonian and Non-Newtonian Flows | Worker's Day Holiday (1 Mayıs)                            |
+|   12 | Navier-Stokes Equations           | Cone-Plate Viscometry                                     |
+|   13 | Bernoulli Equation                | Application of the Bernoulli Equation                     |
+|   14 | Measurement of Flow and Pressure  | Navier-Stokes Worksheets: Formulation of Problems         |
+|   15 | Flow Between Flat Plates          | Steady Flow in Circular Tubes                             |
 
 ** Resources
-#+REVEAL_HTML: <div style="font-size: 60%;">
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- ~README.org~ for each lecture
-- [[https://link.springer.com/book/10.1007/978-1-4939-2623-7][2015 Humphrey (continuum)]] (Main text, weeks 8-15)
-- [[https://www.cambridge.org/core/books/first-course-in-continuum-mechanics/DC9A87155531958AD5EFC66AEB981DAE][2008 Gonzales and Stuart]] (Main text, weeks 1-7)
-- [[https://archive.org/details/biomechanicsmech0000fung][2004 Fung:mechanical properties]]
-#+ATTR_REVEAL: :frag (appear appear appear ...)
+- ~README.org~ The lecture presentations will be made available to students and public
+- <<IB:SFAD/15>>[IB:SFAD/15] [[https://link.springer.com/book/10.1007/978-1-4939-2623-7][2015 Humphrey]] (Introduction to Biomechanics: Solids and Fluids, Analysis and Design; roughly in weeks 8-15)
+- [AFCiCM/08] [[https://www.cambridge.org/core/books/first-course-in-continuum-mechanics/DC9A87155531958AD5EFC66AEB981DAE][2008 Gonzales and Stuart]] (A First Course in Continuum Mechanics, rougly in weeks 1-7)
+- [B:MPLT/04] [[https://archive.org/details/biomechanicsmech0000fung][2004 Fung]] (Biomechanics: Mechanical Properties of Living Tissues, week 1)
 - Software
-  #+ATTR_REVEAL: :frag (appear appear appear ...)
   + Online Octave
   + Octave: https://octave.org/download
-#+ATTR_REVEAL: :frag (appear appear appear ...)
 - Web Resources
-  #+ATTR_REVEAL: :frag (appear appear appear ...)
   + [[https://silver.neep.wisc.edu/~lakes/BME315Fr.html][BME 315 Biomechanics, University of Wisconsin]]
-#+REVEAL_HTML: <div>
 
-** Assesment
+** Assessment
 #+REVEAL_HTML: <div style="font-size: 90%;">
 | In-term studies | Count # | Percentage (%) |
 |-----------------+---------+----------------|
 | Exit-Surveys    |       9 |             35 |
 | Quizzes         |       4 |             35 |
+|                 |         |                |
 | Final           |       1 |             30 |
 #+REVEAL_HTML: <div>
 
+* Modus operandi
+Course is composed of a few activities,
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- Lectures
+  #+ATTR_REVEAL: :frag (appear appear appear ...)
+  + Listening and taking notes in the lecture
+  + Prepare for study questions for next lectures using *openAI*
+- Attendence through Yulearn check-in
+- Quizzes
+- Exit Survey Questions
+- Jove Videos
+- Final
+
+** Lectures
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- The board, projector, and supplementary materials will be utilized.
+- _Asking questions_, and _taking notes_ are encouraged.
+- The lecture notes are shared on Yulearn.
+
+** Quizzes
+Three or four quizzes, half-an-hour with a single question each, will be given during the semester.
+
+** Exit Survey Questions
+Eight of nine such questions shall be asked to students during the last 5 minutes of lectures during the semester.
+
+** How to get updates about this course?
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- Yulearn course page
+- OBS course announcements
 * Code of Conduct & Ethics
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- The interpersonal communication in class is based on a level of minimum respect towards each other
-- The class is a communal space, it is not a stage to show off (except for the instructor)
-- Students are expected to arrive to class on a voluntary basis, involuntary participation is strongly discouraged
-- Mechanics requires a direct teaching model where the role of the student is usually limited to a receiver, however, the students are encouraged to ask questions and participate in the learning process
-#+REVEAL_HTML: <div>
-- Here’s a fascinating account of ethics (in Turkish): [[https://www.youtube.com/watch?v=Q88NhXSmK_I][Etik Değerler ve Eğitimi]] by Prof. Ioanna Kuçuradi (Maltepe University)
+- The interpersonal communication in class is based on a level of minimum respect towards each other.
+- The class is a communal space, it is not a stage to show off (except for the instructor).
+- Students are expected to arrive to class on a voluntary basis, involuntary participation is strongly discouraged.
+- Mechanics requires a direct teaching model where the role of the student is usually limited to a receiver, however, the students are encouraged to ask questions and participate in the learning process.
+- Here’s a fascinating account of ethics (in Turkish): [[https://www.youtube.com/watch?v=Q88NhXSmK_I][Etik Değerler ve Eğitimi]] by Prof. Ioanna Kuçuradi (Maltepe University).
+
+

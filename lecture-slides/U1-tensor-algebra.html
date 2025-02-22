@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>BME Unit 1: Tensor Algebra</title>
+<meta name="author" content="Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../style.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>BME Unit 1: Tensor Algebra</h2> <h3>Reading: [AFCiCM/08] <a href="../textbook_excerpts/1_TensorAlgebra.pdf">Chapter 1</a></h3> <h4>2025-02-20</h4>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-org6604a85">Preliminaries</a></li>
+<li><a href="#/slide-org6c7ed57">(\(\S 1.1\)) Vectors</a></li>
+<li><a href="#/slide-orgaee6239">(\(\S 1.2\)) Index Notation</a></li>
+<li><a href="#/slide-org550561f">(\(\S 1.3\)) Second-Order Tensors</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<section id="slide-org6604a85">
+<h2 id="org6604a85">Preliminaries</h2>
+<div class="outline-text-2" id="text-org6604a85">
+</div>
+</section>
+<section id="slide-orgb3bb31f">
+<h4 id="orgb3bb31f">Units</h4>
+<p>
+What is the unit of force?
+</p>
+<ul>
+<li class="fragment appear">The fundamental units required to define the unit of force are the following
+<ul>
+<li class="fragment appear">Length [L]</li>
+<li class="fragment appear">Mass [M]</li>
+<li class="fragment appear">Time [T]</li>
+
+</ul></li>
+<li class="fragment appear">International System of Units, Newton, dyne, etc.</li>
+<li class="fragment appear">Anglo-saxon System of Units, lb-f</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org6c7ed57">
+<h2 id="org6c7ed57">(\(\S 1.1\)) Vectors</h2>
+<ul>
+<li class="fragment appear">A vector (or a first-order tensor, in general) is merely an abstraction/representation of a mechanical effect (a force, velocity, displacement, linear momentum, gradient of a scalar field variable, etc.).</li>
+<li class="fragment appear">It is one of the main actors in the field of mechanics (apart from others such as scalars, or higher-order tensors).</li>
+
+</ul>
+
+</section>
+<section id="slide-orgc297e07">
+<h4 id="orgc297e07">Symbolic Representation of Vectors</h4>
+<ul>
+<li class="fragment appear">A vector/tensor is usually represented by placing a right arrow over the letter: \[ \vec{F},\; \vec{a},\,\, \vec{\nabla}\phi \]</li>
+<li class="fragment appear">or a tilde symbol below as in: \[ \underset{\sim}{F},\; \underset{\sim}{a},\; \underset{\sim}{\nabla}\phi \]</li>
+<li class="fragment appear">or simply using boldface if one has access to a modern typesetting system (such as latex) \[ \boldsymbol{F},\; \boldsymbol{a},\; \boldsymbol{\nabla}\phi \]</li>
+<li class="fragment appear">the difference of the \(\nabla\) is that it is an operator which requires an argument, for example a scalar field variable such as the temperature \(T\) \[ \boldsymbol{\nabla}{T} \]</li>
+<li class="fragment appear">represents the gradient of the temperature field.</li>
+
+</ul>
+
+</section>
+<section id="slide-orgd98ba99">
+<h4 id="orgd98ba99">Graphical Representation of Vectors</h4>
+
+<div id="org07104a1" class="figure">
+<p><img src="../images/AFC-1.1.png" alt="AFC-1.1.png" width="900px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">Simplest algebraic operations such as addition or subtraction of two vectors, or the multiplication of a vector by a scalar can be performed graphically.</li>
+<li class="fragment appear">By letting \(\mathcal{V}\) be the set of all vectors, then it should be TRUE that \[ \boldsymbol{u} + \boldsymbol{v} \in \mathcal{V} \;\; \forall \boldsymbol{u},\,\boldsymbol{v} \in \mathcal{V} \;\; \mathrm{and}\;\; \alpha\boldsymbol{v} \in \mathcal{V} \;\; \forall \alpha \in \mathbb{R},\; \boldsymbol{v} \in \mathcal{V}\,.\]</li>
+
+</ul>
+
+</section>
+<section id="slide-orgb4f3d5b">
+<h3 id="orgb4f3d5b">(\(\S 1.1.2\)) Scalar and Vector Products</h3>
+<ul>
+<li class="fragment appear">The scalar or dot product is defined as the product of the magnitudes of both arguments, and cosine of the acute angle \(\theta \in [0,\pi]\) subtended between the argument vectors placed tail to tail.</li>
+<li class="fragment appear">The vector product  is defined by a vector pointing normal to the plane formed by the argument vectors, in the sense shown by turning from the first argument towards the second using the right hand, having a magnitude equal to the products of the magnitudes of the argument vectors and the sine of the same angle, \(\theta \in [0,\pi]\).</li>
+<li class="fragment appear">you can figure out the triple scalar product between three vectors. (Resulting in the volume of the parallelpiped formed by the three arguments.)</li>
+
+</ul>
+
+</section>
+<section id="slide-org0d4f6d4">
+<h3 id="org0d4f6d4">(\(\S 1.1.3\)) Projections, Bases and Coordinate Frames</h3>
+<ul>
+<li class="fragment appear">Any vector \(\boldsymbol{v}\) can be decomposed into two vectors, one of which  (\(\boldsymbol{v}_{e\parallel}\)) is parallel to a given direction (unit vector) \(\boldsymbol{e}\), and the other  (\(\boldsymbol{v}_{e\perp}\)) perpendicular to \(\boldsymbol{e}\).</li>
+<li class="fragment appear">A right handed orthonormal basis (\(\boldsymbol{i}, \boldsymbol{j}, \boldsymbol{k}\) or \(\boldsymbol{e}_1, \boldsymbol{e}_2, \boldsymbol{e}_3\)) is one relative to which vectors can be decomposed into components along the three coordinate axes (a Cartesian coordinate system).</li>
+<li class="fragment appear">Respective vector components \(v_1,\,v_2,\,v_3\) are found by taking the dot product between the vector \(\boldsymbol{v}\) and each one of the unit vectors \(\boldsymbol{e}_i,\,i=1,2,3\).</li>
+<li class="fragment ...">And the vector can be written as a sum of its projections onto the three coordinate axes (the classical notation).</li>
+<li class="fragment ...">An alternate way of expressing the vector \(\boldsymbol{v}\) is the matrix notation. There the vector components are written as an ordered triplet listed in a column.</li>
+
+</ul>
+
+</section>
+<section id="slide-org0d4f6d4-split">
+
+<div id="org67a2871" class="figure">
+<p><img src="../images/AFC-1.3.png" alt="AFC-1.3.png" width="900px" />
+</p>
+</div>
+
+<p>
+Let there be two bases \(\{\boldsymbol{e}_i\}\) and \(\{\boldsymbol{e}'_i\}\), the primed system rotated about the third axis in the positive sense by 45 degrees. A vector \(\boldsymbol{v}\) which has components \([1,1,0]\) in the first system will have what components in the primed system?
+</p>
+
+</section>
+<section id="slide-org4f93fb7">
+<h3 id="org4f93fb7">Questions for next session</h3>
+<p>
+Ask AI:
+</p>
+<ul>
+<li>Explain the indicial notation from physics</li>
+
+</ul>
+</section>
+<section id="slide-org555f551">
+<h3 id="org555f551">Deliverables</h3>
+<p>
+Students should be able to:
+</p>
+<ul>
+<li class="off"><code>[&#xa0;]</code> perform simple algebraic operations with vectors</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgaee6239">
+<h2 id="orgaee6239">(\(\S 1.2\)) Index Notation</h2>
+<ul>
+<li class="fragment appear">This is the way to code mechanics in a computational setting (such as Octave/matlab, or a finite element method tool).</li>
+<li class="fragment appear">It simplifies the scalar (inner) product operation greatly.</li>
+<li class="fragment appear">It provides a new tool for cyclic permutation.</li>
+
+</ul>
+
+</section>
+<section id="slide-orgc47e433">
+<h3 id="orgc47e433">(\(\S 1.2.1\))Summation Convention</h3>
+<ul>
+<li class="fragment appear">Instead of summing over the dimensions by rewriting each term for every other repeating dimension, a <b>repeating (<i>dummy</i>) index</b> implies summation (thus eliminating the need to write three terms explicitly), examples,
+<ul>
+<li>\(\boldsymbol{a}\),</li>
+<li>\(\boldsymbol{a}\cdot\boldsymbol{b}\),</li>
+<li>\(\boldsymbol{a} = (\boldsymbol{c}\cdot\boldsymbol{b})\,\boldsymbol{b}\), etc.</li>
+
+</ul></li>
+<li class="fragment appear">An index may not repeat more than twice,</li>
+<li class="fragment appear">Non-repeating indices are called as <b>free indices</b>,</li>
+<li class="fragment appear">A valid expression according to summation convention should have the same free indices appearing at each term.</li>
+<li class="fragment appear">Work out some examples&#x2026;</li>
+
+</ul>
+
+</section>
+<section id="slide-org86b97aa">
+<h3 id="org86b97aa">(\(\S 1.2.2\)) Kroenecker&rsquo;s Delta and Permutation Symbols</h3>
+<ul>
+<li class="fragment appear">The Kroenecker delta symbol, \(\delta_{ij}\), is defined the dot (inner) product of base vectors.</li>
+<li class="fragment appear">It is also known as an <b>index shifter</b> (\(\boldsymbol{e}_i = \delta_{ij}\boldsymbol{e}_j\)).</li>
+<li class="fragment appear">The <b>permutation (<i>alternator</i>) symbol</b>, \(\epsilon_{ijk}\), is defined from the cyclic permutation that appears in the cross-product operation (\(\boldsymbol{e}_i\times \boldsymbol{e}_j = \epsilon_{ijk}\boldsymbol{e}_k\))</li>
+<li class="fragment appear">The permutation symbol also proves useful in representing the determinant of a second-order tensor.</li>
+
+</ul>
+
+</section>
+<section id="slide-org1a1293d">
+<h3 id="org1a1293d">Exercises: (\(\S 1.2.4\)) Vector Operations in Components</h3>
+<ul>
+<li class="fragment appear">the scalar (inner) product</li>
+<li class="fragment appear">the vector (cross) product</li>
+<li class="fragment appear">the triple scalar product</li>
+<li class="fragment appear">the triple vector product</li>
+
+</ul>
+
+</section>
+<section id="slide-orgb4f6207">
+<h3 id="orgb4f6207">Questions for next session</h3>
+<p>
+Ask AI:
+</p>
+<ul>
+<li>what is a second order tensor?</li>
+
+</ul>
+</section>
+<section id="slide-orgf2a2816">
+<h3 id="orgf2a2816">Deliverables</h3>
+<p>
+Students should be able to:
+</p>
+<ul>
+<li class="off"><code>[&#xa0;]</code> read and verify expressions written in the indicial notation</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org550561f">
+<h2 id="org550561f">(\(\S 1.3\)) Second-Order Tensors</h2>
+<p>
+Undergoing work
+</p>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>
