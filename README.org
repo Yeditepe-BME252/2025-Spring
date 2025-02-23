@@ -1,5 +1,5 @@
-#+TITLE: BME 252 Biomechanics
-#+SUBTITLE: Spring 2025
+#+TITLE: BME 252 (Bio)mechanics
+#+SUBTITLE: Spring 2025 Syllabus
 #+AUTHOR: Fethi Okyar
 #+STARTUP: overview
 #+REVEAL_THEME: simple
@@ -21,64 +21,63 @@ The *first course in Biomechanics* offered by the Biomedical Engineering Departm
 - A Brief on Cell Biology, 
 - The Extracellular Matrix
 - Mechanotransduction in Cells
-  
-* Syllabus
+
+* Syllabus  
 ** Course learning objectives-CLOs
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-1. [ ] exemplify some basic biomechanical phenomenon that arise in living tissues ()
-2. [ ] perform simple algebraic operations with vectors
-3. [ ] read and verify expressions written in the indicial notation
-4. [ ] convert expressions between their tensor and indicial forms
-5. [ ] transform vectors linearly via second-order tensors
-6. [ ] convert expressions between their tensor and matrix forms
-7. [ ] perform skew-symmetric decomposition of a second-order tensor
-8. [ ] perform change of basis of vector components
-9. [ ] calculate the determinant of a second-order tensor
-10. [ ] calculate the eigenvalues and eigenvectors of a second-order tensor
-11. [ ] provide examples of scalar and vector fields
-12. [ ] apply the gradient operator to  a scalar field
-13. [ ] apply the gradient operator to a vector field
-14. [ ] identify divergence, curl and laplacian operators in cartesian coordinates
-15. [ ] differentiate between formulations using cartesian and curvilinear coordinates
+- [X] exemplify some basic biomechanical phenomenon that arise in living tissues ()
+- [X] perform simple algebraic operations with vectors
+- [X] read and verify expressions written in the indicial notation
+- [X] convert expressions between their tensor and indicial forms
+- [X] transform vectors linearly via second-order tensors
+- [X] convert expressions between their tensor and matrix forms
+- [X] perform change of basis of vector components
+- [ ] calculate the determinant of a second-order tensor
+- [ ] calculate the eigenvalues and eigenvectors of a second-order tensor
+- [ ] provide examples of scalar and vector fields
+- [ ] apply the gradient operator to  a scalar field
+- [ ] apply the gradient operator to a vector field
+- [ ] identify divergence, curl and laplacian operators in cartesian coordinates
+- [ ] differentiate between formulations using cartesian and curvilinear coordinates
+- [ ] apply the divergence theorem to integral forms
+
 #+REVEAL: split
-#+ATTR_HTML: :start 16
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-16. [ ] apply the divergence theorem to integral forms
-17. [ ] use density to find continuum mass and center of mass
-18. [ ] differentiate surface and body forces
-19. [ ] provide an example to the surface traction vector
-20. [ ] relate the surface traction vector and the stress tensor
-21. [ ] write the condition of static equilibrium in global form
-22. [ ] obtain the local form of static equilibrium using the divergence theorem
-23. [ ] derive deformation gradient and strain from a given deformation map
-24. [ ] differentiate between the total rates of stationary and moving fields
-25. [ ] provide examples of the total rate of change of field variables
-26. [ ] state the balance laws for a system of particles
-27. [ ] state the balance laws for a continuum (integral form)
-28. [ ] identify mechanical variables in the first law of thermodynamics
-29. [ ] state the local (differential) form of balance laws for a continuum 
-30. [ ] convert between classical type formulations and their indicial forms
-31. [ ] solve for a mechanical variable using the balance laws
+- [ ] use density to find continuum mass and center of mass
+- [ ] differentiate surface and body forces
+- [ ] provide an example to the surface traction vector
+- [ ] relate the surface traction vector and the stress tensor
+- [ ] write the condition of static equilibrium in global form
+- [ ] obtain the local form of static equilibrium using the divergence theorem
+- [ ] derive deformation gradient and strain from a given deformation map
+- [ ] differentiate between the total rates of stationary and moving fields
+- [ ] provide examples of the total rate of change of field variables
+- [ ] state the balance laws for a system of particles
+- [ ] state the balance laws for a continuum (integral form)
+- [ ] identify mechanical variables in the first law of thermodynamics
+- [ ] state the local (differential) form of balance laws for a continuum 
+- [ ] convert between classical type formulations and their indicial forms
+- [ ] solve for a mechanical variable using the balance laws
 
 ** Weekly outline
 #+REVEAL_HTML: <div style="font-size: 80%;">
-| Week | Lectures (Tuesday)                | Lectures (Thursday)                                       |
-|------+-----------------------------------+-----------------------------------------------------------|
-|    1 | No lecture                        | Course Conduct, [[./lecture-slides/U1-tensor-algebra.html][Tensor Algebra]] bases, projections         |
-|    2 | Motivation: Point of Departure    | Indicial Notation, kroenecker delta and permutation       |
-|    3 | Second Order Tensors              | Change of Basis, Trace, Determinant                       |
-|    4 | Eigenvalues, principal invariants | [[./lecture-slides/U2-tensor-calculus.html][Tensor calculus]], gradient operator, divergence, curl      |
-|    5 | Divergence theorem, localization  | [[./lecture-slides/U3-mass-force.html][Mass and force concepts]], surface traction and stress      |
-|    6 | Condition of statical equilibrium | [[./lecture-slides/U4-kinematics.html][Kinematics]], Deformation, Displacement, Strain             |
-|    7 | Bayram                            | Velocity, Velocity Gradient, Acceleration, Vorticity, etc |
-|    8 | [[./lecture-slides/U5-balance-laws.html][Balance Laws]], global forms        | Local Forms, Biosolid Simple Constitutive Equations       |
-|    9 | Axially tethered structures       | TBA                                                       |
-|   10 | Thin-Walled Pressurized Tubes     | Biofluidic Mechanics: Constitution of an Ideal Flow       |
-|   11 | Newtonian and Non-Newtonian Flows | Worker's Day Holiday (1 Mayıs)                            |
-|   12 | Navier-Stokes Equations           | Cone-Plate Viscometry                                     |
-|   13 | Bernoulli Equation                | Application of the Bernoulli Equation                     |
-|   14 | Measurement of Flow and Pressure  | Navier-Stokes Worksheets: Formulation of Problems         |
-|   15 | Flow Between Flat Plates          | Steady Flow in Circular Tubes                             |
+| Week | Lectures (Tuesday)                           | Lectures (Thursday)                                       |
+|------+----------------------------------------------+-----------------------------------------------------------|
+|    1 | No lecture                                   | Course Conduct, [[./lecture-slides/U1-tensor-algebra.html][Tensor Algebra]] bases, projections         |
+|    2 | Motivation: Point of Departure               | Indicial Notation, kroenecker delta and permutation       |
+|    3 | Second Order Tensors                         | Change of Basis, Trace, Determinant                       |
+|    4 | Eigenvalues, principal invariants (*Quiz 1*) | [[./lecture-slides/U2-tensor-calculus.html][Tensor calculus]], gradient operator, divergence, curl      |
+|    5 | Divergence theorem, localization             | [[./lecture-slides/U3-mass-force.html][Mass and force concepts]], surface traction and stress      |
+|    6 | Condition of statical equilibrium            | [[./lecture-slides/U4-kinematics.html][Kinematics]], Deformation, Displacement, Strain (*Quiz 2*)  |
+|    7 | Bayram                                       | Velocity, Velocity Gradient, Acceleration, Vorticity, etc |
+|    8 | [[./lecture-slides/U5-balance-laws.html][Balance Laws]], global forms                   | Local Forms, Biosolid Simple Constitutive Equations       |
+|    9 | Axially tethered structures                  | TBA                                                       |
+|   10 | Thin-Walled Pressurized Tubes (*Quiz 3*)     | Biofluidic Mechanics: Constitution of an Ideal Flow       |
+|   11 | Newtonian and Non-Newtonian Flows            | Worker's Day Holiday (1 Mayıs)                            |
+|   12 | Navier-Stokes Equations                      | Cone-Plate Viscometry                                     |
+|   13 | Bernoulli Equation  (*Quiz 4*)                | Application of the Bernoulli Equation                     |
+|   14 | Measurement of Flow and Pressure             | Navier-Stokes Worksheets: Formulation of Problems         |
+|   15 | Flow Between Flat Plates                     | Steady Flow in Circular Tubes                             |
 
 ** Resources
 #+ATTR_REVEAL: :frag (appear appear appear ...)
@@ -102,7 +101,7 @@ The *first course in Biomechanics* offered by the Biomedical Engineering Departm
 | Final           |       1 |             30 |
 #+REVEAL_HTML: <div>
 
-* Modus operandi
+* Modus Operandi
 Course is composed of a few activities,
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - Lectures
@@ -138,5 +137,3 @@ Eight of nine such questions shall be asked to students during the last 5 minute
 - Students are expected to arrive to class on a voluntary basis, involuntary participation is strongly discouraged.
 - Mechanics requires a direct teaching model where the role of the student is usually limited to a receiver, however, the students are encouraged to ask questions and participate in the learning process.
 - Here’s a fascinating account of ethics (in Turkish): [[https://www.youtube.com/watch?v=Q88NhXSmK_I][Etik Değerler ve Eğitimi]] by Prof. Ioanna Kuçuradi (Maltepe University).
-
-

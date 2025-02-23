@@ -1,4 +1,4 @@
-#+TITLE: BME Unit 1: Tensor Algebra
+#+TITLE:  Unit 1: Tensor Algebra
 #+AUTHOR: Fethi Okyar
 #+DATE: 2025-02-20
 #+SUBTITLE: Reading: [AFCiCM/08] [[../textbook_excerpts/1_TensorAlgebra.pdf][Chapter 1]]
@@ -22,7 +22,7 @@ What is the unit of force?
 - International System of Units, Newton, dyne, etc.
 - Anglo-saxon System of Units, lb-f
 
-* ($\S 1.1$) Vectors 
+* ($\S 1.1$) Vectors (Session 1)
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - A vector (or a first-order tensor, in general) is merely an abstraction/representation of a mechanical effect (a force, velocity, displacement, linear momentum, gradient of a scalar field variable, etc.).
 - It is one of the main actors in the field of mechanics (apart from others such as scalars, or higher-order tensors).
@@ -69,7 +69,7 @@ Ask AI:
 Students should be able to:
 - [ ] perform simple algebraic operations with vectors 
 
-* ($\S 1.2$) Index Notation
+* ($\S 1.2$) Index Notation (Session 2)
 #+ATTR_REVEAL: :frag (appear)
 - This is the way to code mechanics in a computational setting (such as Octave/matlab, or a finite element method tool).
 - It simplifies the scalar (inner) product operation greatly.
@@ -106,6 +106,108 @@ Ask AI:
 ** Deliverables
 Students should be able to:
 - [ ] read and verify expressions written in the indicial notation
+- [ ] convert expressions between their tensor and indicial forms
 
-* ($\S 1.3$) Second-Order Tensors
-Undergoing work
+* ($\S 1.3$) Second-Order Tensors (Session 3)
+#+ATTR_REVEAL: :frag (appear)
+- Scalars have no index, first-order tensors (vectors) have one. The index is also referred to as the *basis*.
+- Abstraction of a physical field or operator that has *two* indices or bases, is called as a second-order tensor.
+- A transformer between vectors, $\boldsymbol{S}\boldsymbol{u} = \boldsymbol{v}$, or $\boldsymbol{S}(\boldsymbol{u}) = \boldsymbol{v}$
+** ($\S 1.3.1$)  Definition
+On the vector space $\mathcal{V}$, we have a /linear/ mapping $\boldsymbol{T}:\mathcal{V}\rightarrow\mathcal{V}$ such that
+
+#+ATTR_REVEAL: :frag (appear)
+- $$\boldsymbol{T} (\boldsymbol{u} + \boldsymbol{v}) = \boldsymbol{T}\boldsymbol{u} + \boldsymbol{T} \boldsymbol{v} \; \forall \; \boldsymbol{u},\,\boldsymbol{v} \in \mathcal{V},$$
+- $$\boldsymbol{T}(\alpha \boldsymbol{u}) = \alpha \boldsymbol{T}\,\boldsymbol{u} \; \forall  \; \alpha \in \mathbb{R} \; \mathrm{and} \; \boldsymbol{u} \in \mathcal{V}.$$
+- The *zero tensor* annuls anything it multiplies with
+- The *identity tensor* $\boldsymbol{I}$, reproduces its argument as its result: $\boldsymbol{I} \boldsymbol{v} =  \boldsymbol{v}$.
+- The equality of two second-order tensors may be established by the identity $\boldsymbol{S}\boldsymbol{v}=\boldsymbol{T}\boldsymbol{v}$ for all $\boldsymbol{v} \in \mathcal{C}$.
+
+#+REVEAL: split
+Example 1: Projections:
+#+ATTR_HTML: :width 900px
+[[../images/AFC-1.3.1a.png]]
+
+#+REVEAL: split
+Example 2: Rotations:
+#+ATTR_HTML: :width 900px
+[[../images/AFC-1.3.1b.png]]
+
+#+REVEAL: split
+Example 3: Reflections:
+#+ATTR_HTML: :width 900px
+[[../images/AFC-1.3.1c.png]]
+
+** ($\S 1.3.2$) Second-Order Tensor Algebra
+Let $\mathcal{V}^2$ be the set of second-order tensors, then
+#+ATTR_REVEAL: :frag (appear)
+- The summation of two elements of $\mathcal{V}^2$ is also a member of  $\mathcal{V}^2$,
+- The multiplication of a member of  $\mathcal{V}^2$ by a scalar, is also a member of  $\mathcal{V}^2$,
+- By multiplying two elements from  $\mathcal{V}^2$, taking the *inner product* (the summation between columns of the left tensor with the rows of the right tensor) between adjacent indices is implied.
+- It is implied that $$(\boldsymbol{S}\boldsymbol{T})\boldsymbol{u} = \boldsymbol{S}(\boldsymbol{T}\boldsymbol{u})$$
+
+** ($\S 1.3.3$) Indicial Representation
+#+ATTR_REVEAL: :frag (appear)
++ The components of a second-order tensor $\boldsymbol{S}$ in a coordinate frame $\{\boldsymbol{e}_i\}$ are nine numbers $S_{ij}\;(1\leq i,j \leq 3)$ defined by $$S_{ij} = \boldsymbol{e}_i \cdot \boldsymbol{S}\boldsymbol{e}_j.$$
++ Given vectors $\boldsymbol{u} = u_i \boldsymbol{e}_i$ and $\boldsymbol{v} = v_j \boldsymbol{e}_j$ such that $\boldsymbol{v} = \boldsymbol{S} \boldsymbol{u}$, we can write $$v_i = S_{ij} u_j$$
++ The nine components arranged into a square matrix is called the *matrix representation*, and is denoted as $[\boldsymbol{S}]\in\mathbb{R}$.
++ The transpose operation is simply obtained by interchanging the rows and columns of the matrix $[\boldsymbol{S}]$, and is denoted as  $[\boldsymbol{S}]^T$.
++ The tensor equation $\boldsymbol{v} = \boldsymbol{S} \boldsymbol{u}$ can be written in various forms as $$\boldsymbol{v} = \boldsymbol{S} \boldsymbol{u} \; \Leftrightarrow \; v_i=S_{ij}u_j \; \Leftrightarrow \; [\boldsymbol{v}] = [\boldsymbol{S}] [\boldsymbol{u}] $$
+
+** Questions for next session
+Ask AI:
+- How can a second-order tensor be symmetric or invertible? What is the relationship between invertibility and determinant of a second-order tensor?
+** Deliverables
+Students should be able to:
+- [ ] transform vectors linearly via second-order tensors
+- [ ] convert expressions between their tensor and matrix forms
+
+* Special Classes and Operations (Session 4)
+** ($\S 1.3.6$) Symmetry, Inverse, Orthogonality, etc.
+#+ATTR_REVEAL: :frag (appear)
+- To any tensor $\boldsymbol{S}\in \mathcal{V}^2$ we associate a *transpose* $\boldsymbol{S}^T \in \mathcal{V}^2$, which shows $$\boldsymbol{S}\boldsymbol{u} \cdot\boldsymbol{v} = \boldsymbol{u} \cdot \boldsymbol{S}^T\boldsymbol{v} \; \forall \boldsymbol{u},\boldsymbol{v} \in \mathcal{V}.$$
+- We say, a tensor is *symmetric* if $\boldsymbol{S}^T = \boldsymbol{S}$, and,
+- *skew-symmetric* if  $\boldsymbol{S}^T = -\boldsymbol{S}$.
+- A tensor $\boldsymbol{T}\in \mathcal{V}^2$ is said to be *positive-definite* if it satisfies $$ \boldsymbol{v} \cdot \boldsymbol{T}\boldsymbol{v} > 0\; \forall \boldsymbol{v}\neq 0,$$
+- and is said to be *invertible* if there exists an *inverse* $\boldsymbol{P}^{-1}\in \mathcal{V}^2$ such that $$\boldsymbol{P}\boldsymbol{P}^{-1} = \boldsymbol{P}^{-1} \boldsymbol{P} = \boldsymbol{I}.$$
+
+#+REVEAL: split
+#+ATTR_REVEAL: :frag (appear)
+- The inverse and transpose operations may commute, that is $(\boldsymbol{P}^{-1})^T = (\boldsymbol{P}^T)^{-1}$, and this is usually denoted as $\boldsymbol{S}^{-T}$.
+- A tensor $\boldsymbol{Q}\in \mathcal{V}^2$ is said to be *orthogonal* if $\boldsymbol{Q}^T= \boldsymbol{Q}^{-1}$, that is  $$\boldsymbol{Q}\boldsymbol{Q}^{T} = \boldsymbol{Q}^{T} \boldsymbol{Q} = \boldsymbol{I}.$$ Such a tensor produces a right-handed rotation *rotation*, provided it has a positive determinant.
+
+** ($\S 1.3.7$) Change of Basis
+#+ATTR_REVEAL: :frag (appear)
+- Let $\{\boldsymbol{e}_i\}$ and $\{\boldsymbol{e}'_i\}$ be two right-handed bases vector sets in $\mathbb{E}^3$, where expression of the primed set in terms of the unprimed can be written as $$\boldsymbol{e}'_j = (\boldsymbol{e}_1 \cdot \boldsymbol{e}'_j) \boldsymbol{e}_1 + (\boldsymbol{e}_2 \cdot \boldsymbol{e}'_j) \boldsymbol{e}_2 + (\boldsymbol{e}_3 \cdot \boldsymbol{e}'_j) \boldsymbol{e}_3 = (\boldsymbol{e}_i \cdot \boldsymbol{e}'_j) \boldsymbol{e}_i,$$
+- while the unprimed set can similarly be expressed in terms of the primed, as $$\boldsymbol{e}_j = (\boldsymbol{e}_j \cdot \boldsymbol{e}'_1) \boldsymbol{e}'_1 + (\boldsymbol{e}_j \cdot \boldsymbol{e}'_2) \boldsymbol{e}'_2 + (\boldsymbol{e}_j \cdot \boldsymbol{e}'_3) \boldsymbol{e}'_3 = (\boldsymbol{e}_j \cdot \boldsymbol{e}'_i) \boldsymbol{e}'_i.$$
+- Defining the term in parantesis as the *change of basis* tensor (a.k.a. *rotation*), $Q_{ij} = (\boldsymbol{e}_i \cdot \boldsymbol{e}'_j)$, the above expressions can be written as $\boldsymbol{e}'_j = Q_{ij} \boldsymbol{e}_i$, and, $\boldsymbol{e}_j = Q_{jk} \boldsymbol{e}'_k$.
+- If the former expansion is used in the latter, or the latter is used in the former, we find out that the tensor $\boldsymbol{Q}$ is orthogonal.
+
+*** Transformation of Components Under a Change of Basis
+#+ATTR_HTML: :width 900px
+[[../images/AFC-1.4.png]]
+#+ATTR_REVEAL: :frag (appear)
+- Consider an arbitrary vector $\boldsymbol{v}\in\mathcal{V}$ as illustrated above. Let $[\boldsymbol{v}] = (v_1,v_2,v_3)^T$ be its representation in $\{\boldsymbol{e}_i\}$, $[\boldsymbol{v}'] = (v'_1,v'_2,v'_3)^T$ be its representation in $\{\boldsymbol{e}'_i\}$, and $\boldsymbol{Q}$ be the change of basis tensor from  $\{\boldsymbol{e}'_i\}$  $\{\boldsymbol{e}_i\}$.
+- By definition of the components we have $\boldsymbol{v} = v_i \{\boldsymbol{e}_i\} = v'_j \{\boldsymbol{e}'_j\}$ which implies $v_i = Q_{ij}v'_j$ upon substitution.
+- For second-order tensors, both indices should be processed by $Q_{ij}$ (from the left and right).
+
+** Questions for next session
+Ask AI:
+- What sort of information is carried by the eigenvalues of a second-order tensor?
+** Deliverables
+Students should be able to:
+- [ ] perform change of basis of vector components
+  
+* Invariants and Eigenvalues (Session 5)
+** ($\S 1.3.8$) The Trace and the Determinant
+** ($\S 1.3.9$) Eigenvalues, Eigenvectors and Principal Invariants
+** Questions for next session
+Ask AI:
+- What is the physical interpretation of the gradient of a scalar or vector field variable?
+** Deliverables
+Students should be able to:
+- [ ] calculate the determinant of a second-order tensor
+- [ ] calculate the eigenvalues and eigenvectors of a second-order tensor
+
+#+REVEAL: split
+END OF UNIT 1
