@@ -22,6 +22,10 @@ The *first course in Biomechanics* offered by the Biomedical Engineering Departm
 - The Extracellular Matrix
 - Mechanotransduction in Cells
 
+[[https://app.jove.com/playlist?plid=9205458][Jove playlist]] (motivational)
+
+Jove: a scientific educational video content provider with free access through Yeditepe
+
 * Syllabus  
 ** Course learning objectives-CLOs
 #+ATTR_REVEAL: :frag (appear appear appear ...)
