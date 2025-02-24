@@ -47,6 +47,15 @@ What is the unit of force?
 - The scalar or dot product is defined as the product of the magnitudes of both arguments, and cosine of the acute angle $\theta \in [0,\pi]$ subtended between the argument vectors placed tail to tail.
 - The vector product  is defined by a vector pointing normal to the plane formed by the argument vectors, in the sense shown by turning from the first argument towards the second using the right hand, having a magnitude equal to the products of the magnitudes of the argument vectors and the sine of the same angle, $\theta \in [0,\pi]$.
 - you can figure out the triple scalar product between three vectors. (Resulting in the volume of the parallelpiped formed by the three arguments.)
+
+#+REVEAL: split
+#+BEGIN_SRC octave
+  a = [0,1.5,3]';
+  b = [-2 2 1]';
+  c = dot(a,b);
+  d = cross(a,b);
+#+END_SRC
+
   
 ** ($\S 1.1.3$) Projections, Bases and Coordinate Frames
 #+ATTR_REVEAL: :frag (appear appear appear ...)
@@ -187,8 +196,8 @@ Students should be able to:
 #+ATTR_HTML: :width 900px
 [[../images/AFC-1.4.png]]
 #+ATTR_REVEAL: :frag (appear)
-- Consider an arbitrary vector $\boldsymbol{v}\in\mathcal{V}$ as illustrated above. Let $[\boldsymbol{v}] = (v_1,v_2,v_3)^T$ be its representation in $\{\boldsymbol{e}_i\}$, $[\boldsymbol{v}'] = (v'_1,v'_2,v'_3)^T$ be its representation in $\{\boldsymbol{e}'_i\}$, and $\boldsymbol{Q}$ be the change of basis tensor from  $\{\boldsymbol{e}'_i\}$  $\{\boldsymbol{e}_i\}$.
-- By definition of the components we have $\boldsymbol{v} = v_i \{\boldsymbol{e}_i\} = v'_j \{\boldsymbol{e}'_j\}$ which implies $v_i = Q_{ij}v'_j$ upon substitution.
+- Consider an arbitrary vector $\boldsymbol{v}\in\mathcal{V}$ as illustrated above. Let $[\boldsymbol{v}] = (v_1,v_2,v_3)^T$ be its representation in $\{\boldsymbol{e}_i\}$, $[\boldsymbol{v}'] = (v'_1,v'_2,v'_3)^T$ be its representation in $\{\boldsymbol{e}'_i\}$, and $\boldsymbol{Q}$ be the change of basis tensor from  $\{\boldsymbol{e}'_i\}$ to $\{\boldsymbol{e}_i\}$.
+- By definition of the components we have $\boldsymbol{v} = v_i \boldsymbol{e}_i = v'_j \boldsymbol{e}'_j$ which implies $v_i = Q_{ij}v'_j$ upon substitution.
 - For second-order tensors, both indices should be processed by $Q_{ij}$ (from the left and right).
 
 ** Questions for next session

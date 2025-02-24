@@ -1,139 +1,344 @@
-<!DOCTYPE html>
-<html lang="en">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Unit 1: Tensor Algebra</title>
-<meta name="author" content="Fethi Okyar"/>
-<meta name="description" content=""/>
-<meta name="keywords" content=""/>
-<style type="text/css">
-.underline { text-decoration: underline; }
+<meta name="author" content="Fethi Okyar" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
 </style>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
-
-<link rel="stylesheet" href="../style.css"/>
-
-<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
-    if( window.location.search.match( /print-pdf/gi ) ) {
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
     }
+  };
 </script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
-<div class="reveal">
-<div class="slides">
-<section id="sec-title-slide"><h2>Unit 1: Tensor Algebra</h2> <h3>Reading: [AFCiCM/08] <a href="../textbook_excerpts/1_TensorAlgebra.pdf">Chapter 1</a></h3> <h4>2025-02-20</h4>
-</section>
-<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<div id="content" class="content">
+<h1 class="title">Unit 1: Tensor Algebra
+<br />
+<span class="subtitle">Reading: [AFCiCM/08] <a href="../textbook_excerpts/1_TensorAlgebra.pdf">Chapter 1</a></span>
+</h1>
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#/slide-orgc306b67">Preliminaries</a></li>
-<li><a href="#/slide-org21719bc">(\(\S 1.1\)) Vectors (Session 1)</a></li>
-<li><a href="#/slide-orgf145395">(\(\S 1.2\)) Index Notation (Session 2)</a></li>
-<li><a href="#/slide-org9c5521d">(\(\S 1.3\)) Second-Order Tensors (Session 3)</a></li>
-<li><a href="#/slide-orge7eac5c">Special Classes and Operations (Session 4)</a></li>
-<li><a href="#/slide-org2eeb56c">Invariants and Eigenvalues (Session 5)</a></li>
+<li><a href="#org209a9cc">Preliminaries</a></li>
+<li><a href="#orge605d17">(\(\S 1.1\)) Vectors (Session 1)</a></li>
+<li><a href="#orgc3e88eb">(\(\S 1.2\)) Index Notation (Session 2)</a></li>
+<li><a href="#org8e4a92f">(\(\S 1.3\)) Second-Order Tensors (Session 3)</a></li>
+<li><a href="#org35bbcd9">Special Classes and Operations (Session 4)</a></li>
+<li><a href="#orge30766b">Invariants and Eigenvalues (Session 5)</a></li>
 </ul>
 </div>
 </div>
-</section>
 
-<section>
-<section id="slide-orgc306b67">
-<h2 id="orgc306b67">Preliminaries</h2>
-<div class="outline-text-2" id="text-orgc306b67">
+<div id="outline-container-org209a9cc" class="outline-2">
+<h2 id="org209a9cc">Preliminaries</h2>
+<div class="outline-text-2" id="text-org209a9cc">
 </div>
-</section>
-<section id="slide-org15095a8">
-<h4 id="org15095a8">Units</h4>
+<div id="outline-container-org7f56f11" class="outline-4">
+<h4 id="org7f56f11">Units</h4>
+<div class="outline-text-4" id="text-org7f56f11">
 <p>
 What is the unit of force?
 </p>
-<ul>
-<li class="fragment appear">The fundamental units required to define the unit of force are the following
-<ul>
-<li class="fragment appear">Length [L]</li>
-<li class="fragment appear">Mass [M]</li>
-<li class="fragment appear">Time [T]</li>
-
+<ul class="org-ul">
+<li>The fundamental units required to define the unit of force are the following
+<ul class="org-ul">
+<li>Length [L]</li>
+<li>Mass [M]</li>
+<li>Time [T]</li>
 </ul></li>
-<li class="fragment appear">International System of Units, Newton, dyne, etc.</li>
-<li class="fragment appear">Anglo-saxon System of Units, lb-f</li>
-
+<li>International System of Units, Newton, dyne, etc.</li>
+<li>Anglo-saxon System of Units, lb-f</li>
 </ul>
+</div>
+</div>
+</div>
 
-</section>
-</section>
-<section>
-<section id="slide-org21719bc">
-<h2 id="org21719bc">(\(\S 1.1\)) Vectors (Session 1)</h2>
-<ul>
-<li class="fragment appear">A vector (or a first-order tensor, in general) is merely an abstraction/representation of a mechanical effect (a force, velocity, displacement, linear momentum, gradient of a scalar field variable, etc.).</li>
-<li class="fragment appear">It is one of the main actors in the field of mechanics (apart from others such as scalars, or higher-order tensors).</li>
-
+<div id="outline-container-orge605d17" class="outline-2">
+<h2 id="orge605d17">(\(\S 1.1\)) Vectors (Session 1)</h2>
+<div class="outline-text-2" id="text-orge605d17">
+<ul class="org-ul">
+<li>A vector (or a first-order tensor, in general) is merely an abstraction/representation of a mechanical effect (a force, velocity, displacement, linear momentum, gradient of a scalar field variable, etc.).</li>
+<li>It is one of the main actors in the field of mechanics (apart from others such as scalars, or higher-order tensors).</li>
 </ul>
+</div>
 
-</section>
-<section id="slide-orge7136f9">
-<h4 id="orge7136f9">Symbolic Representation of Vectors</h4>
-<ul>
-<li class="fragment appear">A vector/tensor is usually represented by placing a right arrow over the letter: \[ \vec{F},\; \vec{a},\,\, \vec{\nabla}\phi \]</li>
-<li class="fragment appear">or a tilde symbol below as in: \[ \underset{\sim}{F},\; \underset{\sim}{a},\; \underset{\sim}{\nabla}\phi \]</li>
-<li class="fragment appear">or simply using boldface if one has access to a modern typesetting system (such as latex) \[ \boldsymbol{F},\; \boldsymbol{a},\; \boldsymbol{\nabla}\phi \]</li>
-<li class="fragment appear">the difference of the \(\nabla\) is that it is an operator which requires an argument, for example a scalar field variable such as the temperature \(T\) \[ \boldsymbol{\nabla}{T} \]</li>
-<li class="fragment appear">represents the gradient of the temperature field.</li>
-
+<div id="outline-container-org62cb9bf" class="outline-4">
+<h4 id="org62cb9bf">Symbolic Representation of Vectors</h4>
+<div class="outline-text-4" id="text-org62cb9bf">
+<ul class="org-ul">
+<li>A vector/tensor is usually represented by placing a right arrow over the letter: \[ \vec{F},\; \vec{a},\,\, \vec{\nabla}\phi \]</li>
+<li>or a tilde symbol below as in: \[ \underset{\sim}{F},\; \underset{\sim}{a},\; \underset{\sim}{\nabla}\phi \]</li>
+<li>or simply using boldface if one has access to a modern typesetting system (such as latex) \[ \boldsymbol{F},\; \boldsymbol{a},\; \boldsymbol{\nabla}\phi \]</li>
+<li>the difference of the \(\nabla\) is that it is an operator which requires an argument, for example a scalar field variable such as the temperature \(T\) \[ \boldsymbol{\nabla}{T} \]</li>
+<li>represents the gradient of the temperature field.</li>
 </ul>
+</div>
+</div>
 
-</section>
-<section id="slide-org6eca20a">
-<h4 id="org6eca20a">Graphical Representation of Vectors</h4>
+<div id="outline-container-org98f66c3" class="outline-4">
+<h4 id="org98f66c3">Graphical Representation of Vectors</h4>
+<div class="outline-text-4" id="text-org98f66c3">
 
-<div id="org9d5b0e2" class="figure">
+<div id="orgd7db755" class="figure">
 <p><img src="../images/AFC-1.1.png" alt="AFC-1.1.png" width="900px" />
 </p>
 </div>
-<ul>
-<li class="fragment appear">Simplest algebraic operations such as addition or subtraction of two vectors, or the multiplication of a vector by a scalar can be performed graphically.</li>
-<li class="fragment appear">By letting \(\mathcal{V}\) be the set of all vectors, then it should be TRUE that \[ \boldsymbol{u} + \boldsymbol{v} \in \mathcal{V} \;\; \forall \boldsymbol{u},\,\boldsymbol{v} \in \mathcal{V} \;\; \mathrm{and}\;\; \alpha\boldsymbol{v} \in \mathcal{V} \;\; \forall \alpha \in \mathbb{R},\; \boldsymbol{v} \in \mathcal{V}\,.\]</li>
+<ul class="org-ul">
+<li>Simplest algebraic operations such as addition or subtraction of two vectors, or the multiplication of a vector by a scalar can be performed graphically.</li>
+<li>By letting \(\mathcal{V}\) be the set of all vectors, then it should be TRUE that \[ \boldsymbol{u} + \boldsymbol{v} \in \mathcal{V} \;\; \forall \boldsymbol{u},\,\boldsymbol{v} \in \mathcal{V} \;\; \mathrm{and}\;\; \alpha\boldsymbol{v} \in \mathcal{V} \;\; \forall \alpha \in \mathbb{R},\; \boldsymbol{v} \in \mathcal{V}\,.\]</li>
+</ul>
+</div>
+</div>
 
+<div id="outline-container-org9f42e0d" class="outline-3">
+<h3 id="org9f42e0d">(\(\S 1.1.2\)) Scalar and Vector Products</h3>
+<div class="outline-text-3" id="text-org9f42e0d">
+<ul class="org-ul">
+<li>The scalar or dot product is defined as the product of the magnitudes of both arguments, and cosine of the acute angle \(\theta \in [0,\pi]\) subtended between the argument vectors placed tail to tail.</li>
+<li>The vector product  is defined by a vector pointing normal to the plane formed by the argument vectors, in the sense shown by turning from the first argument towards the second using the right hand, having a magnitude equal to the products of the magnitudes of the argument vectors and the sine of the same angle, \(\theta \in [0,\pi]\).</li>
+<li>you can figure out the triple scalar product between three vectors. (Resulting in the volume of the parallelpiped formed by the three arguments.)</li>
 </ul>
 
-</section>
-<section id="slide-org9351977">
-<h3 id="org9351977">(\(\S 1.1.2\)) Scalar and Vector Products</h3>
-<ul>
-<li class="fragment appear">The scalar or dot product is defined as the product of the magnitudes of both arguments, and cosine of the acute angle \(\theta \in [0,\pi]\) subtended between the argument vectors placed tail to tail.</li>
-<li class="fragment appear">The vector product  is defined by a vector pointing normal to the plane formed by the argument vectors, in the sense shown by turning from the first argument towards the second using the right hand, having a magnitude equal to the products of the magnitudes of the argument vectors and the sine of the same angle, \(\theta \in [0,\pi]\).</li>
-<li class="fragment appear">you can figure out the triple scalar product between three vectors. (Resulting in the volume of the parallelpiped formed by the three arguments.)</li>
+<div class="org-src-container">
+<pre class="src src-octave">a <span style="color: #4f97d7;">=</span> [0<span style="color: #4f97d7;">,</span>1.5<span style="color: #4f97d7;">,</span>3]<span style="color: #4f97d7;">';</span>
+b <span style="color: #4f97d7;">=</span> [<span style="color: #4f97d7;">-</span>2 2 1]<span style="color: #4f97d7;">';</span>
+c <span style="color: #4f97d7;">=</span> dot(a<span style="color: #4f97d7;">,</span>b)<span style="color: #4f97d7;">;</span>
+d <span style="color: #4f97d7;">=</span> cross(a<span style="color: #4f97d7;">,</span>b)<span style="color: #4f97d7;">;</span>
+</pre>
+</div>
+</div>
+</div>
 
+
+<div id="outline-container-org7446dbc" class="outline-3">
+<h3 id="org7446dbc">(\(\S 1.1.3\)) Projections, Bases and Coordinate Frames</h3>
+<div class="outline-text-3" id="text-org7446dbc">
+<ul class="org-ul">
+<li>Any vector \(\boldsymbol{v}\) can be decomposed into two vectors, one of which  (\(\boldsymbol{v}_{e\parallel}\)) is parallel to a given direction (unit vector) \(\boldsymbol{e}\), and the other  (\(\boldsymbol{v}_{e\perp}\)) perpendicular to \(\boldsymbol{e}\).</li>
+<li>A right handed orthonormal basis (\(\boldsymbol{i}, \boldsymbol{j}, \boldsymbol{k}\) or \(\boldsymbol{e}_1, \boldsymbol{e}_2, \boldsymbol{e}_3\)) is one relative to which vectors can be decomposed into components along the three coordinate axes (a Cartesian coordinate system).</li>
+<li>Respective vector components \(v_1,\,v_2,\,v_3\) are found by taking the dot product between the vector \(\boldsymbol{v}\) and each one of the unit vectors \(\boldsymbol{e}_i,\,i=1,2,3\).</li>
+<li>And the vector can be written as a sum of its projections onto the three coordinate axes (the classical notation).</li>
+<li>An alternate way of expressing the vector \(\boldsymbol{v}\) is the matrix notation. There the vector components are written as an ordered triplet listed in a column.</li>
 </ul>
 
-</section>
-<section id="slide-orgfc1e8bf">
-<h3 id="orgfc1e8bf">(\(\S 1.1.3\)) Projections, Bases and Coordinate Frames</h3>
-<ul>
-<li class="fragment appear">Any vector \(\boldsymbol{v}\) can be decomposed into two vectors, one of which  (\(\boldsymbol{v}_{e\parallel}\)) is parallel to a given direction (unit vector) \(\boldsymbol{e}\), and the other  (\(\boldsymbol{v}_{e\perp}\)) perpendicular to \(\boldsymbol{e}\).</li>
-<li class="fragment appear">A right handed orthonormal basis (\(\boldsymbol{i}, \boldsymbol{j}, \boldsymbol{k}\) or \(\boldsymbol{e}_1, \boldsymbol{e}_2, \boldsymbol{e}_3\)) is one relative to which vectors can be decomposed into components along the three coordinate axes (a Cartesian coordinate system).</li>
-<li class="fragment appear">Respective vector components \(v_1,\,v_2,\,v_3\) are found by taking the dot product between the vector \(\boldsymbol{v}\) and each one of the unit vectors \(\boldsymbol{e}_i,\,i=1,2,3\).</li>
-<li class="fragment ...">And the vector can be written as a sum of its projections onto the three coordinate axes (the classical notation).</li>
-<li class="fragment ...">An alternate way of expressing the vector \(\boldsymbol{v}\) is the matrix notation. There the vector components are written as an ordered triplet listed in a column.</li>
 
-</ul>
-
-</section>
-<section id="slide-orgfc1e8bf-split">
-
-<div id="orgc5ca5ec" class="figure">
+<div id="org859e063" class="figure">
 <p><img src="../images/AFC-1.3.png" alt="AFC-1.3.png" width="900px" />
 </p>
 </div>
@@ -141,345 +346,333 @@ What is the unit of force?
 <p>
 Let there be two bases \(\{\boldsymbol{e}_i\}\) and \(\{\boldsymbol{e}'_i\}\), the primed system rotated about the third axis in the positive sense by 45 degrees. A vector \(\boldsymbol{v}\) which has components \([1,1,0]\) in the first system will have what components in the primed system?
 </p>
+</div>
+</div>
 
-</section>
-<section id="slide-org7ea82ef">
-<h3 id="org7ea82ef">Questions for next session</h3>
+<div id="outline-container-orge7d4045" class="outline-3">
+<h3 id="orge7d4045">Questions for next session</h3>
+<div class="outline-text-3" id="text-orge7d4045">
 <p>
 Ask AI:
 </p>
-<ul>
+<ul class="org-ul">
 <li>Explain the indicial notation from physics</li>
-
 </ul>
-</section>
-<section id="slide-orgac72a3b">
-<h3 id="orgac72a3b">Deliverables</h3>
+</div>
+</div>
+<div id="outline-container-orgaec0d14" class="outline-3">
+<h3 id="orgaec0d14">Deliverables</h3>
+<div class="outline-text-3" id="text-orgaec0d14">
 <p>
 Students should be able to:
 </p>
-<ul>
+<ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> perform simple algebraic operations with vectors</li>
-
 </ul>
+</div>
+</div>
+</div>
 
-</section>
-</section>
-<section>
-<section id="slide-orgf145395">
-<h2 id="orgf145395">(\(\S 1.2\)) Index Notation (Session 2)</h2>
-<ul>
-<li class="fragment appear">This is the way to code mechanics in a computational setting (such as Octave/matlab, or a finite element method tool).</li>
-<li class="fragment appear">It simplifies the scalar (inner) product operation greatly.</li>
-<li class="fragment appear">It provides a new tool for cyclic permutation.</li>
-
+<div id="outline-container-orgc3e88eb" class="outline-2">
+<h2 id="orgc3e88eb">(\(\S 1.2\)) Index Notation (Session 2)</h2>
+<div class="outline-text-2" id="text-orgc3e88eb">
+<ul class="org-ul">
+<li>This is the way to code mechanics in a computational setting (such as Octave/matlab, or a finite element method tool).</li>
+<li>It simplifies the scalar (inner) product operation greatly.</li>
+<li>It provides a new tool for cyclic permutation.</li>
 </ul>
+</div>
 
-</section>
-<section id="slide-org6f9cd26">
-<h3 id="org6f9cd26">(\(\S 1.2.1\))Summation Convention</h3>
-<ul>
-<li class="fragment appear">Instead of summing over the dimensions by rewriting each term for every other repeating dimension, a <b>repeating (<i>dummy</i>) index</b> implies summation (thus eliminating the need to write three terms explicitly), examples,
-<ul>
+<div id="outline-container-org4ced57a" class="outline-3">
+<h3 id="org4ced57a">(\(\S 1.2.1\))Summation Convention</h3>
+<div class="outline-text-3" id="text-org4ced57a">
+<ul class="org-ul">
+<li>Instead of summing over the dimensions by rewriting each term for every other repeating dimension, a <b>repeating (<i>dummy</i>) index</b> implies summation (thus eliminating the need to write three terms explicitly), examples,
+<ul class="org-ul">
 <li>\(\boldsymbol{a}\),</li>
 <li>\(\boldsymbol{a}\cdot\boldsymbol{b}\),</li>
 <li>\(\boldsymbol{a} = (\boldsymbol{c}\cdot\boldsymbol{b})\,\boldsymbol{b}\), etc.</li>
-
 </ul></li>
-<li class="fragment appear">An index may not repeat more than twice,</li>
-<li class="fragment appear">Non-repeating indices are called as <b>free indices</b>,</li>
-<li class="fragment appear">A valid expression according to summation convention should have the same free indices appearing at each term.</li>
-<li class="fragment appear">Work out some examples&#x2026;</li>
-
+<li>An index may not repeat more than twice,</li>
+<li>Non-repeating indices are called as <b>free indices</b>,</li>
+<li>A valid expression according to summation convention should have the same free indices appearing at each term.</li>
+<li>Work out some examples&#x2026;</li>
 </ul>
+</div>
+</div>
 
-</section>
-<section id="slide-orgea0657f">
-<h3 id="orgea0657f">(\(\S 1.2.2\)) Kroenecker&rsquo;s Delta and Permutation Symbols</h3>
-<ul>
-<li class="fragment appear">The Kroenecker delta symbol, \(\delta_{ij}\), is defined the dot (inner) product of base vectors.</li>
-<li class="fragment appear">It is also known as an <b>index shifter</b> (\(\boldsymbol{e}_i = \delta_{ij}\boldsymbol{e}_j\)).</li>
-<li class="fragment appear">The <b>permutation (<i>alternator</i>) symbol</b>, \(\epsilon_{ijk}\), is defined from the cyclic permutation that appears in the cross-product operation (\(\boldsymbol{e}_i\times \boldsymbol{e}_j = \epsilon_{ijk}\boldsymbol{e}_k\))</li>
-<li class="fragment appear">The permutation symbol also proves useful in representing the determinant of a second-order tensor.</li>
-
+<div id="outline-container-org1366281" class="outline-3">
+<h3 id="org1366281">(\(\S 1.2.2\)) Kroenecker&rsquo;s Delta and Permutation Symbols</h3>
+<div class="outline-text-3" id="text-org1366281">
+<ul class="org-ul">
+<li>The Kroenecker delta symbol, \(\delta_{ij}\), is defined the dot (inner) product of base vectors.</li>
+<li>It is also known as an <b>index shifter</b> (\(\boldsymbol{e}_i = \delta_{ij}\boldsymbol{e}_j\)).</li>
+<li>The <b>permutation (<i>alternator</i>) symbol</b>, \(\epsilon_{ijk}\), is defined from the cyclic permutation that appears in the cross-product operation (\(\boldsymbol{e}_i\times \boldsymbol{e}_j = \epsilon_{ijk}\boldsymbol{e}_k\))</li>
+<li>The permutation symbol also proves useful in representing the determinant of a second-order tensor.</li>
 </ul>
+</div>
+</div>
 
-</section>
-<section id="slide-org0d405b7">
-<h3 id="org0d405b7">Exercises: (\(\S 1.2.4\)) Vector Operations in Components</h3>
-<ul>
-<li class="fragment appear">the scalar (inner) product</li>
-<li class="fragment appear">the vector (cross) product</li>
-<li class="fragment appear">the triple scalar product</li>
-<li class="fragment appear">the triple vector product</li>
-
+<div id="outline-container-orgd529d83" class="outline-3">
+<h3 id="orgd529d83">Exercises: (\(\S 1.2.4\)) Vector Operations in Components</h3>
+<div class="outline-text-3" id="text-orgd529d83">
+<ul class="org-ul">
+<li>the scalar (inner) product</li>
+<li>the vector (cross) product</li>
+<li>the triple scalar product</li>
+<li>the triple vector product</li>
 </ul>
+</div>
+</div>
 
-</section>
-<section id="slide-org0b5e12c">
-<h3 id="org0b5e12c">Questions for next session</h3>
+<div id="outline-container-org97dbe62" class="outline-3">
+<h3 id="org97dbe62">Questions for next session</h3>
+<div class="outline-text-3" id="text-org97dbe62">
 <p>
 Ask AI:
 </p>
-<ul>
+<ul class="org-ul">
 <li>what is a second order tensor?</li>
-
 </ul>
-</section>
-<section id="slide-org7030fd7">
-<h3 id="org7030fd7">Deliverables</h3>
+</div>
+</div>
+<div id="outline-container-orgcc282ba" class="outline-3">
+<h3 id="orgcc282ba">Deliverables</h3>
+<div class="outline-text-3" id="text-orgcc282ba">
 <p>
 Students should be able to:
 </p>
-<ul>
+<ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> read and verify expressions written in the indicial notation</li>
 <li class="off"><code>[&#xa0;]</code> convert expressions between their tensor and indicial forms</li>
-
 </ul>
+</div>
+</div>
+</div>
 
-</section>
-</section>
-<section>
-<section id="slide-org9c5521d">
-<h2 id="org9c5521d">(\(\S 1.3\)) Second-Order Tensors (Session 3)</h2>
-<ul>
-<li class="fragment appear">Scalars have no index, first-order tensors (vectors) have one. The index is also referred to as the <b>basis</b>.</li>
-<li class="fragment appear">Abstraction of a physical field or operator that has <b>two</b> indices or bases, is called as a second-order tensor.</li>
-<li class="fragment appear">A transformer between vectors, \(\boldsymbol{S}\boldsymbol{u} = \boldsymbol{v}\), or \(\boldsymbol{S}(\boldsymbol{u}) = \boldsymbol{v}\)</li>
-
+<div id="outline-container-org8e4a92f" class="outline-2">
+<h2 id="org8e4a92f">(\(\S 1.3\)) Second-Order Tensors (Session 3)</h2>
+<div class="outline-text-2" id="text-org8e4a92f">
+<ul class="org-ul">
+<li>Scalars have no index, first-order tensors (vectors) have one. The index is also referred to as the <b>basis</b>.</li>
+<li>Abstraction of a physical field or operator that has <b>two</b> indices or bases, is called as a second-order tensor.</li>
+<li>A transformer between vectors, \(\boldsymbol{S}\boldsymbol{u} = \boldsymbol{v}\), or \(\boldsymbol{S}(\boldsymbol{u}) = \boldsymbol{v}\)</li>
 </ul>
-</section>
-<section id="slide-org911cc80">
-<h3 id="org911cc80">(\(\S 1.3.1\))  Definition</h3>
+</div>
+<div id="outline-container-org2bb530d" class="outline-3">
+<h3 id="org2bb530d">(\(\S 1.3.1\))  Definition</h3>
+<div class="outline-text-3" id="text-org2bb530d">
 <p>
 On the vector space \(\mathcal{V}\), we have a <i>linear</i> mapping \(\boldsymbol{T}:\mathcal{V}\rightarrow\mathcal{V}\) such that
 </p>
 
-<ul>
-<li class="fragment appear">\[\boldsymbol{T} (\boldsymbol{u} + \boldsymbol{v}) = \boldsymbol{T}\boldsymbol{u} + \boldsymbol{T} \boldsymbol{v} \; \forall \; \boldsymbol{u},\,\boldsymbol{v} \in \mathcal{V},\]</li>
-<li class="fragment appear">\[\boldsymbol{T}(\alpha \boldsymbol{u}) = \alpha \boldsymbol{T}\,\boldsymbol{u} \; \forall  \; \alpha \in \mathbb{R} \; \mathrm{and} \; \boldsymbol{u} \in \mathcal{V}.\]</li>
-<li class="fragment appear">The <b>zero tensor</b> annuls anything it multiplies with</li>
-<li class="fragment appear">The <b>identity tensor</b> \(\boldsymbol{I}\), reproduces its argument as its result: \(\boldsymbol{I} \boldsymbol{v} =  \boldsymbol{v}\).</li>
-<li class="fragment appear">The equality of two second-order tensors may be established by the identity \(\boldsymbol{S}\boldsymbol{v}=\boldsymbol{T}\boldsymbol{v}\) for all \(\boldsymbol{v} \in \mathcal{C}\).</li>
-
+<ul class="org-ul">
+<li>\[\boldsymbol{T} (\boldsymbol{u} + \boldsymbol{v}) = \boldsymbol{T}\boldsymbol{u} + \boldsymbol{T} \boldsymbol{v} \; \forall \; \boldsymbol{u},\,\boldsymbol{v} \in \mathcal{V},\]</li>
+<li>\[\boldsymbol{T}(\alpha \boldsymbol{u}) = \alpha \boldsymbol{T}\,\boldsymbol{u} \; \forall  \; \alpha \in \mathbb{R} \; \mathrm{and} \; \boldsymbol{u} \in \mathcal{V}.\]</li>
+<li>The <b>zero tensor</b> annuls anything it multiplies with</li>
+<li>The <b>identity tensor</b> \(\boldsymbol{I}\), reproduces its argument as its result: \(\boldsymbol{I} \boldsymbol{v} =  \boldsymbol{v}\).</li>
+<li>The equality of two second-order tensors may be established by the identity \(\boldsymbol{S}\boldsymbol{v}=\boldsymbol{T}\boldsymbol{v}\) for all \(\boldsymbol{v} \in \mathcal{C}\).</li>
 </ul>
 
-</section>
-<section id="slide-org911cc80-split">
 <p>
 Example 1: Projections:
 </p>
 
-<div id="org5974ece" class="figure">
+<div id="orgf5f558a" class="figure">
 <p><img src="../images/AFC-1.3.1a.png" alt="AFC-1.3.1a.png" width="900px" />
 </p>
 </div>
 
-</section>
-<section id="slide-org911cc80-split">
 <p>
 Example 2: Rotations:
 </p>
 
-<div id="orgcacc236" class="figure">
+<div id="org04bf241" class="figure">
 <p><img src="../images/AFC-1.3.1b.png" alt="AFC-1.3.1b.png" width="900px" />
 </p>
 </div>
 
-</section>
-<section id="slide-org911cc80-split">
 <p>
 Example 3: Reflections:
 </p>
 
-<div id="orgfaca769" class="figure">
+<div id="orge965ba3" class="figure">
 <p><img src="../images/AFC-1.3.1c.png" alt="AFC-1.3.1c.png" width="900px" />
 </p>
 </div>
+</div>
+</div>
 
-</section>
-<section id="slide-org9faa427">
-<h3 id="org9faa427">(\(\S 1.3.2\)) Second-Order Tensor Algebra</h3>
+<div id="outline-container-orgda6ddb4" class="outline-3">
+<h3 id="orgda6ddb4">(\(\S 1.3.2\)) Second-Order Tensor Algebra</h3>
+<div class="outline-text-3" id="text-orgda6ddb4">
 <p>
 Let \(\mathcal{V}^2\) be the set of second-order tensors, then
 </p>
-<ul>
-<li class="fragment appear">The summation of two elements of \(\mathcal{V}^2\) is also a member of  \(\mathcal{V}^2\),</li>
-<li class="fragment appear">The multiplication of a member of  \(\mathcal{V}^2\) by a scalar, is also a member of  \(\mathcal{V}^2\),</li>
-<li class="fragment appear">By multiplying two elements from  \(\mathcal{V}^2\), taking the <b>inner product</b> (the summation between columns of the left tensor with the rows of the right tensor) between adjacent indices is implied.</li>
-<li class="fragment appear">It is implied that \[(\boldsymbol{S}\boldsymbol{T})\boldsymbol{u} = \boldsymbol{S}(\boldsymbol{T}\boldsymbol{u})\]</li>
-
+<ul class="org-ul">
+<li>The summation of two elements of \(\mathcal{V}^2\) is also a member of  \(\mathcal{V}^2\),</li>
+<li>The multiplication of a member of  \(\mathcal{V}^2\) by a scalar, is also a member of  \(\mathcal{V}^2\),</li>
+<li>By multiplying two elements from  \(\mathcal{V}^2\), taking the <b>inner product</b> (the summation between columns of the left tensor with the rows of the right tensor) between adjacent indices is implied.</li>
+<li>It is implied that \[(\boldsymbol{S}\boldsymbol{T})\boldsymbol{u} = \boldsymbol{S}(\boldsymbol{T}\boldsymbol{u})\]</li>
 </ul>
+</div>
+</div>
 
-</section>
-<section id="slide-orgb8bc58f">
-<h3 id="orgb8bc58f">(\(\S 1.3.3\)) Indicial Representation</h3>
-<ul>
-<li class="fragment appear">The components of a second-order tensor \(\boldsymbol{S}\) in a coordinate frame \(\{\boldsymbol{e}_i\}\) are nine numbers \(S_{ij}\;(1\leq i,j \leq 3)\) defined by \[S_{ij} = \boldsymbol{e}_i \cdot \boldsymbol{S}\boldsymbol{e}_j.\]</li>
-<li class="fragment appear">Given vectors \(\boldsymbol{u} = u_i \boldsymbol{e}_i\) and \(\boldsymbol{v} = v_j \boldsymbol{e}_j\) such that \(\boldsymbol{v} = \boldsymbol{S} \boldsymbol{u}\), we can write \[v_i = S_{ij} u_j\]</li>
-<li class="fragment appear">The nine components arranged into a square matrix is called the <b>matrix representation</b>, and is denoted as \([\boldsymbol{S}]\in\mathbb{R}\).</li>
-<li class="fragment appear">The transpose operation is simply obtained by interchanging the rows and columns of the matrix \([\boldsymbol{S}]\), and is denoted as  \([\boldsymbol{S}]^T\).</li>
-<li class="fragment appear">The tensor equation \(\boldsymbol{v} = \boldsymbol{S} \boldsymbol{u}\) can be written in various forms as \[\boldsymbol{v} = \boldsymbol{S} \boldsymbol{u} \; \Leftrightarrow \; v_i=S_{ij}u_j \; \Leftrightarrow \; [\boldsymbol{v}] = [\boldsymbol{S}] [\boldsymbol{u}] \]</li>
-
+<div id="outline-container-org9a9860c" class="outline-3">
+<h3 id="org9a9860c">(\(\S 1.3.3\)) Indicial Representation</h3>
+<div class="outline-text-3" id="text-org9a9860c">
+<ul class="org-ul">
+<li>The components of a second-order tensor \(\boldsymbol{S}\) in a coordinate frame \(\{\boldsymbol{e}_i\}\) are nine numbers \(S_{ij}\;(1\leq i,j \leq 3)\) defined by \[S_{ij} = \boldsymbol{e}_i \cdot \boldsymbol{S}\boldsymbol{e}_j.\]</li>
+<li>Given vectors \(\boldsymbol{u} = u_i \boldsymbol{e}_i\) and \(\boldsymbol{v} = v_j \boldsymbol{e}_j\) such that \(\boldsymbol{v} = \boldsymbol{S} \boldsymbol{u}\), we can write \[v_i = S_{ij} u_j\]</li>
+<li>The nine components arranged into a square matrix is called the <b>matrix representation</b>, and is denoted as \([\boldsymbol{S}]\in\mathbb{R}\).</li>
+<li>The transpose operation is simply obtained by interchanging the rows and columns of the matrix \([\boldsymbol{S}]\), and is denoted as  \([\boldsymbol{S}]^T\).</li>
+<li>The tensor equation \(\boldsymbol{v} = \boldsymbol{S} \boldsymbol{u}\) can be written in various forms as \[\boldsymbol{v} = \boldsymbol{S} \boldsymbol{u} \; \Leftrightarrow \; v_i=S_{ij}u_j \; \Leftrightarrow \; [\boldsymbol{v}] = [\boldsymbol{S}] [\boldsymbol{u}] \]</li>
 </ul>
+</div>
+</div>
 
-</section>
-<section id="slide-org3af542e">
-<h3 id="org3af542e">Questions for next session</h3>
+<div id="outline-container-org0fcbd17" class="outline-3">
+<h3 id="org0fcbd17">Questions for next session</h3>
+<div class="outline-text-3" id="text-org0fcbd17">
 <p>
 Ask AI:
 </p>
-<ul>
+<ul class="org-ul">
 <li>How can a second-order tensor be symmetric or invertible? What is the relationship between invertibility and determinant of a second-order tensor?</li>
-
 </ul>
-</section>
-<section id="slide-orgcb61975">
-<h3 id="orgcb61975">Deliverables</h3>
+</div>
+</div>
+<div id="outline-container-orgf65189e" class="outline-3">
+<h3 id="orgf65189e">Deliverables</h3>
+<div class="outline-text-3" id="text-orgf65189e">
 <p>
 Students should be able to:
 </p>
-<ul>
+<ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> transform vectors linearly via second-order tensors</li>
 <li class="off"><code>[&#xa0;]</code> convert expressions between their tensor and matrix forms</li>
-
 </ul>
-
-</section>
-</section>
-<section>
-<section id="slide-orge7eac5c">
-<h2 id="orge7eac5c">Special Classes and Operations (Session 4)</h2>
-<div class="outline-text-2" id="text-orge7eac5c">
 </div>
-</section>
-<section id="slide-orge27ae3d">
-<h3 id="orge27ae3d">(\(\S 1.3.6\)) Symmetry, Inverse, Orthogonality, etc.</h3>
-<ul>
-<li class="fragment appear">To any tensor \(\boldsymbol{S}\in \mathcal{V}^2\) we associate a <b>transpose</b> \(\boldsymbol{S}^T \in \mathcal{V}^2\), which shows \[\boldsymbol{S}\boldsymbol{u} \cdot\boldsymbol{v} = \boldsymbol{u} \cdot \boldsymbol{S}^T\boldsymbol{v} \; \forall \boldsymbol{u},\boldsymbol{v} \in \mathcal{V}.\]</li>
-<li class="fragment appear">We say, a tensor is <b>symmetric</b> if \(\boldsymbol{S}^T = \boldsymbol{S}\), and,</li>
-<li class="fragment appear"><b>skew-symmetric</b> if  \(\boldsymbol{S}^T = -\boldsymbol{S}\).</li>
-<li class="fragment appear">A tensor \(\boldsymbol{T}\in \mathcal{V}^2\) is said to be <b>positive-definite</b> if it satisfies \[ \boldsymbol{v} \cdot \boldsymbol{T}\boldsymbol{v} > 0\; \forall \boldsymbol{v}\neq 0,\]</li>
-<li class="fragment appear">and is said to be <b>invertible</b> if there exists an <b>inverse</b> \(\boldsymbol{P}^{-1}\in \mathcal{V}^2\) such that \[\boldsymbol{P}\boldsymbol{P}^{-1} = \boldsymbol{P}^{-1} \boldsymbol{P} = \boldsymbol{I}.\]</li>
+</div>
+</div>
 
+<div id="outline-container-org35bbcd9" class="outline-2">
+<h2 id="org35bbcd9">Special Classes and Operations (Session 4)</h2>
+<div class="outline-text-2" id="text-org35bbcd9">
+</div>
+<div id="outline-container-orgc322e90" class="outline-3">
+<h3 id="orgc322e90">(\(\S 1.3.6\)) Symmetry, Inverse, Orthogonality, etc.</h3>
+<div class="outline-text-3" id="text-orgc322e90">
+<ul class="org-ul">
+<li>To any tensor \(\boldsymbol{S}\in \mathcal{V}^2\) we associate a <b>transpose</b> \(\boldsymbol{S}^T \in \mathcal{V}^2\), which shows \[\boldsymbol{S}\boldsymbol{u} \cdot\boldsymbol{v} = \boldsymbol{u} \cdot \boldsymbol{S}^T\boldsymbol{v} \; \forall \boldsymbol{u},\boldsymbol{v} \in \mathcal{V}.\]</li>
+<li>We say, a tensor is <b>symmetric</b> if \(\boldsymbol{S}^T = \boldsymbol{S}\), and,</li>
+<li><b>skew-symmetric</b> if  \(\boldsymbol{S}^T = -\boldsymbol{S}\).</li>
+<li>A tensor \(\boldsymbol{T}\in \mathcal{V}^2\) is said to be <b>positive-definite</b> if it satisfies \[ \boldsymbol{v} \cdot \boldsymbol{T}\boldsymbol{v} > 0\; \forall \boldsymbol{v}\neq 0,\]</li>
+<li>and is said to be <b>invertible</b> if there exists an <b>inverse</b> \(\boldsymbol{P}^{-1}\in \mathcal{V}^2\) such that \[\boldsymbol{P}\boldsymbol{P}^{-1} = \boldsymbol{P}^{-1} \boldsymbol{P} = \boldsymbol{I}.\]</li>
 </ul>
 
-</section>
-<section id="slide-orge27ae3d-split">
-<ul>
-<li class="fragment appear">The inverse and transpose operations may commute, that is \((\boldsymbol{P}^{-1})^T = (\boldsymbol{P}^T)^{-1}\), and this is usually denoted as \(\boldsymbol{S}^{-T}\).</li>
-<li class="fragment appear">A tensor \(\boldsymbol{Q}\in \mathcal{V}^2\) is said to be <b>orthogonal</b> if \(\boldsymbol{Q}^T= \boldsymbol{Q}^{-1}\), that is  \[\boldsymbol{Q}\boldsymbol{Q}^{T} = \boldsymbol{Q}^{T} \boldsymbol{Q} = \boldsymbol{I}.\] Such a tensor produces a right-handed rotation <b>rotation</b>, provided it has a positive determinant.</li>
-
+<ul class="org-ul">
+<li>The inverse and transpose operations may commute, that is \((\boldsymbol{P}^{-1})^T = (\boldsymbol{P}^T)^{-1}\), and this is usually denoted as \(\boldsymbol{S}^{-T}\).</li>
+<li>A tensor \(\boldsymbol{Q}\in \mathcal{V}^2\) is said to be <b>orthogonal</b> if \(\boldsymbol{Q}^T= \boldsymbol{Q}^{-1}\), that is  \[\boldsymbol{Q}\boldsymbol{Q}^{T} = \boldsymbol{Q}^{T} \boldsymbol{Q} = \boldsymbol{I}.\] Such a tensor produces a right-handed rotation <b>rotation</b>, provided it has a positive determinant.</li>
 </ul>
+</div>
+</div>
 
-</section>
-<section id="slide-org0243e18">
-<h3 id="org0243e18">(\(\S 1.3.7\)) Change of Basis</h3>
-<ul>
-<li class="fragment appear">Let \(\{\boldsymbol{e}_i\}\) and \(\{\boldsymbol{e}'_i\}\) be two right-handed bases vector sets in \(\mathbb{E}^3\), where expression of the primed set in terms of the unprimed can be written as \[\boldsymbol{e}'_j = (\boldsymbol{e}_1 \cdot \boldsymbol{e}'_j) \boldsymbol{e}_1 + (\boldsymbol{e}_2 \cdot \boldsymbol{e}'_j) \boldsymbol{e}_2 + (\boldsymbol{e}_3 \cdot \boldsymbol{e}'_j) \boldsymbol{e}_3 = (\boldsymbol{e}_i \cdot \boldsymbol{e}'_j) \boldsymbol{e}_i,\]</li>
-<li class="fragment appear">while the unprimed set can similarly be expressed in terms of the primed, as \[\boldsymbol{e}_j = (\boldsymbol{e}_j \cdot \boldsymbol{e}'_1) \boldsymbol{e}'_1 + (\boldsymbol{e}_j \cdot \boldsymbol{e}'_2) \boldsymbol{e}'_2 + (\boldsymbol{e}_j \cdot \boldsymbol{e}'_3) \boldsymbol{e}'_3 = (\boldsymbol{e}_j \cdot \boldsymbol{e}'_i) \boldsymbol{e}'_i.\]</li>
-<li class="fragment appear">Defining the term in parantesis as the <b>change of basis</b> tensor (a.k.a. <b>rotation</b>), \(Q_{ij} = (\boldsymbol{e}_i \cdot \boldsymbol{e}'_j)\), the above expressions can be written as \(\boldsymbol{e}'_j = Q_{ij} \boldsymbol{e}_i\), and, \(\boldsymbol{e}_j = Q_{jk} \boldsymbol{e}'_k\).</li>
-<li class="fragment appear">If the former expansion is used in the latter, or the latter is used in the former, we find out that the tensor \(\boldsymbol{Q}\) is orthogonal.</li>
-
+<div id="outline-container-orgc71becb" class="outline-3">
+<h3 id="orgc71becb">(\(\S 1.3.7\)) Change of Basis</h3>
+<div class="outline-text-3" id="text-orgc71becb">
+<ul class="org-ul">
+<li>Let \(\{\boldsymbol{e}_i\}\) and \(\{\boldsymbol{e}'_i\}\) be two right-handed bases vector sets in \(\mathbb{E}^3\), where expression of the primed set in terms of the unprimed can be written as \[\boldsymbol{e}'_j = (\boldsymbol{e}_1 \cdot \boldsymbol{e}'_j) \boldsymbol{e}_1 + (\boldsymbol{e}_2 \cdot \boldsymbol{e}'_j) \boldsymbol{e}_2 + (\boldsymbol{e}_3 \cdot \boldsymbol{e}'_j) \boldsymbol{e}_3 = (\boldsymbol{e}_i \cdot \boldsymbol{e}'_j) \boldsymbol{e}_i,\]</li>
+<li>while the unprimed set can similarly be expressed in terms of the primed, as \[\boldsymbol{e}_j = (\boldsymbol{e}_j \cdot \boldsymbol{e}'_1) \boldsymbol{e}'_1 + (\boldsymbol{e}_j \cdot \boldsymbol{e}'_2) \boldsymbol{e}'_2 + (\boldsymbol{e}_j \cdot \boldsymbol{e}'_3) \boldsymbol{e}'_3 = (\boldsymbol{e}_j \cdot \boldsymbol{e}'_i) \boldsymbol{e}'_i.\]</li>
+<li>Defining the term in parantesis as the <b>change of basis</b> tensor (a.k.a. <b>rotation</b>), \(Q_{ij} = (\boldsymbol{e}_i \cdot \boldsymbol{e}'_j)\), the above expressions can be written as \(\boldsymbol{e}'_j = Q_{ij} \boldsymbol{e}_i\), and, \(\boldsymbol{e}_j = Q_{jk} \boldsymbol{e}'_k\).</li>
+<li>If the former expansion is used in the latter, or the latter is used in the former, we find out that the tensor \(\boldsymbol{Q}\) is orthogonal.</li>
 </ul>
+</div>
 
-</section>
-<section id="slide-orga677c26">
-<h4 id="orga677c26">Transformation of Components Under a Change of Basis</h4>
+<div id="outline-container-orgfe2a472" class="outline-4">
+<h4 id="orgfe2a472">Transformation of Components Under a Change of Basis</h4>
+<div class="outline-text-4" id="text-orgfe2a472">
 
-<div id="org0f2a377" class="figure">
+<div id="org7b6b46c" class="figure">
 <p><img src="../images/AFC-1.4.png" alt="AFC-1.4.png" width="900px" />
 </p>
 </div>
-<ul>
-<li class="fragment appear">Consider an arbitrary vector \(\boldsymbol{v}\in\mathcal{V}\) as illustrated above. Let \([\boldsymbol{v}] = (v_1,v_2,v_3)^T\) be its representation in \(\{\boldsymbol{e}_i\}\), \([\boldsymbol{v}'] = (v'_1,v'_2,v'_3)^T\) be its representation in \(\{\boldsymbol{e}'_i\}\), and \(\boldsymbol{Q}\) be the change of basis tensor from  \(\{\boldsymbol{e}'_i\}\)  \(\{\boldsymbol{e}_i\}\).</li>
-<li class="fragment appear">By definition of the components we have \(\boldsymbol{v} = v_i \{\boldsymbol{e}_i\} = v'_j \{\boldsymbol{e}'_j\}\) which implies \(v_i = Q_{ij}v'_j\) upon substitution.</li>
-<li class="fragment appear">For second-order tensors, both indices should be processed by \(Q_{ij}\) (from the left and right).</li>
-
+<ul class="org-ul">
+<li>Consider an arbitrary vector \(\boldsymbol{v}\in\mathcal{V}\) as illustrated above. Let \([\boldsymbol{v}] = (v_1,v_2,v_3)^T\) be its representation in \(\{\boldsymbol{e}_i\}\), \([\boldsymbol{v}'] = (v'_1,v'_2,v'_3)^T\) be its representation in \(\{\boldsymbol{e}'_i\}\), and \(\boldsymbol{Q}\) be the change of basis tensor from  \(\{\boldsymbol{e}'_i\}\)  \(\{\boldsymbol{e}_i\}\).</li>
+<li>By definition of the components we have \(\boldsymbol{v} = v_i \{\boldsymbol{e}_i\} = v'_j \{\boldsymbol{e}'_j\}\) which implies \(v_i = Q_{ij}v'_j\) upon substitution.</li>
+<li>For second-order tensors, both indices should be processed by \(Q_{ij}\) (from the left and right).</li>
 </ul>
-
-</section>
-<section id="slide-org9768359">
-<h3 id="org9768359">Questions for next session</h3>
-<p>
-Ask AI:
-</p>
-<ul>
-<li>What sort of information is carried by the eigenvalues of a second-order tensor?</li>
-
-</ul>
-</section>
-<section id="slide-org7d030e1">
-<h3 id="org7d030e1">Deliverables</h3>
-<p>
-Students should be able to:
-</p>
-<ul>
-<li class="off"><code>[&#xa0;]</code> perform change of basis of vector components</li>
-
-</ul>
-
-</section>
-</section>
-<section>
-<section id="slide-org2eeb56c">
-<h2 id="org2eeb56c">Invariants and Eigenvalues (Session 5)</h2>
-<div class="outline-text-2" id="text-org2eeb56c">
 </div>
-</section>
-<section id="slide-org3c319c8">
-<h3 id="org3c319c8">(\(\S 1.3.8\)) The Trace and the Determinant</h3>
-</section>
-<section id="slide-org3621906">
-<h3 id="org3621906">(\(\S 1.3.9\)) Eigenvalues, Eigenvectors and Principal Invariants</h3>
-</section>
-<section id="slide-org85cd8b3">
-<h3 id="org85cd8b3">Questions for next session</h3>
+</div>
+</div>
+
+<div id="outline-container-orgf001549" class="outline-3">
+<h3 id="orgf001549">Questions for next session</h3>
+<div class="outline-text-3" id="text-orgf001549">
 <p>
 Ask AI:
 </p>
-<ul>
-<li>What is the physical interpretation of the gradient of a scalar or vector field variable?</li>
-
+<ul class="org-ul">
+<li>What sort of information is carried by the eigenvalues of a second-order tensor?</li>
 </ul>
-</section>
-<section id="slide-org0c3fd33">
-<h3 id="org0c3fd33">Deliverables</h3>
+</div>
+</div>
+<div id="outline-container-orgf1d06a7" class="outline-3">
+<h3 id="orgf1d06a7">Deliverables</h3>
+<div class="outline-text-3" id="text-orgf1d06a7">
 <p>
 Students should be able to:
 </p>
-<ul>
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> perform change of basis of vector components</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge30766b" class="outline-2">
+<h2 id="orge30766b">Invariants and Eigenvalues (Session 5)</h2>
+<div class="outline-text-2" id="text-orge30766b">
+</div>
+<div id="outline-container-orgaaac973" class="outline-3">
+<h3 id="orgaaac973">(\(\S 1.3.8\)) The Trace and the Determinant</h3>
+</div>
+<div id="outline-container-org0814f10" class="outline-3">
+<h3 id="org0814f10">(\(\S 1.3.9\)) Eigenvalues, Eigenvectors and Principal Invariants</h3>
+</div>
+<div id="outline-container-org2d34d04" class="outline-3">
+<h3 id="org2d34d04">Questions for next session</h3>
+<div class="outline-text-3" id="text-org2d34d04">
+<p>
+Ask AI:
+</p>
+<ul class="org-ul">
+<li>What is the physical interpretation of the gradient of a scalar or vector field variable?</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc5a96cd" class="outline-3">
+<h3 id="orgc5a96cd">Deliverables</h3>
+<div class="outline-text-3" id="text-orgc5a96cd">
+<p>
+Students should be able to:
+</p>
+<ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> calculate the determinant of a second-order tensor</li>
 <li class="off"><code>[&#xa0;]</code> calculate the eigenvalues and eigenvectors of a second-order tensor</li>
-
 </ul>
 
-</section>
-<section id="slide-org0c3fd33-split">
 <p>
 END OF UNIT 1
 </p>
-</section>
-</section>
 </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
-
-<script>
-// Full list of configuration options available here:
-// https://github.com/hakimel/reveal.js#configuration
-Reveal.initialize({
-slideNumber:"c/t", width:1920, height:1080,
-
-// Optional libraries used to extend on reveal.js
-dependencies: [
- { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
- { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
-
-});
-
-</script>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2025-02-20</p>
+<p class="author">Author: Fethi Okyar</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
 </body>
 </html>
