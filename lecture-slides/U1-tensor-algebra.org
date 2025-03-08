@@ -119,17 +119,23 @@ Students should be able to:
 
 * ($\S 1.3$) Second-Order Tensors (Session 3)
 #+ATTR_REVEAL: :frag (appear)
-- Scalars have no index, first-order tensors (vectors) have one. The index is also referred to as the *basis*.
+- Scalars have no index, first-order tensors (vectors) have one. The index is associated with a *basis*.
 - Abstraction of a physical field or operator that has *two* indices or bases, is called as a second-order tensor.
 - A transformer between vectors, $\boldsymbol{S}\boldsymbol{u} = \boldsymbol{v}$, or $\boldsymbol{S}(\boldsymbol{u}) = \boldsymbol{v}$
 ** ($\S 1.3.1$)  Definition
 On the vector space $\mathcal{V}$, we have a /linear/ mapping $\boldsymbol{T}:\mathcal{V}\rightarrow\mathcal{V}$ such that
 
 #+ATTR_REVEAL: :frag (appear)
-- $$\boldsymbol{T} (\boldsymbol{u} + \boldsymbol{v}) = \boldsymbol{T}\boldsymbol{u} + \boldsymbol{T} \boldsymbol{v} \; \forall \; \boldsymbol{u},\,\boldsymbol{v} \in \mathcal{V},$$
-- $$\boldsymbol{T}(\alpha \boldsymbol{u}) = \alpha \boldsymbol{T}\,\boldsymbol{u} \; \forall  \; \alpha \in \mathbb{R} \; \mathrm{and} \; \boldsymbol{u} \in \mathcal{V}.$$
+- addition
+  $$\boldsymbol{T} (\boldsymbol{u} + \boldsymbol{v}) = \boldsymbol{T}\boldsymbol{u} + \boldsymbol{T} \boldsymbol{v} \; \forall \; \boldsymbol{u},\,\boldsymbol{v} \in \mathcal{V},$$
+- scalar multiplication
+  $$\boldsymbol{T}(\alpha \boldsymbol{u}) = \alpha \boldsymbol{T}\,\boldsymbol{u} \; \forall  \; \alpha \in \mathbb{R} \; \mathrm{and} \; \boldsymbol{u} \in \mathcal{V}.$$
 - The *zero tensor* annuls anything it multiplies with
+- Some examples to second order tensors are the Kroenecker's delta, $\delta_{ij}$, the change of basis tensor, $Q_{i'j}$, etc.  
+
+#+REVEAL: split
 - The *identity tensor* $\boldsymbol{I}$, reproduces its argument as its result: $\boldsymbol{I} \boldsymbol{v} =  \boldsymbol{v}$.
+- $\delta_{ij}$ is the identitiy tensor in indicial notation
 - The equality of two second-order tensors may be established by the identity $\boldsymbol{S}\boldsymbol{v}=\boldsymbol{T}\boldsymbol{v}$ for all $\boldsymbol{v} \in \mathcal{C}$.
 
 #+REVEAL: split
@@ -171,10 +177,10 @@ Students should be able to:
 - [ ] transform vectors linearly via second-order tensors
 - [ ] convert expressions between their tensor and matrix forms
 
-* Special Classes and Operations (Session 4)
+* ($\S 1.3$) Special Classes and Operations (Session 4)
 ** ($\S 1.3.6$) Symmetry, Inverse, Orthogonality, etc.
 #+ATTR_REVEAL: :frag (appear)
-- To any tensor $\boldsymbol{S}\in \mathcal{V}^2$ we associate a *transpose* $\boldsymbol{S}^T \in \mathcal{V}^2$, which shows $$\boldsymbol{S}\boldsymbol{u} \cdot\boldsymbol{v} = \boldsymbol{u} \cdot \boldsymbol{S}^T\boldsymbol{v} \; \forall \boldsymbol{u},\boldsymbol{v} \in \mathcal{V}.$$
+- To any tensor $\boldsymbol{S}\in \mathcal{V}^2$ we associate a *transpose* $\boldsymbol{S}^T \in \mathcal{V}^2$, which shows $$\boldsymbol{S}\boldsymbol{u} \cdot\boldsymbol{v} = \boldsymbol{u} \cdot \boldsymbol{S}^T\boldsymbol{v} \;\;\; \forall \boldsymbol{u},\boldsymbol{v} \in \mathcal{V}.$$
 - We say, a tensor is *symmetric* if $\boldsymbol{S}^T = \boldsymbol{S}$, and,
 - *skew-symmetric* if  $\boldsymbol{S}^T = -\boldsymbol{S}$.
 - A tensor $\boldsymbol{T}\in \mathcal{V}^2$ is said to be *positive-definite* if it satisfies $$ \boldsymbol{v} \cdot \boldsymbol{T}\boldsymbol{v} > 0\; \forall \boldsymbol{v}\neq 0,$$
@@ -189,15 +195,15 @@ Students should be able to:
 #+ATTR_REVEAL: :frag (appear)
 - Let $\{\boldsymbol{e}_i\}$ and $\{\boldsymbol{e}'_i\}$ be two right-handed bases vector sets in $\mathbb{E}^3$, where expression of the primed set in terms of the unprimed can be written as $$\boldsymbol{e}'_j = (\boldsymbol{e}_1 \cdot \boldsymbol{e}'_j) \boldsymbol{e}_1 + (\boldsymbol{e}_2 \cdot \boldsymbol{e}'_j) \boldsymbol{e}_2 + (\boldsymbol{e}_3 \cdot \boldsymbol{e}'_j) \boldsymbol{e}_3 = (\boldsymbol{e}_i \cdot \boldsymbol{e}'_j) \boldsymbol{e}_i,$$
 - while the unprimed set can similarly be expressed in terms of the primed, as $$\boldsymbol{e}_j = (\boldsymbol{e}_j \cdot \boldsymbol{e}'_1) \boldsymbol{e}'_1 + (\boldsymbol{e}_j \cdot \boldsymbol{e}'_2) \boldsymbol{e}'_2 + (\boldsymbol{e}_j \cdot \boldsymbol{e}'_3) \boldsymbol{e}'_3 = (\boldsymbol{e}_j \cdot \boldsymbol{e}'_i) \boldsymbol{e}'_i.$$
-- Defining the term in parantesis as the *change of basis* tensor (a.k.a. *rotation*), $Q_{ij} = (\boldsymbol{e}_i \cdot \boldsymbol{e}'_j)$, the above expressions can be written as $\boldsymbol{e}'_j = Q_{ij} \boldsymbol{e}_i$, and, $\boldsymbol{e}_j = Q_{jk} \boldsymbol{e}'_k$.
+- Defining the term in parantesis as the *change of basis* tensor (a.k.a. *rotation*), $Q_{ij} = (\boldsymbol{e}'_i \cdot \boldsymbol{e}_j)$, the above expressions can be written as $\boldsymbol{e}_j = Q_{ij} \boldsymbol{e}'_i$, and, $\boldsymbol{e}'_j = Q_{jk} \boldsymbol{e}_k$.
 - If the former expansion is used in the latter, or the latter is used in the former, we find out that the tensor $\boldsymbol{Q}$ is orthogonal.
 
 *** Transformation of Components Under a Change of Basis
 #+ATTR_HTML: :width 900px
 [[../images/AFC-1.4.png]]
 #+ATTR_REVEAL: :frag (appear)
-- Consider an arbitrary vector $\boldsymbol{v}\in\mathcal{V}$ as illustrated above. Let $[\boldsymbol{v}] = (v_1,v_2,v_3)^T$ be its representation in $\{\boldsymbol{e}_i\}$, $[\boldsymbol{v}'] = (v'_1,v'_2,v'_3)^T$ be its representation in $\{\boldsymbol{e}'_i\}$, and $\boldsymbol{Q}$ be the change of basis tensor from  $\{\boldsymbol{e}'_i\}$ to $\{\boldsymbol{e}_i\}$.
-- By definition of the components we have $\boldsymbol{v} = v_i \boldsymbol{e}_i = v'_j \boldsymbol{e}'_j$ which implies $v_i = Q_{ij}v'_j$ upon substitution.
+- Consider an arbitrary vector $\boldsymbol{v}\in\mathcal{V}$ as illustrated above. Let $[\boldsymbol{v}] = (v_1,v_2,v_3)^T$ be its representation in $\{\boldsymbol{e}_i\}$, $[\boldsymbol{v}'] = (v'_1,v'_2,v'_3)^T$ be its representation in $\{\boldsymbol{e}'_i\}$, and $\boldsymbol{Q}$ be the change of basis tensor from  $\{\boldsymbol{e}_i\}$ to $\{\boldsymbol{e}'_i\}$.
+- By definition of the components we have $\boldsymbol{v} = v_i \boldsymbol{e}_i = v'_j \boldsymbol{e}'_j$ which implies $v'_i = Q_{ij}v_j$ upon substitution.
 - For second-order tensors, both indices should be processed by $Q_{ij}$ (from the left and right).
 
 ** Questions for next session
@@ -207,8 +213,21 @@ Ask AI:
 Students should be able to:
 - [ ] perform change of basis of vector components
   
-* Invariants and Eigenvalues (Session 5)
+* ($\S 1.3$) Invariants and Eigenvalues (Session 5)
 ** ($\S 1.3.8$) The Trace and the Determinant
+#+ATTR_REVEAL: :frag (appear)
+- The trace of a second-order tensor is a linear mapping tr : $\mathcal{V}^2\, \rightarrow \mathbb{R}$ defined by $$\mathrm{tr}\,\boldsymbol{S} = S_{ii}$$ 
+- It has a similar representation in the matrix form $$\mathrm{tr}\,[\boldsymbol{S}] =  [\boldsymbol{S}]_{ii}$$
+- Show that the trace remains invariant to a change of basis, i.e. $$\mathrm{tr}\,\boldsymbol{S} = \mathrm{tr}\,\boldsymbol{S}'$$
+
+#+REVEAL: split
+#+ATTR_REVEAL: :frag (appear)
+- The determinant of a second-order tensor is a mapping det : $\mathcal{V}^2\, \rightarrow \mathbb{R}$ defined by
+  $$ \mathrm{det} \boldsymbol{S} = \epsilon_{ijk} S_{i1} S_{j2} S_{k3}$$
+- In matrix form this corresponds to
+  $$ \mathrm{det} [\boldsymbol{S}] = \mathrm{det} ([\boldsymbol{S}\boldsymbol{e}_1],\,[\boldsymbol{S}\boldsymbol{e}_2],\,[\boldsymbol{S}\boldsymbol{e}_3]) $$
+- The determinant is also invariant to a change of basis (it's value does not change as a result of changing to a different basis )
+
 ** ($\S 1.3.9$) Eigenvalues, Eigenvectors and Principal Invariants
 ** Questions for next session
 Ask AI:
