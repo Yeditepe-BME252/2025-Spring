@@ -9,6 +9,9 @@
 #+OPTIONS: timestamp:nil toc:1 num:nil
 #+REVEAL_EXTRA_CSS: ../style.css
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+HTML_HEAD_EXTRA: <style>
+#+HTML_HEAD_EXTRA: pre.src { font-size: 0.8em; color: white; background: black; padding: 10px; }
+#+HTML_HEAD_EXTRA: </style>
 
 * Preliminaries
 *** Units
@@ -54,8 +57,7 @@ What is the unit of force?
   b = [-2 2 1]';
   c = dot(a,b);
   d = cross(a,b);
-#+END_SRC
-
+  #+END_SRC
   
 ** ($\S 1.1.3$) Projections, Bases and Coordinate Frames
 #+ATTR_REVEAL: :frag (appear appear appear ...)
@@ -77,7 +79,7 @@ Ask AI:
 ** Deliverables
 Students should be able to:
 - [ ] perform simple algebraic operations with vectors 
-
+   
 * ($\S 1.2$) Index Notation (Session 2)
 #+ATTR_REVEAL: :frag (appear)
 - This is the way to code mechanics in a computational setting (such as Octave/matlab, or a finite element method tool).
@@ -118,14 +120,43 @@ Students should be able to:
 - [ ] convert expressions between their tensor and indicial forms
 
 * ($\S 1.3$) Second-Order Tensors (Session 3)
+** Review of previous session (by scripting in Python)
+#+BEGIN_SRC python
+  import numpy as np
+  vec_1 = np.array( [ 1 , 1 , 2] )
+  vec_2 = np.array( [-1 , 0 , 2] )
+  vec_3 = np.array( [ 1 ,-2 , 0] )
+
+  # the dot product, vec_1 . vec_3
+  np.dot( vec_1 , vec,3 )
+
+  # the cross product, vec_3 x vec_2
+  np.cross( vec3 , vec2 )
+
+  # the scalar triple product, (vec_2 x vec_1) . (vec_3)
+  np.dot( np.cross( vec2 , vec1 ) , vec_3 )
+
+  # the triple vector product, vec_2 . (vec_1 x vec_3)
+  np.cross( vec_2 , np.cross( vec_1 , vec_3 ) )
+#+END_SRC
+
+#+REVEAL: split
+Questions for AI?
+#+ATTR_REVEAL: :frag (appear)
+1. can we write math expressions in indicial notation in python?
+2. can you provide a function definition for the permutation symbol in this context?
+   [[../scripts/levi_civita.py]]
+3. please provide some examples from vector algebra in indicial notation..
+   
+** ($\S 1.3.1$) Definition
 #+ATTR_REVEAL: :frag (appear)
 - Scalars have no index, first-order tensors (vectors) have one. The index is associated with a *basis*.
 - Abstraction of a physical field or operator that has *two* indices or bases, is called as a second-order tensor.
 - A transformer between vectors, $\boldsymbol{S}\boldsymbol{u} = \boldsymbol{v}$, or $\boldsymbol{S}(\boldsymbol{u}) = \boldsymbol{v}$
-** ($\S 1.3.1$)  Definition
-On the vector space $\mathcal{V}$, we have a /linear/ mapping $\boldsymbol{T}:\mathcal{V}\rightarrow\mathcal{V}$ such that
 
+#+REVEAL: split
 #+ATTR_REVEAL: :frag (appear)
+- On the vector space $\mathcal{V}$, we have a /linear/ mapping $\boldsymbol{T}:\mathcal{V}\rightarrow\mathcal{V}$ such that
 - addition
   $$\boldsymbol{T} (\boldsymbol{u} + \boldsymbol{v}) = \boldsymbol{T}\boldsymbol{u} + \boldsymbol{T} \boldsymbol{v} \; \forall \; \boldsymbol{u},\,\boldsymbol{v} \in \mathcal{V},$$
 - scalar multiplication
@@ -134,6 +165,7 @@ On the vector space $\mathcal{V}$, we have a /linear/ mapping $\boldsymbol{T}:\m
 - Some examples to second order tensors are the Kroenecker's delta, $\delta_{ij}$, the change of basis tensor, $Q_{i'j}$, etc.  
 
 #+REVEAL: split
+#+ATTR_REVEAL: :frag (appear)
 - The *identity tensor* $\boldsymbol{I}$, reproduces its argument as its result: $\boldsymbol{I} \boldsymbol{v} =  \boldsymbol{v}$.
 - $\delta_{ij}$ is the identitiy tensor in indicial notation
 - The equality of two second-order tensors may be established by the identity $\boldsymbol{S}\boldsymbol{v}=\boldsymbol{T}\boldsymbol{v}$ for all $\boldsymbol{v} \in \mathcal{C}$.
@@ -165,7 +197,7 @@ Let $\mathcal{V}^2$ be the set of second-order tensors, then
 #+ATTR_REVEAL: :frag (appear)
 + The components of a second-order tensor $\boldsymbol{S}$ in a coordinate frame $\{\boldsymbol{e}_i\}$ are nine numbers $S_{ij}\;(1\leq i,j \leq 3)$ defined by $$S_{ij} = \boldsymbol{e}_i \cdot \boldsymbol{S}\boldsymbol{e}_j.$$
 + Given vectors $\boldsymbol{u} = u_i \boldsymbol{e}_i$ and $\boldsymbol{v} = v_j \boldsymbol{e}_j$ such that $\boldsymbol{v} = \boldsymbol{S} \boldsymbol{u}$, we can write $$v_i = S_{ij} u_j$$
-+ The nine components arranged into a square matrix is called the *matrix representation*, and is denoted as $[\boldsymbol{S}]\in\mathbb{R}$.
++ The nine components arranged into a square matrix is called the *matrix representation*, and is denoted as $[\boldsymbol{S}]\in\mathbb{R}^{3\times 3}$.
 + The transpose operation is simply obtained by interchanging the rows and columns of the matrix $[\boldsymbol{S}]$, and is denoted as  $[\boldsymbol{S}]^T$.
 + The tensor equation $\boldsymbol{v} = \boldsymbol{S} \boldsymbol{u}$ can be written in various forms as $$\boldsymbol{v} = \boldsymbol{S} \boldsymbol{u} \; \Leftrightarrow \; v_i=S_{ij}u_j \; \Leftrightarrow \; [\boldsymbol{v}] = [\boldsymbol{S}] [\boldsymbol{u}] $$
 
