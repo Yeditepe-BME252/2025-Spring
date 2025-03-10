@@ -39,25 +39,25 @@ pre.src { font-size: 0.8em; color: white; background: black; padding: 10px; }
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#/slide-org4d23e54">Preliminaries</a></li>
-<li><a href="#/slide-orgd2b635f">(\(\S 1.1\)) Vectors (Session 1)</a></li>
-<li><a href="#/slide-org62e2f32">(\(\S 1.2\)) Index Notation (Session 2)</a></li>
-<li><a href="#/slide-org6083efa">(\(\S 1.3\)) Second-Order Tensors (Session 3)</a></li>
-<li><a href="#/slide-orgfcbed52">(\(\S 1.3\)) Special Classes and Operations (Session 4)</a></li>
-<li><a href="#/slide-org2c90bb9">(\(\S 1.3\)) Invariants and Eigenvalues (Session 5)</a></li>
+<li><a href="#/slide-org5db26a9">Preliminaries</a></li>
+<li><a href="#/slide-orgf9c8021">(\(\S 1.1\)) Vectors (Session 1)</a></li>
+<li><a href="#/slide-org14d7fa0">(\(\S 1.2\)) Index Notation (Session 2)</a></li>
+<li><a href="#/slide-org859cf2e">(\(\S 1.3\)) Second-Order Tensors (Session 3)</a></li>
+<li><a href="#/slide-org54989a7">(\(\S 1.3\)) Special Classes and Operations (Session 4)</a></li>
+<li><a href="#/slide-orgf26162f">(\(\S 1.3\)) Invariants and Eigenvalues (Session 5)</a></li>
 </ul>
 </div>
 </div>
 </section>
 
 <section>
-<section id="slide-org4d23e54">
-<h2 id="org4d23e54">Preliminaries</h2>
-<div class="outline-text-2" id="text-org4d23e54">
+<section id="slide-org5db26a9">
+<h2 id="org5db26a9">Preliminaries</h2>
+<div class="outline-text-2" id="text-org5db26a9">
 </div>
 </section>
-<section id="slide-org3f15641">
-<h4 id="org3f15641">Units</h4>
+<section id="slide-orgfbe9fbe">
+<h4 id="orgfbe9fbe">Units</h4>
 <p>
 What is the unit of force?
 </p>
@@ -77,8 +77,8 @@ What is the unit of force?
 </section>
 </section>
 <section>
-<section id="slide-orgd2b635f">
-<h2 id="orgd2b635f">(\(\S 1.1\)) Vectors (Session 1)</h2>
+<section id="slide-orgf9c8021">
+<h2 id="orgf9c8021">(\(\S 1.1\)) Vectors (Session 1)</h2>
 <ul>
 <li class="fragment appear">A vector (or a first-order tensor, in general) is merely an abstraction/representation of a mechanical effect (a force, velocity, displacement, linear momentum, gradient of a scalar field variable, etc.).</li>
 <li class="fragment appear">It is one of the main actors in the field of mechanics (apart from others such as scalars, or higher-order tensors).</li>
@@ -86,8 +86,8 @@ What is the unit of force?
 </ul>
 
 </section>
-<section id="slide-orga0c98f2">
-<h4 id="orga0c98f2">Symbolic Representation of Vectors</h4>
+<section id="slide-org360bec9">
+<h4 id="org360bec9">Symbolic Representation of Vectors</h4>
 <ul>
 <li class="fragment appear">A vector/tensor is usually represented by placing a right arrow over the letter: \[ \vec{F},\; \vec{a},\,\, \vec{\nabla}\phi \]</li>
 <li class="fragment appear">or a tilde symbol below as in: \[ \underset{\sim}{F},\; \underset{\sim}{a},\; \underset{\sim}{\nabla}\phi \]</li>
@@ -98,10 +98,10 @@ What is the unit of force?
 </ul>
 
 </section>
-<section id="slide-org201ca87">
-<h4 id="org201ca87">Graphical Representation of Vectors</h4>
+<section id="slide-org4634b7c">
+<h4 id="org4634b7c">Graphical Representation of Vectors</h4>
 
-<div id="orgc2e13f8" class="figure">
+<div id="org30fb3ec" class="figure">
 <p><img src="../images/AFC-1.1.png" alt="AFC-1.1.png" width="900px" />
 </p>
 </div>
@@ -112,8 +112,8 @@ What is the unit of force?
 </ul>
 
 </section>
-<section id="slide-org78cc4c5">
-<h3 id="org78cc4c5">(\(\S 1.1.2\)) Scalar and Vector Products</h3>
+<section id="slide-org6911841">
+<h3 id="org6911841">(\(\S 1.1.2\)) Scalar and Vector Products</h3>
 <ul>
 <li class="fragment appear">The scalar or dot product is defined as the product of the magnitudes of both arguments, and cosine of the acute angle \(\theta \in [0,\pi]\) subtended between the argument vectors placed tail to tail.</li>
 <li class="fragment appear">The vector product  is defined by a vector pointing normal to the plane formed by the argument vectors, in the sense shown by turning from the first argument towards the second using the right hand, having a magnitude equal to the products of the magnitudes of the argument vectors and the sine of the same angle, \(\theta \in [0,\pi]\).</li>
@@ -122,7 +122,7 @@ What is the unit of force?
 </ul>
 
 </section>
-<section id="slide-org78cc4c5-split">
+<section id="slide-org6911841-split">
 <div class="org-src-container">
 
 <pre  class="src src-octave"   ><code trim>a <span style="color: #4f97d7;">=</span> [0<span style="color: #4f97d7;">,</span>1.5<span style="color: #4f97d7;">,</span>3]<span style="color: #4f97d7;">';</span>
@@ -133,8 +133,8 @@ d <span style="color: #4f97d7;">=</span> cross(a<span style="color: #4f97d7;">,<
 </div>
 
 </section>
-<section id="slide-orge102433">
-<h3 id="orge102433">(\(\S 1.1.3\)) Projections, Bases and Coordinate Frames</h3>
+<section id="slide-org66e0b43">
+<h3 id="org66e0b43">(\(\S 1.1.3\)) Projections, Bases and Coordinate Frames</h3>
 <ul>
 <li class="fragment appear">Any vector \(\boldsymbol{v}\) can be decomposed into two vectors, one of which  (\(\boldsymbol{v}_{e\parallel}\)) is parallel to a given direction (unit vector) \(\boldsymbol{e}\), and the other  (\(\boldsymbol{v}_{e\perp}\)) perpendicular to \(\boldsymbol{e}\).</li>
 <li class="fragment appear">A right handed orthonormal basis (\(\boldsymbol{i}, \boldsymbol{j}, \boldsymbol{k}\) or \(\boldsymbol{e}_1, \boldsymbol{e}_2, \boldsymbol{e}_3\)) is one relative to which vectors can be decomposed into components along the three coordinate axes (a Cartesian coordinate system).</li>
@@ -145,9 +145,9 @@ d <span style="color: #4f97d7;">=</span> cross(a<span style="color: #4f97d7;">,<
 </ul>
 
 </section>
-<section id="slide-orge102433-split">
+<section id="slide-org66e0b43-split">
 
-<div id="org2dacea8" class="figure">
+<div id="org56cacf0" class="figure">
 <p><img src="../images/AFC-1.3.png" alt="AFC-1.3.png" width="900px" />
 </p>
 </div>
@@ -157,8 +157,8 @@ Let there be two bases \(\{\boldsymbol{e}_i\}\) and \(\{\boldsymbol{e}'_i\}\), t
 </p>
 
 </section>
-<section id="slide-org0f06dea">
-<h3 id="org0f06dea">Questions for next session</h3>
+<section id="slide-org9032f3f">
+<h3 id="org9032f3f">Questions for next session</h3>
 <p>
 Ask AI:
 </p>
@@ -167,8 +167,8 @@ Ask AI:
 
 </ul>
 </section>
-<section id="slide-orga468297">
-<h3 id="orga468297">Deliverables</h3>
+<section id="slide-org2e28bc7">
+<h3 id="org2e28bc7">Deliverables</h3>
 <p>
 Students should be able to:
 </p>
@@ -180,8 +180,8 @@ Students should be able to:
 </section>
 </section>
 <section>
-<section id="slide-org62e2f32">
-<h2 id="org62e2f32">(\(\S 1.2\)) Index Notation (Session 2)</h2>
+<section id="slide-org14d7fa0">
+<h2 id="org14d7fa0">(\(\S 1.2\)) Index Notation (Session 2)</h2>
 <ul>
 <li class="fragment appear">This is the way to code mechanics in a computational setting (such as Octave/matlab, or a finite element method tool).</li>
 <li class="fragment appear">It simplifies the scalar (inner) product operation greatly.</li>
@@ -190,8 +190,8 @@ Students should be able to:
 </ul>
 
 </section>
-<section id="slide-orgf7e3b33">
-<h3 id="orgf7e3b33">(\(\S 1.2.1\))Summation Convention</h3>
+<section id="slide-org37d17a7">
+<h3 id="org37d17a7">(\(\S 1.2.1\))Summation Convention</h3>
 <ul>
 <li class="fragment appear">Instead of summing over the dimensions by rewriting each term for every other repeating dimension, a <b>repeating (<i>dummy</i>) index</b> implies summation (thus eliminating the need to write three terms explicitly), examples,
 <ul>
@@ -208,8 +208,8 @@ Students should be able to:
 </ul>
 
 </section>
-<section id="slide-org2f231a4">
-<h3 id="org2f231a4">(\(\S 1.2.2\)) Kroenecker&rsquo;s Delta and Permutation Symbols</h3>
+<section id="slide-orgfc55c17">
+<h3 id="orgfc55c17">(\(\S 1.2.2\)) Kroenecker&rsquo;s Delta and Permutation Symbols</h3>
 <ul>
 <li class="fragment appear">The Kroenecker delta symbol, \(\delta_{ij}\), is defined the dot (inner) product of base vectors.</li>
 <li class="fragment appear">It is also known as an <b>index shifter</b> (\(\boldsymbol{e}_i = \delta_{ij}\boldsymbol{e}_j\)).</li>
@@ -219,8 +219,8 @@ Students should be able to:
 </ul>
 
 </section>
-<section id="slide-orga6c5cd2">
-<h3 id="orga6c5cd2">Exercises: (\(\S 1.2.4\)) Vector Operations in Components</h3>
+<section id="slide-orge42734d">
+<h3 id="orge42734d">Exercises: (\(\S 1.2.4\)) Vector Operations in Components</h3>
 <ul>
 <li class="fragment appear">the scalar (inner) product</li>
 <li class="fragment appear">the vector (cross) product</li>
@@ -230,8 +230,8 @@ Students should be able to:
 </ul>
 
 </section>
-<section id="slide-orgdbe9bcb">
-<h3 id="orgdbe9bcb">Questions for next session</h3>
+<section id="slide-org797ea08">
+<h3 id="org797ea08">Questions for next session</h3>
 <p>
 Ask AI:
 </p>
@@ -240,8 +240,8 @@ Ask AI:
 
 </ul>
 </section>
-<section id="slide-org5449326">
-<h3 id="org5449326">Deliverables</h3>
+<section id="slide-org922aa7f">
+<h3 id="org922aa7f">Deliverables</h3>
 <p>
 Students should be able to:
 </p>
@@ -254,13 +254,16 @@ Students should be able to:
 </section>
 </section>
 <section>
-<section id="slide-org6083efa">
-<h2 id="org6083efa">(\(\S 1.3\)) Second-Order Tensors (Session 3)</h2>
-<div class="outline-text-2" id="text-org6083efa">
+<section id="slide-org859cf2e">
+<h2 id="org859cf2e">(\(\S 1.3\)) Second-Order Tensors (Session 3)</h2>
+<div class="outline-text-2" id="text-org859cf2e">
 </div>
 </section>
-<section id="slide-orgc538582">
-<h3 id="orgc538582">Review of previous session (by scripting in Python)</h3>
+<section id="slide-org6925efd">
+<h3 id="org6925efd">Review of previous session (by scripting in Python)</h3>
+<p>
+Accessing python using <a href="https://www.pythonanywhere.com">https://www.pythonanywhere.com</a> 
+</p>
 <div class="org-src-container">
 
 <pre  class="src src-python"   ><code trim><span style="color: #4f97d7; font-weight: bold;">import</span> numpy <span style="color: #4f97d7; font-weight: bold;">as</span> np
@@ -283,21 +286,22 @@ np.cross( vec_2 , np.cross( vec_1 , vec_3 ) )
 </div>
 
 </section>
-<section id="slide-orgc538582-split">
+<section id="slide-org6925efd-split">
 <p>
 Questions for AI?
+Hint: <a href="https://www.pythonanywhere.com">https://www.pythonanywhere.com</a> site to access python online.
 </p>
 <ol>
 <li class="fragment appear">can we write math expressions in indicial notation in python?</li>
 <li class="fragment appear">can you provide a function definition for the permutation symbol in this context?
 <a href="../scripts/levi_civita.py">../scripts/levi_civita.py</a></li>
-<li class="fragment appear">please provide some examples from vector algebra in indicial notation..</li>
+<li class="fragment appear">please provide some examples from vector algebra in indicial notation.</li>
 
 </ol>
 
 </section>
-<section id="slide-orge7792ff">
-<h3 id="orge7792ff">(\(\S 1.3.1\)) Definition</h3>
+<section id="slide-orga7e7845">
+<h3 id="orga7e7845">(\(\S 1.3.1\)) Definition</h3>
 <ul>
 <li class="fragment appear">Scalars have no index, first-order tensors (vectors) have one. The index is associated with a <b>basis</b>.</li>
 <li class="fragment appear">Abstraction of a physical field or operator that has <b>two</b> indices or bases, is called as a second-order tensor.</li>
@@ -306,7 +310,7 @@ Questions for AI?
 </ul>
 
 </section>
-<section id="slide-orge7792ff-split">
+<section id="slide-orga7e7845-split">
 <ul>
 <li class="fragment appear">On the vector space \(\mathcal{V}\), we have a <i>linear</i> mapping \(\boldsymbol{T}:\mathcal{V}\rightarrow\mathcal{V}\) such that</li>
 <li class="fragment appear">addition
@@ -319,7 +323,7 @@ Questions for AI?
 </ul>
 
 </section>
-<section id="slide-orge7792ff-split">
+<section id="slide-orga7e7845-split">
 <ul>
 <li class="fragment appear">The <b>identity tensor</b> \(\boldsymbol{I}\), reproduces its argument as its result: \(\boldsymbol{I} \boldsymbol{v} =  \boldsymbol{v}\).</li>
 <li class="fragment appear">\(\delta_{ij}\) is the identitiy tensor in indicial notation</li>
@@ -328,41 +332,41 @@ Questions for AI?
 </ul>
 
 </section>
-<section id="slide-orge7792ff-split">
+<section id="slide-orga7e7845-split">
 <p>
 Example 1: Projections:
 </p>
 
-<div id="org653ad13" class="figure">
+<div id="org59634b3" class="figure">
 <p><img src="../images/AFC-1.3.1a.png" alt="AFC-1.3.1a.png" width="900px" />
 </p>
 </div>
 
 </section>
-<section id="slide-orge7792ff-split">
+<section id="slide-orga7e7845-split">
 <p>
 Example 2: Rotations:
 </p>
 
-<div id="orge62bb7f" class="figure">
+<div id="org04992dc" class="figure">
 <p><img src="../images/AFC-1.3.1b.png" alt="AFC-1.3.1b.png" width="900px" />
 </p>
 </div>
 
 </section>
-<section id="slide-orge7792ff-split">
+<section id="slide-orga7e7845-split">
 <p>
 Example 3: Reflections:
 </p>
 
-<div id="org43e8aa6" class="figure">
+<div id="org2dc48b9" class="figure">
 <p><img src="../images/AFC-1.3.1c.png" alt="AFC-1.3.1c.png" width="900px" />
 </p>
 </div>
 
 </section>
-<section id="slide-orgcef03e2">
-<h3 id="orgcef03e2">(\(\S 1.3.2\)) Second-Order Tensor Algebra</h3>
+<section id="slide-org310a826">
+<h3 id="org310a826">(\(\S 1.3.2\)) Second-Order Tensor Algebra</h3>
 <p>
 Let \(\mathcal{V}^2\) be the set of second-order tensors, then
 </p>
@@ -375,8 +379,8 @@ Let \(\mathcal{V}^2\) be the set of second-order tensors, then
 </ul>
 
 </section>
-<section id="slide-orgf6fb3d0">
-<h3 id="orgf6fb3d0">(\(\S 1.3.3\)) Indicial Representation</h3>
+<section id="slide-org9d81c66">
+<h3 id="org9d81c66">(\(\S 1.3.3\)) Indicial Representation</h3>
 <ul>
 <li class="fragment appear">The components of a second-order tensor \(\boldsymbol{S}\) in a coordinate frame \(\{\boldsymbol{e}_i\}\) are nine numbers \(S_{ij}\;(1\leq i,j \leq 3)\) defined by \[S_{ij} = \boldsymbol{e}_i \cdot \boldsymbol{S}\boldsymbol{e}_j.\]</li>
 <li class="fragment appear">Given vectors \(\boldsymbol{u} = u_i \boldsymbol{e}_i\) and \(\boldsymbol{v} = v_j \boldsymbol{e}_j\) such that \(\boldsymbol{v} = \boldsymbol{S} \boldsymbol{u}\), we can write \[v_i = S_{ij} u_j\]</li>
@@ -387,8 +391,8 @@ Let \(\mathcal{V}^2\) be the set of second-order tensors, then
 </ul>
 
 </section>
-<section id="slide-orgab5ec66">
-<h3 id="orgab5ec66">Questions for next session</h3>
+<section id="slide-orga536cac">
+<h3 id="orga536cac">Questions for next session</h3>
 <p>
 Ask AI:
 </p>
@@ -397,8 +401,8 @@ Ask AI:
 
 </ul>
 </section>
-<section id="slide-org761bb86">
-<h3 id="org761bb86">Deliverables</h3>
+<section id="slide-org341832b">
+<h3 id="org341832b">Deliverables</h3>
 <p>
 Students should be able to:
 </p>
@@ -411,13 +415,13 @@ Students should be able to:
 </section>
 </section>
 <section>
-<section id="slide-orgfcbed52">
-<h2 id="orgfcbed52">(\(\S 1.3\)) Special Classes and Operations (Session 4)</h2>
-<div class="outline-text-2" id="text-orgfcbed52">
+<section id="slide-org54989a7">
+<h2 id="org54989a7">(\(\S 1.3\)) Special Classes and Operations (Session 4)</h2>
+<div class="outline-text-2" id="text-org54989a7">
 </div>
 </section>
-<section id="slide-orgf0a3d5b">
-<h3 id="orgf0a3d5b">(\(\S 1.3.6\)) Symmetry, Inverse, Orthogonality, etc.</h3>
+<section id="slide-org0f444bf">
+<h3 id="org0f444bf">(\(\S 1.3.6\)) Symmetry, Inverse, Orthogonality, etc.</h3>
 <ul>
 <li class="fragment appear">To any tensor \(\boldsymbol{S}\in \mathcal{V}^2\) we associate a <b>transpose</b> \(\boldsymbol{S}^T \in \mathcal{V}^2\), which shows \[\boldsymbol{S}\boldsymbol{u} \cdot\boldsymbol{v} = \boldsymbol{u} \cdot \boldsymbol{S}^T\boldsymbol{v} \;\;\; \forall \boldsymbol{u},\boldsymbol{v} \in \mathcal{V}.\]</li>
 <li class="fragment appear">We say, a tensor is <b>symmetric</b> if \(\boldsymbol{S}^T = \boldsymbol{S}\), and,</li>
@@ -428,7 +432,7 @@ Students should be able to:
 </ul>
 
 </section>
-<section id="slide-orgf0a3d5b-split">
+<section id="slide-org0f444bf-split">
 <ul>
 <li class="fragment appear">The inverse and transpose operations may commute, that is \((\boldsymbol{P}^{-1})^T = (\boldsymbol{P}^T)^{-1}\), and this is usually denoted as \(\boldsymbol{S}^{-T}\).</li>
 <li class="fragment appear">A tensor \(\boldsymbol{Q}\in \mathcal{V}^2\) is said to be <b>orthogonal</b> if \(\boldsymbol{Q}^T= \boldsymbol{Q}^{-1}\), that is  \[\boldsymbol{Q}\boldsymbol{Q}^{T} = \boldsymbol{Q}^{T} \boldsymbol{Q} = \boldsymbol{I}.\] Such a tensor produces a right-handed rotation <b>rotation</b>, provided it has a positive determinant.</li>
@@ -436,8 +440,8 @@ Students should be able to:
 </ul>
 
 </section>
-<section id="slide-orgf8f97e4">
-<h3 id="orgf8f97e4">(\(\S 1.3.7\)) Change of Basis</h3>
+<section id="slide-orgd09ae8f">
+<h3 id="orgd09ae8f">(\(\S 1.3.7\)) Change of Basis</h3>
 <ul>
 <li class="fragment appear">Let \(\{\boldsymbol{e}_i\}\) and \(\{\boldsymbol{e}'_i\}\) be two right-handed bases vector sets in \(\mathbb{E}^3\), where expression of the primed set in terms of the unprimed can be written as \[\boldsymbol{e}'_j = (\boldsymbol{e}_1 \cdot \boldsymbol{e}'_j) \boldsymbol{e}_1 + (\boldsymbol{e}_2 \cdot \boldsymbol{e}'_j) \boldsymbol{e}_2 + (\boldsymbol{e}_3 \cdot \boldsymbol{e}'_j) \boldsymbol{e}_3 = (\boldsymbol{e}_i \cdot \boldsymbol{e}'_j) \boldsymbol{e}_i,\]</li>
 <li class="fragment appear">while the unprimed set can similarly be expressed in terms of the primed, as \[\boldsymbol{e}_j = (\boldsymbol{e}_j \cdot \boldsymbol{e}'_1) \boldsymbol{e}'_1 + (\boldsymbol{e}_j \cdot \boldsymbol{e}'_2) \boldsymbol{e}'_2 + (\boldsymbol{e}_j \cdot \boldsymbol{e}'_3) \boldsymbol{e}'_3 = (\boldsymbol{e}_j \cdot \boldsymbol{e}'_i) \boldsymbol{e}'_i.\]</li>
@@ -447,10 +451,10 @@ Students should be able to:
 </ul>
 
 </section>
-<section id="slide-org9f1a108">
-<h4 id="org9f1a108">Transformation of Components Under a Change of Basis</h4>
+<section id="slide-org20671f7">
+<h4 id="org20671f7">Transformation of Components Under a Change of Basis</h4>
 
-<div id="org47da863" class="figure">
+<div id="org871eb0f" class="figure">
 <p><img src="../images/AFC-1.4.png" alt="AFC-1.4.png" width="900px" />
 </p>
 </div>
@@ -462,8 +466,8 @@ Students should be able to:
 </ul>
 
 </section>
-<section id="slide-org40d35f8">
-<h3 id="org40d35f8">Questions for next session</h3>
+<section id="slide-org54e8fae">
+<h3 id="org54e8fae">Questions for next session</h3>
 <p>
 Ask AI:
 </p>
@@ -472,8 +476,8 @@ Ask AI:
 
 </ul>
 </section>
-<section id="slide-org97bb22d">
-<h3 id="org97bb22d">Deliverables</h3>
+<section id="slide-org43adf55">
+<h3 id="org43adf55">Deliverables</h3>
 <p>
 Students should be able to:
 </p>
@@ -485,13 +489,13 @@ Students should be able to:
 </section>
 </section>
 <section>
-<section id="slide-org2c90bb9">
-<h2 id="org2c90bb9">(\(\S 1.3\)) Invariants and Eigenvalues (Session 5)</h2>
-<div class="outline-text-2" id="text-org2c90bb9">
+<section id="slide-orgf26162f">
+<h2 id="orgf26162f">(\(\S 1.3\)) Invariants and Eigenvalues (Session 5)</h2>
+<div class="outline-text-2" id="text-orgf26162f">
 </div>
 </section>
-<section id="slide-org97a558a">
-<h3 id="org97a558a">(\(\S 1.3.8\)) The Trace and the Determinant</h3>
+<section id="slide-org2d19059">
+<h3 id="org2d19059">(\(\S 1.3.8\)) The Trace and the Determinant</h3>
 <ul>
 <li class="fragment appear">The trace of a second-order tensor is a linear mapping tr : \(\mathcal{V}^2\, \rightarrow \mathbb{R}\) defined by \[\mathrm{tr}\,\boldsymbol{S} = S_{ii}\]</li>
 <li class="fragment appear">It has a similar representation in the matrix form \[\mathrm{tr}\,[\boldsymbol{S}] =  [\boldsymbol{S}]_{ii}\]</li>
@@ -500,7 +504,7 @@ Students should be able to:
 </ul>
 
 </section>
-<section id="slide-org97a558a-split">
+<section id="slide-org2d19059-split">
 <ul>
 <li class="fragment appear">The determinant of a second-order tensor is a mapping det : \(\mathcal{V}^2\, \rightarrow \mathbb{R}\) defined by
 \[ \mathrm{det} \boldsymbol{S} = \epsilon_{ijk} S_{i1} S_{j2} S_{k3}\]</li>
@@ -511,11 +515,11 @@ Students should be able to:
 </ul>
 
 </section>
-<section id="slide-org4f89b98">
-<h3 id="org4f89b98">(\(\S 1.3.9\)) Eigenvalues, Eigenvectors and Principal Invariants</h3>
+<section id="slide-org6b01a16">
+<h3 id="org6b01a16">(\(\S 1.3.9\)) Eigenvalues, Eigenvectors and Principal Invariants</h3>
 </section>
-<section id="slide-orgf6e7b87">
-<h3 id="orgf6e7b87">Questions for next session</h3>
+<section id="slide-orgb3a4dce">
+<h3 id="orgb3a4dce">Questions for next session</h3>
 <p>
 Ask AI:
 </p>
@@ -524,8 +528,8 @@ Ask AI:
 
 </ul>
 </section>
-<section id="slide-org47aa209">
-<h3 id="org47aa209">Deliverables</h3>
+<section id="slide-org864dad7">
+<h3 id="org864dad7">Deliverables</h3>
 <p>
 Students should be able to:
 </p>
@@ -536,7 +540,7 @@ Students should be able to:
 </ul>
 
 </section>
-<section id="slide-org47aa209-split">
+<section id="slide-org864dad7-split">
 <p>
 END OF UNIT 1
 </p>

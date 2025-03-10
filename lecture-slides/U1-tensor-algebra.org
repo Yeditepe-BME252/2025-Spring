@@ -121,6 +121,7 @@ Students should be able to:
 
 * ($\S 1.3$) Second-Order Tensors (Session 3)
 ** Review of previous session (by scripting in Python)
+Accessing python using https://www.pythonanywhere.com 
 #+BEGIN_SRC python
   import numpy as np
   vec_1 = np.array( [ 1 , 1 , 2] )
@@ -142,11 +143,12 @@ Students should be able to:
 
 #+REVEAL: split
 Questions for AI?
+Hint: https://www.pythonanywhere.com site to access python online.
 #+ATTR_REVEAL: :frag (appear)
 1. can we write math expressions in indicial notation in python?
 2. can you provide a function definition for the permutation symbol in this context?
    [[../scripts/levi_civita.py]]
-3. please provide some examples from vector algebra in indicial notation..
+3. please provide some examples from vector algebra in indicial notation.
    
 ** ($\S 1.3.1$) Definition
 #+ATTR_REVEAL: :frag (appear)
@@ -192,7 +194,7 @@ Let $\mathcal{V}^2$ be the set of second-order tensors, then
 - The multiplication of a member of  $\mathcal{V}^2$ by a scalar, is also a member of  $\mathcal{V}^2$,
 - By multiplying two elements from  $\mathcal{V}^2$, taking the *inner product* (the summation between columns of the left tensor with the rows of the right tensor) between adjacent indices is implied.
 - It is implied that $$(\boldsymbol{S}\boldsymbol{T})\boldsymbol{u} = \boldsymbol{S}(\boldsymbol{T}\boldsymbol{u})$$
-
+  
 ** ($\S 1.3.3$) Indicial Representation
 #+ATTR_REVEAL: :frag (appear)
 + The components of a second-order tensor $\boldsymbol{S}$ in a coordinate frame $\{\boldsymbol{e}_i\}$ are nine numbers $S_{ij}\;(1\leq i,j \leq 3)$ defined by $$S_{ij} = \boldsymbol{e}_i \cdot \boldsymbol{S}\boldsymbol{e}_j.$$
