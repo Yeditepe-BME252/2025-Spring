@@ -1,7 +1,7 @@
-#+TITLE: BME Lecture 1: vector algebra
+#+TITLE: Unit 2: vector calculus
 #+AUTHOR: Fethi Okyar
-#+DATE: 2025-02-20
-#+SUBTITLE: Readings from Stuart and Gonzales, Chapter 1
+#+DATE: 2025-03-16
+#+SUBTITLE: Readings from Stuart and Gonzales, Chapter 2
 #+STARTUP: overview
 #+REVEAL_THEME: simple
 #+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
@@ -10,56 +10,7 @@
 #+REVEAL_EXTRA_CSS: ../style.css
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
 
-* Why does this course exist?
-The *first course in Biomechanics* offered by the Biomedical Engineering Department aims to enhance the understading of the science of motion and the concept of force, although only the motion of rigid bodies, and a very brief introduction into deformable bodies and their motion.
-
-#+ATTR_REVEAL: :frag (appear)
-The acquired skills and knowledge include,
-#+ATTR_REVEAL: :frag (appear appear appear ...)
-- performing algebraic manipulation of vectors
-- drawing isolated body equilibrium diagrams
-- solve systems of linear equations for mechanical unknowns
-  
-* Course conduct
-Course is composed of a few activities,
-#+ATTR_REVEAL: :frag (appear appear appear ...)
-- Lectures
-  #+ATTR_REVEAL: :frag (appear appear appear ...)
-  + Listening and taking notes in the lecture
-  + Preparation for lectures using *openAI* if study questions were provided
-- Attendence through Yulearn check-in
-- Quizzes
-- Exit Survey Questions
-- Final
-
-** Lectures
-#+ATTR_REVEAL: :frag (appear appear appear ...)
-- The board, projector, and supplementary materials will be utilized.
-- _Asking questions_, and _taking notes_ are encouraged.
-- The lecture notes are shared on Yulearn.
-  #+ATTR_REVEAL: :frag (appear appear appear ...)
-  + Contents of ~README.org~, and ~README.html~ are same, but presented differently. In lectures, ~README.html~ is projected, and you can read the content of ~README.org~ in the corresponding repository page.
-  + For example, the documentation of the first week's lecture will be ~Spring2024-ES117-4-6/lecture-1/README.org~ and ~Spring2024-ES117-4-6/lecture-1/README.html~
-
-** Quizzes
-Three or four quizzes, half-an-hour with a single question each, will be given during the semester.
-
-** Exit Survey Questions
-Eight of nine such questions shall be asked to students during the last 5 minutes of lectures during the semester.
-
-* How to get updates about this course?
-#+ATTR_REVEAL: :frag (appear appear appear ...)
-- Yulearn course page
-- OBS course announcements
-
-* Concept of a Force
-#+ATTR_REVEAL: :frag (appear appear appear ...)
-- A force is merely an abstraction of the mechanical effect bodies exert upon each other.
-- It is the mathematical "abstraction" of a physical ocurrence.
-- It is one of the main actors in the field of mechanics.
-- Others are - *moment*, *traction*, *stress*, *strain*, etc.
-** Preliminaries
-*** Units
+* Preliminaries
 What is the unit of force?
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - The fundamental units required to define the unit of force are the following
@@ -69,57 +20,60 @@ What is the unit of force?
   + Time [T]
 - International System of Units, Newton, dyne, etc.
 - Anglo-saxon System of Units, lb-f
-- the formal definition will be given after visiting Newton's laws
-** Force Vectors
+
+* ($\S 2.2$) The Del Operator (Session 6)
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- A vector (or a first-order tensor, in general) is merely an abstraction/representation of a mechanical effect (a force, velocity, displacement, linear momentum, gradient of a scalar field variable, etc.).
+- It is one of the main actors in the field of mechanics (apart from others such as scalars, or higher-order tensors).
+
 *** Symbolic Representation of Vectors
-A force is usually represented with an uppercase case letter with a right arrow over it:
-$$ \vec{F} $$
-or a tilda symbol as in:
-$$ \tilde{F} $$ 
+#+ATTR_REVEAL: :frag (appear)
+- A vector/tensor is usually represented by placing a right arrow over the letter: $$ \vec{F},\; \vec{a},\,\, \vec{\nabla}\phi $$
+- or a tilde symbol below as in: $$ \underset{\sim}{F},\; \underset{\sim}{a},\; \underset{\sim}{\nabla}\phi $$
+- or simply using boldface if one has access to a modern typesetting system (such as latex) $$ \boldsymbol{F},\; \boldsymbol{a},\; \boldsymbol{\nabla}\phi $$
+- the difference of the $\nabla$ is that it is an operator which requires an argument, for example a scalar field variable such as the temperature $T$ $$ \boldsymbol{\nabla}{T} $$
+- represents the gradient of the temperature field.
+  
 *** Graphical Representation of Vectors
-#+ATTR_HTML: :width 600px
-[[../images/fig.1-3.png]]
-*** Notion of Coordinates
-#+ATTR_REVEAL: :frag (appear appear appear ...)
-- Coordinate systems (linear, orthogonal, polar, spherical, curvilinear, etc)
-- measuring position
-- measuring force
-*** Vector Components
-#+ATTR_HTML: :width 500px
-#+ATTR_HTML: :style align:center
-[[../images/fig.1-4.png]]
+#+ATTR_HTML: :width 900px
+[[../images/AFC-1.1.png]]
+#+ATTR_REVEAL: :frag (appear)
+- Simplest algebraic operations such as addition or subtraction of two vectors, or the multiplication of a vector by a scalar can be performed graphically.
+- By letting $\mathcal{V}$ be the set of all vectors, then it should be TRUE that $$ \boldsymbol{u} + \boldsymbol{v} \in \mathcal{V} \;\; \forall \boldsymbol{u},\,\boldsymbol{v} \in \mathcal{V} \;\; \mathrm{and}\;\; \alpha\boldsymbol{v} \in \mathcal{V} \;\; \forall \alpha \in \mathbb{R},\; \boldsymbol{v} \in \mathcal{V}\,.$$
 
-Various formulas involving trigonometric functions can be generated
-$$ \tan\theta = \frac{F_y}{F_x} $$
-$$ \sin\theta = \frac{F_y}{F} $$
-etc.
-*** Vector Algebra
+** ($\S 1.1.2$) Scalar and Vector Products
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- negation
-- multiplication by a scalar
-- commutative property of addition
-- distributive property of addition
-*** Force Resultant
-#+ATTR_HTML: :width 800px
-#+ATTR_HTML: :style align:center
-[[../images/fig.1-6.png]]
-*** Adding by Components
-#+ATTR_HTML: :width 1000px
-#+ATTR_HTML: :style align:center
-[[../images/fig.1-7.png]]
-*** Exercise 1.1
-Find the resultant force applied to the patient's leg by the traction device as a function of angle $\theta$ and the hanging weight.
-#+ATTR_HTML: :width 1000px
-#+ATTR_HTML: :style align:center
-[[../images/fig.ex.1-1.png]]
+- The scalar or dot product is defined as the product of the magnitudes of both arguments, and cosine of the acute angle $\theta \in [0,\pi]$ subtended between the argument vectors placed tail to tail.
+- The vector product  is defined by a vector pointing normal to the plane formed by the argument vectors, in the sense shown by turning from the first argument towards the second using the right hand, having a magnitude equal to the products of the magnitudes of the argument vectors and the sine of the same angle, $\theta \in [0,\pi]$.
+- you can figure out the triple scalar product between three vectors. (Resulting in the volume of the parallelpiped formed by the three arguments.)
 
-* questions for next session
+#+REVEAL: split
+#+BEGIN_SRC octave
+  a = [0,1.5,3]';
+  b = [-2 2 1]';
+  c = dot(a,b);
+  d = cross(a,b);
+  #+END_SRC
+  
+** ($\S 1.1.3$) Projections, Bases and Coordinate Frames
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- Any vector $\boldsymbol{v}$ can be decomposed into two vectors, one of which  ($\boldsymbol{v}_{e\parallel}$) is parallel to a given direction (unit vector) $\boldsymbol{e}$, and the other  ($\boldsymbol{v}_{e\perp}$) perpendicular to $\boldsymbol{e}$.
+- A right handed orthonormal basis ($\boldsymbol{i}, \boldsymbol{j}, \boldsymbol{k}$ or $\boldsymbol{e}_1, \boldsymbol{e}_2, \boldsymbol{e}_3$) is one relative to which vectors can be decomposed into components along the three coordinate axes (a Cartesian coordinate system).
+- Respective vector components $v_1,\,v_2,\,v_3$ are found by taking the dot product between the vector $\boldsymbol{v}$ and each one of the unit vectors $\boldsymbol{e}_i,\,i=1,2,3$.
+- And the vector can be written as a sum of its projections onto the three coordinate axes (the classical notation).
+- An alternate way of expressing the vector $\boldsymbol{v}$ is the matrix notation. There the vector components are written as an ordered triplet listed in a column. 
+
+#+REVEAL: split 
+#+ATTR_HTML: :width 900px
+[[../images/AFC-1.3.png]]
+
+Let there be two bases $\{\boldsymbol{e}_i\}$ and $\{\boldsymbol{e}'_i\}$, the primed system rotated about the third axis in the positive sense by 45 degrees. A vector $\boldsymbol{v}$ which has components $[1,1,0]$ in the first system will have what components in the primed system?
+
+** Questions for next session
 Ask AI:
-- to describe the role of vector algebra in Newtonian mechanics
-- Is this the only way to express the fundamental laws of mechanics? Is there any alternative?
-* Deliverables
+- Explain the indicial notation from physics
+** Deliverables
 Students should be able to:
-1. provide the relative position vector from a point P to a point Q.
-2. find the unit vector that points in the direction of a given vector.
-3. write the force vector for a cable sustaining a given tension, T.
-4. solve for equilibrium of a planar concurrent system of forces.
+- [ ] perform simple algebraic operations with vectors 
+   
+  

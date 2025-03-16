@@ -52,6 +52,7 @@ What is the unit of force?
 - you can figure out the triple scalar product between three vectors. (Resulting in the volume of the parallelpiped formed by the three arguments.)
 
 #+REVEAL: split
+A code snippet in Octave/Matlab illustrating vector assignment, and the built-in dot product and cross product functions.
 #+BEGIN_SRC octave
   a = [0,1.5,3]';
   b = [-2 2 1]';
@@ -71,7 +72,7 @@ What is the unit of force?
 #+ATTR_HTML: :width 900px
 [[../images/AFC-1.3.png]]
 
-Let there be two bases $\{\boldsymbol{e}_i\}$ and $\{\boldsymbol{e}'_i\}$, the primed system rotated about the third axis in the positive sense by 45 degrees. A vector $\boldsymbol{v}$ which has components $[1,1,0]$ in the first system will have what components in the primed system?
+Let there be two bases $\{\boldsymbol{e}_i\}$ and $\{\boldsymbol{e}_{i'}\}$, the primed system rotated about the third axis in the positive sense by 45 degrees. A vector $\boldsymbol{v}$ which has components $[1,1,0]$ in the first system will have what components in the primed system?
 
 ** Questions for next session
 Ask AI:
@@ -113,7 +114,7 @@ Students should be able to:
 
 ** Questions for next session
 Ask AI:
-- what is a second order tensor?
+- what is a second-order tensor?
 ** Deliverables
 Students should be able to:
 - [ ] read and verify expressions written in the indicial notation
@@ -121,7 +122,9 @@ Students should be able to:
 
 * ($\S 1.3$) Second-Order Tensors (Session 3)
 ** Review of previous session (by scripting in Python)
-Accessing python using https://www.pythonanywhere.com 
+Accessing python using https://www.pythonanywhere.com
+
+Illustration of vector assignment, and the dot product, the cross product, and other operations in Python.
 #+BEGIN_SRC python
   import numpy as np
   vec_1 = np.array( [ 1 , 1 , 2] )
@@ -164,7 +167,7 @@ Hint: https://www.pythonanywhere.com site to access python online.
 - scalar multiplication
   $$\boldsymbol{T}(\alpha \boldsymbol{u}) = \alpha \boldsymbol{T}\,\boldsymbol{u} \; \forall  \; \alpha \in \mathbb{R} \; \mathrm{and} \; \boldsymbol{u} \in \mathcal{V}.$$
 - The *zero tensor* annuls anything it multiplies with
-- Some examples to second order tensors are the Kroenecker's delta, $\delta_{ij}$, the change of basis tensor, $Q_{i'j}$, etc.  
+- Some examples to second-order tensors are the Kroenecker's delta, $\delta_{ij}$, the change of basis tensor, $Q_{i'j}$, etc.  
 
 #+REVEAL: split
 #+ATTR_REVEAL: :frag (appear)
@@ -227,18 +230,18 @@ Students should be able to:
 
 ** ($\S 1.3.7$) Change of Basis
 #+ATTR_REVEAL: :frag (appear)
-- Let $\{\boldsymbol{e}_i\}$ and $\{\boldsymbol{e}'_i\}$ be two right-handed bases vector sets in $\mathbb{E}^3$, where expression of the primed set in terms of the unprimed can be written as $$\boldsymbol{e}'_j = (\boldsymbol{e}_1 \cdot \boldsymbol{e}'_j) \boldsymbol{e}_1 + (\boldsymbol{e}_2 \cdot \boldsymbol{e}'_j) \boldsymbol{e}_2 + (\boldsymbol{e}_3 \cdot \boldsymbol{e}'_j) \boldsymbol{e}_3 = (\boldsymbol{e}_i \cdot \boldsymbol{e}'_j) \boldsymbol{e}_i,$$
-- while the unprimed set can similarly be expressed in terms of the primed, as $$\boldsymbol{e}_j = (\boldsymbol{e}_j \cdot \boldsymbol{e}'_1) \boldsymbol{e}'_1 + (\boldsymbol{e}_j \cdot \boldsymbol{e}'_2) \boldsymbol{e}'_2 + (\boldsymbol{e}_j \cdot \boldsymbol{e}'_3) \boldsymbol{e}'_3 = (\boldsymbol{e}_j \cdot \boldsymbol{e}'_i) \boldsymbol{e}'_i.$$
-- Defining the term in parantesis as the *change of basis* tensor (a.k.a. *rotation*), $Q_{ij} = (\boldsymbol{e}'_i \cdot \boldsymbol{e}_j)$, the above expressions can be written as $\boldsymbol{e}_j = Q_{ij} \boldsymbol{e}'_i$, and, $\boldsymbol{e}'_j = Q_{jk} \boldsymbol{e}_k$.
-- If the former expansion is used in the latter, or the latter is used in the former, we find out that the tensor $\boldsymbol{Q}$ is orthogonal.
++ Let $\{\boldsymbol{e}_i\}$ and $\{\boldsymbol{e}_{i'}\}$ be two right-handed bases vector sets in $\mathbb{E}^3$, where expression of the primed set in terms of the unprimed can be written as $$\boldsymbol{e}_{j'} = (\boldsymbol{e}_1 \cdot \boldsymbol{e}_{j'}) \boldsymbol{e}_1 + (\boldsymbol{e}_2 \cdot \boldsymbol{e}_{j'}) \boldsymbol{e}_2 + (\boldsymbol{e}_3 \cdot \boldsymbol{e}_{j'}) \boldsymbol{e}_3 = (\boldsymbol{e}_i \cdot \boldsymbol{e}_{j'}) \boldsymbol{e}_i,$$
++ while the unprimed set can similarly be expressed in terms of the primed, as $$\boldsymbol{e}_j = (\boldsymbol{e}_j \cdot \boldsymbol{e}_{1'}) \boldsymbol{e}_{1'} + (\boldsymbol{e}_j \cdot \boldsymbol{e}_{2'}) \boldsymbol{e}_{2'} + (\boldsymbol{e}_j \cdot \boldsymbol{e}_{3'}) \boldsymbol{e}_{3'} = (\boldsymbol{e}_j \cdot \boldsymbol{e}_{i'}) \boldsymbol{e}_{i'}.$$
++ Defining the term in parantesis as the *change of basis* tensor (a.k.a. *rotation*), $Q_{i'j} = (\boldsymbol{e}_{i'} \cdot \boldsymbol{e}_j)$, the above expressions can be written as $\boldsymbol{e}_j = Q_{i'j} \boldsymbol{e}_{i'}$, and, $\boldsymbol{e}_{j'} = Q_{j'k} \boldsymbol{e}_k$.
++ If the former expansion is used in the latter, or the latter is used in the former, we find out that the tensor $\boldsymbol{Q}$ is orthogonal.
 
 *** Transformation of Components Under a Change of Basis
 #+ATTR_HTML: :width 900px
 [[../images/AFC-1.4.png]]
 #+ATTR_REVEAL: :frag (appear)
-- Consider an arbitrary vector $\boldsymbol{v}\in\mathcal{V}$ as illustrated above. Let $[\boldsymbol{v}] = (v_1,v_2,v_3)^T$ be its representation in $\{\boldsymbol{e}_i\}$, $[\boldsymbol{v}'] = (v'_1,v'_2,v'_3)^T$ be its representation in $\{\boldsymbol{e}'_i\}$, and $\boldsymbol{Q}$ be the change of basis tensor from  $\{\boldsymbol{e}_i\}$ to $\{\boldsymbol{e}'_i\}$.
-- By definition of the components we have $\boldsymbol{v} = v_i \boldsymbol{e}_i = v'_j \boldsymbol{e}'_j$ which implies $v'_i = Q_{ij}v_j$ upon substitution.
-- For second-order tensors, both indices should be processed by $Q_{ij}$ (from the left and right).
+- Consider an arbitrary vector $\boldsymbol{v}\in\mathcal{V}$ as illustrated above. Let $[\boldsymbol{v}] = (v_1,v_2,v_3)^T$ be its representation in $\{\boldsymbol{e}_i\}$, $[\boldsymbol{v}]' = (v_{1'},v_{2'},v_{3'})^T$ be its representation in $\{\boldsymbol{e}_{i'}\}$, and $\boldsymbol{Q}$ be the change of basis tensor from  $\{\boldsymbol{e}_i\}$ to $\{\boldsymbol{e}_{i'}\}$.
+- By definition of the components we have $\boldsymbol{v} = v_i \boldsymbol{e}_i = v_{j'} \boldsymbol{e}_{j'}$ which implies $v_{i'} = Q_{i'j}v_j$ upon substitution.
+- For second-order tensors, both indices should be processed by $Q_{i'j}$ (once from the left and right).
 
 ** Questions for next session
 Ask AI:
@@ -263,6 +266,18 @@ Students should be able to:
 - The determinant is also invariant to a change of basis (it's value does not change as a result of changing to a different basis )
 
 ** ($\S 1.3.9$) Eigenvalues, Eigenvectors and Principal Invariants
+It occurs that for some particular directions a second-order tensor $\boldsymbol{S}$ produces a vector that is in the same direction as it's argument vector $\boldsymbol{e}$, as in $$\boldsymbol{S} \boldsymbol{e} = \lambda \boldsymbol{e}.$$
+#+ATTR_REVEAL: :frag (appear)
+- Any such $\lambda$ is called an *eigenvalue* and any such $\boldsymbol{e}$ an *eigenvector* of $\boldsymbol{S}$.
+- From linear algebra we recall that $\lambda$ is an eigenvalue if and only if it is a root of the characteristic (cubic) polynomial $$p(\lambda) = \mathrm{det} (\boldsymbol{S} - \lambda \boldsymbol{I}).$$
+- Moreover, to any eigenvalue $\lambda$, one or more eigenvectors $\boldsymbol{e}$ may be associated by solving the linear, homogeneous equation $$(\boldsymbol{S} - \lambda \boldsymbol{I}) \boldsymbol{e} = \boldsymbol{0}.$$
+
+#+REVEAL: split
+#+ATTR_REVEAL: :frag (appear)
+- The *principal invariants* of a second-order tensor $\boldsymbol{S}$ are three scalars defined by $$I_1(\boldsymbol{S}) = \mathrm{tr} \mathrm{\boldsymbol{S}} ,\hspace{1em} I_1(\boldsymbol{S}) = \frac{1}{2} [(\mathrm{tr} \boldsymbol{S})^2 - \mathrm{tr} (\boldsymbol{S}^2)] ,\hspace{1em} I_3(\boldsymbol{S}) = \mathrm{det} \boldsymbol{S}.$$
+- For any $\alpha \in \mathbb{R}$, the principal invariants satisfy the relation $$ \mathrm{det} (\boldsymbol{S} - \lambda \boldsymbol{I}) = -\alpha^3 + I_1(\boldsymbol{S}) \alpha^2 -  I_2(\boldsymbol{S}) \alpha + I_1(\boldsymbol{S}).$$
+- The invariants are not affected by a change of basis.
+- When $\boldsymbol{S}$ is symmetric it can be shown that all three roots of the characteristic polynomial are real.
 ** Questions for next session
 Ask AI:
 - What is the physical interpretation of the gradient of a scalar or vector field variable?
