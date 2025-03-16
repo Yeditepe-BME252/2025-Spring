@@ -39,24 +39,24 @@ pre.src { font-size: 0.8em; color: white; background: black; padding: 10px; }
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#/slide-orgd97902e">Preliminaries</a></li>
-<li><a href="#/slide-org4a75aaf">(\(\S 1.1\)) Vectors (Session 1)</a></li>
-<li><a href="#/slide-orge10db1b">(\(\S 1.2\)) Index Notation (Session 2)</a></li>
-<li><a href="#/slide-orgcf7bf35">(\(\S 1.3\)) Second-Order Tensors (Session 3)</a></li>
-<li><a href="#/slide-orgc34d8bc">(\(\S 1.3\)) Special Classes and Operations (Session 4)</a></li>
-<li><a href="#/slide-orga2fb097">(\(\S 1.3\)) Invariants and Eigenvalues (Session 5)</a></li>
+<li><a href="#/slide-orgda860fa">Preliminaries</a></li>
+<li><a href="#/slide-orgf92e66c">(\(\S 1.1\)) Vectors (Session 1)</a></li>
+<li><a href="#/slide-org547ce17">(\(\S 1.2\)) Index Notation (Session 2)</a></li>
+<li><a href="#/slide-orgd4d1e57">(\(\S 1.3\)) Second-Order Tensors (Session 3)</a></li>
+<li><a href="#/slide-orgb346ee9">(\(\S 1.3\)) Special Classes and Operations (Session 4)</a></li>
+<li><a href="#/slide-org4e096da">(\(\S 1.3\)) Invariants and Eigenvalues (Session 5)</a></li>
 </ul>
 </div>
 </div>
 </section>
 <section>
-<section id="slide-orgd97902e">
-<h2 id="orgd97902e">Preliminaries</h2>
-<div class="outline-text-2" id="text-orgd97902e">
+<section id="slide-orgda860fa">
+<h2 id="orgda860fa">Preliminaries</h2>
+<div class="outline-text-2" id="text-orgda860fa">
 </div>
 </section>
-<section id="slide-org12f3c6b">
-<h4 id="org12f3c6b">Units</h4>
+<section id="slide-org0a5d4a7">
+<h4 id="org0a5d4a7">Units</h4>
 <p>
 What is the unit of force?
 </p>
@@ -75,16 +75,16 @@ What is the unit of force?
 </section>
 </section>
 <section>
-<section id="slide-org4a75aaf">
-<h2 id="org4a75aaf">(\(\S 1.1\)) Vectors (Session 1)</h2>
+<section id="slide-orgf92e66c">
+<h2 id="orgf92e66c">(\(\S 1.1\)) Vectors (Session 1)</h2>
 <ul>
 <li class="fragment appear">A vector (or a first-order tensor, in general) is merely an abstraction/representation of a mechanical effect (a force, velocity, displacement, linear momentum, gradient of a scalar field variable, etc.).</li>
 <li class="fragment appear">It is one of the main actors in the field of mechanics (apart from others such as scalars, or higher-order tensors).</li>
 
 </ul>
 </section>
-<section id="slide-org053968b">
-<h4 id="org053968b">Symbolic Representation of Vectors</h4>
+<section id="slide-orga75ecb2">
+<h4 id="orga75ecb2">Symbolic Representation of Vectors</h4>
 <ul>
 <li class="fragment appear">A vector/tensor is usually represented by placing a right arrow over the letter: \[ \vec{F},\; \vec{a},\,\, \vec{\nabla}\phi \]</li>
 <li class="fragment appear">or a tilde symbol below as in: \[ \underset{\sim}{F},\; \underset{\sim}{a},\; \underset{\sim}{\nabla}\phi \]</li>
@@ -94,10 +94,10 @@ What is the unit of force?
 
 </ul>
 </section>
-<section id="slide-org7471f4a">
-<h4 id="org7471f4a">Graphical Representation of Vectors</h4>
+<section id="slide-org6c78818">
+<h4 id="org6c78818">Graphical Representation of Vectors</h4>
 
-<div id="org2b649c6" class="figure">
+<div id="org2a896a4" class="figure">
 <p><img src="../images/AFC-1.1.png" alt="AFC-1.1.png" width="900px" />
 </p>
 </div>
@@ -107,8 +107,8 @@ What is the unit of force?
 
 </ul>
 </section>
-<section id="slide-org56c7db9">
-<h3 id="org56c7db9">(\(\S 1.1.2\)) Scalar and Vector Products</h3>
+<section id="slide-org0c2808d">
+<h3 id="org0c2808d">(\(\S 1.1.2\)) Scalar and Vector Products</h3>
 <ul>
 <li class="fragment appear">The scalar or dot product is defined as the product of the magnitudes of both arguments, and cosine of the acute angle \(\theta \in [0,\pi]\) subtended between the argument vectors placed tail to tail.</li>
 <li class="fragment appear">The vector product  is defined by a vector pointing normal to the plane formed by the argument vectors, in the sense shown by turning from the first argument towards the second using the right hand, having a magnitude equal to the products of the magnitudes of the argument vectors and the sine of the same angle, \(\theta \in [0,\pi]\).</li>
@@ -117,7 +117,7 @@ What is the unit of force?
 </ul>
 
 </section>
-<section id="slide-org56c7db9-split">
+<section id="slide-org0c2808d-split">
 <p>
 A code snippet in Octave/Matlab illustrating vector assignment, and the built-in dot product and cross product functions.
 </p>
@@ -130,8 +130,8 @@ d <span style="color: #4f97d7;">=</span> cross(a<span style="color: #4f97d7;">,<
 </code></pre>
 </div>
 </section>
-<section id="slide-orgcd9de98">
-<h3 id="orgcd9de98">(\(\S 1.1.3\)) Projections, Bases and Coordinate Frames</h3>
+<section id="slide-orgc272cd0">
+<h3 id="orgc272cd0">(\(\S 1.1.3\)) Projections, Bases and Coordinate Frames</h3>
 <ul>
 <li class="fragment appear">Any vector \(\boldsymbol{v}\) can be decomposed into two vectors, one of which  (\(\boldsymbol{v}_{e\parallel}\)) is parallel to a given direction (unit vector) \(\boldsymbol{e}\), and the other  (\(\boldsymbol{v}_{e\perp}\)) perpendicular to \(\boldsymbol{e}\).</li>
 <li class="fragment appear">A right handed orthonormal basis (\(\boldsymbol{i}, \boldsymbol{j}, \boldsymbol{k}\) or \(\boldsymbol{e}_1, \boldsymbol{e}_2, \boldsymbol{e}_3\)) is one relative to which vectors can be decomposed into components along the three coordinate axes (a Cartesian coordinate system).</li>
@@ -142,9 +142,9 @@ d <span style="color: #4f97d7;">=</span> cross(a<span style="color: #4f97d7;">,<
 </ul>
 
 </section>
-<section id="slide-orgcd9de98-split">
+<section id="slide-orgc272cd0-split">
 
-<div id="org363729d" class="figure">
+<div id="org19ddfd3" class="figure">
 <p><img src="../images/AFC-1.3.png" alt="AFC-1.3.png" width="900px" />
 </p>
 </div>
@@ -153,8 +153,8 @@ d <span style="color: #4f97d7;">=</span> cross(a<span style="color: #4f97d7;">,<
 Let there be two bases \(\{\boldsymbol{e}_i\}\) and \(\{\boldsymbol{e}_{i'}\}\), the primed system rotated about the third axis in the positive sense by 45 degrees. A vector \(\boldsymbol{v}\) which has components \([1,1,0]\) in the first system will have what components in the primed system?
 </p>
 </section>
-<section id="slide-org3c56ac1">
-<h3 id="org3c56ac1">Questions for next session</h3>
+<section id="slide-org3a72f26">
+<h3 id="org3a72f26">Questions for next session</h3>
 <p>
 Ask AI:
 </p>
@@ -163,8 +163,8 @@ Ask AI:
 
 </ul>
 </section>
-<section id="slide-orga984746">
-<h3 id="orga984746">Deliverables</h3>
+<section id="slide-org7655045">
+<h3 id="org7655045">Deliverables</h3>
 <p>
 Students should be able to:
 </p>
@@ -175,8 +175,8 @@ Students should be able to:
 </section>
 </section>
 <section>
-<section id="slide-orge10db1b">
-<h2 id="orge10db1b">(\(\S 1.2\)) Index Notation (Session 2)</h2>
+<section id="slide-org547ce17">
+<h2 id="org547ce17">(\(\S 1.2\)) Index Notation (Session 2)</h2>
 <ul>
 <li class="fragment appear">This is the way to code mechanics in a computational setting (such as Octave/matlab, or a finite element method tool).</li>
 <li class="fragment appear">It simplifies the scalar (inner) product operation greatly.</li>
@@ -184,8 +184,8 @@ Students should be able to:
 
 </ul>
 </section>
-<section id="slide-org03a9996">
-<h3 id="org03a9996">(\(\S 1.2.1\))Summation Convention</h3>
+<section id="slide-org2407338">
+<h3 id="org2407338">(\(\S 1.2.1\))Summation Convention</h3>
 <ul>
 <li class="fragment appear">Instead of summing over the dimensions by rewriting each term for every other repeating dimension, a <b>repeating (<i>dummy</i>) index</b> implies summation (thus eliminating the need to write three terms explicitly), examples,
 <ul>
@@ -201,8 +201,8 @@ Students should be able to:
 
 </ul>
 </section>
-<section id="slide-org58db9c0">
-<h3 id="org58db9c0">(\(\S 1.2.2\)) Kroenecker&rsquo;s Delta and Permutation Symbols</h3>
+<section id="slide-org8a82753">
+<h3 id="org8a82753">(\(\S 1.2.2\)) Kroenecker&rsquo;s Delta and Permutation Symbols</h3>
 <ul>
 <li class="fragment appear">The Kroenecker delta symbol, \(\delta_{ij}\), is defined the dot (inner) product of base vectors.</li>
 <li class="fragment appear">It is also known as an <b>index shifter</b> (\(\boldsymbol{e}_i = \delta_{ij}\boldsymbol{e}_j\)).</li>
@@ -211,8 +211,8 @@ Students should be able to:
 
 </ul>
 </section>
-<section id="slide-org66b4162">
-<h3 id="org66b4162">Exercises: (\(\S 1.2.4\)) Vector Operations in Components</h3>
+<section id="slide-org4248097">
+<h3 id="org4248097">Exercises: (\(\S 1.2.4\)) Vector Operations in Components</h3>
 <ul>
 <li class="fragment appear">the scalar (inner) product</li>
 <li class="fragment appear">the vector (cross) product</li>
@@ -221,8 +221,8 @@ Students should be able to:
 
 </ul>
 </section>
-<section id="slide-orgfdc5faa">
-<h3 id="orgfdc5faa">Questions for next session</h3>
+<section id="slide-orgaf57303">
+<h3 id="orgaf57303">Questions for next session</h3>
 <p>
 Ask AI:
 </p>
@@ -231,8 +231,8 @@ Ask AI:
 
 </ul>
 </section>
-<section id="slide-orgacf6d74">
-<h3 id="orgacf6d74">Deliverables</h3>
+<section id="slide-orgd1a5d09">
+<h3 id="orgd1a5d09">Deliverables</h3>
 <p>
 Students should be able to:
 </p>
@@ -242,15 +242,82 @@ Students should be able to:
 
 </ul>
 </section>
+<section id="slide-org54fe207">
+<h3 id="org54fe207">Code Appendix</h3>
+<p>
+Python definition of the levi-civita operator
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #4f97d7; font-weight: bold;">import</span> numpy <span style="color: #4f97d7; font-weight: bold;">as</span> np
+<span style="color: #4f97d7; font-weight: bold;">from</span> itertools <span style="color: #4f97d7; font-weight: bold;">import</span> permutations
+
+<span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">levi_civita</span>(n):
+<span style="background-color: #292e34;"> </span>   <span style="color: #9f8766;">"""</span>
+<span style="color: #9f8766; background-color: #292e34;"> </span><span style="color: #9f8766;">   Generate the Levi-Civita permutation symbol (n-dimensional).</span>
+
+<span style="color: #9f8766; background-color: #292e34;"> </span><span style="color: #9f8766;">   Parameters:</span>
+<span style="color: #9f8766; background-color: #292e34;"> </span><span style="color: #9f8766;">   n (int): The dimension of the Levi-Civita symbol (e.g., 2 for &#949;_ij, 3 for &#949;_ijk)</span>
+
+<span style="color: #9f8766; background-color: #292e34;"> </span><span style="color: #9f8766;">   Returns:</span>
+<span style="color: #9f8766; background-color: #292e34;"> </span><span style="color: #9f8766;">   np.ndarray: A tensor of shape (n, n, ..., n) with the Levi-Civita symbol values.</span>
+<span style="color: #9f8766; background-color: #292e34;"> </span><span style="color: #9f8766;">   """</span>
+<span style="background-color: #292e34;"> </span>   <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Create an n-dimensional tensor filled with zeros</span>
+<span style="background-color: #292e34;"> </span>   <span style="color: #7590db;">epsilon</span> = np.zeros((n,) * n, dtype=<span style="color: #4f97d7;">int</span>)
+
+<span style="background-color: #292e34;"> </span>   <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Get all permutations of indices [0, 1, ..., n-1]</span>
+<span style="background-color: #292e34;"> </span>   <span style="color: #4f97d7; font-weight: bold;">for</span> perm <span style="color: #4f97d7; font-weight: bold;">in</span> permutations(<span style="color: #4f97d7;">range</span>(n)):
+<span style="background-color: #292e34;"> </span>   <span style="background-color: #292e34;"> </span>   <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Compute the sign of the permutation</span>
+<span style="background-color: #292e34;"> </span>   <span style="background-color: #292e34;"> </span>   <span style="color: #7590db;">sign</span> = np.linalg.det(np.eye(n)[:, perm])
+<span style="background-color: #292e34;"> </span>   <span style="background-color: #292e34;"> </span>   <span style="color: #7590db;">epsilon</span>[perm] = <span style="color: #4f97d7;">int</span>(sign)
+
+<span style="background-color: #292e34;"> </span>   <span style="color: #4f97d7; font-weight: bold;">return</span> epsilon
+
+<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">import functions from this file into any python script using:</span>
+<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">from tensor_utils import levi_civita</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Example: Generate the 3D Levi-Civita symbol (&#949;_ijk)</span>
+<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">levi_3d = levi_civita(3)</span>
+<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">print(levi_3d)</span>
+</code></pre>
+</div>
+
 </section>
-<section>
-<section id="slide-orgcf7bf35">
-<h2 id="orgcf7bf35">(\(\S 1.3\)) Second-Order Tensors (Session 3)</h2>
-<div class="outline-text-2" id="text-orgcf7bf35">
+<section id="slide-org54fe207-split">
+<p>
+Some example calculation in index notation
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #4f97d7; font-weight: bold;">import</span> numpy <span style="color: #4f97d7; font-weight: bold;">as</span> np
+
+<span style="color: #7590db;">A</span> = np.random.rand(3, 3)  <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Generates random values between 0 and 1</span>
+<span style="color: #7590db;">u</span> = np.random.rand(3)
+<span style="color: #7590db;">v</span> = np.random.rand(3)
+
+<span style="color: #4f97d7; font-weight: bold;">from</span> tensor_utils <span style="color: #4f97d7; font-weight: bold;">import</span> levi_civita <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">in tensor_utils.py </span>
+<span style="color: #7590db;">levi_3d</span> = levi_civita(3)
+
+<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">the cross product between two vectors</span>
+<span style="color: #7590db;">cross_product</span> = np.einsum(<span style="color: #2d9574;">'ijk,j,k-&gt;i'</span>, levi_3d, u, v)
+<span style="color: #4f97d7;">print</span>(<span style="color: #2d9574;">"Cross Product (u &#215; v):"</span>, cross_product)
+cross_product - np.cross(u,v) <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">verify equality with built-in functions</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">A vector into a second-order tensor (inner product, contraction)</span>
+<span style="color: #7590db;">w</span> = np.einsum(<span style="color: #2d9574;">'ij,j-&gt;i'</span>, A, u)  <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Contract over index 'j'</span>
+w - np.dot(A,u) <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">verify equality with built-in functions</span>
+</code></pre>
 </div>
 </section>
-<section id="slide-org213f6e9">
-<h3 id="org213f6e9">Review of previous session (by scripting in Python)</h3>
+</section>
+<section>
+<section id="slide-orgd4d1e57">
+<h2 id="orgd4d1e57">(\(\S 1.3\)) Second-Order Tensors (Session 3)</h2>
+<div class="outline-text-2" id="text-orgd4d1e57">
+</div>
+</section>
+<section id="slide-org045893a">
+<h3 id="org045893a">Review of previous session (by scripting in Python)</h3>
 <p>
 Accessing python using <a href="https://www.pythonanywhere.com">https://www.pythonanywhere.com</a>
 </p>
@@ -280,7 +347,7 @@ np.cross( vec_2 , np.cross( vec_1 , vec_3 ) )
 </div>
 
 </section>
-<section id="slide-org213f6e9-split">
+<section id="slide-org045893a-split">
 <p>
 Questions for AI?
 Hint: <a href="https://www.pythonanywhere.com">https://www.pythonanywhere.com</a> site to access python online.
@@ -293,8 +360,8 @@ Hint: <a href="https://www.pythonanywhere.com">https://www.pythonanywhere.com</a
 
 </ol>
 </section>
-<section id="slide-org998e0de">
-<h3 id="org998e0de">(\(\S 1.3.1\)) Definition</h3>
+<section id="slide-orga561508">
+<h3 id="orga561508">(\(\S 1.3.1\)) Definition</h3>
 <ul>
 <li class="fragment appear">Scalars have no index, first-order tensors (vectors) have one. The index is associated with a <b>basis</b>.</li>
 <li class="fragment appear">Abstraction of a physical field or operator that has <b>two</b> indices or bases, is called as a second-order tensor.</li>
@@ -303,7 +370,7 @@ Hint: <a href="https://www.pythonanywhere.com">https://www.pythonanywhere.com</a
 </ul>
 
 </section>
-<section id="slide-org998e0de-split">
+<section id="slide-orga561508-split">
 <ul>
 <li class="fragment appear">On the vector space \(\mathcal{V}\), we have a <i>linear</i> mapping \(\boldsymbol{T}:\mathcal{V}\rightarrow\mathcal{V}\) such that</li>
 <li class="fragment appear">addition
@@ -316,7 +383,7 @@ Hint: <a href="https://www.pythonanywhere.com">https://www.pythonanywhere.com</a
 </ul>
 
 </section>
-<section id="slide-org998e0de-split">
+<section id="slide-orga561508-split">
 <ul>
 <li class="fragment appear">The <b>identity tensor</b> \(\boldsymbol{I}\), reproduces its argument as its result: \(\boldsymbol{I} \boldsymbol{v} =  \boldsymbol{v}\).</li>
 <li class="fragment appear">\(\delta_{ij}\) is the identitiy tensor in indicial notation</li>
@@ -325,40 +392,40 @@ Hint: <a href="https://www.pythonanywhere.com">https://www.pythonanywhere.com</a
 </ul>
 
 </section>
-<section id="slide-org998e0de-split">
+<section id="slide-orga561508-split">
 <p>
 Example 1: Projections:
 </p>
 
-<div id="orgac9b04c" class="figure">
+<div id="org88134e5" class="figure">
 <p><img src="../images/AFC-1.3.1a.png" alt="AFC-1.3.1a.png" width="900px" />
 </p>
 </div>
 
 </section>
-<section id="slide-org998e0de-split">
+<section id="slide-orga561508-split">
 <p>
 Example 2: Rotations:
 </p>
 
-<div id="orgfa02d52" class="figure">
+<div id="org40f6fa7" class="figure">
 <p><img src="../images/AFC-1.3.1b.png" alt="AFC-1.3.1b.png" width="900px" />
 </p>
 </div>
 
 </section>
-<section id="slide-org998e0de-split">
+<section id="slide-orga561508-split">
 <p>
 Example 3: Reflections:
 </p>
 
-<div id="org5d2811c" class="figure">
+<div id="orgdff890b" class="figure">
 <p><img src="../images/AFC-1.3.1c.png" alt="AFC-1.3.1c.png" width="900px" />
 </p>
 </div>
 </section>
-<section id="slide-org1650f20">
-<h3 id="org1650f20">(\(\S 1.3.2\)) Second-Order Tensor Algebra</h3>
+<section id="slide-org34d785e">
+<h3 id="org34d785e">(\(\S 1.3.2\)) Second-Order Tensor Algebra</h3>
 <p>
 Let \(\mathcal{V}^2\) be the set of second-order tensors, then
 </p>
@@ -370,8 +437,8 @@ Let \(\mathcal{V}^2\) be the set of second-order tensors, then
 
 </ul>
 </section>
-<section id="slide-org150e206">
-<h3 id="org150e206">(\(\S 1.3.3\)) Indicial Representation</h3>
+<section id="slide-org4e5b62f">
+<h3 id="org4e5b62f">(\(\S 1.3.3\)) Indicial Representation</h3>
 <ul>
 <li class="fragment appear">The components of a second-order tensor \(\boldsymbol{S}\) in a coordinate frame \(\{\boldsymbol{e}_i\}\) are nine numbers \(S_{ij}\;(1\leq i,j \leq 3)\) defined by \[S_{ij} = \boldsymbol{e}_i \cdot \boldsymbol{S}\boldsymbol{e}_j.\]</li>
 <li class="fragment appear">Given vectors \(\boldsymbol{u} = u_i \boldsymbol{e}_i\) and \(\boldsymbol{v} = v_j \boldsymbol{e}_j\) such that \(\boldsymbol{v} = \boldsymbol{S} \boldsymbol{u}\), we can write \[v_i = S_{ij} u_j\]</li>
@@ -381,8 +448,8 @@ Let \(\mathcal{V}^2\) be the set of second-order tensors, then
 
 </ul>
 </section>
-<section id="slide-orgec1a45c">
-<h3 id="orgec1a45c">Questions for next session</h3>
+<section id="slide-orgdb9c14e">
+<h3 id="orgdb9c14e">Questions for next session</h3>
 <p>
 Ask AI:
 </p>
@@ -391,8 +458,8 @@ Ask AI:
 
 </ul>
 </section>
-<section id="slide-org74481e3">
-<h3 id="org74481e3">Deliverables</h3>
+<section id="slide-org5fd52fe">
+<h3 id="org5fd52fe">Deliverables</h3>
 <p>
 Students should be able to:
 </p>
@@ -404,13 +471,13 @@ Students should be able to:
 </section>
 </section>
 <section>
-<section id="slide-orgc34d8bc">
-<h2 id="orgc34d8bc">(\(\S 1.3\)) Special Classes and Operations (Session 4)</h2>
-<div class="outline-text-2" id="text-orgc34d8bc">
+<section id="slide-orgb346ee9">
+<h2 id="orgb346ee9">(\(\S 1.3\)) Special Classes and Operations (Session 4)</h2>
+<div class="outline-text-2" id="text-orgb346ee9">
 </div>
 </section>
-<section id="slide-orga6c56be">
-<h3 id="orga6c56be">(\(\S 1.3.6\)) Symmetry, Inverse, Orthogonality, etc.</h3>
+<section id="slide-org895b09d">
+<h3 id="org895b09d">(\(\S 1.3.6\)) Symmetry, Inverse, Orthogonality, etc.</h3>
 <ul>
 <li class="fragment appear">To any tensor \(\boldsymbol{S}\in \mathcal{V}^2\) we associate a <b>transpose</b> \(\boldsymbol{S}^T \in \mathcal{V}^2\), which shows \[\boldsymbol{S}\boldsymbol{u} \cdot\boldsymbol{v} = \boldsymbol{u} \cdot \boldsymbol{S}^T\boldsymbol{v} \;\;\; \forall \boldsymbol{u},\boldsymbol{v} \in \mathcal{V}.\]</li>
 <li class="fragment appear">We say, a tensor is <b>symmetric</b> if \(\boldsymbol{S}^T = \boldsymbol{S}\), and,</li>
@@ -421,15 +488,15 @@ Students should be able to:
 </ul>
 
 </section>
-<section id="slide-orga6c56be-split">
+<section id="slide-org895b09d-split">
 <ul>
 <li class="fragment appear">The inverse and transpose operations may commute, that is \((\boldsymbol{P}^{-1})^T = (\boldsymbol{P}^T)^{-1}\), and this is usually denoted as \(\boldsymbol{S}^{-T}\).</li>
 <li class="fragment appear">A tensor \(\boldsymbol{Q}\in \mathcal{V}^2\) is said to be <b>orthogonal</b> if \(\boldsymbol{Q}^T= \boldsymbol{Q}^{-1}\), that is  \[\boldsymbol{Q}\boldsymbol{Q}^{T} = \boldsymbol{Q}^{T} \boldsymbol{Q} = \boldsymbol{I}.\] Such a tensor produces a right-handed rotation <b>rotation</b>, provided it has a positive determinant.</li>
 
 </ul>
 </section>
-<section id="slide-org4b62b42">
-<h3 id="org4b62b42">(\(\S 1.3.7\)) Change of Basis</h3>
+<section id="slide-orgcaf8898">
+<h3 id="orgcaf8898">(\(\S 1.3.7\)) Change of Basis</h3>
 <ul>
 <li class="fragment appear">Let \(\{\boldsymbol{e}_i\}\) and \(\{\boldsymbol{e}_{i'}\}\) be two right-handed bases vector sets in \(\mathbb{E}^3\), where expression of the primed set in terms of the unprimed can be written as \[\boldsymbol{e}_{j'} = (\boldsymbol{e}_1 \cdot \boldsymbol{e}_{j'}) \boldsymbol{e}_1 + (\boldsymbol{e}_2 \cdot \boldsymbol{e}_{j'}) \boldsymbol{e}_2 + (\boldsymbol{e}_3 \cdot \boldsymbol{e}_{j'}) \boldsymbol{e}_3 = (\boldsymbol{e}_i \cdot \boldsymbol{e}_{j'}) \boldsymbol{e}_i,\]</li>
 <li class="fragment appear">while the unprimed set can similarly be expressed in terms of the primed, as \[\boldsymbol{e}_j = (\boldsymbol{e}_j \cdot \boldsymbol{e}_{1'}) \boldsymbol{e}_{1'} + (\boldsymbol{e}_j \cdot \boldsymbol{e}_{2'}) \boldsymbol{e}_{2'} + (\boldsymbol{e}_j \cdot \boldsymbol{e}_{3'}) \boldsymbol{e}_{3'} = (\boldsymbol{e}_j \cdot \boldsymbol{e}_{i'}) \boldsymbol{e}_{i'}.\]</li>
@@ -438,10 +505,10 @@ Students should be able to:
 
 </ul>
 </section>
-<section id="slide-orgc0b4450">
-<h4 id="orgc0b4450">Transformation of Components Under a Change of Basis</h4>
+<section id="slide-orgfa918cb">
+<h4 id="orgfa918cb">Transformation of Components Under a Change of Basis</h4>
 
-<div id="org7956a8d" class="figure">
+<div id="orgf900dbe" class="figure">
 <p><img src="../images/AFC-1.4.png" alt="AFC-1.4.png" width="900px" />
 </p>
 </div>
@@ -452,8 +519,8 @@ Students should be able to:
 
 </ul>
 </section>
-<section id="slide-org3034508">
-<h3 id="org3034508">Questions for next session</h3>
+<section id="slide-org7be2e13">
+<h3 id="org7be2e13">Questions for next session</h3>
 <p>
 Ask AI:
 </p>
@@ -462,8 +529,8 @@ Ask AI:
 
 </ul>
 </section>
-<section id="slide-org7d631d5">
-<h3 id="org7d631d5">Deliverables</h3>
+<section id="slide-org69abded">
+<h3 id="org69abded">Deliverables</h3>
 <p>
 Students should be able to:
 </p>
@@ -474,13 +541,13 @@ Students should be able to:
 </section>
 </section>
 <section>
-<section id="slide-orga2fb097">
-<h2 id="orga2fb097">(\(\S 1.3\)) Invariants and Eigenvalues (Session 5)</h2>
-<div class="outline-text-2" id="text-orga2fb097">
+<section id="slide-org4e096da">
+<h2 id="org4e096da">(\(\S 1.3\)) Invariants and Eigenvalues (Session 5)</h2>
+<div class="outline-text-2" id="text-org4e096da">
 </div>
 </section>
-<section id="slide-org270ed1f">
-<h3 id="org270ed1f">(\(\S 1.3.8\)) The Trace and the Determinant</h3>
+<section id="slide-orgc9f779e">
+<h3 id="orgc9f779e">(\(\S 1.3.8\)) The Trace and the Determinant</h3>
 <ul>
 <li class="fragment appear">The trace of a second-order tensor is a linear mapping tr : \(\mathcal{V}^2\, \rightarrow \mathbb{R}\) defined by \[\mathrm{tr}\,\boldsymbol{S} = S_{ii}\]</li>
 <li class="fragment appear">It has a similar representation in the matrix form \[\mathrm{tr}\,[\boldsymbol{S}] =  [\boldsymbol{S}]_{ii}\]</li>
@@ -489,7 +556,7 @@ Students should be able to:
 </ul>
 
 </section>
-<section id="slide-org270ed1f-split">
+<section id="slide-orgc9f779e-split">
 <ul>
 <li class="fragment appear">The determinant of a second-order tensor is a mapping det : \(\mathcal{V}^2\, \rightarrow \mathbb{R}\) defined by
 \[ \mathrm{det} \boldsymbol{S} = \epsilon_{ijk} S_{i1} S_{j2} S_{k3}\]</li>
@@ -499,8 +566,8 @@ Students should be able to:
 
 </ul>
 </section>
-<section id="slide-org6089aea">
-<h3 id="org6089aea">(\(\S 1.3.9\)) Eigenvalues, Eigenvectors and Principal Invariants</h3>
+<section id="slide-orgdfe9ec2">
+<h3 id="orgdfe9ec2">(\(\S 1.3.9\)) Eigenvalues, Eigenvectors and Principal Invariants</h3>
 <p>
 It occurs that for some particular directions a second-order tensor \(\boldsymbol{S}\) produces a vector that is in the same direction as it&rsquo;s argument vector \(\boldsymbol{e}\), as in \[\boldsymbol{S} \boldsymbol{e} = \lambda \boldsymbol{e}.\]
 </p>
@@ -512,7 +579,7 @@ It occurs that for some particular directions a second-order tensor \(\boldsymbo
 </ul>
 
 </section>
-<section id="slide-org6089aea-split">
+<section id="slide-orgdfe9ec2-split">
 <ul>
 <li class="fragment appear">The <b>principal invariants</b> of a second-order tensor \(\boldsymbol{S}\) are three scalars defined by \[I_1(\boldsymbol{S}) = \mathrm{tr} \mathrm{\boldsymbol{S}} ,\hspace{1em} I_1(\boldsymbol{S}) = \frac{1}{2} [(\mathrm{tr} \boldsymbol{S})^2 - \mathrm{tr} (\boldsymbol{S}^2)] ,\hspace{1em} I_3(\boldsymbol{S}) = \mathrm{det} \boldsymbol{S}.\]</li>
 <li class="fragment appear">For any \(\alpha \in \mathbb{R}\), the principal invariants satisfy the relation \[ \mathrm{det} (\boldsymbol{S} - \lambda \boldsymbol{I}) = -\alpha^3 + I_1(\boldsymbol{S}) \alpha^2 -  I_2(\boldsymbol{S}) \alpha + I_1(\boldsymbol{S}).\]</li>
@@ -521,8 +588,8 @@ It occurs that for some particular directions a second-order tensor \(\boldsymbo
 
 </ul>
 </section>
-<section id="slide-orgec4bbf7">
-<h3 id="orgec4bbf7">Questions for next session</h3>
+<section id="slide-org786b04c">
+<h3 id="org786b04c">Questions for next session</h3>
 <p>
 Ask AI:
 </p>
@@ -531,8 +598,8 @@ Ask AI:
 
 </ul>
 </section>
-<section id="slide-org81c3d32">
-<h3 id="org81c3d32">Deliverables</h3>
+<section id="slide-org8a697b4">
+<h3 id="org8a697b4">Deliverables</h3>
 <p>
 Students should be able to:
 </p>
@@ -543,7 +610,7 @@ Students should be able to:
 </ul>
 
 </section>
-<section id="slide-org81c3d32-split">
+<section id="slide-org8a697b4-split">
 <p>
 END OF UNIT 1
 </p>

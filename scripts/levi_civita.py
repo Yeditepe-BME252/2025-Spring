@@ -22,8 +22,9 @@ def levi_civita(n):
     
     return epsilon
 
+# import functions from this file into any python script using:
+# from tensor_utils import levi_civita
+
 # Example: Generate the 3D Levi-Civita symbol (ε_ijk)
 # levi_3d = levi_civita(3)
-
-# print("Levi-Civita Symbol (3D):")
 # print(levi_3d)
