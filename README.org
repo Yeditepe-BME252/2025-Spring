@@ -36,8 +36,8 @@ Jove: a scientific educational video content provider with free access through Y
 - [X] transform vectors linearly via second-order tensors
 - [X] convert expressions between their tensor and matrix forms
 - [X] perform change of basis of vector components
-- [ ] calculate the determinant of a second-order tensor
-- [ ] calculate the eigenvalues and eigenvectors of a second-order tensor
+- [X] calculate the determinant of a second-order tensor
+- [X] calculate the eigenvalues and eigenvectors of a second-order tensor
 - [ ] provide examples of scalar and vector fields
 - [ ] apply the gradient operator to  a scalar field
 - [ ] apply the gradient operator to a vector field

@@ -19,7 +19,7 @@ def levi_civita(n):
         # Compute the sign of the permutation
         sign = np.linalg.det(np.eye(n)[:, perm])
         epsilon[perm] = int(sign)
-    
+
     return epsilon
 
 # import functions from this file into any python script using:

@@ -10,42 +10,35 @@
 #+REVEAL_EXTRA_CSS: ../style.css
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
 
-* Preliminaries
-What is the unit of force?
+* ($\S 2.1$) Preliminaries (Session 6)
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- The fundamental units required to define the unit of force are the following
-  #+ATTR_REVEAL: :frag (appear appear appear ...)
-  + Length [L]
-  + Mass [M]
-  + Time [T]
-- International System of Units, Newton, dyne, etc.
-- Anglo-saxon System of Units, lb-f
+- Change in a physical variable, $\phi$, is usually denoted by $d$ or $\partial$, is called a *differential* of $\phi$, such as $d\phi$ or $\partial\phi$.
+- The choice of correct representation depends on how many other variables it depends on, e.g. if it depends on a single variable such as $\phi(t)$ then the *differential change in variable* $\phi$ with respect to a *differential change in time*, $dt$, is denoted as $$\frac{d\phi}{dt}$$
+- When the physical variable depends on more than one independent variables such as $\phi(x_1, x_2)$, then the *differential change in* $\phi$ with respect to $x_1$ and $x_2$ are denoted as $$\frac{\partial\phi}{\partial x_1},\;\; \frac{\partial\phi}{\partial x_2}$$
 
-* ($\S 2.2$) The Del Operator (Session 6)
-#+ATTR_REVEAL: :frag (appear appear appear ...)
-- A vector (or a first-order tensor, in general) is merely an abstraction/representation of a mechanical effect (a force, velocity, displacement, linear momentum, gradient of a scalar field variable, etc.).
-- It is one of the main actors in the field of mechanics (apart from others such as scalars, or higher-order tensors).
-
-*** Symbolic Representation of Vectors
-#+ATTR_REVEAL: :frag (appear)
-- A vector/tensor is usually represented by placing a right arrow over the letter: $$ \vec{F},\; \vec{a},\,\, \vec{\nabla}\phi $$
-- or a tilde symbol below as in: $$ \underset{\sim}{F},\; \underset{\sim}{a},\; \underset{\sim}{\nabla}\phi $$
-- or simply using boldface if one has access to a modern typesetting system (such as latex) $$ \boldsymbol{F},\; \boldsymbol{a},\; \boldsymbol{\nabla}\phi $$
-- the difference of the $\nabla$ is that it is an operator which requires an argument, for example a scalar field variable such as the temperature $T$ $$ \boldsymbol{\nabla}{T} $$
-- represents the gradient of the temperature field.
-  
-*** Graphical Representation of Vectors
+*** One-dimensional case
 #+ATTR_HTML: :width 900px
-[[../images/AFC-1.1.png]]
-#+ATTR_REVEAL: :frag (appear)
-- Simplest algebraic operations such as addition or subtraction of two vectors, or the multiplication of a vector by a scalar can be performed graphically.
-- By letting $\mathcal{V}$ be the set of all vectors, then it should be TRUE that $$ \boldsymbol{u} + \boldsymbol{v} \in \mathcal{V} \;\; \forall \boldsymbol{u},\,\boldsymbol{v} \in \mathcal{V} \;\; \mathrm{and}\;\; \alpha\boldsymbol{v} \in \mathcal{V} \;\; \forall \alpha \in \mathbb{R},\; \boldsymbol{v} \in \mathcal{V}\,.$$
+[[../images/one-dimension.jpg]]
 
-** ($\S 1.1.2$) Scalar and Vector Products
+*** Two-dimensional case
+#+ATTR_HTML: :width 900px
+[[../images/colormaps_ex4_glycerine.png]]
+- Find the isocontours, i.e. $d\phi=0$. In this case, by the chain rule $d\phi = {{\partial\phi}\over{\partial x_1}} d x_1 + {{\partial\phi}\over{\partial x_2}} d x_2$.
+- The gradient of $\phi$, i.e. the vector $\nabla\phi = {{\partial\phi}\over{\partial x_i}} \boldsymbol{e}_i$ is normal to the vector $d\boldsymbol{x} = \partial x_i \boldsymbol{e}_i$. 
+
+
+** ($\S 2.1.1$) Points, Tensors
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- The scalar or dot product is defined as the product of the magnitudes of both arguments, and cosine of the acute angle $\theta \in [0,\pi]$ subtended between the argument vectors placed tail to tail.
-- The vector product  is defined by a vector pointing normal to the plane formed by the argument vectors, in the sense shown by turning from the first argument towards the second using the right hand, having a magnitude equal to the products of the magnitudes of the argument vectors and the sine of the same angle, $\theta \in [0,\pi]$.
-- you can figure out the triple scalar product between three vectors. (Resulting in the volume of the parallelpiped formed by the three arguments.)
+- In the remainder of the course a stationary (non-moving) coordinate frame $\{\boldsymbol{e}_i\}$ in Euclidean space $\mathbb{E}^3$ will be used.
+- We identify points $\boldsymbol{x} \in \mathbb{E}^3$ with, $$ \boldsymbol{x} = x_i \boldsymbol{e}_i = \begin{Bmatrix} x_1 \\ x_2 \\ x_3 \end{Bmatrix} \in \mathbb{R}^3$$
+- We identify vectors $\boldsymbol{v} \in \mathcal{V}$ with, $$ \boldsymbol{v} = v_i \boldsymbol{e}_i = \begin{Bmatrix} v_1 \\ v_2 \\ v_3 \end{Bmatrix} \in \mathbb{R}^3$$
+- We identify second-order tensors $\boldsymbol{S} \in \mathcal{V}^2$ with, $$ \boldsymbol{S} = S_{ij} \boldsymbol{e}_i \otimes \boldsymbol{e}_j= \begin{bmatrix} S_{11} & S_{12} & S_{13} \\ S_{21} & S_{22} & S_{23} \\ S_{31} & S_{32} & S_{33} \end{bmatrix} \in \mathbb{R}^3\times 3$$
+  
+** ($S\ 2.1.2$) Norms, Order
+#+ATTR_REVEAL: :frag (appear)
+- 
+  
+
 
 #+REVEAL: split
 #+BEGIN_SRC octave
@@ -55,19 +48,26 @@ What is the unit of force?
   d = cross(a,b);
   #+END_SRC
   
-** ($\S 1.1.3$) Projections, Bases and Coordinate Frames
+* ($\S 2.2$) Differentiation of Tensor Fields (Session 7)
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- Any vector $\boldsymbol{v}$ can be decomposed into two vectors, one of which  ($\boldsymbol{v}_{e\parallel}$) is parallel to a given direction (unit vector) $\boldsymbol{e}$, and the other  ($\boldsymbol{v}_{e\perp}$) perpendicular to $\boldsymbol{e}$.
-- A right handed orthonormal basis ($\boldsymbol{i}, \boldsymbol{j}, \boldsymbol{k}$ or $\boldsymbol{e}_1, \boldsymbol{e}_2, \boldsymbol{e}_3$) is one relative to which vectors can be decomposed into components along the three coordinate axes (a Cartesian coordinate system).
-- Respective vector components $v_1,\,v_2,\,v_3$ are found by taking the dot product between the vector $\boldsymbol{v}$ and each one of the unit vectors $\boldsymbol{e}_i,\,i=1,2,3$.
-- And the vector can be written as a sum of its projections onto the three coordinate axes (the classical notation).
-- An alternate way of expressing the vector $\boldsymbol{v}$ is the matrix notation. There the vector components are written as an ordered triplet listed in a column. 
+** ($\S 2.2.1$) Gradient of a scalar field 
+
+#+ATTR_HTML: :width 900px
+[[../images/gradientofphi.jpg]]
+
+Introduce $\nabla \phi$
 
 #+REVEAL: split 
-#+ATTR_HTML: :width 900px
-[[../images/AFC-1.3.png]]
+New page
 
-Let there be two bases $\{\boldsymbol{e}_i\}$ and $\{\boldsymbol{e}'_i\}$, the primed system rotated about the third axis in the positive sense by 45 degrees. A vector $\boldsymbol{v}$ which has components $[1,1,0]$ in the first system will have what components in the primed system?
+** ($\S 2.2.1$) Gradient of a vector field 
+
+#+ATTR_HTML: :width 900px
+[[../images/windy.mp4]]
+
+Introduce $\nabla \boldsymbol{v}$
+
+* ($\S 2.3.1$) Divergence Integral Theorem (Session 8)
 
 ** Questions for next session
 Ask AI:

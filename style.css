@@ -3,7 +3,7 @@
     margin-left: 55px;
 }
 .reveal li {
-  color: gray; /* Default color for all list items */
+  color: black; /* Default color for all list items */
 }
 
 .reveal li.visible {

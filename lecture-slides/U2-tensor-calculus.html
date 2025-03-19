@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Unit 2: vector calculus</title>
+<meta name="author" content="Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../style.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>Unit 2: vector calculus</h2> <h3>Readings from Stuart and Gonzales, Chapter 2</h3> <h4>2025-03-16</h4>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-orgd2c47e9">(\(\S 2.1\)) Preliminaries (Session 6)</a></li>
+<li><a href="#/slide-org790d69f">(\(\S 2.2\)) Differentiation of Tensor Fields (Session 7)</a></li>
+<li><a href="#/slide-org2a458aa">(\(\S 2.3.1\)) Divergence Integral Theorem (Session 8)</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section>
+<section id="slide-orgd2c47e9">
+<h2 id="orgd2c47e9">(\(\S 2.1\)) Preliminaries (Session 6)</h2>
+<ul>
+<li class="fragment appear">Change in a physical variable, \(\phi\), is usually denoted by \(d\) or \(\partial\), is called a <b>differential</b> of \(\phi\), such as \(d\phi\) or \(\partial\phi\).</li>
+<li class="fragment appear">The choice of correct representation depends on how many other variables it depends on, e.g. if it depends on a single variable such as \(\phi(t)\) then the <b>differential change in variable</b> \(\phi\) with respect to a <b>differential change in time</b>, \(dt\), is denoted as \[\frac{d\phi}{dt}\]</li>
+<li class="fragment appear">When the physical variable depends on more than one independent variables such as \(\phi(x_1, x_2)\), then the <b>differential change in</b> \(\phi\) with respect to \(x_1\) and \(x_2\) are denoted as \[\frac{\partial\phi}{\partial x_1},\;\; \frac{\partial\phi}{\partial x_2}\]</li>
+
+</ul>
+</section>
+<section id="slide-orge5dd129">
+<h4 id="orge5dd129">One-dimensional case</h4>
+
+<div id="orgb9a3fde" class="figure">
+<p><img src="../images/one-dimension.jpg" alt="one-dimension.jpg" width="900px" />
+</p>
+</div>
+</section>
+<section id="slide-org83ecb19">
+<h4 id="org83ecb19">Two-dimensional case</h4>
+
+<div id="orgbf9831d" class="figure">
+<p><img src="../images/colormaps_ex4_glycerine.png" alt="colormaps_ex4_glycerine.png" width="900px" />
+</p>
+</div>
+<ul>
+<li>Find the isocontours, i.e. \(d\phi=0\). In this case, by the chain rule \(d\phi = {{\partial\phi}\over{\partial x_1}} d x_1 + {{\partial\phi}\over{\partial x_2}} d x_2\).</li>
+<li>The gradient of \(\phi\), i.e. the vector \(\nabla\phi = {{\partial\phi}\over{\partial x_i}} \boldsymbol{e}_i\) is normal to the vector \(d\boldsymbol{x} = \partial x_i \boldsymbol{e}_i\).</li>
+
+</ul>
+</section>
+<section id="slide-org8fc82e0">
+<h3 id="org8fc82e0">(\(\S 2.1.1\)) Points, Tensors</h3>
+<ul>
+<li class="fragment appear">In the remainder of the course a stationary (non-moving) coordinate frame \(\{\boldsymbol{e}_i\}\) in Euclidean space \(\mathbb{E}^3\) will be used.</li>
+<li class="fragment appear">We identify points \(\boldsymbol{x} \in \mathbb{E}^3\) with, \[ \boldsymbol{x} = x_i \boldsymbol{e}_i = \begin{Bmatrix} x_1 \\ x_2 \\ x_3 \end{Bmatrix} \in \mathbb{R}^3\]</li>
+<li class="fragment appear">We identify vectors \(\boldsymbol{v} \in \mathcal{V}\) with, \[ \boldsymbol{v} = v_i \boldsymbol{e}_i = \begin{Bmatrix} v_1 \\ v_2 \\ v_3 \end{Bmatrix} \in \mathbb{R}^3\]</li>
+<li class="fragment ...">We identify second-order tensors \(\boldsymbol{S} \in \mathcal{V}^2\) with, \[ \boldsymbol{S} = S_{ij} \boldsymbol{e}_i \otimes \boldsymbol{e}_j= \begin{bmatrix} S_{11} & S_{12} & S_{13} \\ S_{21} & S_{22} & S_{23} \\ S_{31} & S_{32} & S_{33} \end{bmatrix} \in \mathbb{R}^3\times 3\]</li>
+
+</ul>
+</section>
+<section id="slide-org37ee479">
+<h3 id="org37ee479">(\(S\ 2.1.2\)) Norms, Order</h3>
+<ul>
+<li class="fragment appear"></li>
+
+</ul>
+
+
+
+</section>
+<section id="slide-org37ee479-split">
+<div class="org-src-container">
+
+<pre  class="src src-octave"   ><code trim>a <span style="color: #4f97d7;">=</span> [0<span style="color: #4f97d7;">,</span>1.5<span style="color: #4f97d7;">,</span>3]<span style="color: #4f97d7;">';</span>
+b <span style="color: #4f97d7;">=</span> [<span style="color: #4f97d7;">-</span>2 2 1]<span style="color: #4f97d7;">';</span>
+c <span style="color: #4f97d7;">=</span> dot(a<span style="color: #4f97d7;">,</span>b)<span style="color: #4f97d7;">;</span>
+d <span style="color: #4f97d7;">=</span> cross(a<span style="color: #4f97d7;">,</span>b)<span style="color: #4f97d7;">;</span>
+</code></pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org790d69f">
+<h2 id="org790d69f">(\(\S 2.2\)) Differentiation of Tensor Fields (Session 7)</h2>
+</section>
+<section id="slide-org7eea53e">
+<h3 id="org7eea53e">(\(\S 2.2.1\)) Gradient of a scalar field</h3>
+
+<div id="org74a28e9" class="figure">
+<p><img src="../images/gradientofphi.jpg" alt="gradientofphi.jpg" width="900px" />
+</p>
+</div>
+
+<p>
+Introduce \(\nabla \phi\)
+</p>
+
+</section>
+<section id="slide-org7eea53e-split">
+<p>
+New page
+</p>
+</section>
+<section id="slide-org1c754a8">
+<h3 id="org1c754a8">(\(\S 2.2.1\)) Gradient of a vector field</h3>
+<p width="900px">
+<a href="../images/windy.mp4" width="900px">../images/windy.mp4</a>
+</p>
+
+<p>
+Introduce \(\nabla \boldsymbol{v}\)
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org2a458aa">
+<h2 id="org2a458aa">(\(\S 2.3.1\)) Divergence Integral Theorem (Session 8)</h2>
+<div class="outline-text-2" id="text-org2a458aa">
+</div>
+</section>
+<section id="slide-orgcdfbd86">
+<h3 id="orgcdfbd86">Questions for next session</h3>
+<p>
+Ask AI:
+</p>
+<ul>
+<li>Explain the indicial notation from physics</li>
+
+</ul>
+</section>
+<section id="slide-org4241959">
+<h3 id="org4241959">Deliverables</h3>
+<p>
+Students should be able to:
+</p>
+<ul>
+<li class="off"><code>[&#xa0;]</code> perform simple algebraic operations with vectors</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>
