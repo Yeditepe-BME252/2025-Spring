@@ -311,7 +311,7 @@ Students should be able to:
 #+ATTR_REVEAL: :frag (appear)
 - The trace of a second-order tensor is a linear mapping tr : $\mathcal{V}^2\, \rightarrow \mathbb{R}$ defined by $$\mathrm{tr}\,\boldsymbol{S} = S_{ii}$$ 
 - It has a similar representation in the matrix form $$\mathrm{tr}\,[\boldsymbol{S}] =  [\boldsymbol{S}]_{ii}$$
-- Show that the trace remains invariant to a change of basis, i.e. $$\mathrm{tr}\,\boldsymbol{S} = \mathrm{tr}\,\boldsymbol{S}'$$
+- Show that the trace remains invariant to a change of basis, i.e. $$\mathrm{tr}\, [\boldsymbol{S}] = \mathrm{tr}\, [\boldsymbol{S}]'$$
 
 #+REVEAL: split
 #+ATTR_REVEAL: :frag (appear)
@@ -331,7 +331,7 @@ It occurs that for some particular directions a second-order tensor $\boldsymbol
 #+REVEAL: split
 #+ATTR_REVEAL: :frag (appear)
 - The *principal invariants* of a second-order tensor $\boldsymbol{S}$ are three scalars defined by $$I_1(\boldsymbol{S}) = \mathrm{tr} \mathrm{\boldsymbol{S}} ,\hspace{1em} I_1(\boldsymbol{S}) = \frac{1}{2} [(\mathrm{tr} \boldsymbol{S})^2 - \mathrm{tr} (\boldsymbol{S}^2)] ,\hspace{1em} I_3(\boldsymbol{S}) = \mathrm{det} \boldsymbol{S}.$$
-- For any $\alpha \in \mathbb{R}$, the principal invariants satisfy the relation $$ \mathrm{det} (\boldsymbol{S} - \lambda \boldsymbol{I}) = -\alpha^3 + I_1(\boldsymbol{S}) \alpha^2 -  I_2(\boldsymbol{S}) \alpha + I_1(\boldsymbol{S}).$$
+- For any $\alpha \in \mathbb{R}$, the principal invariants satisfy the relation $$ \mathrm{det} (\boldsymbol{S} - \alpha \boldsymbol{I}) = -\alpha^3 + I_1(\boldsymbol{S}) \alpha^2 -  I_2(\boldsymbol{S}) \alpha + I_1(\boldsymbol{S}).$$
 - The invariants are not affected by a change of basis.
 - When $\boldsymbol{S}$ is symmetric it can be shown that all three roots of the characteristic polynomial are real.
 ** Questions for next session
