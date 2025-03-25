@@ -17,15 +17,14 @@
 - When the physical variable depends on more than one independent variables such as $\phi(x_1, x_2)$, then the *differential change in* $\phi$ with respect to $x_1$ and $x_2$ are denoted as $$\frac{\partial\phi}{\partial x_1},\;\; \frac{\partial\phi}{\partial x_2}$$
 
 *** One-dimensional case
-#+ATTR_HTML: :width 900px
+#+ATTR_HTML: :width 1200px
 [[../images/one-dimension.jpg]]
 
 *** Two-dimensional case
-#+ATTR_HTML: :width 900px
+#+ATTR_HTML: :width 1200px
 [[../images/colormaps_ex4_glycerine.png]]
 - Find the isocontours, i.e. $d\phi=0$. In this case, by the chain rule $d\phi = {{\partial\phi}\over{\partial x_1}} d x_1 + {{\partial\phi}\over{\partial x_2}} d x_2$.
 - The gradient of $\phi$, i.e. the vector $\nabla\phi = {{\partial\phi}\over{\partial x_i}} \boldsymbol{e}_i$ is normal to the vector $d\boldsymbol{x} = \partial x_i \boldsymbol{e}_i$. 
-
 
 ** ($\S 2.1.1$) Points, Tensors
 #+ATTR_REVEAL: :frag (appear appear appear ...)
@@ -34,19 +33,29 @@
 - We identify vectors $\boldsymbol{v} \in \mathcal{V}$ with, $$ \boldsymbol{v} = v_i \boldsymbol{e}_i = \begin{Bmatrix} v_1 \\ v_2 \\ v_3 \end{Bmatrix} \in \mathbb{R}^3$$
 - We identify second-order tensors $\boldsymbol{S} \in \mathcal{V}^2$ with, $$ \boldsymbol{S} = S_{ij} \boldsymbol{e}_i \otimes \boldsymbol{e}_j= \begin{bmatrix} S_{11} & S_{12} & S_{13} \\ S_{21} & S_{22} & S_{23} \\ S_{31} & S_{32} & S_{33} \end{bmatrix} \in \mathbb{R}^3\times 3$$
   
-** ($S\ 2.1.2$) Norms, Order
+** ($\S 2.1.2$) Norms, Order
 #+ATTR_REVEAL: :frag (appear)
-- 
+- By the standard (Euclidean) norms on the spaces $\mathbb{E}^3$, $\mathcal{V}$, and $\mathcal{V}^2$ we mean the scalar functions defined by $$\begin{align}|\boldsymbol{x}| &= \sqrt{\boldsymbol{x} \cdot \boldsymbol{x}}, \;\; \forall \boldsymbol{x} \in \mathbb{E}^3 \\|\boldsymbol{v} | &= \sqrt{\boldsymbol{v} \cdot \boldsymbol{v}}, \;\; \forall \boldsymbol{v} \in \mathcal{V} \\|\boldsymbol{S} | &= \sqrt{\boldsymbol{S} : \boldsymbol{S}}, \;\; \forall \boldsymbol{S} \in \mathcal{V}^2  \end{align}$$
+- Consider a function $\boldsymbol{f}: U \rightarrow W$, where $U$ and $W$ denote any of the spaces $\mathbb{E}^3$, $\mathcal{V}$ and $\mathcal{V}^2$ or $\mathbb{R}$.\\
+  If there are constants $C>0$ and $r>0$ such that $|\boldsymbol{f} (\boldsymbol{h})| \leq C|\boldsymbol{h}|^r$ as $\boldsymbol{h} \rightarrow 0$, we write $$\boldsymbol{f} (\boldsymbol{h}) = \mathcal{O}(|\boldsymbol{h}|^r)\;\; \mathrm{as} \;\; \boldsymbol{h} \rightarrow 0.$$
   
-
-
 #+REVEAL: split
-#+BEGIN_SRC octave
-  a = [0,1.5,3]';
-  b = [-2 2 1]';
-  c = dot(a,b);
-  d = cross(a,b);
-  #+END_SRC
+Calculating norm of vector and second-order tensor in python.
+#+BEGIN_SRC python
+  import numpy as np
+
+  x = np.random.rand(3)   # Generates random values between 0 and 1
+  S = np.random.rand(3, 3)
+
+  # Calculating the norms
+  # Compute the Euclidean (L2) norm
+  norm_v = np.linalg.norm(x)
+  print(norm_v)  # Output
+  
+  # Frobenius norm (default for matrices)
+  norm_A = np.linalg.norm(S)
+  print(norm_A)  # Output 
+#+END_SRC
   
 * ($\S 2.2$) Differentiation of Tensor Fields (Session 7)
 #+ATTR_REVEAL: :frag (appear appear appear ...)

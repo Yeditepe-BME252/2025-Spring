@@ -36,36 +36,39 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#/slide-orgd2c47e9">(\(\S 2.1\)) Preliminaries (Session 6)</a></li>
-<li><a href="#/slide-org790d69f">(\(\S 2.2\)) Differentiation of Tensor Fields (Session 7)</a></li>
-<li><a href="#/slide-org2a458aa">(\(\S 2.3.1\)) Divergence Integral Theorem (Session 8)</a></li>
+<li><a href="#/slide-orgfcc8c74">(\(\S 2.1\)) Preliminaries (Session 6)</a></li>
+<li><a href="#/slide-org94d60ed">(\(\S 2.2\)) Differentiation of Tensor Fields (Session 7)</a></li>
+<li><a href="#/slide-org02e6b40">(\(\S 2.3.1\)) Divergence Integral Theorem (Session 8)</a></li>
 </ul>
 </div>
 </div>
 </section>
+
 <section>
-<section id="slide-orgd2c47e9">
-<h2 id="orgd2c47e9">(\(\S 2.1\)) Preliminaries (Session 6)</h2>
+<section id="slide-orgfcc8c74">
+<h2 id="orgfcc8c74">(\(\S 2.1\)) Preliminaries (Session 6)</h2>
 <ul>
 <li class="fragment appear">Change in a physical variable, \(\phi\), is usually denoted by \(d\) or \(\partial\), is called a <b>differential</b> of \(\phi\), such as \(d\phi\) or \(\partial\phi\).</li>
 <li class="fragment appear">The choice of correct representation depends on how many other variables it depends on, e.g. if it depends on a single variable such as \(\phi(t)\) then the <b>differential change in variable</b> \(\phi\) with respect to a <b>differential change in time</b>, \(dt\), is denoted as \[\frac{d\phi}{dt}\]</li>
 <li class="fragment appear">When the physical variable depends on more than one independent variables such as \(\phi(x_1, x_2)\), then the <b>differential change in</b> \(\phi\) with respect to \(x_1\) and \(x_2\) are denoted as \[\frac{\partial\phi}{\partial x_1},\;\; \frac{\partial\phi}{\partial x_2}\]</li>
 
 </ul>
-</section>
-<section id="slide-orge5dd129">
-<h4 id="orge5dd129">One-dimensional case</h4>
 
-<div id="orgb9a3fde" class="figure">
-<p><img src="../images/one-dimension.jpg" alt="one-dimension.jpg" width="900px" />
+</section>
+<section id="slide-orgaad04b5">
+<h4 id="orgaad04b5">One-dimensional case</h4>
+
+<div id="org2890576" class="figure">
+<p><img src="../images/one-dimension.jpg" alt="one-dimension.jpg" width="1200px" />
 </p>
 </div>
-</section>
-<section id="slide-org83ecb19">
-<h4 id="org83ecb19">Two-dimensional case</h4>
 
-<div id="orgbf9831d" class="figure">
-<p><img src="../images/colormaps_ex4_glycerine.png" alt="colormaps_ex4_glycerine.png" width="900px" />
+</section>
+<section id="slide-org48e431e">
+<h4 id="org48e431e">Two-dimensional case</h4>
+
+<div id="orgac544d7" class="figure">
+<p><img src="../images/colormaps_ex4_glycerine.png" alt="colormaps_ex4_glycerine.png" width="1200px" />
 </p>
 </div>
 <ul>
@@ -73,9 +76,10 @@
 <li>The gradient of \(\phi\), i.e. the vector \(\nabla\phi = {{\partial\phi}\over{\partial x_i}} \boldsymbol{e}_i\) is normal to the vector \(d\boldsymbol{x} = \partial x_i \boldsymbol{e}_i\).</li>
 
 </ul>
+
 </section>
-<section id="slide-org8fc82e0">
-<h3 id="org8fc82e0">(\(\S 2.1.1\)) Points, Tensors</h3>
+<section id="slide-orge2ab58c">
+<h3 id="orge2ab58c">(\(\S 2.1.1\)) Points, Tensors</h3>
 <ul>
 <li class="fragment appear">In the remainder of the course a stationary (non-moving) coordinate frame \(\{\boldsymbol{e}_i\}\) in Euclidean space \(\mathbb{E}^3\) will be used.</li>
 <li class="fragment appear">We identify points \(\boldsymbol{x} \in \mathbb{E}^3\) with, \[ \boldsymbol{x} = x_i \boldsymbol{e}_i = \begin{Bmatrix} x_1 \\ x_2 \\ x_3 \end{Bmatrix} \in \mathbb{R}^3\]</li>
@@ -83,36 +87,50 @@
 <li class="fragment ...">We identify second-order tensors \(\boldsymbol{S} \in \mathcal{V}^2\) with, \[ \boldsymbol{S} = S_{ij} \boldsymbol{e}_i \otimes \boldsymbol{e}_j= \begin{bmatrix} S_{11} & S_{12} & S_{13} \\ S_{21} & S_{22} & S_{23} \\ S_{31} & S_{32} & S_{33} \end{bmatrix} \in \mathbb{R}^3\times 3\]</li>
 
 </ul>
+
 </section>
-<section id="slide-org37ee479">
-<h3 id="org37ee479">(\(S\ 2.1.2\)) Norms, Order</h3>
+<section id="slide-org77f1e14">
+<h3 id="org77f1e14">(\(\S 2.1.2\)) Norms, Order</h3>
 <ul>
-<li class="fragment appear"></li>
+<li class="fragment appear">By the standard (Euclidean) norms on the spaces \(\mathbb{E}^3\), \(\mathcal{V}\), and \(\mathcal{V}^2\) we mean the scalar functions defined by \[\begin{align}|\boldsymbol{x}| &= \sqrt{\boldsymbol{x} \cdot \boldsymbol{x}}, \;\; \forall \boldsymbol{x} \in \mathbb{E}^3 \\|\boldsymbol{v} | &= \sqrt{\boldsymbol{v} \cdot \boldsymbol{v}}, \;\; \forall \boldsymbol{v} \in \mathcal{V} \\|\boldsymbol{S} | &= \sqrt{\boldsymbol{S} : \boldsymbol{S}}, \;\; \forall \boldsymbol{S} \in \mathcal{V}^2  \end{align}\]</li>
+<li class="fragment appear">Consider a function \(\boldsymbol{f}: U \rightarrow W\), where \(U\) and \(W\) denote any of the spaces \(\mathbb{E}^3\), \(\mathcal{V}\) and \(\mathcal{V}^2\) or \(\mathbb{R}\).<br />
+If there are constants \(C>0\) and \(r>0\) such that \(|\boldsymbol{f} (\boldsymbol{h})| \leq C|\boldsymbol{h}|^r\) as \(\boldsymbol{h} \rightarrow 0\), we write \[\boldsymbol{f} (\boldsymbol{h}) = \mathcal{O}(|\boldsymbol{h}|^r)\;\; \mathrm{as} \;\; \boldsymbol{h} \rightarrow 0.\]</li>
 
 </ul>
 
-
-
 </section>
-<section id="slide-org37ee479-split">
+<section id="slide-org77f1e14-split">
+<p>
+Calculating norm of vector and second-order tensor in python.
+</p>
 <div class="org-src-container">
 
-<pre  class="src src-octave"   ><code trim>a <span style="color: #4f97d7;">=</span> [0<span style="color: #4f97d7;">,</span>1.5<span style="color: #4f97d7;">,</span>3]<span style="color: #4f97d7;">';</span>
-b <span style="color: #4f97d7;">=</span> [<span style="color: #4f97d7;">-</span>2 2 1]<span style="color: #4f97d7;">';</span>
-c <span style="color: #4f97d7;">=</span> dot(a<span style="color: #4f97d7;">,</span>b)<span style="color: #4f97d7;">;</span>
-d <span style="color: #4f97d7;">=</span> cross(a<span style="color: #4f97d7;">,</span>b)<span style="color: #4f97d7;">;</span>
+<pre  class="src src-python"   ><code trim><span style="color: #4f97d7; font-weight: bold;">import</span> numpy <span style="color: #4f97d7; font-weight: bold;">as</span> np
+
+<span style="color: #7590db;">x</span> = np.random.rand(3)   <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Generates random values between 0 and 1</span>
+<span style="color: #7590db;">S</span> = np.random.rand(3, 3)
+
+<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Calculating the norms</span>
+<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Compute the Euclidean (L2) norm</span>
+<span style="color: #7590db;">norm_v</span> = np.linalg.norm(x)
+<span style="color: #4f97d7;">print</span>(norm_v)  <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Output</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Frobenius norm (default for matrices)</span>
+<span style="color: #7590db;">norm_A</span> = np.linalg.norm(S)
+<span style="color: #4f97d7;">print</span>(norm_A)  <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Output </span>
 </code></pre>
 </div>
+
 </section>
 </section>
 <section>
-<section id="slide-org790d69f">
-<h2 id="org790d69f">(\(\S 2.2\)) Differentiation of Tensor Fields (Session 7)</h2>
+<section id="slide-org94d60ed">
+<h2 id="org94d60ed">(\(\S 2.2\)) Differentiation of Tensor Fields (Session 7)</h2>
 </section>
-<section id="slide-org7eea53e">
-<h3 id="org7eea53e">(\(\S 2.2.1\)) Gradient of a scalar field</h3>
+<section id="slide-org147e455">
+<h3 id="org147e455">(\(\S 2.2.1\)) Gradient of a scalar field</h3>
 
-<div id="org74a28e9" class="figure">
+<div id="orgf39c18a" class="figure">
 <p><img src="../images/gradientofphi.jpg" alt="gradientofphi.jpg" width="900px" />
 </p>
 </div>
@@ -122,13 +140,14 @@ Introduce \(\nabla \phi\)
 </p>
 
 </section>
-<section id="slide-org7eea53e-split">
+<section id="slide-org147e455-split">
 <p>
 New page
 </p>
+
 </section>
-<section id="slide-org1c754a8">
-<h3 id="org1c754a8">(\(\S 2.2.1\)) Gradient of a vector field</h3>
+<section id="slide-orgc6b0c07">
+<h3 id="orgc6b0c07">(\(\S 2.2.1\)) Gradient of a vector field</h3>
 <p width="900px">
 <a href="../images/windy.mp4" width="900px">../images/windy.mp4</a>
 </p>
@@ -136,16 +155,17 @@ New page
 <p>
 Introduce \(\nabla \boldsymbol{v}\)
 </p>
+
 </section>
 </section>
 <section>
-<section id="slide-org2a458aa">
-<h2 id="org2a458aa">(\(\S 2.3.1\)) Divergence Integral Theorem (Session 8)</h2>
-<div class="outline-text-2" id="text-org2a458aa">
+<section id="slide-org02e6b40">
+<h2 id="org02e6b40">(\(\S 2.3.1\)) Divergence Integral Theorem (Session 8)</h2>
+<div class="outline-text-2" id="text-org02e6b40">
 </div>
 </section>
-<section id="slide-orgcdfbd86">
-<h3 id="orgcdfbd86">Questions for next session</h3>
+<section id="slide-orgd94c78c">
+<h3 id="orgd94c78c">Questions for next session</h3>
 <p>
 Ask AI:
 </p>
@@ -154,8 +174,8 @@ Ask AI:
 
 </ul>
 </section>
-<section id="slide-org4241959">
-<h3 id="org4241959">Deliverables</h3>
+<section id="slide-org7ceab28">
+<h3 id="org7ceab28">Deliverables</h3>
 <p>
 Students should be able to:
 </p>
