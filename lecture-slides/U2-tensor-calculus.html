@@ -36,38 +36,35 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#/slide-orgfcc8c74">(\(\S 2.1\)) Preliminaries (Session 6)</a></li>
-<li><a href="#/slide-org94d60ed">(\(\S 2.2\)) Differentiation of Tensor Fields (Session 7)</a></li>
-<li><a href="#/slide-org02e6b40">(\(\S 2.3.1\)) Divergence Integral Theorem (Session 8)</a></li>
+<li><a href="#/slide-org613da34">(\(\S 2.1\)) Preliminaries (Session 6)</a></li>
+<li><a href="#/slide-org17c31c3">(\(\S 2.2\)) Differentiation of Tensor Fields (Session 7)</a></li>
+<li><a href="#/slide-orgef39932">(\(\S 2.3.1\)) Divergence Integral Theorem (Session 8)</a></li>
 </ul>
 </div>
 </div>
 </section>
-
 <section>
-<section id="slide-orgfcc8c74">
-<h2 id="orgfcc8c74">(\(\S 2.1\)) Preliminaries (Session 6)</h2>
+<section id="slide-org613da34">
+<h2 id="org613da34">(\(\S 2.1\)) Preliminaries (Session 6)</h2>
 <ul>
 <li class="fragment appear">Change in a physical variable, \(\phi\), is usually denoted by \(d\) or \(\partial\), is called a <b>differential</b> of \(\phi\), such as \(d\phi\) or \(\partial\phi\).</li>
 <li class="fragment appear">The choice of correct representation depends on how many other variables it depends on, e.g. if it depends on a single variable such as \(\phi(t)\) then the <b>differential change in variable</b> \(\phi\) with respect to a <b>differential change in time</b>, \(dt\), is denoted as \[\frac{d\phi}{dt}\]</li>
 <li class="fragment appear">When the physical variable depends on more than one independent variables such as \(\phi(x_1, x_2)\), then the <b>differential change in</b> \(\phi\) with respect to \(x_1\) and \(x_2\) are denoted as \[\frac{\partial\phi}{\partial x_1},\;\; \frac{\partial\phi}{\partial x_2}\]</li>
 
 </ul>
-
 </section>
-<section id="slide-orgaad04b5">
-<h4 id="orgaad04b5">One-dimensional case</h4>
+<section id="slide-orga79ca32">
+<h4 id="orga79ca32">One-dimensional case</h4>
 
-<div id="org2890576" class="figure">
+<div id="org42049b4" class="figure">
 <p><img src="../images/one-dimension.jpg" alt="one-dimension.jpg" width="1200px" />
 </p>
 </div>
-
 </section>
-<section id="slide-org48e431e">
-<h4 id="org48e431e">Two-dimensional case</h4>
+<section id="slide-orgfd36e6c">
+<h4 id="orgfd36e6c">Two-dimensional case</h4>
 
-<div id="orgac544d7" class="figure">
+<div id="orgfed9a83" class="figure">
 <p><img src="../images/colormaps_ex4_glycerine.png" alt="colormaps_ex4_glycerine.png" width="1200px" />
 </p>
 </div>
@@ -76,10 +73,9 @@
 <li>The gradient of \(\phi\), i.e. the vector \(\nabla\phi = {{\partial\phi}\over{\partial x_i}} \boldsymbol{e}_i\) is normal to the vector \(d\boldsymbol{x} = \partial x_i \boldsymbol{e}_i\).</li>
 
 </ul>
-
 </section>
-<section id="slide-orge2ab58c">
-<h3 id="orge2ab58c">(\(\S 2.1.1\)) Points, Tensors</h3>
+<section id="slide-org65e16a0">
+<h3 id="org65e16a0">(\(\S 2.1.1\)) Points, Tensors</h3>
 <ul>
 <li class="fragment appear">In the remainder of the course a stationary (non-moving) coordinate frame \(\{\boldsymbol{e}_i\}\) in Euclidean space \(\mathbb{E}^3\) will be used.</li>
 <li class="fragment appear">We identify points \(\boldsymbol{x} \in \mathbb{E}^3\) with, \[ \boldsymbol{x} = x_i \boldsymbol{e}_i = \begin{Bmatrix} x_1 \\ x_2 \\ x_3 \end{Bmatrix} \in \mathbb{R}^3\]</li>
@@ -87,10 +83,9 @@
 <li class="fragment ...">We identify second-order tensors \(\boldsymbol{S} \in \mathcal{V}^2\) with, \[ \boldsymbol{S} = S_{ij} \boldsymbol{e}_i \otimes \boldsymbol{e}_j= \begin{bmatrix} S_{11} & S_{12} & S_{13} \\ S_{21} & S_{22} & S_{23} \\ S_{31} & S_{32} & S_{33} \end{bmatrix} \in \mathbb{R}^3\times 3\]</li>
 
 </ul>
-
 </section>
-<section id="slide-org77f1e14">
-<h3 id="org77f1e14">(\(\S 2.1.2\)) Norms, Order</h3>
+<section id="slide-orgd4d2392">
+<h3 id="orgd4d2392">(\(\S 2.1.2\)) Norms, Order</h3>
 <ul>
 <li class="fragment appear">By the standard (Euclidean) norms on the spaces \(\mathbb{E}^3\), \(\mathcal{V}\), and \(\mathcal{V}^2\) we mean the scalar functions defined by \[\begin{align}|\boldsymbol{x}| &= \sqrt{\boldsymbol{x} \cdot \boldsymbol{x}}, \;\; \forall \boldsymbol{x} \in \mathbb{E}^3 \\|\boldsymbol{v} | &= \sqrt{\boldsymbol{v} \cdot \boldsymbol{v}}, \;\; \forall \boldsymbol{v} \in \mathcal{V} \\|\boldsymbol{S} | &= \sqrt{\boldsymbol{S} : \boldsymbol{S}}, \;\; \forall \boldsymbol{S} \in \mathcal{V}^2  \end{align}\]</li>
 <li class="fragment appear">Consider a function \(\boldsymbol{f}: U \rightarrow W\), where \(U\) and \(W\) denote any of the spaces \(\mathbb{E}^3\), \(\mathcal{V}\) and \(\mathcal{V}^2\) or \(\mathbb{R}\).<br />
@@ -99,9 +94,9 @@ If there are constants \(C>0\) and \(r>0\) such that \(|\boldsymbol{f} (\boldsym
 </ul>
 
 </section>
-<section id="slide-org77f1e14-split">
+<section id="slide-orgd4d2392-split">
 <p>
-Calculating norm of vector and second-order tensor in python.
+Calculating norm of vectors and second-order tensors in python.
 </p>
 <div class="org-src-container">
 
@@ -120,52 +115,117 @@ Calculating norm of vector and second-order tensor in python.
 <span style="color: #4f97d7;">print</span>(norm_A)  <span style="color: #2aa1ae; background-color: #292e34;"># </span><span style="color: #2aa1ae; background-color: #292e34;">Output </span>
 </code></pre>
 </div>
+</section>
+<section id="slide-org2f55c33">
+<h3 id="org2f55c33">Questions for next session</h3>
+<p>
+Ask AI:
+</p>
+<ul>
+<li>Where is the gradient operator used in writing the principles of mechanics?</li>
 
+</ul>
+</section>
+<section id="slide-orgd6be2df">
+<h3 id="orgd6be2df">Deliverables</h3>
+<p>
+Students should be able to:
+</p>
+<ul>
+<li class="off"><code>[&#xa0;]</code> provide examples of scalar and vector fields</li>
+
+</ul>
 </section>
 </section>
 <section>
-<section id="slide-org94d60ed">
-<h2 id="org94d60ed">(\(\S 2.2\)) Differentiation of Tensor Fields (Session 7)</h2>
+<section id="slide-org17c31c3">
+<h2 id="org17c31c3">(\(\S 2.2\)) Differentiation of Tensor Fields (Session 7)</h2>
 </section>
-<section id="slide-org147e455">
-<h3 id="org147e455">(\(\S 2.2.1\)) Gradient of a scalar field</h3>
+<section id="slide-orgf35a37d">
+<h3 id="orgf35a37d">(\(\S 2.2.1\)) Gradient of a scalar field</h3>
 
-<div id="orgf39c18a" class="figure">
-<p><img src="../images/gradientofphi.jpg" alt="gradientofphi.jpg" width="900px" />
+<div id="orgda3f2b4" class="figure">
+<p><img src="../images/gradientofphi.jpg" alt="gradientofphi.jpg" width="1600px" />
 </p>
 </div>
 
-<p>
-Introduce \(\nabla \phi\)
-</p>
+</section>
+<section id="slide-orgf35a37d-split">
+<ul>
+<li class="fragment appear">Let \(\{\boldsymbol{e}_i\}\) be an arbitrary frame. Then, the <b>scalar gradient</b>  corresponding to a field \(\phi = \phi(\boldsymbol{x})\), can be written as \[\nabla \phi = \frac{\partial \phi}{\partial x_i} \boldsymbol{e}_i.\] where \(\phi : \mathbb{R}^3 \rightarrow \mathbb{R}\) , is a mapping from the coordinate space onto the set of real numbers.</li>
+<li class="fragment appear">The derivative of a scalar field is a vector field, \(\nabla \phi : \mathbb{E}^3 \rightarrow \mathcal{V}\).</li>
+<li class="fragment appear">The derivative symbol may be replaced with shorthand alternatives \[\frac{\partial \Box}{\partial x_i} \quad \quad \partial_i \Box \quad \quad \Box_{,i}\]</li>
+<li class="fragment appear">We can use the Taylor series expansion, for any small vector \(d\boldsymbol{x} \in \mathcal{V}\) to show \[\phi({x_i} + d{x_i}) = \phi({x_i}) + \frac{\partial \phi}{\partial x_i}\,dx_i + \mathcal{O}(dx_i dx_i)\]</li>
+<li class="fragment appear">In tensor notation the above indicial expression takes the form \[\phi(\boldsymbol{x} + d\boldsymbol{x}) = \phi(\boldsymbol{x}) + \nabla \phi \cdot d\boldsymbol{x} +  \mathcal{O} (|d\boldsymbol{x}|^2)\]</li>
+
+</ul>
 
 </section>
-<section id="slide-org147e455-split">
+<section id="slide-orgf35a37d-split">
 <p>
-New page
+Some example from principles of mechanics involving the gradient:
 </p>
+<ul>
+<li class="fragment appear">Conservation of Mass: \[\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \boldsymbol{v} ) = 0\]</li>
+<li class="fragment appear">Conservation of Linear Momentum: \[\rho \dot{\boldsymbol{v}} = \nabla \cdot \boldsymbol{S} + \rho \boldsymbol{b}\]</li>
+<li class="fragment appear">The Reduced Clasius-Duhem Inequality \[\rho \dot{\phi} \leq \boldsymbol{S} : \boldsymbol{L} - \rho\eta\dot\theta - \theta^{-1} \boldsymbol{q} \cdot \nabla\phi\]</li>
 
+</ul>
 </section>
-<section id="slide-orgc6b0c07">
-<h3 id="orgc6b0c07">(\(\S 2.2.1\)) Gradient of a vector field</h3>
+<section id="slide-org35c5b79">
+<h3 id="org35c5b79">(\(\S 2.2.1\)) Gradient of a vector field</h3>
 <p width="900px">
 <a href="../images/windy.mp4" width="900px">../images/windy.mp4</a>
 </p>
 
-<p>
-Introduce \(\nabla \boldsymbol{v}\)
-</p>
+</section>
+<section id="slide-org35c5b79-split">
+<ul>
+<li class="fragment appear">Let \(\{\boldsymbol{e}_i\}\) be an arbitrary (Cartesian) frame and let \(\boldsymbol{v} = v_i \boldsymbol{e}_i\) denote a vector field such that \(\boldsymbol{v} : \mathbb{E}^3 \rightarrow \mathcal{V}\), then the <b>vector gradient</b> in indicial notation reads \[\nabla \boldsymbol{v} = \frac{\partial v_j}{\partial x_i} \boldsymbol{e}_i \otimes \boldsymbol{e}_j\]</li>
+<li class="fragment appear">The derivative of a vector field \(\boldsymbol{v} : \mathbb{E}^3 \rightarrow \mathcal{V}\) is a second-order tensor field \(\nabla \boldsymbol{v} : \mathbb{E}^3 \rightarrow \mathcal{V}^2\).</li>
+<li class="fragment appear">The gradient in indicial form can be written in a variety of ways including \[\frac{\partial v_j}{\partial x_i} \quad \quad \partial_i v_j \quad \quad v_{j,i}\]</li>
+<li class="fragment appear">We can use the Taylor series expansion, for any small vector \(d\boldsymbol{x} \in \mathcal{V}\) to show \[{v}_i(\boldsymbol{x} + d\boldsymbol{x}) = {v}_i(\boldsymbol{x}) + \frac{\partial {v}_j}{\partial x_i}\,dx_j + \mathcal{O}(|d\boldsymbol{x}|^2)\]</li>
+<li class="fragment appear">In tensor notation the above indicial expression takes the form \[\boldsymbol{v}(\boldsymbol{x} + d\boldsymbol{x}) = \boldsymbol{v}(\boldsymbol{x}) + \nabla \boldsymbol{v} \,d\boldsymbol{x} +  \mathcal{O} (|d\boldsymbol{x}|^2)\]</li>
 
+</ul>
+</section>
+<section id="slide-org89d87cb">
+<h3 id="org89d87cb">(\(\S2.2.2\)) Divergence and (\(\S2.2.3\)) Curl</h3>
+<p>
+Introduce the concepts
+</p>
+</section>
+<section id="slide-org4357921">
+<h3 id="org4357921">Questions for next session</h3>
+<p>
+Ask AI:
+</p>
+<ul>
+<li>Where is the gradient operator used in writing the principles of mechanics?</li>
+
+</ul>
+</section>
+<section id="slide-orgb7f83c1">
+<h3 id="orgb7f83c1">Deliverables</h3>
+<p>
+Students should be able to:
+</p>
+<ul>
+<li class="off"><code>[&#xa0;]</code> apply the gradient operator to a scalar field</li>
+<li class="off"><code>[&#xa0;]</code> apply the gradient operator to a vector field</li>
+<li class="off"><code>[&#xa0;]</code> identify divergence, curl and laplacian operators in cartesian coordinates</li>
+
+</ul>
 </section>
 </section>
 <section>
-<section id="slide-org02e6b40">
-<h2 id="org02e6b40">(\(\S 2.3.1\)) Divergence Integral Theorem (Session 8)</h2>
-<div class="outline-text-2" id="text-org02e6b40">
+<section id="slide-orgef39932">
+<h2 id="orgef39932">(\(\S 2.3.1\)) Divergence Integral Theorem (Session 8)</h2>
+<div class="outline-text-2" id="text-orgef39932">
 </div>
 </section>
-<section id="slide-orgd94c78c">
-<h3 id="orgd94c78c">Questions for next session</h3>
+<section id="slide-org5fd3bd8">
+<h3 id="org5fd3bd8">Questions for next session</h3>
 <p>
 Ask AI:
 </p>
@@ -174,8 +234,8 @@ Ask AI:
 
 </ul>
 </section>
-<section id="slide-org7ceab28">
-<h3 id="org7ceab28">Deliverables</h3>
+<section id="slide-orge9565e4">
+<h3 id="orge9565e4">Deliverables</h3>
 <p>
 Students should be able to:
 </p>

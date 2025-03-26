@@ -38,10 +38,10 @@ Jove: a scientific educational video content provider with free access through Y
 - [X] perform change of basis of vector components
 - [X] calculate the determinant of a second-order tensor
 - [X] calculate the eigenvalues and eigenvectors of a second-order tensor
-- [ ] provide examples of scalar and vector fields
-- [ ] apply the gradient operator to  a scalar field
-- [ ] apply the gradient operator to a vector field
-- [ ] identify divergence, curl and laplacian operators in cartesian coordinates
+- [X] provide examples of scalar and vector fields
+- [X] apply the gradient operator to  a scalar field
+- [X] apply the gradient operator to a vector field
+- [X] identify divergence, curl and laplacian operators in cartesian coordinates
 - [ ] differentiate between formulations using cartesian and curvilinear coordinates
 - [ ] apply the divergence theorem to integral forms
 

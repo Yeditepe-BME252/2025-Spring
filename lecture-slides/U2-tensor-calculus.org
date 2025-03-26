@@ -40,7 +40,7 @@
   If there are constants $C>0$ and $r>0$ such that $|\boldsymbol{f} (\boldsymbol{h})| \leq C|\boldsymbol{h}|^r$ as $\boldsymbol{h} \rightarrow 0$, we write $$\boldsymbol{f} (\boldsymbol{h}) = \mathcal{O}(|\boldsymbol{h}|^r)\;\; \mathrm{as} \;\; \boldsymbol{h} \rightarrow 0.$$
   
 #+REVEAL: split
-Calculating norm of vector and second-order tensor in python.
+Calculating norm of vectors and second-order tensors in python.
 #+BEGIN_SRC python
   import numpy as np
 
@@ -51,30 +51,66 @@ Calculating norm of vector and second-order tensor in python.
   # Compute the Euclidean (L2) norm
   norm_v = np.linalg.norm(x)
   print(norm_v)  # Output
-  
+
   # Frobenius norm (default for matrices)
   norm_A = np.linalg.norm(S)
   print(norm_A)  # Output 
 #+END_SRC
+** Questions for next session
+Ask AI:
+- Where is the gradient operator used in writing the principles of mechanics?
+** Deliverables
+Students should be able to:
+- [ ] provide examples of scalar and vector fields
   
 * ($\S 2.2$) Differentiation of Tensor Fields (Session 7)
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 ** ($\S 2.2.1$) Gradient of a scalar field 
 
-#+ATTR_HTML: :width 900px
+#+ATTR_HTML: :width 1600px
 [[../images/gradientofphi.jpg]]
 
-Introduce $\nabla \phi$
+#+REVEAL: split
+#+ATTR_REVEAL: :frag (appear)
+- Let $\{\boldsymbol{e}_i\}$ be an arbitrary frame. Then, the *scalar gradient*  corresponding to a field $\phi = \phi(\boldsymbol{x})$, can be written as $$\nabla \phi = \frac{\partial \phi}{\partial x_i} \boldsymbol{e}_i.$$ where $\phi : \mathbb{R}^3 \rightarrow \mathbb{R}$ , is a mapping from the coordinate space onto the set of real numbers.
+- The derivative of a scalar field is a vector field, $\nabla \phi : \mathbb{E}^3 \rightarrow \mathcal{V}$.
+- The derivative symbol may be replaced with shorthand alternatives $$\frac{\partial \Box}{\partial x_i} \quad \quad \partial_i \Box \quad \quad \Box_{,i}$$
+- We can use the Taylor series expansion, for any small vector $d\boldsymbol{x} \in \mathcal{V}$ to show $$\phi({x_i} + d{x_i}) = \phi({x_i}) + \frac{\partial \phi}{\partial x_i}\,dx_i + \mathcal{O}(dx_i dx_i)$$
+- In tensor notation the above indicial expression takes the form $$\phi(\boldsymbol{x} + d\boldsymbol{x}) = \phi(\boldsymbol{x}) + \nabla \phi \cdot d\boldsymbol{x} +  \mathcal{O} (|d\boldsymbol{x}|^2)$$
 
 #+REVEAL: split 
-New page
+Some example from principles of mechanics involving the gradient:
+#+ATTR_REVEAL: :frag (appear)
+- Conservation of Mass: $$\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \boldsymbol{v} ) = 0$$
+- Conservation of Linear Momentum: $$\rho \dot{\boldsymbol{v}} = \nabla \cdot \boldsymbol{S} + \rho \boldsymbol{b}$$
+- The Reduced Clasius-Duhem Inequality $$\rho \dot{\phi} \leq \boldsymbol{S} : \boldsymbol{L} - \rho\eta\dot\theta - \theta^{-1} \boldsymbol{q} \cdot \nabla\phi$$
 
 ** ($\S 2.2.1$) Gradient of a vector field 
 
 #+ATTR_HTML: :width 900px
 [[../images/windy.mp4]]
 
-Introduce $\nabla \boldsymbol{v}$
+#+REVEAL: split
+#+ATTR_REVEAL: :frag (appear)
+- Let $\{\boldsymbol{e}_i\}$ be an arbitrary (Cartesian) frame and let $\boldsymbol{v} = v_i \boldsymbol{e}_i$ denote a vector field such that $\boldsymbol{v} : \mathbb{E}^3 \rightarrow \mathcal{V}$, then the *vector gradient* in indicial notation reads $$\nabla \boldsymbol{v} = \frac{\partial v_j}{\partial x_i} \boldsymbol{e}_i \otimes \boldsymbol{e}_j$$
+- The derivative of a vector field $\boldsymbol{v} : \mathbb{E}^3 \rightarrow \mathcal{V}$ is a second-order tensor field $\nabla \boldsymbol{v} : \mathbb{E}^3 \rightarrow \mathcal{V}^2$.
+- The gradient in indicial form can be written in a variety of ways including $$\frac{\partial v_j}{\partial x_i} \quad \quad \partial_i v_j \quad \quad v_{j,i}$$
+- We can use the Taylor series expansion, for any small vector $d\boldsymbol{x} \in \mathcal{V}$ to show $${v}_i(\boldsymbol{x} + d\boldsymbol{x}) = {v}_i(\boldsymbol{x}) + \frac{\partial {v}_j}{\partial x_i}\,dx_j + \mathcal{O}(|d\boldsymbol{x}|^2)$$
+- In tensor notation the above indicial expression takes the form $$\boldsymbol{v}(\boldsymbol{x} + d\boldsymbol{x}) = \boldsymbol{v}(\boldsymbol{x}) + \nabla \boldsymbol{v} \,d\boldsymbol{x} +  \mathcal{O} (|d\boldsymbol{x}|^2)$$
+
+** ($\S2.2.2$) Divergence and ($\S2.2.3$) Curl
+Introduce the concepts
+
+** Questions for next session
+Ask AI:
+- Where is the gradient operator used in writing the principles of mechanics?
+  
+** Deliverables
+Students should be able to:
+- [ ] apply the gradient operator to a scalar field
+- [ ] apply the gradient operator to a vector field
+- [ ] identify divergence, curl and laplacian operators in cartesian coordinates
+
 
 * ($\S 2.3.1$) Divergence Integral Theorem (Session 8)
 
