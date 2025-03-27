@@ -110,8 +110,7 @@ Students should be able to:
 - [ ] apply the gradient operator to a scalar field
 - [ ] apply the gradient operator to a vector field
 - [ ] identify divergence, curl and laplacian operators in cartesian coordinates
-
-
+  
 * ($\S 2.3.1$) Divergence Integral Theorem (Session 8)
 
 ** Questions for next session

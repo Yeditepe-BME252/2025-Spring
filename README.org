@@ -111,7 +111,7 @@ Course is composed of a few activities,
 - Lectures
   #+ATTR_REVEAL: :frag (appear appear appear ...)
   + Listening and taking notes in the lecture
-  + Prepare for study questions for next lectures using *openAI*
+  + Prepare for next lectures with study questions and *openAI*
 - Attendence through Yulearn check-in
 - Quizzes
 - Exit Survey Questions
