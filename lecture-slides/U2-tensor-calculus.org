@@ -25,14 +25,14 @@
 #+ATTR_HTML: :width 1200px
 [[../images/colormaps_ex4_glycerine.png]]
 - Find the isocontours, i.e. $d\phi=0$. In this case, by the chain rule $d\phi = {{\partial\phi}\over{\partial x_1}} d x_1 + {{\partial\phi}\over{\partial x_2}} d x_2$.
-- The gradient of $\phi$, i.e. the vector $\nabla\phi = {{\partial\phi}\over{\partial x_i}} \boldsymbol{e}_i$ is normal to the vector $d\boldsymbol{x} = \partial x_i \boldsymbol{e}_i$. 
+- The gradient of $\phi$, i.e. the vector $\nabla\phi = {{\partial\phi}\over{\partial x_i}} \boldsymbol{e}_i$ is normal to isocontours of $\phi$. 
 
 ** ($\S 2.1.1$) Points, Tensors
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - In the remainder of the course a stationary (non-moving) coordinate frame $\{\boldsymbol{e}_i\}$ in Euclidean space $\mathbb{E}^3$ will be used.
 - We identify points $\boldsymbol{x} \in \mathbb{E}^3$ with, $$ \boldsymbol{x} = x_i \boldsymbol{e}_i = \begin{Bmatrix} x_1 \\ x_2 \\ x_3 \end{Bmatrix} \in \mathbb{R}^3$$
 - We identify vectors $\boldsymbol{v} \in \mathcal{V}$ with, $$ \boldsymbol{v} = v_i \boldsymbol{e}_i = \begin{Bmatrix} v_1 \\ v_2 \\ v_3 \end{Bmatrix} \in \mathbb{R}^3$$
-- We identify second-order tensors $\boldsymbol{S} \in \mathcal{V}^2$ with, $$ \boldsymbol{S} = S_{ij} \boldsymbol{e}_i \otimes \boldsymbol{e}_j= \begin{bmatrix} S_{11} & S_{12} & S_{13} \\ S_{21} & S_{22} & S_{23} \\ S_{31} & S_{32} & S_{33} \end{bmatrix} \in \mathbb{R}^3\times 3$$
+- We identify second-order tensors $\boldsymbol{S} \in \mathcal{V}^2$ with, $$ \boldsymbol{S} = S_{ij} \boldsymbol{e}_i \otimes \boldsymbol{e}_j= \begin{bmatrix} S_{11} & S_{12} & S_{13} \\ S_{21} & S_{22} & S_{23} \\ S_{31} & S_{32} & S_{33} \end{bmatrix} \in \mathbb{R}^{3\times 3}$$
   
 ** ($\S 2.1.2$) Norms, Order
 #+ATTR_REVEAL: :frag (appear)
@@ -41,7 +41,7 @@
   If there are constants $C>0$ and $r>0$ such that $|\boldsymbol{f} (\boldsymbol{h})| \leq C|\boldsymbol{h}|^r$ as $\boldsymbol{h} \rightarrow 0$, we write $$\boldsymbol{f} (\boldsymbol{h}) = \mathcal{O}(|\boldsymbol{h}|^r)\;\; \mathrm{as} \;\; \boldsymbol{h} \rightarrow 0.$$
   
 #+REVEAL: split
-Calculating norm of vectors and second-order tensors in python.
+Calculating the norm of vectors and second-order tensors in python.
 #+BEGIN_SRC python
   import numpy as np
 
@@ -65,13 +65,12 @@ Students should be able to:
 - [ ] provide examples of scalar and vector fields
   
 * ($\S 2.2$) Differentiation of Tensor Fields (Session 7)
-#+ATTR_REVEAL: :frag (appear appear appear ...)
-** ($\S 2.2.1$) Gradient of a scalar field 
+** ($\S 2.2.1$) Gradient of a Scalar Field 
 
 #+ATTR_HTML: :width 1600px
 [[../images/gradientofphi.jpg]]
 
-#+REVEAL: split
+*** Definition of Scalar Gradient
 #+ATTR_REVEAL: :frag (appear)
 - Let $\{\boldsymbol{e}_i\}$ be an arbitrary frame. Then, the *scalar gradient*  corresponding to a field $\phi = \phi(\boldsymbol{x})$, can be written as $$\nabla \phi = \frac{\partial \phi}{\partial x_i} \boldsymbol{e}_i.$$ where $\phi : \mathbb{R}^3 \rightarrow \mathbb{R}$ , is a mapping from the coordinate space onto the set of real numbers.
 - The derivative of a scalar field is a vector field, $\nabla \phi : \mathbb{E}^3 \rightarrow \mathcal{V}$.
@@ -79,14 +78,11 @@ Students should be able to:
 - We can use the Taylor series expansion, for any small vector $d\boldsymbol{x} \in \mathcal{V}$ to show $$\phi({x_i} + d{x_i}) = \phi({x_i}) + \frac{\partial \phi}{\partial x_i}\,dx_i + \mathcal{O}(dx_i dx_i)$$
 - In tensor notation the above indicial expression takes the form $$\phi(\boldsymbol{x} + d\boldsymbol{x}) = \phi(\boldsymbol{x}) + \nabla \phi \cdot d\boldsymbol{x} +  \mathcal{O} (|d\boldsymbol{x}|^2)$$
 
-#+REVEAL: split 
-Some example from principles of mechanics involving the gradient:
-#+ATTR_REVEAL: :frag (appear)
-- Conservation of Mass: $$\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \boldsymbol{v} ) = 0$$
-- Conservation of Linear Momentum: $$\rho \dot{\boldsymbol{v}} = \nabla \cdot \boldsymbol{S} + \rho \boldsymbol{b}$$
-- The Reduced Clasius-Duhem Inequality $$\rho \dot{\phi} \leq \boldsymbol{S} : \boldsymbol{L} - \rho\eta\dot\theta - \theta^{-1} \boldsymbol{q} \cdot \nabla\phi$$
+*** Examples from Mechanics
+The Reduced Clasius-Duhem Inequality
+$$\rho \dot{\phi} \leq \boldsymbol{S} : \boldsymbol{L} - \rho\eta\dot\theta - \theta^{-1} \boldsymbol{q} \cdot \nabla\phi$$
 
-** ($\S 2.2.1$) Gradient of a vector field 
+** ($\S 2.2.1$) Gradient of a Vector Field 
 
 #+ATTR_HTML: :width 900px
 [[../images/windy.mp4]]
@@ -99,6 +95,9 @@ Some example from principles of mechanics involving the gradient:
 - We can use the Taylor series expansion, for any small vector $d\boldsymbol{x} \in \mathcal{V}$ to show $${v}_i(\boldsymbol{x} + d\boldsymbol{x}) = {v}_i(\boldsymbol{x}) + \frac{\partial {v}_j}{\partial x_i}\,dx_j + \mathcal{O}(|d\boldsymbol{x}|^2)$$
 - In tensor notation the above indicial expression takes the form $$\boldsymbol{v}(\boldsymbol{x} + d\boldsymbol{x}) = \boldsymbol{v}(\boldsymbol{x}) + \nabla \boldsymbol{v} \,d\boldsymbol{x} +  \mathcal{O} (|d\boldsymbol{x}|^2)$$
 
+*** Examples from Mechanics
+- The velocity gradient tensor $$\nabla\boldsymbol{v} = v_{j,i} \mathbf{e}_i \otimes \mathbf{e}_j$$
+
 ** ($\S2.2.2$) Divergence
 This following text was suggested mostly by DeepSeek Chat as a response to the question[fn:1]
 #+BEGIN_QUOTE
@@ -107,51 +106,45 @@ can you provide a nice example from mechanics to explain the role of taking the 
 #+ATTR_REVEAL: :frag (appear)
 - Physical Context: Incompressible Fluid Flow
   #+BEGIN_QUOTE
-  Consider a fluid with velocity field \(\mathbf{v}(\mathbf{x}, t)\). The divergence \(\nabla \cdot \mathbf{v}\) measures the *net volume flux* per unit volume at a point.
+  Consider a fluid with velocity field \(\boldsymbol{v}(\mathbf{x}, t)\). The divergence \(\nabla \cdot \boldsymbol{v}\) measures the *net volume flux* per unit volume at a point.
   #+END_QUOTE
 - Mathematical Definition
-  \[\nabla \cdot \mathbf{v} = \frac{\partial v_1}{\partial x_1} + \frac{\partial v_2}{\partial x_2} + \frac{\partial v_3}{\partial x_3} = v_{i,i}\]
+  \[\nabla \cdot \boldsymbol{v} = \frac{\partial v_1}{\partial x_1} + \frac{\partial v_2}{\partial x_2} + \frac{\partial v_3}{\partial x_3} = v_{i,i}\]
 [fn:1] Response generated by DeepSeek Chat (https://deepseek.com). 
 *** Example: Flow Through a Pipe
 #+ATTR_REVEAL: :frag (appear)
 - *Case 1: Uniform Flow* \\
-  \[\mathbf{v} = v_0 \mathbf{e}_x\]
-  \[\nabla \cdot \mathbf{v} = 0\]
+  \[\boldsymbol{v} = v_0 \mathbf{e}_x\]
+  \[\nabla \cdot \boldsymbol{v} = 0\]
   (incompressible).\\
 
 - *Case 2: Expanding Flow* \\
-  \[\mathbf{v} = kx \mathbf{e}_x\] 
-  \[\nabla \cdot \mathbf{v} = k > 0\]
+  \[\boldsymbol{v} = kx \mathbf{e}_x\] 
+  \[\nabla \cdot \boldsymbol{v} = k > 0\]
   (expansion).\\
 
 - *Case 3: Compressing Flow* \\
-  \[\mathbf{v} = k/y \mathbf{e}_y\]
-  \[\nabla \cdot \mathbf{v} = -k/y^2 < 0\]
+  \[\boldsymbol{v} = (k/y) \mathbf{e}_y\]
+  \[\nabla \cdot \boldsymbol{v} = -k/y^2 < 0\]
   (compression).
 
-*** Role in Conservation Laws
+*** Examples from Mechanics
 #+ATTR_REVEAL: :frag (appear)
-- Continuity Equation:
-  \[
-  \frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = 0.
-  \]
-- Stress Equilibrium:
-  \[
-  \nabla \cdot \boldsymbol{\sigma} + \mathbf{f} = \rho \mathbf{a}.
-  \]
-** ($\S2.2.3$) Curl
+- Conservation of Mass: $$\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \boldsymbol{v} ) = 0$$
+- Conservation of Linear Momentum: $$\rho \dot{\boldsymbol{v}} = \nabla \cdot \boldsymbol{S} + \rho \boldsymbol{b}$$
+* ($\S2.2.3$) Curl
 *Core Concept:*\\
-The curl (\(\nabla \times \mathbf{v}\)) measures *local rotation* in a vector field, $\mathbf{v}$:
+The curl (\(\nabla \times \boldsymbol{v}\)) measures *local rotation* in a vector field, $\boldsymbol{v}$:
 - Direction = Rotation axis (right-hand rule)
 - Magnitude = Rotation strength
 
 *** Key Example: Vorticity in Fluid Mechanics
 **** Velocity Field
-\(\mathbf{v} = (-y, x, 0)\) (counterclockwise rotating fluid)
+\(\boldsymbol{v} = (-y, x, 0)\) (counterclockwise rotating fluid)
 
 **** Curl Calculation
 \begin{equation*}
-\nabla \times \mathbf{v} = 
+\nabla \times \boldsymbol{v} = 
 \begin{vmatrix}
 \mathbf{e}_x & \mathbf{e}_y & \mathbf{e}_z \\
 \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
