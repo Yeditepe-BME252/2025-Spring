@@ -36,10 +36,11 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#/slide-org2c6f748">(\(\S 2.1\)) Preliminaries (Session 6)</a></li>
-<li><a href="#/slide-orgc818903">(\(\S 2.2\)) Differentiation of Tensor Fields (Session 7)</a></li>
-<li><a href="#/slide-orgc8dde8a">(\(\S2.2.3\)) Curl</a></li>
-<li><a href="#/slide-orgded9204">(\(\S 2.3.1\)) Divergence Integral Theorem (Session 8)</a></li>
+<li><a href="#/slide-orgf6964b3">(\(\S 2.1\)) Preliminaries (Session 6)</a></li>
+<li><a href="#/slide-orgcbed060">(\(\S 2.2\)) Differentiation of Tensor Fields (Session 7)</a></li>
+<li><a href="#/slide-org372cbbc">(\(\S2.2.2\)) Divergence</a></li>
+<li><a href="#/slide-org175842c">(\(\S2.2.3\)) Curl</a></li>
+<li><a href="#/slide-orgaa6ee61">(\(\S 2.3.1\)) Divergence Integral Theorem (Session 8)</a></li>
 </ul>
 </div>
 </div>
@@ -47,8 +48,8 @@
 
 
 <section>
-<section id="slide-org2c6f748">
-<h2 id="org2c6f748">(\(\S 2.1\)) Preliminaries (Session 6)</h2>
+<section id="slide-orgf6964b3">
+<h2 id="orgf6964b3">(\(\S 2.1\)) Preliminaries (Session 6)</h2>
 <ul>
 <li class="fragment appear">Change in a physical variable, \(\phi\), is usually denoted by \(d\) or \(\partial\), is called a <b>differential</b> of \(\phi\), such as \(d\phi\) or \(\partial\phi\).</li>
 <li class="fragment appear">The choice of correct representation depends on how many other variables it depends on, e.g. if it depends on a single variable such as \(\phi(t)\) then the <b>differential change in variable</b> \(\phi\) with respect to a <b>differential change in time</b>, \(dt\), is denoted as \[\frac{d\phi}{dt}\]</li>
@@ -57,19 +58,19 @@
 </ul>
 
 </section>
-<section id="slide-orgec563a4">
-<h4 id="orgec563a4">One-dimensional case</h4>
+<section id="slide-org7a475c9">
+<h4 id="org7a475c9">One-dimensional case</h4>
 
-<div id="org9c2b7b1" class="figure">
+<div id="org4ea4721" class="figure">
 <p><img src="../images/one-dimension.jpg" alt="one-dimension.jpg" width="1200px" />
 </p>
 </div>
 
 </section>
-<section id="slide-org18c1ff8">
-<h4 id="org18c1ff8">Two-dimensional case</h4>
+<section id="slide-orgd2c8c6f">
+<h4 id="orgd2c8c6f">Two-dimensional case</h4>
 
-<div id="orgb9e96b9" class="figure">
+<div id="orgb45af80" class="figure">
 <p><img src="../images/colormaps_ex4_glycerine.png" alt="colormaps_ex4_glycerine.png" width="1200px" />
 </p>
 </div>
@@ -80,8 +81,8 @@
 </ul>
 
 </section>
-<section id="slide-orged6451e">
-<h3 id="orged6451e">(\(\S 2.1.1\)) Points, Tensors</h3>
+<section id="slide-org566e5ff">
+<h3 id="org566e5ff">(\(\S 2.1.1\)) Points, Tensors</h3>
 <ul>
 <li class="fragment appear">In the remainder of the course a stationary (non-moving) coordinate frame \(\{\boldsymbol{e}_i\}\) in Euclidean space \(\mathbb{E}^3\) will be used.</li>
 <li class="fragment appear">We identify points \(\boldsymbol{x} \in \mathbb{E}^3\) with, \[ \boldsymbol{x} = x_i \boldsymbol{e}_i = \begin{Bmatrix} x_1 \\ x_2 \\ x_3 \end{Bmatrix} \in \mathbb{R}^3\]</li>
@@ -91,8 +92,8 @@
 </ul>
 
 </section>
-<section id="slide-org5950447">
-<h3 id="org5950447">(\(\S 2.1.2\)) Norms, Order</h3>
+<section id="slide-org56c4cac">
+<h3 id="org56c4cac">(\(\S 2.1.2\)) Norms, Order</h3>
 <ul>
 <li class="fragment appear">By the standard (Euclidean) norms on the spaces \(\mathbb{E}^3\), \(\mathcal{V}\), and \(\mathcal{V}^2\) we mean the scalar functions defined by \[\begin{align}|\boldsymbol{x}| &= \sqrt{\boldsymbol{x} \cdot \boldsymbol{x}}, \;\; \forall \boldsymbol{x} \in \mathbb{E}^3 \\|\boldsymbol{v} | &= \sqrt{\boldsymbol{v} \cdot \boldsymbol{v}}, \;\; \forall \boldsymbol{v} \in \mathcal{V} \\|\boldsymbol{S} | &= \sqrt{\boldsymbol{S} : \boldsymbol{S}}, \;\; \forall \boldsymbol{S} \in \mathcal{V}^2  \end{align}\]</li>
 <li class="fragment appear">Consider a function \(\boldsymbol{f}: U \rightarrow W\), where \(U\) and \(W\) denote any of the spaces \(\mathbb{E}^3\), \(\mathcal{V}\) and \(\mathcal{V}^2\) or \(\mathbb{R}\).<br />
@@ -101,7 +102,7 @@ If there are constants \(C>0\) and \(r>0\) such that \(|\boldsymbol{f} (\boldsym
 </ul>
 
 </section>
-<section id="slide-org5950447-split">
+<section id="slide-org56c4cac-split">
 <p>
 Calculating the norm of vectors and second-order tensors in python.
 </p>
@@ -123,8 +124,8 @@ Calculating the norm of vectors and second-order tensors in python.
 </code></pre>
 </div>
 </section>
-<section id="slide-org6796e4b">
-<h3 id="org6796e4b">Questions for next session</h3>
+<section id="slide-orgcf3eb30">
+<h3 id="orgcf3eb30">Questions for next session</h3>
 <p>
 Ask AI:
 </p>
@@ -133,8 +134,8 @@ Ask AI:
 
 </ul>
 </section>
-<section id="slide-org128b618">
-<h3 id="org128b618">Deliverables</h3>
+<section id="slide-orge5f18c8">
+<h3 id="orge5f18c8">Deliverables</h3>
 <p>
 Students should be able to:
 </p>
@@ -146,22 +147,22 @@ Students should be able to:
 </section>
 </section>
 <section>
-<section id="slide-orgc818903">
-<h2 id="orgc818903">(\(\S 2.2\)) Differentiation of Tensor Fields (Session 7)</h2>
-<div class="outline-text-2" id="text-orgc818903">
+<section id="slide-orgcbed060">
+<h2 id="orgcbed060">(\(\S 2.2\)) Differentiation of Tensor Fields (Session 7)</h2>
+<div class="outline-text-2" id="text-orgcbed060">
 </div>
 </section>
-<section id="slide-org9985a55">
-<h3 id="org9985a55">(\(\S 2.2.1\)) Gradient of a Scalar Field</h3>
+<section id="slide-orgd157e00">
+<h3 id="orgd157e00">(\(\S 2.2.1\)) Gradient of a Scalar Field</h3>
 
-<div id="orgf26084b" class="figure">
+<div id="org1636f34" class="figure">
 <p><img src="../images/gradientofphi.jpg" alt="gradientofphi.jpg" width="1600px" />
 </p>
 </div>
 
 </section>
-<section id="slide-org5fa8a47">
-<h4 id="org5fa8a47">Definition of Scalar Gradient</h4>
+<section id="slide-org611093c">
+<h4 id="org611093c">Definition of Scalar Gradient</h4>
 <ul>
 <li class="fragment appear">Let \(\{\boldsymbol{e}_i\}\) be an arbitrary frame. Then, the <b>scalar gradient</b>  corresponding to a field \(\phi = \phi(\boldsymbol{x})\), can be written as \[\nabla \phi = \frac{\partial \phi}{\partial x_i} \boldsymbol{e}_i.\] where \(\phi : \mathbb{R}^3 \rightarrow \mathbb{R}\) , is a mapping from the coordinate space onto the set of real numbers.</li>
 <li class="fragment appear">The derivative of a scalar field is a vector field, \(\nabla \phi : \mathbb{E}^3 \rightarrow \mathcal{V}\).</li>
@@ -172,22 +173,22 @@ Students should be able to:
 </ul>
 
 </section>
-<section id="slide-orgc3d354e">
-<h4 id="orgc3d354e">Examples from Mechanics</h4>
+<section id="slide-orgf2ceaae">
+<h4 id="orgf2ceaae">Examples from Mechanics</h4>
 <p>
 The Reduced Clasius-Duhem Inequality
 \[\rho \dot{\phi} \leq \boldsymbol{S} : \boldsymbol{L} - \rho\eta\dot\theta - \theta^{-1} \boldsymbol{q} \cdot \nabla\phi\]
 </p>
 
 </section>
-<section id="slide-org1004a73">
-<h3 id="org1004a73">(\(\S 2.2.1\)) Gradient of a Vector Field</h3>
+<section id="slide-org7ca3f8c">
+<h3 id="org7ca3f8c">(\(\S 2.2.1\)) Gradient of a Vector Field</h3>
 <p width="900px">
 <a href="../images/windy.mp4" width="900px">../images/windy.mp4</a>
 </p>
 
 </section>
-<section id="slide-org1004a73-split">
+<section id="slide-org7ca3f8c-split">
 <ul>
 <li class="fragment appear">Let \(\{\boldsymbol{e}_i\}\) be an arbitrary (Cartesian) frame and let \(\boldsymbol{v} = v_i \boldsymbol{e}_i\) denote a vector field such that \(\boldsymbol{v} : \mathbb{E}^3 \rightarrow \mathcal{V}\), then the <b>vector gradient</b> in indicial notation reads \[\nabla \boldsymbol{v} = \frac{\partial v_j}{\partial x_i} \boldsymbol{e}_i \otimes \boldsymbol{e}_j\]</li>
 <li class="fragment appear">The derivative of a vector field \(\boldsymbol{v} : \mathbb{E}^3 \rightarrow \mathcal{V}\) is a second-order tensor field \(\nabla \boldsymbol{v} : \mathbb{E}^3 \rightarrow \mathcal{V}^2\).</li>
@@ -198,16 +199,18 @@ The Reduced Clasius-Duhem Inequality
 </ul>
 
 </section>
-<section id="slide-orgf8d574e">
-<h4 id="orgf8d574e">Examples from Mechanics</h4>
+<section id="slide-org343e713">
+<h4 id="org343e713">Examples from Mechanics</h4>
 <ul>
 <li>The velocity gradient tensor \[\nabla\boldsymbol{v} = v_{j,i} \mathbf{e}_i \otimes \mathbf{e}_j\]</li>
 
 </ul>
 
 </section>
-<section id="slide-org2248d5c">
-<h3 id="org2248d5c">(\(\S2.2.2\)) Divergence</h3>
+</section>
+<section>
+<section id="slide-org372cbbc">
+<h2 id="org372cbbc">(\(\S2.2.2\)) Divergence</h2>
 <p>
 This following text was suggested mostly by DeepSeek Chat as a response to the question<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>
 </p>
@@ -230,8 +233,8 @@ Consider a fluid with velocity field \(\boldsymbol{v}(\mathbf{x}, t)\). The dive
 
 </ul>
 </section>
-<section id="slide-orgc066a9e">
-<h4 id="orgc066a9e">Example: Flow Through a Pipe</h4>
+<section id="slide-orge441920">
+<h4 id="orge441920">Example: Flow Through a Pipe</h4>
 <ul>
 <li class="fragment appear"><b>Case 1: Uniform Flow</b> <br />
 \[\boldsymbol{v} = v_0 \mathbf{e}_x\]
@@ -251,8 +254,8 @@ Consider a fluid with velocity field \(\boldsymbol{v}(\mathbf{x}, t)\). The dive
 </ul>
 
 </section>
-<section id="slide-org7a5601b">
-<h4 id="org7a5601b">Examples from Mechanics</h4>
+<section id="slide-org44d3aec">
+<h4 id="org44d3aec">Examples from Mechanics</h4>
 <ul>
 <li class="fragment appear">Conservation of Mass: \[\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \boldsymbol{v} ) = 0\]</li>
 <li class="fragment appear">Conservation of Linear Momentum: \[\rho \dot{\boldsymbol{v}} = \nabla \cdot \boldsymbol{S} + \rho \boldsymbol{b}\]</li>
@@ -261,8 +264,8 @@ Consider a fluid with velocity field \(\boldsymbol{v}(\mathbf{x}, t)\). The dive
 </section>
 </section>
 <section>
-<section id="slide-orgc8dde8a">
-<h2 id="orgc8dde8a">(\(\S2.2.3\)) Curl</h2>
+<section id="slide-org175842c">
+<h2 id="org175842c">(\(\S2.2.3\)) Curl</h2>
 <p>
 <b>Core Concept:</b><br />
 The curl (\(\nabla \times \boldsymbol{v}\)) measures <b>local rotation</b> in a vector field, \(\boldsymbol{v}\):
@@ -274,18 +277,18 @@ The curl (\(\nabla \times \boldsymbol{v}\)) measures <b>local rotation</b> in a 
 </ul>
 
 </section>
-<section id="slide-org76b99d6">
-<h4 id="org76b99d6">Key Example: Vorticity in Fluid Mechanics</h4>
-<div class="outline-text-4" id="text-org76b99d6">
+<section id="slide-org2ab6048">
+<h4 id="org2ab6048">Key Example: Vorticity in Fluid Mechanics</h4>
+<div class="outline-text-4" id="text-org2ab6048">
 </div>
 <ul class="org-ul">
-<li><a id="orgc501bb3"></a>Velocity Field<br />
+<li><a id="orgbdcf646"></a>Velocity Field<br />
 <p>
 \(\boldsymbol{v} = (-y, x, 0)\) (counterclockwise rotating fluid)
 </p>
 </li>
 
-<li><a id="org61a4bfa"></a>Curl Calculation<br />
+<li><a id="orgeaf6c45"></a>Curl Calculation<br />
 <div>
 \begin{equation*}
 \nabla \times \boldsymbol{v} = 
@@ -302,8 +305,8 @@ The curl (\(\nabla \times \boldsymbol{v}\)) measures <b>local rotation</b> in a 
 </ul>
 
 </section>
-<section id="slide-org07ec1e3">
-<h4 id="org07ec1e3">Physical Interpretation</h4>
+<section id="slide-org5cf4ea2">
+<h4 id="org5cf4ea2">Physical Interpretation</h4>
 <ol>
 <li>Fluid rotates like a rigid body (\(\omega = 1\))</li>
 <li>Vorticity \(\boldsymbol{\omega} = 2\mathbf{e}_z\) (twice the angular velocity)</li>
@@ -312,18 +315,18 @@ The curl (\(\nabla \times \boldsymbol{v}\)) measures <b>local rotation</b> in a 
 </ol>
 
 </section>
-<section id="slide-org54d143a">
-<h4 id="org54d143a">Why It Matters</h4>
+<section id="slide-orgb9367a1">
+<h4 id="orgb9367a1">Why It Matters</h4>
 <ul>
-<li><a id="org732284d">Fluid Dynamics</a>: Predicts vortices/turbulence</li>
-<li><a id="org01c63b5">Solid Mechanics</a>: Reveals local twisting in deformations</li>
-<li><a id="org36520e8">Field Theory</a>: Distinguishes conservative vs. rotational fields</li>
+<li><a id="orga29bd3b">Fluid Dynamics</a>: Predicts vortices/turbulence</li>
+<li><a id="orgad53601">Solid Mechanics</a>: Reveals local twisting in deformations</li>
+<li><a id="orga105397">Field Theory</a>: Distinguishes conservative vs. rotational fields</li>
 
 </ul>
 
 </section>
-<section id="slide-orga730c22">
-<h4 id="orga730c22">Teaching Tip</h4>
+<section id="slide-orgcd3b087">
+<h4 id="orgcd3b087">Teaching Tip</h4>
 <p>
 Use a spinning bucket of water demo + MATLAB/Python visualization:
 </p>
@@ -337,8 +340,8 @@ plt.title(<span style="color: #2d9574;">"Vortex: $</span><span style="color: #a4
 </code></pre>
 </div>
 </section>
-<section id="slide-org428f372">
-<h3 id="org428f372">Questions for next session</h3>
+<section id="slide-org5bd0bd0">
+<h3 id="org5bd0bd0">Questions for next session</h3>
 <p>
 Ask AI:
 </p>
@@ -348,8 +351,8 @@ Ask AI:
 </ul>
 
 </section>
-<section id="slide-org13cde58">
-<h3 id="org13cde58">Deliverables</h3>
+<section id="slide-org66c3d33">
+<h3 id="org66c3d33">Deliverables</h3>
 <p>
 Students should be able to:
 </p>
@@ -363,14 +366,14 @@ Students should be able to:
 </section>
 </section>
 <section>
-<section id="slide-orgded9204">
-<h2 id="orgded9204">(\(\S 2.3.1\)) Divergence Integral Theorem (Session 8)</h2>
+<section id="slide-orgaa6ee61">
+<h2 id="orgaa6ee61">(\(\S 2.3.1\)) Divergence Integral Theorem (Session 8)</h2>
 <p class="fragment split">
 Work in progress&#x2026;
 </p>
 </section>
-<section id="slide-org0705434">
-<h3 id="org0705434">Questions for next session</h3>
+<section id="slide-org400d917">
+<h3 id="org400d917">Questions for next session</h3>
 <p>
 Ask AI:
 </p>
@@ -379,8 +382,8 @@ Ask AI:
 
 </ul>
 </section>
-<section id="slide-org3207c77">
-<h3 id="org3207c77">Deliverables</h3>
+<section id="slide-org2eac4ed">
+<h3 id="org2eac4ed">Deliverables</h3>
 <p>
 Students should be able to:
 </p>

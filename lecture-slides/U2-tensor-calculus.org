@@ -98,7 +98,7 @@ $$\rho \dot{\phi} \leq \boldsymbol{S} : \boldsymbol{L} - \rho\eta\dot\theta - \t
 *** Examples from Mechanics
 - The velocity gradient tensor $$\nabla\boldsymbol{v} = v_{j,i} \mathbf{e}_i \otimes \mathbf{e}_j$$
 
-** ($\S2.2.2$) Divergence
+* ($\S2.2.2$) Divergence
 This following text was suggested mostly by DeepSeek Chat as a response to the question[fn:1]
 #+BEGIN_QUOTE
 can you provide a nice example from mechanics to explain the role of taking the divergence of a vector?
