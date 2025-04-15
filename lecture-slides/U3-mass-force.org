@@ -11,56 +11,50 @@
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
 
 
-* ($\S 2.1$) Preliminaries (Session 9)
+* ($\S 3.1$) Continuum Bodies (Session 9)
+#+ATTR_HTML: :width 600px
+[[../images/Continuum_body.svg]]
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- Change in a physical variable, $\phi$, is usually denoted by $d$ or $\partial$, is called a *differential* of $\phi$, such as $d\phi$ or $\partial\phi$.
-- The choice of correct representation depends on how many other variables it depends on, e.g. if it depends on a single variable such as $\phi(t)$ then the *differential change in variable* $\phi$ with respect to a *differential change in time*, $dt$, is denoted as $$\frac{d\phi}{dt}$$
-- When the physical variable depends on more than one independent variables such as $\phi(x_1, x_2)$, then the *differential change in* $\phi$ with respect to $x_1$ and $x_2$ are denoted as $$\frac{\partial\phi}{\partial x_1},\;\; \frac{\partial\phi}{\partial x_2}$$
+- What is the notion of a /[[https://en.wikipedia.org/wiki/Continuum_mechanics][continuum]]/? (ask chat AI)
+- In this context define *density* of a material, $\rho$ (units in mass/volume)
+- We identify the /placement of a *material body*/ as an open subset $B$ of Euclidean Space $\mathbb{E}^3$
+- The placement of a body may change in time, i.e. $B=B(t)$, under the effect of external factors.
+- Study of the relationship between the change in placement and external factors, is called /continuum mechanics/.
 
-*** One-dimensional case
-#+ATTR_HTML: :width 1200px
-[[../images/one-dimension.jpg]]
-
-*** Two-dimensional case
-#+ATTR_HTML: :width 1200px
-[[../images/colormaps_ex4_glycerine.png]]
-- Find the isocontours, i.e. $d\phi=0$. In this case, by the chain rule $d\phi = {{\partial\phi}\over{\partial x_1}} d x_1 + {{\partial\phi}\over{\partial x_2}} d x_2$.
-- The gradient of $\phi$, i.e. the vector $\nabla\phi = {{\partial\phi}\over{\partial x_i}} \boldsymbol{e}_i$ is normal to isocontours of $\phi$. 
-
-** ($\S 2.1.1$) Points, Tensors
+** ($\S 3.2$) Volume and Mass
+#+ATTR_HTML: :width 300px
+[[../images/Continuum_body.svg]]
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- In the remainder of the course a stationary (non-moving) coordinate frame $\{\boldsymbol{e}_i\}$ in Euclidean space $\mathbb{E}^3$ will be used.
-- We identify points $\boldsymbol{x} \in \mathbb{E}^3$ with, $$ \boldsymbol{x} = x_i \boldsymbol{e}_i = \begin{Bmatrix} x_1 \\ x_2 \\ x_3 \end{Bmatrix} \in \mathbb{R}^3$$
-- We identify vectors $\boldsymbol{v} \in \mathcal{V}$ with, $$ \boldsymbol{v} = v_i \boldsymbol{e}_i = \begin{Bmatrix} v_1 \\ v_2 \\ v_3 \end{Bmatrix} \in \mathbb{R}^3$$
-- We identify second-order tensors $\boldsymbol{S} \in \mathcal{V}^2$ with, $$ \boldsymbol{S} = S_{ij} \boldsymbol{e}_i \otimes \boldsymbol{e}_j= \begin{bmatrix} S_{11} & S_{12} & S_{13} \\ S_{21} & S_{22} & S_{23} \\ S_{31} & S_{32} & S_{33} \end{bmatrix} \in \mathbb{R}^{3\times 3}$$
-  
-** ($\S 2.1.2$) Norms, Order
-#+ATTR_REVEAL: :frag (appear)
-- By the standard (Euclidean) norms on the spaces $\mathbb{E}^3$, $\mathcal{V}$, and $\mathcal{V}^2$ we mean the scalar functions defined by $$\begin{align}|\boldsymbol{x}| &= \sqrt{\boldsymbol{x} \cdot \boldsymbol{x}}, \;\; \forall \boldsymbol{x} \in \mathbb{E}^3 \\|\boldsymbol{v} | &= \sqrt{\boldsymbol{v} \cdot \boldsymbol{v}}, \;\; \forall \boldsymbol{v} \in \mathcal{V} \\|\boldsymbol{S} | &= \sqrt{\boldsymbol{S} : \boldsymbol{S}}, \;\; \forall \boldsymbol{S} \in \mathcal{V}^2  \end{align}$$
-- Consider a function $\boldsymbol{f}: U \rightarrow W$, where $U$ and $W$ denote any of the spaces $\mathbb{E}^3$, $\mathcal{V}$ and $\mathcal{V}^2$ or $\mathbb{R}$.\\
-  If there are constants $C>0$ and $r>0$ such that $|\boldsymbol{f} (\boldsymbol{h})| \leq C|\boldsymbol{h}|^r$ as $\boldsymbol{h} \rightarrow 0$, we write $$\boldsymbol{f} (\boldsymbol{h}) = \mathcal{O}(|\boldsymbol{h}|^r)\;\; \mathrm{as} \;\; \boldsymbol{h} \rightarrow 0.$$
-  
+- The *mass* of the body is distributed continuously throughout its *volume*.
+- The volume of an arbitrary open subset $\Omega$ of $B$ is $$\mathrm{vol}[\Omega] = \int_\Omega dV.$$ where $dV$ denotes an infinitesimal volume element at $\boldsymbol{x}\in\Omega$.
+- Let there be a *mass density* field per unit volume $\rho:B\to\mathbb{R}$ such that $$\mathrm{mass}[\Omega] = \int_\Omega \rho(\boldsymbol{x})dV.$$
+
 #+REVEAL: split
-Calculating the norm of vectors and second-order tensors in python.
-#+BEGIN_SRC python
-  import numpy as np
-
-  x = np.random.rand(3)   # Generates random values between 0 and 1
-  S = np.random.rand(3, 3)
-
-  # Calculating the norms
-  # Compute the Euclidean (L2) norm
-  norm_v = np.linalg.norm(x)
-  print(norm_v)  # Output
-
-  # Frobenius norm (default for matrices)
-  norm_A = np.linalg.norm(S)
-  print(norm_A)  # Output 
-#+END_SRC
+*** ($\S 3.2.2$) Centers of Volume and Mass
+#+ATTR_HTML: :width 300px
+[[../images/Continuum_body.svg]]
+#+ATTR_REVEAL: :frag (appear)
+- By the center of volume of an open subset $\Omega$ of $B$ we mean the point $$\boldsymbol{x}_\mathrm{cov} = \frac{1}{\mathrm{vol}[\Omega]} \int_\Omega \boldsymbol{x} dV.$$
+- By the center of mass of an open subset $\Omega$ of $B$ we mean the point $$\boldsymbol{x}_\mathrm{com} = \frac{1}{\mathrm{mass}[\Omega]} \int_\Omega \boldsymbol{x} \rho(\boldsymbol{x}) dV.$$
+  
+** ($\S 3.3$) Force
+#+ATTR_REVEAL: :frag (appear)
+- The abstract notion describing the physical effect of attraction/repulsion.
+- Units of force: Newton (SI), dyne (SI), pounds (US), etc.
+*** ($\S 3.3.1$) Body Force
+#+ATTR_REVEAL: :frag (appear)
+- This term refers, in general, to any force field, $\boldsymbol{b}(\boldsymbol{x})$, that does not arise from physical contact (between bodies).
+- Example: gravity, $g$ (has units of m/s$^2$)
+- It is usually measured in terms of the force field per unit mass (i.e. force/mass)
+- Let $\Omega$ be an arbitrary subset of $B$. Then the resultant force on $\Omega$ due to a body force field is defined as $$\boldsymbol{r}_b[\Omega] = \int_\Omega \rho(\boldsymbol{x}) \boldsymbol{b}(\boldsymbol{x}) dV,$$
+- and the resultant torque, about a point $\boldsymbol{z}$, becomes  $$\boldsymbol{\tau}_b[\Omega] = \int_\Omega (\boldsymbol{x} - \boldsymbol{z}) \times \rho(\boldsymbol{x}) \boldsymbol{b}(\boldsymbol{x}) dV.$$
+  
 ** Questions for next session
 Ask AI:
-- Where is the gradient operator used in writing the principles of mechanics?
+- How can the stress tensor be introduced in a simple but mathematically concise manner?
+  
 ** Deliverables
 Students should be able to:
-- [ ] provide examples of scalar and vector fields
+- [ ] use density to find continuum mass and center of mass
+
   

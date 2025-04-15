@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Unit 3: Mass and Force Concepts</title>
+<meta name="author" content="Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../style.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>Unit 3: Mass and Force Concepts</h2> <h3>Readings from Stuart and Gonzales, Chapter 3</h3> <h4>2025-04-13</h4>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-orgf05996f">(\(\S 3.1\)) Continuum Bodies (Session 9)</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+
+<section>
+<section id="slide-orgf05996f">
+<h2 id="orgf05996f">(\(\S 3.1\)) Continuum Bodies (Session 9)</h2>
+
+<div id="org5336f12" class="figure">
+<p><img src="../images/Continuum_body.svg" alt="Continuum_body.svg" class="org-svg" width="600px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">What is the notion of a <i><a href="https://en.wikipedia.org/wiki/Continuum_mechanics">continuum</a></i>? (ask chat AI)</li>
+<li class="fragment appear">In this context define <b>density</b> of a material, \(\rho\) (units in mass/volume)</li>
+<li class="fragment appear">We identify the <i>placement of a <b>material body</b></i> as an open subset \(B\) of Euclidean Space \(\mathbb{E}^3\)</li>
+<li class="fragment ...">The placement of a body may change in time, i.e. \(B=B(t)\), under the effect of external factors.</li>
+<li class="fragment ...">Study of the relationship between the change in placement and external factors, is called <i>continuum mechanics</i>.</li>
+
+</ul>
+
+</section>
+<section id="slide-org4e89349">
+<h3 id="org4e89349">(\(\S 3.2\)) Volume and Mass</h3>
+
+<div id="org8899fd0" class="figure">
+<p><img src="../images/Continuum_body.svg" alt="Continuum_body.svg" class="org-svg" width="300px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">The <b>mass</b> of the body is distributed continuously throughout its <b>volume</b>.</li>
+<li class="fragment appear">The volume of an arbitrary open subset \(\Omega\) of \(B\) is \[\mathrm{vol}[\Omega] = \int_\Omega dV.\] where \(dV\) denotes an infinitesimal volume element at \(\boldsymbol{x}\in\Omega\).</li>
+<li class="fragment appear">Let there be a <b>mass density</b> field per unit volume \(\rho:B\to\mathbb{R}\) such that \[\mathrm{mass}[\Omega] = \int_\Omega \rho(\boldsymbol{x})dV.\]</li>
+
+</ul>
+
+</section>
+<section id="slide-org4e89349-split">
+</section>
+<section id="slide-orgc808c4c">
+<h4 id="orgc808c4c">(\(\S 3.2.2\)) Centers of Volume and Mass</h4>
+
+<div id="org2e24aaa" class="figure">
+<p><img src="../images/Continuum_body.svg" alt="Continuum_body.svg" class="org-svg" width="300px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">By the center of volume of an open subset \(\Omega\) of \(B\) we mean the point \[\boldsymbol{x}_\mathrm{cov} = \frac{1}{\mathrm{vol}[\Omega]} \int_\Omega \boldsymbol{x} dV.\]</li>
+<li class="fragment appear">By the center of mass of an open subset \(\Omega\) of \(B\) we mean the point \[\boldsymbol{x}_\mathrm{com} = \frac{1}{\mathrm{mass}[\Omega]} \int_\Omega \boldsymbol{x} \rho(\boldsymbol{x}) dV.\]</li>
+
+</ul>
+
+</section>
+<section id="slide-org0bc5a8c">
+<h3 id="org0bc5a8c">(\(\S 3.3\)) Force</h3>
+<ul>
+<li class="fragment appear">The abstract notion describing the physical effect of attraction/repulsion.</li>
+<li class="fragment appear">Units of force: Newton (SI), dyne (SI), pounds (US), etc.</li>
+
+</ul>
+</section>
+<section id="slide-org56f55c2">
+<h4 id="org56f55c2">(\(\S 3.3.1\)) Body Force</h4>
+<ul>
+<li class="fragment appear">This term refers, in general, to any force field, \(\boldsymbol{b}(\boldsymbol{x})\), that does not arise from physical contact (between bodies).</li>
+<li class="fragment appear">Example: gravity, \(g\) (has units of m/s\(^2\))</li>
+<li class="fragment appear">It is usually measured in terms of the force field per unit mass (i.e. force/mass)</li>
+<li class="fragment appear">Let \(\Omega\) be an arbitrary subset of \(B\). Then the resultant force on \(\Omega\) due to a body force field is defined as \[\boldsymbol{r}_b[\Omega] = \int_\Omega \rho(\boldsymbol{x}) \boldsymbol{b}(\boldsymbol{x}) dV,\]</li>
+<li class="fragment appear">and the resultant torque, about a point \(\boldsymbol{z}\), becomes  \[\boldsymbol{\tau}_b[\Omega] = \int_\Omega (\boldsymbol{x} - \boldsymbol{z}) \times \rho(\boldsymbol{x}) \boldsymbol{b}(\boldsymbol{x}) dV.\]</li>
+
+</ul>
+
+</section>
+<section id="slide-orge5968ea">
+<h3 id="orge5968ea">Questions for next session</h3>
+<p>
+Ask AI:
+</p>
+<ul>
+<li>How can the stress tensor be introduced in a simple but mathematically concise manner?</li>
+
+</ul>
+
+</section>
+<section id="slide-org79c8de3">
+<h3 id="org79c8de3">Deliverables</h3>
+<p>
+Students should be able to:
+</p>
+<ul>
+<li class="off"><code>[&#xa0;]</code> use density to find continuum mass and center of mass</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>
