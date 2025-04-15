@@ -79,7 +79,7 @@ Jove: a scientific educational video content provider with free access through Y
 |   10 | Thin-Walled Pressurized Tubes (*Quiz 3*)     | Biofluidic Mechanics: Constitution of an Ideal Flow       |
 |   11 | Newtonian and Non-Newtonian Flows            | Worker's Day Holiday (1 Mayıs)                            |
 |   12 | Navier-Stokes Equations                      | Cone-Plate Viscometry                                     |
-|   13 | Bernoulli Equation  (*Quiz 4*)                | Application of the Bernoulli Equation                     |
+|   13 | Bernoulli Equation  (*Quiz 4*)               | Application of the Bernoulli Equation                     |
 |   14 | Measurement of Flow and Pressure             | Navier-Stokes Worksheets: Formulation of Problems         |
 |   15 | Flow Between Flat Plates                     | Steady Flow in Circular Tubes                             |
 
