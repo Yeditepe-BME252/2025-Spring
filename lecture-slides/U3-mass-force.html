@@ -36,84 +36,80 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#/slide-orgf05996f">(\(\S 3.1\)) Continuum Bodies (Session 9)</a></li>
+<li><a href="#/slide-org1d8805a">(\(\S 3.1\)) Continuum Bodies (Session 9)</a></li>
+<li><a href="#/slide-org8163821">(\(\S 3.3.2\)) Surface Forces</a></li>
 </ul>
 </div>
 </div>
 </section>
-
-
 <section>
-<section id="slide-orgf05996f">
-<h2 id="orgf05996f">(\(\S 3.1\)) Continuum Bodies (Session 9)</h2>
+<section id="slide-org1d8805a">
+<h2 id="org1d8805a">(\(\S 3.1\)) Continuum Bodies (Session 9)</h2>
 
-<div id="org5336f12" class="figure">
+<div id="orgbf6a5a1" class="figure">
 <p><img src="../images/Continuum_body.svg" alt="Continuum_body.svg" class="org-svg" width="600px" />
 </p>
 </div>
 <ul>
 <li class="fragment appear">What is the notion of a <i><a href="https://en.wikipedia.org/wiki/Continuum_mechanics">continuum</a></i>? (ask chat AI)</li>
 <li class="fragment appear">In this context define <b>density</b> of a material, \(\rho\) (units in mass/volume)</li>
-<li class="fragment appear">We identify the <i>placement of a <b>material body</b></i> as an open subset \(B\) of Euclidean Space \(\mathbb{E}^3\)</li>
-<li class="fragment ...">The placement of a body may change in time, i.e. \(B=B(t)\), under the effect of external factors.</li>
+<li class="fragment appear">We identify the <i>placement of a <b>material body</b></i> as an open subset \(\mathcal{B}\) of Euclidean Space \(\mathbb{E}^3\)</li>
+<li class="fragment ...">The placement of a body may change in time, i.e. \(\mathcal{B}=\mathcal{B}(t)\), under the effect of external factors.</li>
 <li class="fragment ...">Study of the relationship between the change in placement and external factors, is called <i>continuum mechanics</i>.</li>
 
 </ul>
-
 </section>
-<section id="slide-org4e89349">
-<h3 id="org4e89349">(\(\S 3.2\)) Volume and Mass</h3>
+<section id="slide-orga085471">
+<h3 id="orga085471">(\(\S 3.2\)) Volume and Mass</h3>
 
-<div id="org8899fd0" class="figure">
+<div id="org9ee8796" class="figure">
 <p><img src="../images/Continuum_body.svg" alt="Continuum_body.svg" class="org-svg" width="300px" />
 </p>
 </div>
 <ul>
 <li class="fragment appear">The <b>mass</b> of the body is distributed continuously throughout its <b>volume</b>.</li>
-<li class="fragment appear">The volume of an arbitrary open subset \(\Omega\) of \(B\) is \[\mathrm{vol}[\Omega] = \int_\Omega dV.\] where \(dV\) denotes an infinitesimal volume element at \(\boldsymbol{x}\in\Omega\).</li>
+<li class="fragment appear">The volume of an arbitrary open subset \(\Omega\) of \(\mathcal{B}\) is \[\mathrm{vol}[\Omega] = \int_\Omega dV.\] where \(dV\) denotes an infinitesimal volume element at \(\boldsymbol{x}\in\Omega\).</li>
 <li class="fragment appear">Let there be a <b>mass density</b> field per unit volume \(\rho:B\to\mathbb{R}\) such that \[\mathrm{mass}[\Omega] = \int_\Omega \rho(\boldsymbol{x})dV.\]</li>
 
 </ul>
 
 </section>
-<section id="slide-org4e89349-split">
+<section id="slide-orga085471-split">
 </section>
-<section id="slide-orgc808c4c">
-<h4 id="orgc808c4c">(\(\S 3.2.2\)) Centers of Volume and Mass</h4>
+<section id="slide-orgb6bc2e0">
+<h4 id="orgb6bc2e0">(\(\S 3.2.2\)) Centers of Volume and Mass</h4>
 
-<div id="org2e24aaa" class="figure">
+<div id="org7fa32fb" class="figure">
 <p><img src="../images/Continuum_body.svg" alt="Continuum_body.svg" class="org-svg" width="300px" />
 </p>
 </div>
 <ul>
-<li class="fragment appear">By the center of volume of an open subset \(\Omega\) of \(B\) we mean the point \[\boldsymbol{x}_\mathrm{cov} = \frac{1}{\mathrm{vol}[\Omega]} \int_\Omega \boldsymbol{x} dV.\]</li>
-<li class="fragment appear">By the center of mass of an open subset \(\Omega\) of \(B\) we mean the point \[\boldsymbol{x}_\mathrm{com} = \frac{1}{\mathrm{mass}[\Omega]} \int_\Omega \boldsymbol{x} \rho(\boldsymbol{x}) dV.\]</li>
+<li class="fragment appear">By the center of volume of an open subset \(\Omega\) of \(\mathcal{B}\) we mean the point \[\boldsymbol{x}_\mathrm{cov} = \frac{1}{\mathrm{vol}[\Omega]} \int_\Omega \boldsymbol{x} dV.\]</li>
+<li class="fragment appear">By the center of mass of an open subset \(\Omega\) of \(\mathcal{B}\) we mean the point \[\boldsymbol{x}_\mathrm{com} = \frac{1}{\mathrm{mass}[\Omega]} \int_\Omega \boldsymbol{x} \rho(\boldsymbol{x}) dV.\]</li>
 
 </ul>
-
 </section>
-<section id="slide-org0bc5a8c">
-<h3 id="org0bc5a8c">(\(\S 3.3\)) Force</h3>
+<section id="slide-org3ec8d61">
+<h3 id="org3ec8d61">(\(\S 3.3\)) Body Forces</h3>
 <ul>
 <li class="fragment appear">The abstract notion describing the physical effect of attraction/repulsion.</li>
 <li class="fragment appear">Units of force: Newton (SI), dyne (SI), pounds (US), etc.</li>
 
 </ul>
 </section>
-<section id="slide-org56f55c2">
-<h4 id="org56f55c2">(\(\S 3.3.1\)) Body Force</h4>
+<section id="slide-org304f92a">
+<h4 id="org304f92a">(\(\S 3.3.1\)) Integrals (Resultant Forces)</h4>
 <ul>
 <li class="fragment appear">This term refers, in general, to any force field, \(\boldsymbol{b}(\boldsymbol{x})\), that does not arise from physical contact (between bodies).</li>
 <li class="fragment appear">Example: gravity, \(g\) (has units of m/s\(^2\))</li>
 <li class="fragment appear">It is usually measured in terms of the force field per unit mass (i.e. force/mass)</li>
-<li class="fragment appear">Let \(\Omega\) be an arbitrary subset of \(B\). Then the resultant force on \(\Omega\) due to a body force field is defined as \[\boldsymbol{r}_b[\Omega] = \int_\Omega \rho(\boldsymbol{x}) \boldsymbol{b}(\boldsymbol{x}) dV,\]</li>
+<li class="fragment appear">Let \(\Omega\) be an the entire region enclosing \(\mathcal{B}\), or an arbitrary subset of it. Then the resultant force on \(\Omega\) due to a body force field is defined as \[\boldsymbol{r}_b[\Omega] = \int_\Omega \rho(\boldsymbol{x}) \boldsymbol{b}(\boldsymbol{x}) dV,\]</li>
 <li class="fragment appear">and the resultant torque, about a point \(\boldsymbol{z}\), becomes  \[\boldsymbol{\tau}_b[\Omega] = \int_\Omega (\boldsymbol{x} - \boldsymbol{z}) \times \rho(\boldsymbol{x}) \boldsymbol{b}(\boldsymbol{x}) dV.\]</li>
 
 </ul>
-
 </section>
-<section id="slide-orge5968ea">
-<h3 id="orge5968ea">Questions for next session</h3>
+<section id="slide-orgbef44fb">
+<h3 id="orgbef44fb">Questions for next session</h3>
 <p>
 Ask AI:
 </p>
@@ -121,15 +117,96 @@ Ask AI:
 <li>How can the stress tensor be introduced in a simple but mathematically concise manner?</li>
 
 </ul>
-
 </section>
-<section id="slide-org79c8de3">
-<h3 id="org79c8de3">Deliverables</h3>
+<section id="slide-orga4dbc16">
+<h3 id="orga4dbc16">Deliverables</h3>
 <p>
 Students should be able to:
 </p>
 <ul>
 <li class="off"><code>[&#xa0;]</code> use density to find continuum mass and center of mass</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org8163821">
+<h2 id="org8163821">(\(\S 3.3.2\)) Surface Forces</h2>
+
+<div id="orgcd5a9f5" class="figure">
+<p><img src="../images/traction_definitions.jpg" alt="traction_definitions.jpg" width="1200 px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear"><i>External traction field</i>, \(\bar{\boldsymbol{t}}(\boldsymbol{x})\), arises on the <i>external</i> boundary of the three-dimensional domain, \(\Omega\), whereas <i>internal traction fields</i>, \(\boldsymbol{t}(\boldsymbol{n},\boldsymbol{x})\), arise over <i>internal</i> surfaces.</li>
+<li class="fragment appear">\(\partial\Omega\) denotes the outer boundary of the domain \(\Omega\).</li>
+<li class="fragment appear">\(\Gamma\) is used to denote arbitrary two-dimensional domains that separate \(\Omega\) into a negative (\(-\)) and a positive (\(+\)) side.</li>
+
+</ul>
+</section>
+<section id="slide-org8bfc7bc">
+<h3 id="org8bfc7bc">Definitions</h3>
+
+<div id="org547b19c" class="figure">
+<p><img src="../images/traction_definitions.jpg" alt="traction_definitions.jpg" width="1200 px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">The force, per unit area, exerted by material on the positive side of the surface \(\Gamma\) upon material on the negative side is assumed to be given by a function \(\boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x}): \mathcal{N} \times \mathcal{B} \to \mathcal{V}\), which we call the <b>traction function</b>.</li>
+<li class="fragment appear">When the surface \(\Gamma\) is part of of the bounding surface \(\partial\mathcal{B}\), the external tractions imposed upon the body are denoted as \(\bar{\boldsymbol{t}} = \boldsymbol{t} (\bar{\boldsymbol{n}}, \boldsymbol{x})\), where \(\bar{\boldsymbol{n}}\) denote the outward unit normal field.</li>
+
+</ul>
+</section>
+<section id="slide-org9720c4d">
+<h3 id="org9720c4d">Integrals (Resultant Forces)</h3>
+
+<div id="orgbf778fd" class="figure">
+<p><img src="../images/traction_integrals.jpg" alt="traction_integrals.jpg" width="1200 px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">Similar to the integrals of body forces we define the resultant force due to a traction field over  \(\boldsymbol{r}_s[\Omega]\), due to (surface) boundary tractions as
+\[\boldsymbol{r}_s[\partial\Omega] = \int_{\partial\Omega} \bar{\boldsymbol{t}} dA,\]</li>
+<li class="fragment appear">and the resultant torque about point \(\boldsymbol{z}\), \(\boldsymbol{\tau}_s[\partial\Omega,\boldsymbol{z}]\) as   \[\boldsymbol{\tau}_s[\partial\Omega] = \int_{\partial\Omega} (\boldsymbol{x} - \boldsymbol{z}) \times \bar{\boldsymbol{t}} dA.\]</li>
+
+</ul>
+</section>
+<section id="slide-org3b63aa9">
+<h3 id="org3b63aa9">Postulate of action/reaction</h3>
+<p>
+The tractions at a point \(\boldsymbol\) over a plane with normal \(\boldsymbol{n}\) are equal and opposite of those that occur on the reciprocal (flipped) plane. \[\boldsymbol{t} (\boldsymbol{-n}, \boldsymbol{x}) = - \boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x})\]
+</p>
+<ul>
+<li class="fragment appear">Draw an image depicting a pair of reciprocal planes at an arbitrary point in \(\mathcal{B}\).</li>
+<li class="fragment appear">Draw the tractions occuring over the reciprocal planes.</li>
+
+</ul>
+</section>
+<section id="slide-orgc0b753e">
+<h3 id="orgc0b753e">Cauchy&rsquo;s Stress Postulate</h3>
+
+<div id="org9b6ac1d" class="figure">
+<p><img src="../images/stress_tetrahedron.png" alt="stress_tetrahedron.png" width="600 px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">Imagine a tetrahedron in \(\mathcal{B}\) with three edges parallel to the coordinates \(x_i\) cornered at point \(\boldsymbol{x}\), intersected by a plane with unit normal \(\boldsymbol{n}\) as shown in the figure above.</li>
+<li class="fragment appear">The internal traction vector on the plane with unit normal $\boldsymbol{n} is \(\boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x})\)</li>
+<li class="fragment appear">The internal traction vectors on the coordinate planes having normals \(-\boldsymbol{e}_j\) are \(\boldsymbol{t} (-\boldsymbol{e}_j, \boldsymbol{x})\)</li>
+<li class="fragment appear">By extending the arguments of force equilibrium the above tractions can be shown to obey \[\boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x}) + \sum_{j=1}^3 \boldsymbol{t} (-\boldsymbol{e}_j, \boldsymbol{x}) n_j = \boldsymbol{0}.\]</li>
+
+</ul>
+
+</section>
+<section id="slide-orgc0b753e-split">
+
+<div id="orgfe4d08e" class="figure">
+<p><img src="../images/stress_tetrahedra.jpg" alt="stress_tetrahedra.jpg" width="600 px" />
+</p>
+</div>
+<ul>
+<li>It can be argued that there exists a second-order tensor field, \(\boldsymbol{S} (\boldsymbol{x}):\mathcal{B} \to \mathcal{V}^2\), called the <b>stress field</b>, which is a transformer between the unit normal field  and the traction field given as \[\boldsymbol{t}(\boldsymbol{n}, \boldsymbol{x}) = \boldsymbol{S}(\boldsymbol{x}) \boldsymbol{n},\]</li>
+<li>where \(S_{ij} = t_i(\boldsymbol{e}_j, \boldsymbol{x})\)</li>
 
 </ul>
 </section>
