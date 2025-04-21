@@ -29,7 +29,6 @@
 - The volume of an arbitrary open subset $\Omega$ of $\mathcal{B}$ is $$\mathrm{vol}[\Omega] = \int_\Omega dV.$$ where $dV$ denotes an infinitesimal volume element at $\boldsymbol{x}\in\Omega$.
 - Let there be a *mass density* field per unit volume $\rho:B\to\mathbb{R}$ such that $$\mathrm{mass}[\Omega] = \int_\Omega \rho(\boldsymbol{x})dV.$$
 
-#+REVEAL: split
 *** ($\S 3.2.2$) Centers of Volume and Mass
 #+ATTR_HTML: :width 300px
 [[../images/Continuum_body.svg]]
@@ -41,13 +40,13 @@
 #+ATTR_REVEAL: :frag (appear)
 - The abstract notion describing the physical effect of attraction/repulsion.
 - Units of force: Newton (SI), dyne (SI), pounds (US), etc.
-*** ($\S 3.3.1$) Integrals (Resultant Forces)
+*** ($\S 3.3.1$)  Resultant Forces (Integrals)
 #+ATTR_REVEAL: :frag (appear)
 - This term refers, in general, to any force field, $\boldsymbol{b}(\boldsymbol{x})$, that does not arise from physical contact (between bodies).
 - Example: gravity, $g$ (has units of m/s$^2$)
 - It is usually measured in terms of the force field per unit mass (i.e. force/mass)
 - Let $\Omega$ be an the entire region enclosing $\mathcal{B}$, or an arbitrary subset of it. Then the resultant force on $\Omega$ due to a body force field is defined as $$\boldsymbol{r}_b[\Omega] = \int_\Omega \rho(\boldsymbol{x}) \boldsymbol{b}(\boldsymbol{x}) dV,$$
-- and the resultant torque, about a point $\boldsymbol{z}$, becomes  $$\boldsymbol{\tau}_b[\Omega] = \int_\Omega (\boldsymbol{x} - \boldsymbol{z}) \times \rho(\boldsymbol{x}) \boldsymbol{b}(\boldsymbol{x}) dV.$$
+- and the resultant torque about a point $\boldsymbol{z}$ can be written as  $$\boldsymbol{\tau}_b[\Omega] = \int_\Omega (\boldsymbol{x} - \boldsymbol{z}) \times \rho(\boldsymbol{x}) \boldsymbol{b}(\boldsymbol{x}) dV.$$
   
 ** Questions for next session
 Ask AI:
@@ -70,18 +69,18 @@ Students should be able to:
 [[../images/traction_definitions.jpg]]
 #+ATTR_REVEAL: :frag (appear)
 - The force, per unit area, exerted by material on the positive side of the surface $\Gamma$ upon material on the negative side is assumed to be given by a function $\boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x}): \mathcal{N} \times \mathcal{B} \to \mathcal{V}$, which we call the *traction function*.
-- When the surface $\Gamma$ is part of of the bounding surface $\partial\mathcal{B}$, the external tractions imposed upon the body are denoted as $\bar{\boldsymbol{t}} = \boldsymbol{t} (\bar{\boldsymbol{n}}, \boldsymbol{x})$, where $\bar{\boldsymbol{n}}$ denote the outward unit normal field.
+- When the surface $\Gamma$ is part of of the bounding surface $\partial\mathcal{B}$, the external tractions imposed upon the body are denoted as $\bar{\boldsymbol{t}} = \boldsymbol{t} (\bar{\boldsymbol{n}}, \boldsymbol{x})$, where $\bar{\boldsymbol{n}}$ denotes the outward unit normal field.
   
-** Integrals (Resultant Forces)
+** Resultant Forces (Integrals)
 #+ATTR_HTML: :width 1200 px
 [[../images/traction_integrals.jpg]]
 #+ATTR_REVEAL: :frag (appear)
-- Similar to the integrals of body forces we define the resultant force due to a traction field over  $\boldsymbol{r}_s[\Omega]$, due to (surface) boundary tractions as
++ Similar to the integrals of body forces we define the resultant force due to a traction field over  $\boldsymbol{r}_s[\Omega]$, due to (surface) boundary tractions as
   $$\boldsymbol{r}_s[\partial\Omega] = \int_{\partial\Omega} \bar{\boldsymbol{t}} dA,$$
-- and the resultant torque about point $\boldsymbol{z}$, $\boldsymbol{\tau}_s[\partial\Omega,\boldsymbol{z}]$ as   $$\boldsymbol{\tau}_s[\partial\Omega] = \int_{\partial\Omega} (\boldsymbol{x} - \boldsymbol{z}) \times \bar{\boldsymbol{t}} dA.$$
++ and the resultant torque about point $\boldsymbol{z}$, $\boldsymbol{\tau}_s[\partial\Omega,\boldsymbol{z}]$ as   $$\boldsymbol{\tau}_s[\partial\Omega,\boldsymbol{z}] = \int_{\partial\Omega} (\boldsymbol{x} - \boldsymbol{z}) \times \bar{\boldsymbol{t}} dA.$$
   
 ** Postulate of action/reaction
-The tractions at a point $\boldsymbol$ over a plane with normal $\boldsymbol{n}$ are equal and opposite of those that occur on the reciprocal (flipped) plane. $$\boldsymbol{t} (\boldsymbol{-n}, \boldsymbol{x}) = - \boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x})$$
+The tractions at a point $\boldsymbol{x}$ over a plane with normal $\boldsymbol{n}$ are equal and opposite of those that occur on the reciprocal (flipped) plane. $$\boldsymbol{t} (\boldsymbol{-n}, \boldsymbol{x}) = - \boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x})$$
 #+ATTR_REVEAL: :frag (appear)
 + Draw an image depicting a pair of reciprocal planes at an arbitrary point in $\mathcal{B}$.
 + Draw the tractions occuring over the reciprocal planes. 
@@ -91,7 +90,7 @@ The tractions at a point $\boldsymbol$ over a plane with normal $\boldsymbol{n}$
 [[../images/stress_tetrahedron.png]]
 #+ATTR_REVEAL: :frag (appear)
 - Imagine a tetrahedron in $\mathcal{B}$ with three edges parallel to the coordinates $x_i$ cornered at point $\boldsymbol{x}$, intersected by a plane with unit normal $\boldsymbol{n}$ as shown in the figure above.
-- The internal traction vector on the plane with unit normal $\boldsymbol{n} is $\boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x})$
+- The internal traction vector on the plane with unit normal $\boldsymbol{n}$ is $\boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x})$
 - The internal traction vectors on the coordinate planes having normals $-\boldsymbol{e}_j$ are $\boldsymbol{t} (-\boldsymbol{e}_j, \boldsymbol{x})$
 - By extending the arguments of force equilibrium the above tractions can be shown to obey $$\boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x}) + \sum_{j=1}^3 \boldsymbol{t} (-\boldsymbol{e}_j, \boldsymbol{x}) n_j = \boldsymbol{0}.$$
 
