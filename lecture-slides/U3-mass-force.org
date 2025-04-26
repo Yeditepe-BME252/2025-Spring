@@ -34,19 +34,25 @@
 [[../images/Continuum_body.svg]]
 #+ATTR_REVEAL: :frag (appear)
 - By the center of volume of an open subset $\Omega$ of $\mathcal{B}$ we mean the point $$\boldsymbol{x}_\mathrm{cov} = \frac{1}{\mathrm{vol}[\Omega]} \int_\Omega \boldsymbol{x} dV.$$
+- This integral is known as the first moment of volume about $O$.
 - By the center of mass of an open subset $\Omega$ of $\mathcal{B}$ we mean the point $$\boldsymbol{x}_\mathrm{com} = \frac{1}{\mathrm{mass}[\Omega]} \int_\Omega \boldsymbol{x} \rho(\boldsymbol{x}) dV.$$
-  
+
+#+REVEAL: split
 ** ($\S 3.3$) Body Forces
+#+ATTR_HTML: :width 1200px
+[[../images/forces_in_nature.jpg]]
 #+ATTR_REVEAL: :frag (appear)
-- The abstract notion describing the physical effect of attraction/repulsion.
-- Units of force: Newton (SI), dyne (SI), pounds (US), etc.
-*** ($\S 3.3.1$)  Resultant Forces (Integrals)
+- How do body forces arise from distant effects such as gravity, electromagnetism?
+
+*** ($\S 3.3.1$)  Body Forces and their Resultants (Integrals)
+#+ATTR_HTML: :width 360px
+[[../images/traction_bodyIntegrals.jpg]]
 #+ATTR_REVEAL: :frag (appear)
-- This term refers, in general, to any force field, $\boldsymbol{b}(\boldsymbol{x})$, that does not arise from physical contact (between bodies).
-- Example: gravity, $g$ (has units of m/s$^2$)
+- Let, $\boldsymbol{b}(\boldsymbol{x}):\mathbb{E}^3 \to \mathcal{V}$, denote any force field that does not arise from physical contact (between bodies).
+- Example: gravity, $\boldsymbol{g}$ (has units of m/s$^2$)
 - It is usually measured in terms of the force field per unit mass (i.e. force/mass)
-- Let $\Omega$ be an the entire region enclosing $\mathcal{B}$, or an arbitrary subset of it. Then the resultant force on $\Omega$ due to a body force field is defined as $$\boldsymbol{r}_b[\Omega] = \int_\Omega \rho(\boldsymbol{x}) \boldsymbol{b}(\boldsymbol{x}) dV,$$
-- and the resultant torque about a point $\boldsymbol{z}$ can be written as  $$\boldsymbol{\tau}_b[\Omega] = \int_\Omega (\boldsymbol{x} - \boldsymbol{z}) \times \rho(\boldsymbol{x}) \boldsymbol{b}(\boldsymbol{x}) dV.$$
+- Let $\Omega$ be an open volume in $\mathcal{B}$, then, the resultant force accumulating in $\Omega$ due to $\boldsymbol{b}$ is $$\boldsymbol{r}_b[\Omega] = \int_\Omega \boldsymbol{b}(\boldsymbol{x}) \rho(\boldsymbol{x}) dV,$$
+- and the resultant torque about a point $\boldsymbol{z}$ can be written as  $$\boldsymbol{\tau}_b[\Omega,\boldsymbol{z}] = \int_\Omega (\boldsymbol{x} - \boldsymbol{z}) \times \boldsymbol{b}(\boldsymbol{x}) \rho(\boldsymbol{x}) dV.$$
   
 ** Questions for next session
 Ask AI:
@@ -56,29 +62,48 @@ Ask AI:
 Students should be able to:
 - [ ] use density to find continuum mass and center of mass
 
-* ($\S 3.3.2$) Surface Forces
+* ($\S 3.3.2$) Surface Forces (Session 10)
 #+ATTR_HTML: :width 1200 px
-[[../images/traction_definitions.jpg]]
+[[../images/traction_glued.jpg]]
 #+ATTR_REVEAL: :frag (appear)
-- /External traction field/, $\bar{\boldsymbol{t}}(\boldsymbol{x})$, arises on the /external/ boundary of the three-dimensional domain, $\Omega$, whereas /internal traction fields/, $\boldsymbol{t}(\boldsymbol{n},\boldsymbol{x})$, arise over /internal/ surfaces.
-- $\partial\Omega$ denotes the outer boundary of the domain $\Omega$.
-- $\Gamma$ is used to denote arbitrary two-dimensional domains that separate $\Omega$ into a negative ($-$) and a positive ($+$) side.
+- How do surface forces, a.k.a. tractions arise from the mutual interaction (contact) between a pair of bodies?
+- Contact occurs over the /boundary/ of $\mathcal{B}$, i.e. $\partial\mathcal{B}$, boundary tractions are labeled $\bar{\boldsymbol{t}}$.
 
 ** Definitions
-#+ATTR_HTML: :width 1200 px
+#+ATTR_HTML: :width 1400 px
 [[../images/traction_definitions.jpg]]
 #+ATTR_REVEAL: :frag (appear)
-- The force, per unit area, exerted by material on the positive side of the surface $\Gamma$ upon material on the negative side is assumed to be given by a function $\boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x}): \mathcal{N} \times \mathcal{B} \to \mathcal{V}$, which we call the *traction function*.
-- When the surface $\Gamma$ is part of of the bounding surface $\partial\mathcal{B}$, the external tractions imposed upon the body are denoted as $\bar{\boldsymbol{t}} = \boldsymbol{t} (\bar{\boldsymbol{n}}, \boldsymbol{x})$, where $\bar{\boldsymbol{n}}$ denotes the outward unit normal field.
-  
-** Resultant Forces (Integrals)
+- $\Gamma$  denotes arbitrary two-dimensional domain separating $\mathcal{B}$ into a ($-$) and a ($+$) side.
+- The force, per unit area, exerted by the ($+$) side of  $\Gamma$ upon the ($-$) side is the *traction function*, $\boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x}): \mathcal{N} \times \mathcal{B} \to \mathcal{V}$.
+- When the $\Gamma$ is part of $\partial\mathcal{B}$, tractions become the boundary tractions,  $\boldsymbol{t} = \bar{\boldsymbol{t}}$.
+
+*** Example 1: Balance of Tractions in an Axial Bar
 #+ATTR_HTML: :width 1200 px
-[[../images/traction_integrals.jpg]]
+[[../images/traction_axialbar.jpg]]
+
+The bar is under axial tension transmitted over its glued end surfaces
+
+Motivations:
+#+ATTR_REVEAL: :frag (appear)
+- How does the surface shear tractions applied at the ends gradually dive into the body and become normal tractions?
+- How are the applied forces related with boundary tractions over the glued surfaces?
+- How can the resultant of the internal normal tractions be computed?
+  
+** Resultant Force and Torque (Integrals)
+#+ATTR_HTML: :width 360 px
+[[../images/traction_surfaceIntegrals.jpg]]
 #+ATTR_REVEAL: :frag (appear)
 + Similar to the integrals of body forces we define the resultant force due to a traction field over  $\boldsymbol{r}_s[\Omega]$, due to (surface) boundary tractions as
   $$\boldsymbol{r}_s[\partial\Omega] = \int_{\partial\Omega} \bar{\boldsymbol{t}} dA,$$
-+ and the resultant torque about point $\boldsymbol{z}$, $\boldsymbol{\tau}_s[\partial\Omega,\boldsymbol{z}]$ as   $$\boldsymbol{\tau}_s[\partial\Omega,\boldsymbol{z}] = \int_{\partial\Omega} (\boldsymbol{x} - \boldsymbol{z}) \times \bar{\boldsymbol{t}} dA.$$
-  
++ and the resultant torque about point $\boldsymbol{z}$ as   $$\boldsymbol{\tau}_s[\partial\Omega,\boldsymbol{z}] = \int_{\partial\Omega} (\boldsymbol{x} - \boldsymbol{z}) \times \bar{\boldsymbol{t}} dA.$$
+
+*** Example 2: Balance of Tractions in a Cylindrical Vessel
+#+ATTR_HTML: :width 1000px
+[[../images/traction_vessel.jpg]]
+
+The vessel is inflated by applying internal pressure
+#+ATTR_REVEAL: : frag (appear)
+- 
 ** Postulate of action/reaction
 The tractions at a point $\boldsymbol{x}$ over a plane with normal $\boldsymbol{n}$ are equal and opposite of those that occur on the reciprocal (flipped) plane. $$\boldsymbol{t} (\boldsymbol{-n}, \boldsymbol{x}) = - \boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x})$$
 #+ATTR_REVEAL: :frag (appear)
@@ -97,5 +122,4 @@ The tractions at a point $\boldsymbol{x}$ over a plane with normal $\boldsymbol{
 #+REVEAL: split  
 #+ATTR_HTML: :width 600 px
 [[../images/stress_tetrahedra.jpg]]
-- It can be argued that there exists a second-order tensor field, $\boldsymbol{S} (\boldsymbol{x}):\mathcal{B} \to \mathcal{V}^2$, called the *stress field*, which is a transformer between the unit normal field  and the traction field given as $$\boldsymbol{t}(\boldsymbol{n}, \boldsymbol{x}) = \boldsymbol{S}(\boldsymbol{x}) \boldsymbol{n},$$
-- where $S_{ij} = t_i(\boldsymbol{e}_j, \boldsymbol{x})$
+- There exists a second-order tensor field, $\boldsymbol{\sigma} (\boldsymbol{x}):\mathcal{B} \to \mathcal{V}^2$, called the *stress field*, which transforms the unit normal field  into the traction field as $$\boldsymbol{t}(\boldsymbol{n}, \boldsymbol{x}) = \boldsymbol{\sigma}(\boldsymbol{x}) \boldsymbol{n}\quad \mathrm{or} \quad \boldsymbol{t} = \boldsymbol{\sigma} \boldsymbol{n}$$  where $\sigma_{ij} = t_i(\boldsymbol{e}_j, \boldsymbol{x})$

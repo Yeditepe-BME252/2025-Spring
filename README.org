@@ -42,16 +42,15 @@ Jove: a scientific educational video content provider with free access through Y
 - [X] apply the gradient operator to  a scalar field
 - [X] apply the gradient operator to a vector field
 - [X] identify divergence, curl and laplacian operators in cartesian coordinates
-- [ ] differentiate between formulations using cartesian and curvilinear coordinates
-- [ ] apply the divergence theorem to integral forms
+- [X] use density to find continuum mass and center of mass
 
 #+REVEAL: split
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- [ ] use density to find continuum mass and center of mass
-- [ ] differentiate surface and body forces
+- [X] differentiate surface and body forces
 - [ ] provide an example to the surface traction vector
 - [ ] relate the surface traction vector and the stress tensor
 - [ ] write the condition of static equilibrium in global form
+- [ ] apply the divergence theorem to integral forms
 - [ ] obtain the local form of static equilibrium using the divergence theorem
 - [ ] derive deformation gradient and strain from a given deformation map
 - [ ] differentiate between the total rates of stationary and moving fields
