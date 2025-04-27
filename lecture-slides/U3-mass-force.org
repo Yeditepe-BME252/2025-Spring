@@ -81,12 +81,12 @@ Students should be able to:
 #+ATTR_HTML: :width 1200 px
 [[../images/traction_axialbar.jpg]]
 
-The bar is under axial tension transmitted over its glued end surfaces
+The *fundamental problem* is to determine the traction distribution over the contact interface.
 
-Motivations:
+Other motivations:
 #+ATTR_REVEAL: :frag (appear)
 - How does the surface shear tractions applied at the ends gradually dive into the body and become normal tractions?
-- How are the applied forces related with boundary tractions over the glued surfaces?
+- How are the applied forces distributed to boundary tractions over the glued surfaces?
 - How can the resultant of the internal normal tractions be computed?
   
 ** Resultant Force and Torque (Integrals)
@@ -97,29 +97,55 @@ Motivations:
   $$\boldsymbol{r}_s[\partial\Omega] = \int_{\partial\Omega} \bar{\boldsymbol{t}} dA,$$
 + and the resultant torque about point $\boldsymbol{z}$ as   $$\boldsymbol{\tau}_s[\partial\Omega,\boldsymbol{z}] = \int_{\partial\Omega} (\boldsymbol{x} - \boldsymbol{z}) \times \bar{\boldsymbol{t}} dA.$$
 
-*** Example 2: Balance of Tractions in a Cylindrical Vessel
-#+ATTR_HTML: :width 1000px
+*** Why care about the torque?
+Consider equilibrium for the models below ...
+#+ATTR_HTML: :width 1500px
+[[../images/traction_torque.jpg]]
+
+$$\int_{\partial\mathcal{B}} \bar{\boldsymbol{t}} dA = \int_{\partial\mathcal{B}_L} \bar{\boldsymbol{t}}_L dA + \int_{\partial\mathcal{B}_R} \bar{\boldsymbol{t}}_R dA = \boldsymbol{0} \hspace{4em} \quad \quad \int_\Gamma \boldsymbol{t} dA = \boldsymbol{0}$$
+#+ATTR_REVEAL: :frag (appear)
+- Zero net force in both cases.
+- How can the rotation tendency under zero net force be explained?
+  
+*** Example 2: Balance of Tractions in a Pressurized Vessel
+#+ATTR_HTML: :width 1200px
 [[../images/traction_vessel.jpg]]
 
-The vessel is inflated by applying internal pressure
-#+ATTR_REVEAL: : frag (appear)
-- 
+Another *fundamental problem* is to determine the internal tractions resulting from the applied boundary tractions.
+
+Further questions:
+#+ATTR_REVEAL: :frag (appear)
+- Is there a coordinate system (alternative to Cartesian) which would be more suitable for this problem?
+- How is the internal pressure related with boundary tractions?
+- Visualize the internal wall tensions due to pressurization
+  
+* ($\S 3.3.3$) The Stress Tensor (Session 11)
 ** Postulate of action/reaction
 The tractions at a point $\boldsymbol{x}$ over a plane with normal $\boldsymbol{n}$ are equal and opposite of those that occur on the reciprocal (flipped) plane. $$\boldsymbol{t} (\boldsymbol{-n}, \boldsymbol{x}) = - \boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x})$$
-#+ATTR_REVEAL: :frag (appear)
-+ Draw an image depicting a pair of reciprocal planes at an arbitrary point in $\mathcal{B}$.
-+ Draw the tractions occuring over the reciprocal planes. 
 
-** Cauchy's Stress Postulate
+Motivations:
+#+ATTR_REVEAL: :frag (appear)
++ Visualize an image depicting a pair of reciprocal planes at an arbitrary point $\boldsymbol{x}$ in $\mathcal{B}$.
++ Visualize tractions occuring over the reciprocal planes. 
+
+** Cauchy's Stress Tetrahedron
 #+ATTR_HTML: :width 600 px
 [[../images/stress_tetrahedron.png]]
 #+ATTR_REVEAL: :frag (appear)
-- Imagine a tetrahedron in $\mathcal{B}$ with three edges parallel to the coordinates $x_i$ cornered at point $\boldsymbol{x}$, intersected by a plane with unit normal $\boldsymbol{n}$ as shown in the figure above.
+- Visualize a tetrahedron in $\mathcal{B}$ with three of its faces normal to $\boldsymbol{e}_i,\;i=1,2,3$, and its fourth face normal to unit vector $\boldsymbol{n}$.
 - The internal traction vector on the plane with unit normal $\boldsymbol{n}$ is $\boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x})$
 - The internal traction vectors on the coordinate planes having normals $-\boldsymbol{e}_j$ are $\boldsymbol{t} (-\boldsymbol{e}_j, \boldsymbol{x})$
 - By extending the arguments of force equilibrium the above tractions can be shown to obey $$\boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x}) + \sum_{j=1}^3 \boldsymbol{t} (-\boldsymbol{e}_j, \boldsymbol{x}) n_j = \boldsymbol{0}.$$
 
-#+REVEAL: split  
-#+ATTR_HTML: :width 600 px
+** Definition: Stress
+#+ATTR_HTML: :width 1300 px
 [[../images/stress_tetrahedra.jpg]]
-- There exists a second-order tensor field, $\boldsymbol{\sigma} (\boldsymbol{x}):\mathcal{B} \to \mathcal{V}^2$, called the *stress field*, which transforms the unit normal field  into the traction field as $$\boldsymbol{t}(\boldsymbol{n}, \boldsymbol{x}) = \boldsymbol{\sigma}(\boldsymbol{x}) \boldsymbol{n}\quad \mathrm{or} \quad \boldsymbol{t} = \boldsymbol{\sigma} \boldsymbol{n}$$  where $\sigma_{ij} = t_i(\boldsymbol{e}_j, \boldsymbol{x})$
+#+ATTR_REVEAL: :frag (appear)
+- There exists a second-order tensor field, $\boldsymbol{\sigma} (\boldsymbol{x}):\mathcal{B} \to \mathcal{V}^2$, called the *stress field*, which transforms the unit normal field  into the traction field as $$\boldsymbol{t} = \boldsymbol{\sigma} \cdot \boldsymbol{n} \quad \mathrm{or} \quad t_i = \sigma_{ij} n_j$$  where $\sigma_{ij} = t_i(\boldsymbol{e}_j, \boldsymbol{x})$
+- the stress component $\sigma_{ij}$ corresponds to the $i^\mathrm{th}$ component of the traction on the plane with normal $\boldsymbol{e}_j$
+  
+*** Example 1: Balance of boundary tractions
+Work under progress
+
+** ($\S 3.4$) Equilibrium Conditions
+Work under progress
