@@ -116,8 +116,13 @@ Another *fundamental problem* is to determine the internal tractions resulting f
 Further questions:
 #+ATTR_REVEAL: :frag (appear)
 - Is there a coordinate system (alternative to Cartesian) which would be more suitable for this problem?
+  $\{1,2,3\} = \{r,\theta\,z\}$
+   
 - How is the internal pressure related with boundary tractions?
-- Visualize the internal wall tensions due to pressurization
+  $\boldsymbol{p} = p\,\boldsymbol{e}_r$
+
+- Visualize the internal wall tensions that are expected in radial planes
+  $\boldsymbol{t} = t\,\boldsymbol{e}_\theta$
   
 * ($\S 3.3.3$) The Stress Tensor (Session 11)
 ** Postulate of action/reaction
