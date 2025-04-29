@@ -47,7 +47,7 @@ Jove: a scientific educational video content provider with free access through Y
 #+REVEAL: split
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - [X] differentiate surface and body forces
-- [ ] provide an example to the surface traction vector
+- [X] provide an example to the surface traction vector
 - [ ] relate the surface traction vector and the stress tensor
 - [ ] write the condition of static equilibrium in global form
 - [ ] apply the divergence theorem to integral forms

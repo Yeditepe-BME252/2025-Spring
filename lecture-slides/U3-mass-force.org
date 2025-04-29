@@ -56,7 +56,7 @@
   
 ** Questions for next session
 Ask AI:
-- How can the stress tensor be introduced in a simple but mathematically concise manner?
+- In which ways do the surface forces differ from the body forces?
   
 ** Deliverables
 Students should be able to:
@@ -73,27 +73,28 @@ Students should be able to:
 #+ATTR_HTML: :width 1400 px
 [[../images/traction_definitions.jpg]]
 #+ATTR_REVEAL: :frag (appear)
-- $\Gamma$  denotes arbitrary two-dimensional domain separating $\mathcal{B}$ into a ($-$) and a ($+$) side.
+- $\Gamma$  denotes the area projected by $\mathcal{B}$ over a plane with normal $\boldsymbol{n}$
+- It separates $\mathcal{B}$ into the ($-$) and a ($+$) sides.
 - The force, per unit area, exerted by the ($+$) side of  $\Gamma$ upon the ($-$) side is the *traction function*, $\boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x}): \mathcal{N} \times \mathcal{B} \to \mathcal{V}$.
 - When the $\Gamma$ is part of $\partial\mathcal{B}$, tractions become the boundary tractions,  $\boldsymbol{t} = \bar{\boldsymbol{t}}$.
+- The tractions at a point $\boldsymbol{x}$ and over opposite faces of $\Gamma$ are equal but have  opposite signs, i.e.: $\boldsymbol{t} (\boldsymbol{-n}, \boldsymbol{x}) = - \boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x})$
 
 *** Example 1: Balance of Tractions in an Axial Bar
 #+ATTR_HTML: :width 1200 px
 [[../images/traction_axialbar.jpg]]
 
-The *fundamental problem* is to determine the traction distribution over the contact interface.
+A *fundamental problem* is to determine the traction distribution over the contact interface.
 
 Other motivations:
 #+ATTR_REVEAL: :frag (appear)
-- How does the surface shear tractions applied at the ends gradually dive into the body and become normal tractions?
-- How are the applied forces distributed to boundary tractions over the glued surfaces?
+- How do the surface shear tractions applied at the ends gradually dive into the body and become normal tractions?
 - How can the resultant of the internal normal tractions be computed?
   
 ** Resultant Force and Torque (Integrals)
 #+ATTR_HTML: :width 360 px
 [[../images/traction_surfaceIntegrals.jpg]]
 #+ATTR_REVEAL: :frag (appear)
-+ Similar to the integrals of body forces we define the resultant force due to a traction field over  $\boldsymbol{r}_s[\Omega]$, due to (surface) boundary tractions as
++ Similar to the integrals of body forces we define the resultant force due to a traction field as
   $$\boldsymbol{r}_s[\partial\Omega] = \int_{\partial\Omega} \bar{\boldsymbol{t}} dA,$$
 + and the resultant torque about point $\boldsymbol{z}$ as   $$\boldsymbol{\tau}_s[\partial\Omega,\boldsymbol{z}] = \int_{\partial\Omega} (\boldsymbol{x} - \boldsymbol{z}) \times \bar{\boldsymbol{t}} dA.$$
 
@@ -115,24 +116,25 @@ Another *fundamental problem* is to determine the internal tractions resulting f
 
 Further questions:
 #+ATTR_REVEAL: :frag (appear)
-- Is there a coordinate system (alternative to Cartesian) which would be more suitable for this problem?
+- Is there a coordinate system (alternative to Cartesian) which would be more suitable for this (cylindrical) problem?
   $\{1,2,3\} = \{r,\theta\,z\}$
    
-- How is the internal pressure related with boundary tractions?
-  $\boldsymbol{p} = p\,\boldsymbol{e}_r$
+- How is the internal pressure related with boundary tractions?  
+  $\bar{\boldsymbol{t}} = -p\,\boldsymbol{e}_r$
 
-- Visualize the internal wall tensions that are expected in radial planes
+- Visualize the internal wall tensions that are expected in radial planes  
   $\boldsymbol{t} = t\,\boldsymbol{e}_\theta$
+
+** Questions for next session
+Ask AI:
+- How is the definition of the stress tensor related with the internal tractions?
   
+** Deliverables
+Students should be able to:
+- [ ] differentiate surface and body forces
+- [ ] provide an example to the surface traction vector
+
 * ($\S 3.3.3$) The Stress Tensor (Session 11)
-** Postulate of action/reaction
-The tractions at a point $\boldsymbol{x}$ over a plane with normal $\boldsymbol{n}$ are equal and opposite of those that occur on the reciprocal (flipped) plane. $$\boldsymbol{t} (\boldsymbol{-n}, \boldsymbol{x}) = - \boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x})$$
-
-Motivations:
-#+ATTR_REVEAL: :frag (appear)
-+ Visualize an image depicting a pair of reciprocal planes at an arbitrary point $\boldsymbol{x}$ in $\mathcal{B}$.
-+ Visualize tractions occuring over the reciprocal planes. 
-
 ** Cauchy's Stress Tetrahedron
 #+ATTR_HTML: :width 600 px
 [[../images/stress_tetrahedron.png]]
@@ -142,7 +144,7 @@ Motivations:
 - The internal traction vectors on the coordinate planes having normals $-\boldsymbol{e}_j$ are $\boldsymbol{t} (-\boldsymbol{e}_j, \boldsymbol{x})$
 - By extending the arguments of force equilibrium the above tractions can be shown to obey $$\boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x}) + \sum_{j=1}^3 \boldsymbol{t} (-\boldsymbol{e}_j, \boldsymbol{x}) n_j = \boldsymbol{0}.$$
 
-** Definition: Stress
+** Definition
 #+ATTR_HTML: :width 1300 px
 [[../images/stress_tetrahedra.jpg]]
 #+ATTR_REVEAL: :frag (appear)
@@ -154,3 +156,12 @@ Work under progress
 
 ** ($\S 3.4$) Equilibrium Conditions
 Work under progress
+
+** Questions for next session
+Ask AI:
+- How is the definition of the stress tensor related with the internal tractions?
+  
+** Deliverables
+Students should be able to:
+- [ ] relate the surface traction vector and the stress tensor
+- [ ] write the condition of static equilibrium in global form
