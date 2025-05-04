@@ -135,6 +135,10 @@ Students should be able to:
 - [ ] provide an example to the surface traction vector
 
 * ($\S 3.3.3$) The Stress Tensor (Session 11)
+#+ATTR_REVEAL: :frag (appear)
+- The internal tractions can be assembled to define the concept of /stress/ in a body
+- Stress is a second-order tensor
+  
 ** Cauchy's Stress Tetrahedron
 #+ATTR_HTML: :width 600 px
 [[../images/stress_tetrahedron.png]]
@@ -145,23 +149,58 @@ Students should be able to:
 - By extending the arguments of force equilibrium the above tractions can be shown to obey $$\boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x}) + \sum_{j=1}^3 \boldsymbol{t} (-\boldsymbol{e}_j, \boldsymbol{x}) n_j = \boldsymbol{0}.$$
 
 ** Definition
-#+ATTR_HTML: :width 1300 px
+#+ATTR_HTML: :width 1200 px
 [[../images/stress_tetrahedra.jpg]]
 #+ATTR_REVEAL: :frag (appear)
 - There exists a second-order tensor field, $\boldsymbol{\sigma} (\boldsymbol{x}):\mathcal{B} \to \mathcal{V}^2$, called the *stress field*, which transforms the unit normal field  into the traction field as $$\boldsymbol{t} = \boldsymbol{\sigma} \cdot \boldsymbol{n} \quad \mathrm{or} \quad t_i = \sigma_{ij} n_j$$  where $\sigma_{ij} = t_i(\boldsymbol{e}_j, \boldsymbol{x})$
 - the stress component $\sigma_{ij}$ corresponds to the $i^\mathrm{th}$ component of the traction on the plane with normal $\boldsymbol{e}_j$
+- The diagonal and off-diagonal components are termed as, /normal/ and /shear/ stresses, respectively.
   
-*** Example 1: Balance of boundary tractions
-Work under progress
-
-** ($\S 3.4$) Equilibrium Conditions
-Work under progress
-
-** Questions for next session
+** ($\S 3.5.1$) Simple States of Stress
+*** Hydrostatic (Spherical) Stress
+#+ATTR_REVEAL: :frag (appear)
+- A state of stress at a point $\boldsymbol{x}$ is said to be *spherical* if
+  $$\boldsymbol{\sigma} = -p \boldsymbol{I}, \quad \mathrm{or} \quad \sigma_{ij} = -p \, \delta_{ij},$$
+  where $p$ denotes the hydrostatic pressure. Note that, /compressive/ pressures are taken as ($-$) while /expansive/ pressures are ($+$). 
+- For this state of stress, we find the tractions on any surface with normal $\boldsymbol{n}$ at $\boldsymbol{x}$ is given by
+  $$\boldsymbol{t} = \boldsymbol{\sigma} \boldsymbol{n} = -p \boldsymbol{n} \quad \mathrm{or} \quad t_i = -p \,n_i.$$
+  
+*** Uniaxial State of Stress
+#+ATTR_REVEAL: :frag (appear)
+- The state of stress at a point $\boldsymbol{x}$ is said to be *uniaxial* if
+  $$\boldsymbol{\sigma} = \sigma\,\boldsymbol{\gamma} \otimes \boldsymbol{\gamma} \quad \mathrm{or} \quad \sigma_{ij} = \sigma \,n_i\,n_j,$$
+  where $\boldsymbol{\gamma}$ is a unit vector that denotes the axis of loading and $\sigma$ is the stress magnitude.
+- For a uniaxial stress state the traction on any surface with normal $\boldsymbol{n}$ at $\boldsymbol{x}$ is given by
+  $$\boldsymbol{t} = \boldsymbol{\sigma} \boldsymbol{n} = (\boldsymbol{\gamma} \cdot \boldsymbol{n}) \sigma \boldsymbol{\gamma} \quad \mathrm{or} \quad t_i = (\gamma_j n_j) \sigma \gamma_i$$
+  Notice that no matter in which direction $\boldsymbol{n}$ points, the traction is always parallel to $\boldsymbol{\gamma}$.
+  
+*** A State of Pure Shear
+#+ATTR_REVEAL: :frag (appear)
+- If at a point $\boldsymbol{x}$ there exists a pair of orthogonal unit vectors $\boldsymbol{\gamma}$ and $\boldsymbol{\eta}$ and a scalar $\tau$ such that
+  $$\boldsymbol{\sigma} = \tau (\boldsymbol{\gamma} \otimes \boldsymbol{\eta} + \boldsymbol{\eta} \otimes \boldsymbol{\gamma}) \quad \mathrm{or} \quad \sigma_{ij} = \tau (\gamma_i \eta_j + \gamma_j \eta_i),$$
+  we say that a state of *pure shear* exists.
+- For this stress state the traction on any surface with normal $\boldsymbol{n}$ is given by
+  $$\boldsymbol{t} = \boldsymbol{\sigma} \boldsymbol{n} = (\boldsymbol{\eta} \cdot \boldsymbol{n}) \tau \boldsymbol{\gamma} + (\boldsymbol{\gamma} \cdot \boldsymbol{n}) \tau \boldsymbol{\eta} \quad \mathrm{or} \quad t_i = (\eta_j n_j) \tau \gamma_i + (\gamma_j n_j) \tau \eta_i.$$
+  
+** Questions for Next Session
 Ask AI:
-- How is the definition of the stress tensor related with the internal tractions?
+- What is the meaning of force equilibrium? 
   
 ** Deliverables
 Students should be able to:
 - [ ] relate the surface traction vector and the stress tensor
+- [ ] provide examples of simple states of stress
+  
+* ($\S 3.4$) Equilibrium Conditions (Session 12)
+Work under progress
+
+** Questions for Next Session
+Ask AI:
+- How can the dynamics of a body be described?
+  
+** Deliverables
+Students should be able to:
 - [ ] write the condition of static equilibrium in global form
+- [ ] apply the divergence theorem to integral forms
+- [ ] obtain the local form of static equilibrium using the divergence theorem
+
