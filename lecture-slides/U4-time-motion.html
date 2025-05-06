@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Unit 4: Time and Motion</title>
+<meta name="author" content="Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../style.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>Unit 4: Time and Motion</h2> <h3>Readings from Stuart and Gonzales, Chapter 4</h3> <h4>2025-05-06</h4>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-org5570c6e">(\(\S 4.4\)) Motions (Session 13)</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section>
+<section id="slide-org5570c6e">
+<h2 id="org5570c6e">(\(\S 4.4\)) Motions (Session 13)</h2>
+
+<div id="orgf638cc6" class="figure">
+<p><img src="../images/AFC-4.7.png" alt="AFC-4.7.png" width="800px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">Work in progres&#x2026;</li>
+
+</ul>
+</section>
+<section id="slide-org3cc5a22">
+<h3 id="org3cc5a22">(\(\S 3.2\)) Material and Spatial Fields</h3>
+
+<div id="org9055b07" class="figure">
+<p><img src="../images/Continuum_body.svg" alt="Continuum_body.svg" class="org-svg" width="300px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">The <b>mass</b> of the body is distributed continuously throughout its <b>volume</b>.</li>
+<li class="fragment appear">The volume of an arbitrary open subset \(\Omega\) of \(\mathcal{B}\) is \[\mathrm{vol}[\Omega] = \int_\Omega dV.\] where \(dV\) denotes an infinitesimal volume element at \(\boldsymbol{x}\in\Omega\).</li>
+<li class="fragment appear">Let there be a <b>mass density</b> field per unit volume \(\rho:B\to\mathbb{R}\) such that \[\mathrm{mass}[\Omega] = \int_\Omega \rho(\boldsymbol{x})dV.\]</li>
+
+</ul>
+</section>
+<section id="slide-orgba609b9">
+<h4 id="orgba609b9">(\(\S 3.2.2\)) Centers of Volume and Mass</h4>
+
+<div id="orgeabc0c8" class="figure">
+<p><img src="../images/Continuum_body.svg" alt="Continuum_body.svg" class="org-svg" width="300px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">By the center of volume of an open subset \(\Omega\) of \(\mathcal{B}\) we mean the point \[\boldsymbol{x}_\mathrm{cov} = \frac{1}{\mathrm{vol}[\Omega]} \int_\Omega \boldsymbol{x} dV.\]</li>
+<li class="fragment appear">This integral is known as the first moment of volume about \(O\).</li>
+<li class="fragment appear">By the center of mass of an open subset \(\Omega\) of \(\mathcal{B}\) we mean the point \[\boldsymbol{x}_\mathrm{com} = \frac{1}{\mathrm{mass}[\Omega]} \int_\Omega \boldsymbol{x} \rho(\boldsymbol{x}) dV.\]</li>
+
+</ul>
+
+</section>
+<section id="slide-orgba609b9-split">
+</section>
+<section id="slide-org7429dba">
+<h3 id="org7429dba">Questions for next session</h3>
+<p>
+Ask AI:
+</p>
+<ul>
+<li></li>
+
+</ul>
+</section>
+<section id="slide-org05d1175">
+<h3 id="org05d1175">Deliverables</h3>
+<p>
+Students should be able to:
+</p>
+<ul>
+<li></li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>

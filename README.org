@@ -65,23 +65,23 @@ Jove: a scientific educational video content provider with free access through Y
 
 ** Weekly outline
 #+REVEAL_HTML: <div style="font-size: 80%;">
-| Week | Lectures (Tuesday)                           | Lectures (Thursday)                                       |
-|------+----------------------------------------------+-----------------------------------------------------------|
-|    1 | No lecture                                   | Course Conduct, [[./lecture-slides/U1-tensor-algebra.html][Tensor Algebra]] bases, projections         |
-|    2 | Motivation: Point of Departure               | Indicial Notation, kroenecker delta and permutation       |
-|    3 | Second Order Tensors                         | Change of Basis, Trace, Determinant                       |
-|    4 | Eigenvalues, principal invariants (*Quiz 1*) | [[./lecture-slides/U2-tensor-calculus.html][Tensor calculus]], gradient operator, divergence, curl      |
-|    5 | Divergence theorem, localization             | [[./lecture-slides/U3-mass-force.html][Mass and force concepts]], surface traction and stress      |
-|    6 | Condition of statical equilibrium            | [[./lecture-slides/U4-kinematics.html][Kinematics]], Deformation, Displacement, Strain (*Quiz 2*)  |
-|    7 | Bayram                                       | Velocity, Velocity Gradient, Acceleration, Vorticity, etc |
-|    8 | [[./lecture-slides/U5-balance-laws.html][Balance Laws]], global forms                   | Local Forms, Biosolid Simple Constitutive Equations       |
-|    9 | Axially tethered structures                  | TBA                                                       |
-|   10 | Thin-Walled Pressurized Tubes (*Quiz 3*)     | Biofluidic Mechanics: Constitution of an Ideal Flow       |
-|   11 | Newtonian and Non-Newtonian Flows            | Worker's Day Holiday (1 Mayıs)                            |
-|   12 | Navier-Stokes Equations                      | Cone-Plate Viscometry                                     |
-|   13 | Bernoulli Equation  (*Quiz 4*)               | Application of the Bernoulli Equation                     |
-|   14 | Measurement of Flow and Pressure             | Navier-Stokes Worksheets: Formulation of Problems         |
-|   15 | Flow Between Flat Plates                     | Steady Flow in Circular Tubes                             |
+| Week | Lectures (Tuesday)                           | Lectures (Thursday)                                     |
+|------+----------------------------------------------+---------------------------------------------------------|
+|    1 | No lecture                                   | Course Conduct, [[./lecture-slides/U1-tensor-algebra.html][Tensor Algebra]] bases, projections       |
+|    2 | Motivation: Point of Departure               | Indicial Notation, kroenecker delta and permutation     |
+|    3 | Second Order Tensors                         | Change of Basis, Trace, Determinant                     |
+|    4 | Eigenvalues, principal invariants (*Quiz 1*) | [[./lecture-slides/U2-tensor-calculus.html][Tensor calculus]], gradient operator, divergence, curl    |
+|    5 | Divergence theorem, localization             | [[./lecture-slides/U3-mass-force.html][Mass and force concepts]], surface traction and stress    |
+|    6 | Condition of statical equilibrium            | [[./lecture-slides/U4-time-motion.html][Time and Motion]], Velocity, Acceleration, Vorticity, etc |
+|    7 | Bayram                                       |                                                         |
+|    8 | [[./lecture-slides/U5-balance-laws.html][Balance Laws]], global forms                   | Local Forms, Biosolid Simple Constitutive Equations     |
+|    9 | Axially tethered structures                  | TBA                                                     |
+|   10 | Thin-Walled Pressurized Tubes (*Quiz 3*)     | Biofluidic Mechanics: Constitution of an Ideal Flow     |
+|   11 | Newtonian and Non-Newtonian Flows            | Worker's Day Holiday (1 Mayıs)                          |
+|   12 | Navier-Stokes Equations                      | Cone-Plate Viscometry                                   |
+|   13 | Bernoulli Equation  (*Quiz 4*)               | Application of the Bernoulli Equation                   |
+|   14 | Measurement of Flow and Pressure             | Navier-Stokes Worksheets: Formulation of Problems       |
+|   15 | Flow Between Flat Plates                     | Steady Flow in Circular Tubes                           |
 
 ** Resources
 #+ATTR_REVEAL: :frag (appear appear appear ...)

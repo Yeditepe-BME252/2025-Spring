@@ -184,7 +184,7 @@ Students should be able to:
   
 ** Questions for Next Session
 Ask AI:
-- What is the meaning of force equilibrium? 
+- What global conditions on body and surfaces forces are necessary, for a continuum body to remain stationary? 
   
 ** Deliverables
 Students should be able to:
@@ -192,11 +192,26 @@ Students should be able to:
 - [ ] provide examples of simple states of stress
   
 * ($\S 3.4$) Equilibrium Conditions (Session 12)
-Work under progress
+#+ATTR_HTML: :width 1200 px
+[[../images/AFC-3.5.png]]
+#+ATTR_REVEAL: :frag (appear)
+- What global conditions on body and surfaces forces are necessary for a continuum body to remain stationary?
+- What is the Gauss's (divergence) theorem?
+- How are the local conditions on body and surface forces obtained from the global ones?
 
+** ($\S 3.4.2) Necessary Conditions
+#+ATTR_HTML: :width 1200 px
+[[../images/AFC-3.5.png]]
+#+ATTR_REVEAL: :frag (appear)
+- Let $\Omega$ be any open subset of $B$ and let $\boldsymbol{t}:\partial\Omega \to \mathcal{V}$ be the traction field acting on it's bounding surface.
+- The resultant force on $\Omega$ due to body and surface forces is
+  $$ \boldsymbol{r}[\Omega] = \boldsymbol{r}_b[\Omega] + \boldsymbol{r}_s[\partial\Omega] = \int_\Omega \rho\,dV+ \int_{\partial\Omega} dA $$
+- The resultant torque on $\Omega$, about point $\boldsymbol{z}$, due to body and surface forces is
+  $$ \boldsymbol{\tau}[\Omega] = \boldsymbol{\tau}_b[\Omega] + \boldsymbol{\tau}_s[\partial\Omega] = \int_\Omega \rho\,dV+ \int_{\partial\Omega} dA $$
+  
 ** Questions for Next Session
 Ask AI:
-- How can the dynamics of a body be described?
+- Briefly describe kinematics in the context of continuum body mechanics, to an engineering undergraduate.
   
 ** Deliverables
 Students should be able to:

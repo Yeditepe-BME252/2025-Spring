@@ -1,0 +1,43 @@
+#+TITLE: Unit 4: Time and Motion
+#+AUTHOR: Fethi Okyar
+#+DATE: 2025-05-06
+#+SUBTITLE: Readings from Stuart and Gonzales, Chapter 4
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil
+#+REVEAL_EXTRA_CSS: ../style.css
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+
+* ($\S 4.4$) Motions (Session 13)
+#+ATTR_HTML: :width 800px
+[[../images/AFC-4.7.png]]
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- Work in progres...
+
+** ($\S 3.2$) Material and Spatial Fields
+#+ATTR_HTML: :width 300px
+[[../images/Continuum_body.svg]]
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- The *mass* of the body is distributed continuously throughout its *volume*.
+- The volume of an arbitrary open subset $\Omega$ of $\mathcal{B}$ is $$\mathrm{vol}[\Omega] = \int_\Omega dV.$$ where $dV$ denotes an infinitesimal volume element at $\boldsymbol{x}\in\Omega$.
+- Let there be a *mass density* field per unit volume $\rho:B\to\mathbb{R}$ such that $$\mathrm{mass}[\Omega] = \int_\Omega \rho(\boldsymbol{x})dV.$$
+
+*** ($\S 3.2.2$) Centers of Volume and Mass
+#+ATTR_HTML: :width 300px
+[[../images/Continuum_body.svg]]
+#+ATTR_REVEAL: :frag (appear)
+- By the center of volume of an open subset $\Omega$ of $\mathcal{B}$ we mean the point $$\boldsymbol{x}_\mathrm{cov} = \frac{1}{\mathrm{vol}[\Omega]} \int_\Omega \boldsymbol{x} dV.$$
+- This integral is known as the first moment of volume about $O$.
+- By the center of mass of an open subset $\Omega$ of $\mathcal{B}$ we mean the point $$\boldsymbol{x}_\mathrm{com} = \frac{1}{\mathrm{mass}[\Omega]} \int_\Omega \boldsymbol{x} \rho(\boldsymbol{x}) dV.$$
+
+#+REVEAL: split
+** Questions for next session
+Ask AI:
+- 
+  
+** Deliverables
+Students should be able to:
+- 
+  
