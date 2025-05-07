@@ -175,6 +175,8 @@ Students should be able to:
   Notice that no matter in which direction $\boldsymbol{n}$ points, the traction is always parallel to $\boldsymbol{\gamma}$.
   
 *** A State of Pure Shear
+#+ATTR_HTML: :width 1200 px
+[[../images/pure_shear.jpg]]
 #+ATTR_REVEAL: :frag (appear)
 - If at a point $\boldsymbol{x}$ there exists a pair of orthogonal unit vectors $\boldsymbol{\gamma}$ and $\boldsymbol{\eta}$ and a scalar $\tau$ such that
   $$\boldsymbol{\sigma} = \tau (\boldsymbol{\gamma} \otimes \boldsymbol{\eta} + \boldsymbol{\eta} \otimes \boldsymbol{\gamma}) \quad \mathrm{or} \quad \sigma_{ij} = \tau (\gamma_i \eta_j + \gamma_j \eta_i),$$
@@ -192,23 +194,43 @@ Students should be able to:
 - [ ] provide examples of simple states of stress
   
 * ($\S 3.4$) Equilibrium Conditions (Session 12)
-#+ATTR_HTML: :width 1200 px
-[[../images/AFC-3.5.png]]
 #+ATTR_REVEAL: :frag (appear)
-- What global conditions on body and surfaces forces are necessary for a continuum body to remain stationary?
+- What /global conditions/ on body and surfaces forces are necessary for a continuum body to remain *stationary*?
 - What is the Gauss's (divergence) theorem?
-- How are the local conditions on body and surface forces obtained from the global ones?
+- How are the /local conditions/ on body and surface forces obtained from the global ones?
 
-** ($\S 3.4.2) Necessary Conditions
+** ($\S 3.4.2$) The Global Resultants
 #+ATTR_HTML: :width 1200 px
 [[../images/AFC-3.5.png]]
 #+ATTR_REVEAL: :frag (appear)
 - Let $\Omega$ be any open subset of $B$ and let $\boldsymbol{t}:\partial\Omega \to \mathcal{V}$ be the traction field acting on it's bounding surface.
 - The resultant force on $\Omega$ due to body and surface forces is
-  $$ \boldsymbol{r}[\Omega] = \boldsymbol{r}_b[\Omega] + \boldsymbol{r}_s[\partial\Omega] = \int_\Omega \rho\,dV+ \int_{\partial\Omega} dA $$
+  $$ \boldsymbol{r}[\Omega] = \boldsymbol{r}_b[\Omega] + \boldsymbol{r}_s[\partial\Omega] = \int_\Omega \boldsymbol{b}\, \rho\,dV + \int_{\partial\Omega} \bar{\boldsymbol{t}} \, dA $$
 - The resultant torque on $\Omega$, about point $\boldsymbol{z}$, due to body and surface forces is
-  $$ \boldsymbol{\tau}[\Omega] = \boldsymbol{\tau}_b[\Omega] + \boldsymbol{\tau}_s[\partial\Omega] = \int_\Omega \rho\,dV+ \int_{\partial\Omega} dA $$
+  $$ \boldsymbol{\tau}[\Omega,\boldsymbol{z}] = \boldsymbol{\tau}_b[\Omega,\boldsymbol{z}] + \boldsymbol{\tau}_s[\partial\Omega,\boldsymbol{z}] = \int_\Omega (\boldsymbol{x} - \boldsymbol{z}) \times \boldsymbol{b}\, \rho\,dV+ \int_{\partial\Omega} (\boldsymbol{x} - \boldsymbol{z}) \times  \bar{\boldsymbol{t}}\, dA $$
   
+*** (Axiom 3.4) Conditions for Stationary Equilibrium
+A stationary body will remain /stationary/ (in *mechanical equilibrium*), IF AND ONLY IF:
+#+ATTR_REVEAL: :frag (appear)
+- the resultant force
+  $$ \boldsymbol{r}[\Omega] = \boldsymbol{0}, $$
+- and the resultant torque about an arbitrary point
+  $$ \boldsymbol{\tau}[\Omega,\boldsymbol{z}] = \boldsymbol{0}.$$
+  
+** ($\S 2.3.1$) Divergence Theorem
+#+ATTR_HTML: :width 1200 px
+[[../images/AFC-2.1.png]]
+
+Let $\mathcal{B}$ denote a regular region in $\mathbb{E}^3$ with boundary $\partial\mathcal{B}$. It can be shown using analytical methods that:
+#+ATTR_REVEAL: :frag (appear)
+1. for an arbitrary vector field $\boldsymbol{v}: \mathcal{B} \to \mathcal{V}$,
+   $$ \int_{\partial\mathcal{B}} \boldsymbol{v} \cdot \boldsymbol{n}\, dA = \int_\mathcal{B} \nabla \cdot \boldsymbol{v}\, dV \quad \mathrm{or} \quad \int_{\partial\mathcal{B}} v_i n_i\, dA = \int_\mathcal{B} v_{i,i}\, dV $$
+2. and, for a second order tensor field $\boldsymbol{S}: \mathcal{B} \to \mathcal{V}^2$
+   $$ \int_{\partial\mathcal{B}} \boldsymbol{S} \cdot \boldsymbol{n}\, dA = \int_\mathcal{B} \nabla \cdot \boldsymbol{S}\, dV \quad \mathrm{or} \quad \int_{\partial\mathcal{B}} S_{ij} n_j\, dA = \int_\mathcal{B} S_{ji,j}\, dV $$
+
+** ($\S 3.4.3$) Localization
+work in progress ...
+
 ** Questions for Next Session
 Ask AI:
 - Briefly describe kinematics in the context of continuum body mechanics, to an engineering undergraduate.

@@ -1,0 +1,7 @@
+/* this is written for the question about uniaxial stress in Quiz 3 */
+
+alpha : %pi/7;
+magnt : 100$
+gamm_ : [sin(alpha),0,cos(alpha)]$
+sigma : genmatrix(lambda([i,j], magnt*gamm_[i]*gamm_[j]), 3, 3)$
+float(sigma);
