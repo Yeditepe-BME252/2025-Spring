@@ -149,7 +149,7 @@ Students should be able to:
 - By extending the arguments of force equilibrium the above tractions can be shown to obey $$\boldsymbol{t} (\boldsymbol{n}, \boldsymbol{x}) + \sum_{j=1}^3 \boldsymbol{t} (-\boldsymbol{e}_j, \boldsymbol{x}) n_j = \boldsymbol{0}.$$
 
 ** Definition
-#+ATTR_HTML: :width 1200 px
+#+ATTR_HTML: :width 1000 px
 [[../images/stress_tetrahedra.jpg]]
 #+ATTR_REVEAL: :frag (appear)
 - There exists a second-order tensor field, $\boldsymbol{\sigma} (\boldsymbol{x}):\mathcal{B} \to \mathcal{V}^2$, called the *stress field*, which transforms the unit normal field  into the traction field as $$\boldsymbol{t} = \boldsymbol{\sigma} \cdot \boldsymbol{n} \quad \mathrm{or} \quad t_i = \sigma_{ij} n_j$$  where $\sigma_{ij} = t_i(\boldsymbol{e}_j, \boldsymbol{x})$
@@ -157,6 +157,11 @@ Students should be able to:
 - The diagonal and off-diagonal components are termed as, /normal/ and /shear/ stresses, respectively.
   
 ** ($\S 3.5.1$) Simple States of Stress
+#+ATTR_REVEAL: :frag (appear)
+- Hydrostatic (Spherical) Stress
+- Uniaxial State of Stress
+- The State of Pure Shear
+  
 *** Hydrostatic (Spherical) Stress
 #+ATTR_REVEAL: :frag (appear)
 - A state of stress at a point $\boldsymbol{x}$ is said to be *spherical* if
@@ -174,8 +179,8 @@ Students should be able to:
   $$\boldsymbol{t} = \boldsymbol{\sigma} \boldsymbol{n} = (\boldsymbol{\gamma} \cdot \boldsymbol{n}) \sigma \boldsymbol{\gamma} \quad \mathrm{or} \quad t_i = (\gamma_j n_j) \sigma \gamma_i$$
   Notice that no matter in which direction $\boldsymbol{n}$ points, the traction is always parallel to $\boldsymbol{\gamma}$.
   
-*** A State of Pure Shear
-#+ATTR_HTML: :width 1200 px
+*** The State of Pure Shear
+#+ATTR_HTML: :width 900 px
 [[../images/pure_shear.jpg]]
 #+ATTR_REVEAL: :frag (appear)
 - If at a point $\boldsymbol{x}$ there exists a pair of orthogonal unit vectors $\boldsymbol{\gamma}$ and $\boldsymbol{\eta}$ and a scalar $\tau$ such that
@@ -203,11 +208,11 @@ Students should be able to:
 #+ATTR_HTML: :width 1200 px
 [[../images/AFC-3.5.png]]
 #+ATTR_REVEAL: :frag (appear)
-- Let $\Omega$ be any open subset of $B$ and let $\boldsymbol{t}:\partial\Omega \to \mathcal{V}$ be the traction field acting on it's bounding surface.
-- The resultant force on $\Omega$ due to body and surface forces is
-  $$ \boldsymbol{r}[\Omega] = \boldsymbol{r}_b[\Omega] + \boldsymbol{r}_s[\partial\Omega] = \int_\Omega \boldsymbol{b}\, \rho\,dV + \int_{\partial\Omega} \bar{\boldsymbol{t}} \, dA $$
-- The resultant torque on $\Omega$, about point $\boldsymbol{z}$, due to body and surface forces is
-  $$ \boldsymbol{\tau}[\Omega,\boldsymbol{z}] = \boldsymbol{\tau}_b[\Omega,\boldsymbol{z}] + \boldsymbol{\tau}_s[\partial\Omega,\boldsymbol{z}] = \int_\Omega (\boldsymbol{x} - \boldsymbol{z}) \times \boldsymbol{b}\, \rho\,dV+ \int_{\partial\Omega} (\boldsymbol{x} - \boldsymbol{z}) \times  \bar{\boldsymbol{t}}\, dA $$
+- Let $\mathcal{B}$ be a body under external forces whose undeformed shape is $\mathcal{B}_0$  and let $\bar{\boldsymbol{t}}:\partial\mathcal{B} \to \mathcal{V}$ be the traction field acting on it's bounding surface.
+- The resultant force on $\mathcal{B}$ due to body and surface forces is
+  $$ \boldsymbol{r}[\mathcal{B}] = \boldsymbol{r}_b[\mathcal{B}] + \boldsymbol{r}_s[\partial\mathcal{B}] = \int_\mathcal{B} \boldsymbol{b}\, \rho\,dV + \int_{\partial\mathcal{B}} \bar{\boldsymbol{t}} \, dA $$
+- The resultant torque on $\mathcal{B}$, about point $\boldsymbol{z}$, due to body and surface forces is
+  $$ \boldsymbol{\tau}[\mathcal{B},\boldsymbol{z}] = \boldsymbol{\tau}_b[\mathcal{B},\boldsymbol{z}] + \boldsymbol{\tau}_s[\partial\mathcal{B},\boldsymbol{z}] = \int_\mathcal{B} (\boldsymbol{x} - \boldsymbol{z}) \times \boldsymbol{b}\, \rho\,dV+ \int_{\partial\mathcal{B}} (\boldsymbol{x} - \boldsymbol{z}) \times  \bar{\boldsymbol{t}}\, dA $$
   
 *** (Axiom 3.4) Conditions for Stationary Equilibrium
 A stationary body will remain /stationary/ (in *mechanical equilibrium*), IF AND ONLY IF:
