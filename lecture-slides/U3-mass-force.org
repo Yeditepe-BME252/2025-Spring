@@ -229,16 +229,40 @@ A stationary body will remain /stationary/ (in *mechanical equilibrium*), IF AND
 Let $\mathcal{B}$ denote a regular region in $\mathbb{E}^3$ with boundary $\partial\mathcal{B}$. It can be shown using analytical methods that:
 #+ATTR_REVEAL: :frag (appear)
 1. for an arbitrary vector field $\boldsymbol{v}: \mathcal{B} \to \mathcal{V}$,
-   $$ \int_{\partial\mathcal{B}} \boldsymbol{v} \cdot \boldsymbol{n}\, dA = \int_\mathcal{B} \nabla \cdot \boldsymbol{v}\, dV \quad \mathrm{or} \quad \int_{\partial\mathcal{B}} v_i n_i\, dA = \int_\mathcal{B} v_{i,i}\, dV $$
+   $$ \int_{\partial\mathcal{B}} \boldsymbol{v} \cdot \boldsymbol{n}\, dA = \int_\mathcal{B} \nabla \cdot \boldsymbol{v}\, dV \quad \mathrm{or} \quad \int_{\partial\mathcal{B}} v_i n_i\, dA = \int_\mathcal{B} v_{i,i}\, dV, $$
 2. and, for a second order tensor field $\boldsymbol{S}: \mathcal{B} \to \mathcal{V}^2$
    $$ \int_{\partial\mathcal{B}} \boldsymbol{S} \cdot \boldsymbol{n}\, dA = \int_\mathcal{B} \nabla \cdot \boldsymbol{S}\, dV \quad \mathrm{or} \quad \int_{\partial\mathcal{B}} S_{ij} n_j\, dA = \int_\mathcal{B} S_{ji,j}\, dV $$
 
 ** ($\S 3.4.3$) Localization
-work in progress ...
+#+ATTR_REVEAL: :frag (appear)
+- The first global (/integral/) condition of (/linear/) equilibrium of stationary bodies reads:
+  $$ \int_\mathcal{B} \boldsymbol{b}\, \rho\,dV + \int_{\partial\mathcal{B}} \bar{\boldsymbol{t}} \, dA = \boldsymbol{0}. $$
+- It is implied that $\bar{\boldsymbol{t}}$ over the boundary is equilibrated by the internal traction $\boldsymbol{t} = \boldsymbol{S} \cdot \boldsymbol{n}$.
+- Substituting the internal tractions into the second term, the *linear equilibrium equation* becomes
+  $$ \int_\mathcal{B} \boldsymbol{b}\, \rho\,dV + \int_{\partial\mathcal{B}} \boldsymbol{S} \cdot \boldsymbol{n} \, dA = \boldsymbol{0}. $$
+- But the second term involving the surface integral can be replaced with a volume integral by issuing the /divergence theorem/, which results in rewriting the linear equilibrium as
+  $$ \int_{\mathcal{B}} (\nabla \cdot \boldsymbol{S} + \rho\,\boldsymbol{b})\, dV. $$
+- Since the above equation must hold for any arbitrary region $\Omega$ in $\mathcal{B}$, we conclude that
+  $$ \nabla \cdot \boldsymbol{S} + \rho \boldsymbol{b} = \boldsymbol{0} \quad \forall\,\boldsymbol{x} \in \mathcal{B}, $$
+  which is known as the *local* (/differential/) *form* of linear equilibrium.
+- By a similar argument, the second global equilibrium condition can be used to reveal that
+  $$ \boldsymbol{S}^T = \boldsymbol{S} \quad \forall\,\boldsymbol{x} \in \mathcal{B},$$
+  which is known as the *local form* of angular equilibrium.
 
+*** Equations of Equilibrium (in expanded form)
+#+ATTR_REVEAL: :frag (appear)
+- In [IB:SFAD/15] ($\S 3.1$) the equations of equilibrium in a Cartesian frame are provided as
+  $$ \frac{\partial\sigma_{xx}}{\partial x} + \frac{\partial\sigma_{yx}}{\partial y} + \frac{\partial\sigma_{zx}}{\partial z} + \rho g_x = 0 \\
+  \frac{\partial\sigma_{xy}}{\partial x} + \frac{\partial\sigma_{yy}}{\partial y} + \frac{\partial\sigma_{zy}}{\partial z} + \rho g_y = 0 \\
+  \frac{\partial\sigma_{zx}}{\partial x} + \frac{\partial\sigma_{zy}}{\partial y} + \frac{\partial\sigma_{zz}}{\partial z} + \rho g_z = 0 $$
+- Note that this is equivalent to the indicial expression
+  $$ \sigma_{ji,j} + \rho b_i = 0 $$
+  where the body force $\boldsymbol{b} = \boldsymbol{g}$.
+- Sections $\S 3.3$ and $\S 3.4$ from [IB:SFAD/15] can be studied within this framework.
+  
 ** Questions for Next Session
 Ask AI:
-- Briefly describe kinematics in the context of continuum body mechanics, to an engineering undergraduate.
+- Briefly describe kinematics in the context of continuum mechanics, to an engineering undergraduate.
   
 ** Deliverables
 Students should be able to:
