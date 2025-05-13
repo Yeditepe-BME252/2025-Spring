@@ -235,17 +235,17 @@ Let $\mathcal{B}$ denote a regular region in $\mathbb{E}^3$ with boundary $\part
 
 ** ($\S 3.4.3$) Localization
 #+ATTR_REVEAL: :frag (appear)
-- The first global (/integral/) condition of (/linear/) equilibrium of stationary bodies reads:
+- The global (/integral/) condition of (/linear/) force equilibrium in stationary bodies reads:
   $$ \int_\mathcal{B} \boldsymbol{b}\, \rho\,dV + \int_{\partial\mathcal{B}} \bar{\boldsymbol{t}} \, dA = \boldsymbol{0}. $$
 - It is implied that $\bar{\boldsymbol{t}}$ over the boundary is equilibrated by the internal traction $\boldsymbol{t} = \boldsymbol{S} \cdot \boldsymbol{n}$.
 - Substituting the internal tractions into the second term, the *linear equilibrium equation* becomes
   $$ \int_\mathcal{B} \boldsymbol{b}\, \rho\,dV + \int_{\partial\mathcal{B}} \boldsymbol{S} \cdot \boldsymbol{n} \, dA = \boldsymbol{0}. $$
 - But the second term involving the surface integral can be replaced with a volume integral by issuing the /divergence theorem/, which results in rewriting the linear equilibrium as
-  $$ \int_{\mathcal{B}} (\nabla \cdot \boldsymbol{S} + \rho\,\boldsymbol{b})\, dV. $$
+  $$ \int_{\mathcal{B}} (\nabla \cdot \boldsymbol{S} + \rho\,\boldsymbol{b})\, dV = \boldsymbol{0}. $$
 - Since the above equation must hold for any arbitrary region $\Omega$ in $\mathcal{B}$, we conclude that
   $$ \nabla \cdot \boldsymbol{S} + \rho \boldsymbol{b} = \boldsymbol{0} \quad \forall\,\boldsymbol{x} \in \mathcal{B}, $$
   which is known as the *local* (/differential/) *form* of linear equilibrium.
-- By a similar argument, the second global equilibrium condition can be used to reveal that
+- By a similar argument, the global condition of (angular) torque equilibrium can be used to reveal that
   $$ \boldsymbol{S}^T = \boldsymbol{S} \quad \forall\,\boldsymbol{x} \in \mathcal{B},$$
   which is known as the *local form* of angular equilibrium.
 
