@@ -42,26 +42,22 @@ Jove: a scientific educational video content provider with free access through Y
 - [X] apply the gradient operator to  a scalar field
 - [X] apply the gradient operator to a vector field
 - [X] identify divergence, curl and laplacian operators in cartesian coordinates
-- [X] use density to find continuum mass and center of mass
-- [X] differentiate surface and body forces
 
 #+REVEAL: split
 #+ATTR_REVEAL: :frag (appear appear appear ...)
+- [X] use density to find continuum mass and center of mass
+- [X] differentiate surface and body forces
 - [X] provide an example to the surface traction vector
-- [ ] relate the surface traction vector and the stress tensor
-- [ ] provide examples of simple states of stress
-- [ ] write the condition of static equilibrium in global form
-- [ ] apply the divergence theorem to integral forms
-- [ ] obtain the local form of static equilibrium using the divergence theorem
-- [ ] derive deformation gradient and strain from a given deformation map
-- [ ] differentiate between the total rates of stationary and moving fields
-- [ ] provide examples of the total rate of change of field variables
+- [X] relate the surface traction vector and the stress tensor
+- [X] provide examples of simple states of stress
+- [X] write the condition of static equilibrium in global form
+- [X] apply the divergence theorem to integral forms
+- [X] obtain the local form of static equilibrium using the divergence theorem
+- [ ] explain the concept of material time derivative
 - [ ] state the balance laws for a system of particles
 - [ ] state the balance laws for a continuum (integral form)
 - [ ] identify mechanical variables in the first law of thermodynamics
 - [ ] state the local (differential) form of balance laws for a continuum 
-- [ ] convert between classical type formulations and their indicial forms
-- [ ] solve for a mechanical variable using the balance laws
 
 ** Weekly outline
 #+REVEAL_HTML: <div style="font-size: 80%;">

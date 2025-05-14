@@ -262,7 +262,7 @@ Let $\mathcal{B}$ denote a regular region in $\mathbb{E}^3$ with boundary $\part
   
 ** Questions for Next Session
 Ask AI:
-- Briefly describe kinematics in the context of continuum mechanics, to an engineering undergraduate.
+- Briefly describe the concept of material time derivative, using arguments that can be followed by an engineering undergraduate student.
   
 ** Deliverables
 Students should be able to:

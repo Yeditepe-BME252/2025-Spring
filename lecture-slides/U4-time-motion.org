@@ -11,33 +11,47 @@
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
 
 * ($\S 4.4$) Motions (Session 13)
-#+ATTR_HTML: :width 800px
+#+ATTR_HTML: :width 1330px
 [[../images/AFC-4.7.png]]
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- Work in progres...
+- In this chapter many important and advanced concepts such as deformation maps, strain, rate of deformation are introduced.
+- However, we will reserve our attention to velocity, the material time derivative, acceleration and vorticity only.
+- Even under this limitation, understanding of the /material time derivative/ by itself is an important conceptualization effort.
 
-** ($\S 3.2$) Material and Spatial Fields
-#+ATTR_HTML: :width 300px
-[[../images/Continuum_body.svg]]
+** ($\S 4.4.4$) Velocity and the Material Time Derivative
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- The *mass* of the body is distributed continuously throughout its *volume*.
-- The volume of an arbitrary open subset $\Omega$ of $\mathcal{B}$ is $$\mathrm{vol}[\Omega] = \int_\Omega dV.$$ where $dV$ denotes an infinitesimal volume element at $\boldsymbol{x}\in\Omega$.
-- Let there be a *mass density* field per unit volume $\rho:B\to\mathbb{R}$ such that $$\mathrm{mass}[\Omega] = \int_\Omega \rho(\boldsymbol{x})dV.$$
+- The spatial description of the material velocity field is denoted by
+  $$ \boldsymbol{v}(\boldsymbol{x},t) $$
+- Let a continuum body $\mathcal{B}$ be moving in a spatial scalar field $\phi$ with velocity $\boldsymbol{v}$. Then the material time derivative of $\phi$ is given by
+  $$ \dot{\phi} = \frac{\partial\phi}{\partial t} + \nabla\phi \cdot \boldsymbol{v}$$
+- /Proof/ follows from the fact that spatial field is a function of $\boldsymbol{x}$, which in turn is a function of $t$. Thus, the derivative has to be applied following the chain rule of differentiation.
+- The two terms have different physical implications:
+  #+ATTR_REVEAL: :frag (appear appear appear ...)
+  + $\partial\phi/\partial t$ is called the /local time derivative/, while
+  + $\nabla\phi \cdot \boldsymbol{v}$ is called the /convective derivative/.
+  + Note that the symbol $\dot{\square}$ and $\frac{\partial\square}{\partial t}$ have different outcomes.
 
-*** ($\S 3.2.2$) Centers of Volume and Mass
-#+ATTR_HTML: :width 300px
-[[../images/Continuum_body.svg]]
+*** Material Time Derivative of a Vector Field
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- Let a continuum body $\mathcal{B}$ be moving in a spatial vector field $\boldsymbol{b}$ with velocity $\boldsymbol{v}$. Then the material time derivative of $\boldsymbol{b}$ is given by
+  $$ \dot{\boldsymbol{b}} = \frac{\boldsymbol{b}}{\partial t} + \nabla\boldsymbol{b} \cdot \boldsymbol{v}$$
+- /Proof/ is similar to the one for scalar fields.
+
+*** Acceleration as the Material Time Derivative of the Velocity Field
 #+ATTR_REVEAL: :frag (appear)
-- By the center of volume of an open subset $\Omega$ of $\mathcal{B}$ we mean the point $$\boldsymbol{x}_\mathrm{cov} = \frac{1}{\mathrm{vol}[\Omega]} \int_\Omega \boldsymbol{x} dV.$$
-- This integral is known as the first moment of volume about $O$.
-- By the center of mass of an open subset $\Omega$ of $\mathcal{B}$ we mean the point $$\boldsymbol{x}_\mathrm{com} = \frac{1}{\mathrm{mass}[\Omega]} \int_\Omega \boldsymbol{x} \rho(\boldsymbol{x}) dV.$$
+- By definition, the spatial acceleration field $\boldsymbol{a}$ of a moving body is $\boldsymbol{a} = \dot{\boldsymbol{v}}$, where $\boldsymbol{v}$ is the spatial velocity of the motion. From the previous concept of material time derivative, we deduce
+  $$\boldsymbol{a} = \frac{\partial\boldsymbol{v}}{\partial t} + (\nabla\boldsymbol{v}) \cdot \boldsymbol{v}.$$
 
-#+REVEAL: split
+*** Vorticity
+By vorticity of a motion we mean the spatial vector field
+$$ \boldsymbol{w} = \nabla \times \boldsymbol{v}.$$
+
 ** Questions for next session
 Ask AI:
-- 
+- Show me the fundamental principles of particle mechanics in tensor-indicial notation.
   
 ** Deliverables
 Students should be able to:
-- 
+- [ ] explain the concept of material time derivative
+
   

@@ -36,72 +36,85 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#/slide-org5570c6e">(\(\S 4.4\)) Motions (Session 13)</a></li>
+<li><a href="#/slide-orgc691809">(\(\S 4.4\)) Motions (Session 13)</a></li>
 </ul>
 </div>
 </div>
 </section>
 <section>
-<section id="slide-org5570c6e">
-<h2 id="org5570c6e">(\(\S 4.4\)) Motions (Session 13)</h2>
+<section id="slide-orgc691809">
+<h2 id="orgc691809">(\(\S 4.4\)) Motions (Session 13)</h2>
 
-<div id="orgf638cc6" class="figure">
-<p><img src="../images/AFC-4.7.png" alt="AFC-4.7.png" width="800px" />
+<div id="org47b52d8" class="figure">
+<p><img src="../images/AFC-4.7.png" alt="AFC-4.7.png" width="1330px" />
 </p>
 </div>
 <ul>
-<li class="fragment appear">Work in progres&#x2026;</li>
+<li class="fragment appear">In this chapter many important and advanced concepts such as deformation maps, strain, rate of deformation are introduced.</li>
+<li class="fragment appear">However, we will reserve our attention to velocity, the material time derivative, acceleration and vorticity only.</li>
+<li class="fragment appear">Even under this limitation, understanding of the <i>material time derivative</i> by itself is an important conceptualization effort.</li>
 
 </ul>
 </section>
-<section id="slide-org3cc5a22">
-<h3 id="org3cc5a22">(\(\S 3.2\)) Material and Spatial Fields</h3>
-
-<div id="org9055b07" class="figure">
-<p><img src="../images/Continuum_body.svg" alt="Continuum_body.svg" class="org-svg" width="300px" />
-</p>
-</div>
+<section id="slide-org73eada1">
+<h3 id="org73eada1">(\(\S 4.4.4\)) Velocity and the Material Time Derivative</h3>
 <ul>
-<li class="fragment appear">The <b>mass</b> of the body is distributed continuously throughout its <b>volume</b>.</li>
-<li class="fragment appear">The volume of an arbitrary open subset \(\Omega\) of \(\mathcal{B}\) is \[\mathrm{vol}[\Omega] = \int_\Omega dV.\] where \(dV\) denotes an infinitesimal volume element at \(\boldsymbol{x}\in\Omega\).</li>
-<li class="fragment appear">Let there be a <b>mass density</b> field per unit volume \(\rho:B\to\mathbb{R}\) such that \[\mathrm{mass}[\Omega] = \int_\Omega \rho(\boldsymbol{x})dV.\]</li>
-
-</ul>
-</section>
-<section id="slide-orgba609b9">
-<h4 id="orgba609b9">(\(\S 3.2.2\)) Centers of Volume and Mass</h4>
-
-<div id="orgeabc0c8" class="figure">
-<p><img src="../images/Continuum_body.svg" alt="Continuum_body.svg" class="org-svg" width="300px" />
-</p>
-</div>
+<li class="fragment appear">The spatial description of the material velocity field is denoted by
+\[ \boldsymbol{v}(\boldsymbol{x},t) \]</li>
+<li class="fragment appear">Let a continuum body \(\mathcal{B}\) be moving in a spatial scalar field \(\phi\) with velocity \(\boldsymbol{v}\). Then the material time derivative of \(\phi\) is given by
+\[ \dot{\phi} = \frac{\partial\phi}{\partial t} + \nabla\phi \cdot \boldsymbol{v}\]</li>
+<li class="fragment appear"><i>Proof</i> follows from the fact that spatial field is a function of \(\boldsymbol{x}\), which in turn is a function of \(t\). Thus, the derivative has to be applied following the chain rule of differentiation.</li>
+<li class="fragment ...">The two terms have different physical implications:
 <ul>
-<li class="fragment appear">By the center of volume of an open subset \(\Omega\) of \(\mathcal{B}\) we mean the point \[\boldsymbol{x}_\mathrm{cov} = \frac{1}{\mathrm{vol}[\Omega]} \int_\Omega \boldsymbol{x} dV.\]</li>
-<li class="fragment appear">This integral is known as the first moment of volume about \(O\).</li>
-<li class="fragment appear">By the center of mass of an open subset \(\Omega\) of \(\mathcal{B}\) we mean the point \[\boldsymbol{x}_\mathrm{com} = \frac{1}{\mathrm{mass}[\Omega]} \int_\Omega \boldsymbol{x} \rho(\boldsymbol{x}) dV.\]</li>
+<li class="fragment appear">\(\partial\phi/\partial t\) is called the <i>local time derivative</i>, while</li>
+<li class="fragment appear">\(\nabla\phi \cdot \boldsymbol{v}\) is called the <i>convective derivative</i>.</li>
+<li class="fragment appear">Note that the symbol \(\dot{\square}\) and \(\frac{\partial\square}{\partial t}\) have different outcomes.</li>
+
+</ul></li>
 
 </ul>
+</section>
+<section id="slide-org4a1de8b">
+<h4 id="org4a1de8b">Material Time Derivative of a Vector Field</h4>
+<ul>
+<li class="fragment appear">Let a continuum body \(\mathcal{B}\) be moving in a spatial vector field \(\boldsymbol{b}\) with velocity \(\boldsymbol{v}\). Then the material time derivative of \(\boldsymbol{b}\) is given by
+\[ \dot{\boldsymbol{b}} = \frac{\boldsymbol{b}}{\partial t} + \nabla\boldsymbol{b} \cdot \boldsymbol{v}\]</li>
+<li class="fragment appear"><i>Proof</i> is similar to the one for scalar fields.</li>
 
+</ul>
 </section>
-<section id="slide-orgba609b9-split">
+<section id="slide-org16b811a">
+<h4 id="org16b811a">Acceleration as the Material Time Derivative of the Velocity Field</h4>
+<ul>
+<li class="fragment appear">By definition, the spatial acceleration field \(\boldsymbol{a}\) of a moving body is \(\boldsymbol{a} = \dot{\boldsymbol{v}}\), where \(\boldsymbol{v}\) is the spatial velocity of the motion. From the previous concept of material time derivative, we deduce
+\[\boldsymbol{a} = \frac{\partial\boldsymbol{v}}{\partial t} + (\nabla\boldsymbol{v}) \cdot \boldsymbol{v}.\]</li>
+
+</ul>
 </section>
-<section id="slide-org7429dba">
-<h3 id="org7429dba">Questions for next session</h3>
+<section id="slide-orgf4a5bb1">
+<h4 id="orgf4a5bb1">Vorticity</h4>
+<p>
+By vorticity of a motion we mean the spatial vector field
+\[ \boldsymbol{w} = \nabla \times \boldsymbol{v}.\]
+</p>
+</section>
+<section id="slide-org0011cc4">
+<h3 id="org0011cc4">Questions for next session</h3>
 <p>
 Ask AI:
 </p>
 <ul>
-<li></li>
+<li>Show me the fundamental principles of particle mechanics in tensor-indicial notation.</li>
 
 </ul>
 </section>
-<section id="slide-org05d1175">
-<h3 id="org05d1175">Deliverables</h3>
+<section id="slide-orga2f6656">
+<h3 id="orga2f6656">Deliverables</h3>
 <p>
 Students should be able to:
 </p>
 <ul>
-<li></li>
+<li class="off"><code>[&#xa0;]</code> explain the concept of material time derivative</li>
 
 </ul>
 </section>
