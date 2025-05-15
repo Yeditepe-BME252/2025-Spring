@@ -22,7 +22,7 @@
 #+ATTR_REVEAL: :frag (appear appear appear ...)
 - The spatial description of the material velocity field is denoted by
   $$ \boldsymbol{v}(\boldsymbol{x},t) $$
-- Let a continuum body $\mathcal{B}$ be moving in a spatial scalar field $\phi$ with velocity $\boldsymbol{v}$. Then the material time derivative of $\phi$ is given by
+- Let a continuum body $\mathcal{B}$ be moving in a spatial scalar field $\phi(\boldsymbol{x},t)$ with velocity $\boldsymbol{v}$. Then the material time derivative of $\phi$ is given by
   $$ \dot{\phi} = \frac{\partial\phi}{\partial t} + \nabla\phi \cdot \boldsymbol{v}$$
 - /Proof/ follows from the fact that spatial field is a function of $\boldsymbol{x}$, which in turn is a function of $t$. Thus, the derivative has to be applied following the chain rule of differentiation.
 - The two terms have different physical implications:
@@ -33,8 +33,8 @@
 
 *** Material Time Derivative of a Vector Field
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- Let a continuum body $\mathcal{B}$ be moving in a spatial vector field $\boldsymbol{b}$ with velocity $\boldsymbol{v}$. Then the material time derivative of $\boldsymbol{b}$ is given by
-  $$ \dot{\boldsymbol{b}} = \frac{\boldsymbol{b}}{\partial t} + \nabla\boldsymbol{b} \cdot \boldsymbol{v}$$
+- Let a continuum body $\mathcal{B}$ be moving in a spatial vector field $\boldsymbol{b}(\boldsymbol{x},t)$ with velocity $\boldsymbol{v}$. Then the material time derivative of $\boldsymbol{b}$ is given by
+  $$ \dot{\boldsymbol{b}} = \frac{\partial\boldsymbol{b}}{\partial t} + \nabla\boldsymbol{b} \cdot \boldsymbol{v}$$
 - /Proof/ is similar to the one for scalar fields.
 
 *** Acceleration as the Material Time Derivative of the Velocity Field
@@ -43,8 +43,10 @@
   $$\boldsymbol{a} = \frac{\partial\boldsymbol{v}}{\partial t} + (\nabla\boldsymbol{v}) \cdot \boldsymbol{v}.$$
 
 *** Vorticity
-By vorticity of a motion we mean the spatial vector field
-$$ \boldsymbol{w} = \nabla \times \boldsymbol{v}.$$
+#+ATTR_REVEAL: :frag (appear)
+- By vorticity of a motion we mean the spatial vector field
+  $$ \boldsymbol{w} = \nabla \times \boldsymbol{v}.$$
+- Vorticity is a measure of circulation in a flow.
 
 ** Questions for next session
 Ask AI:
