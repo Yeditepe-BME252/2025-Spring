@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Unit 5: Balance Laws</title>
+<meta name="author" content="Fethi Okyar"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="../style.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h2>Unit 5: Balance Laws</h2> <h3>Readings from Stuart and Gonzales, Chapter 5</h3> <h4>2025-05-15</h4>
+</section>
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-org66f4c56">(Chapter 5) Motivation (Session 14)</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section>
+<section id="slide-org66f4c56">
+<h2 id="org66f4c56">(Chapter 5) Motivation (Session 14)</h2>
+<ul>
+<li class="fragment appear">In this final chapter, the fundamental principles of mechanics are laid out.</li>
+<li class="fragment appear">First, these ideas are developed for a system of particles.</li>
+<li class="fragment appear">Then the concepts of temperature and heat are developed for a continuum body.</li>
+<li class="fragment ...">The principles developed for a system of particles are extended to cover a continuum body.</li>
+<li class="fragment ...">Using definition of temperature and heat the principle of energy conservation is appended to the prior principles.</li>
+<li class="fragment ...">Finally, the local forms of these global principles are developed based on localization.</li>
+
+</ul>
+</section>
+<section id="slide-org12bcc92">
+<h3 id="org12bcc92">(\(\S 5.1\)) Ideas from Particle Mechanics</h3>
+
+<div id="org6840e94" class="figure">
+<p><img src="../images/AFC-5.1.png" alt="AFC-5.1.png" width="1200px" />
+</p>
+</div>
+<ul>
+<li class="fragment appear">We consider a system of \(N\) particles with masses \(m_\alpha\) and positions \(\boldsymbol{x}_\alpha\) as illustrated above.</li>
+<li class="fragment appear">It will be assumed there is an internal potential regulating the interaction between each particle pair \(\alpha-\beta\), which is called \(U_{\alpha\beta}\).</li>
+<li class="fragment appear">This potential is assumed to be symmetric between particles, i.e.,  \(U_{\alpha\beta} =  U_{\beta\alpha}\), and the <b>interaction force</b> applied by particle \(\beta\) on particle \(\alpha\) is given by \[\boldsymbol{f}_{\alpha\beta}^{\mathrm{int}} = -\nabla U_{\alpha\beta}\]</li>
+<li class="fragment ...">Furthermore, each particle may be subject to an external (environmental) force, \(\boldsymbol{f}_\alpha^{\mathrm{env}}\), and no other forces act on or within the system.</li>
+
+</ul>
+
+</section>
+<section id="slide-org12bcc92-split">
+<ul>
+<li class="fragment appear">To the configuration \(\Omega_t\) of the system of \(N\) particles at any time \(t\leq 0\), we associate:
+<ul>
+<li class="fragment appear">a total mass
+\[M[\Omega_t] = \sum_{\alpha\in N} m_\alpha\]</li>
+<li class="fragment appear">linear momentum
+\[\boldsymbol{l}[\Omega_t] = \sum_{\alpha\in N} m_\alpha \dot{\boldsymbol{x}}_\alpha\]</li>
+<li class="fragment appear">angular momentum
+\[\boldsymbol{j}[\Omega_t] = \sum_{\alpha\in N} \boldsymbol{x}_\alpha \times m_\alpha \dot{\boldsymbol{x}}_\alpha\]</li>
+<li class="fragment appear">internal energy
+\[U[\Omega_t] = \sum_{\begin{array}{@{}l@{}}
+      \alpha,\beta \in N \\
+      \alpha < \beta
+    \end{array}} U_{\alpha\beta}\]</li>
+<li class="fragment appear">and kinetic energy
+\[K[\Omega_t] = \sum_{\alpha\in N} \tfrac{1}{2} m_\alpha |\dot{\boldsymbol{x}}_\alpha|^2\]</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-org923e2d7">
+<h4 id="org923e2d7">Balance Laws for the \(N\) Particle System</h4>
+<p>
+From the definitions above we state the fundamental balance principles as
+</p>
+<ol>
+<li class="fragment appear">the mass of \(\Omega_t\) does not change with time
+\[ \frac{d}{dt} M[\Omega_t] = 0, \]</li>
+<li class="fragment appear">the rate of change of linear momentum is equal to the resultant external force on \(\Omega_t\)
+\[ \frac{d}{dt} \boldsymbol{l}[\Omega_t] = \sum_{\alpha \in N} \boldsymbol{f}_\alpha^\mathrm{env}, \]</li>
+<li class="fragment appear">the rate of change of angular momentum is equal to the resultant external torque on \(\Omega_t\)
+\[ \frac{d}{dt} \boldsymbol{j}[\Omega_t] = \sum_{\alpha \in N} \boldsymbol{x}_\alpha \times \boldsymbol{f}_\alpha^\mathrm{env}, \]</li>
+<li class="fragment ...">and the rate of change of the sum of potential (internal) and kinetic energy is equal to the power of external forces on \(\Omega_t\)
+\[ \frac{d}{dt}(U[\Omega_t] + K[\Omega_t]) = \sum_{\alpha \in N} \dot{\boldsymbol{x}}_\alpha \cdot \boldsymbol{f}_\alpha^\mathrm{env}. \]</li>
+
+</ol>
+</section>
+<section id="slide-org891c5f1">
+<h4 id="org891c5f1">Argumemts Concerning Temperature and Heat</h4>
+<ul>
+<li class="fragment appear">The balance laws for mass, linear momentum and angular momentum can readily be generalized to continuum bodies by replacing the summation by an integral.</li>
+<li class="fragment appear">However, balance of energy will require the introduction of two new terms.</li>
+<li class="fragment appear">The continuum assumption cannot represent the detail that occurs at length scales comparable to, or shorter than, inter-atomic spacings.</li>
+<li class="fragment appear">In particular, the velocity at a point is to be interpreted as the average velocity of atoms in the vicinity of that point.</li>
+<li class="fragment appear">Fluctuations in the velocities (vibrations) of atoms about the mean velocity are not represented in the continuum velocity field.</li>
+<li class="fragment appear">To account for these fluctuations, we introduce new concepts:
+<ul>
+<li class="fragment appear"><b>temperature</b>: measure of the size of velocity fluctuations.</li>
+<li class="fragment appear"><b>heat</b>: measure of the energy of fluctuations.</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-org570ebc2">
+<h3 id="org570ebc2">Questions for next session</h3>
+<p>
+Ask AI:
+</p>
+<ul>
+<li>How do temperature and heat enter the conservation of energy principle for a continuum body?</li>
+
+</ul>
+</section>
+<section id="slide-orgf6a38ab">
+<h3 id="orgf6a38ab">Deliverables</h3>
+<p>
+Students should be able to:
+</p>
+<ul>
+<li class="off"><code>[&#xa0;]</code> state the balance laws for a system of particles</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+slideNumber:"c/t", width:1920, height:1080,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>

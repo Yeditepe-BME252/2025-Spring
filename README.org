@@ -53,7 +53,7 @@ Jove: a scientific educational video content provider with free access through Y
 - [X] write the condition of static equilibrium in global form
 - [X] apply the divergence theorem to integral forms
 - [X] obtain the local form of static equilibrium using the divergence theorem
-- [ ] explain the concept of material time derivative
+- [X] explain the concept of material time derivative
 - [ ] state the balance laws for a system of particles
 - [ ] state the balance laws for a continuum (integral form)
 - [ ] identify mechanical variables in the first law of thermodynamics

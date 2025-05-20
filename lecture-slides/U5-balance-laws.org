@@ -1,0 +1,81 @@
+#+TITLE: Unit 5: Balance Laws
+#+AUTHOR: Fethi Okyar
+#+DATE: 2025-05-15
+#+SUBTITLE: Readings from Stuart and Gonzales, Chapter 5
+#+STARTUP: overview
+#+REVEAL_THEME: simple
+#+REVEAL_INIT_OPTIONS: slideNumber:"c/t", width:1920, height:1080
+#+REVEAL_TITLE_SLIDE: <h2>%t</h2> <h3>%s</h3> <h4>%d</h4>
+#+OPTIONS: timestamp:nil toc:1 num:nil
+#+REVEAL_EXTRA_CSS: ../style.css
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+
+* (Chapter 5) Motivation (Session 14)
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- In this final chapter, the fundamental principles of mechanics are laid out.
+- First, these ideas are developed for a system of particles.
+- Then the concepts of temperature and heat are developed for a continuum body.
+- The principles developed for a system of particles are extended to cover a continuum body.
+- Using definition of temperature and heat the principle of energy conservation is appended to the prior principles.
+- Finally, the local forms of these global principles are developed based on localization.
+
+** ($\S 5.1$) Ideas from Particle Mechanics
+#+ATTR_HTML: :width 1200px
+[[../images/AFC-5.1.png]]
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- We consider a system of $N$ particles with masses $m_\alpha$ and positions $\boldsymbol{x}_\alpha$ as illustrated above. 
+- It will be assumed there is an internal potential regulating the interaction between each particle pair $\alpha-\beta$, which is called $U_{\alpha\beta}$.
+- This potential is assumed to be symmetric between particles, i.e.,  $U_{\alpha\beta} =  U_{\beta\alpha}$, and the *interaction force* applied by particle $\beta$ on particle $\alpha$ is given by $$\boldsymbol{f}_{\alpha\beta}^{\mathrm{int}} = -\nabla U_{\alpha\beta}$$
+- Furthermore, each particle may be subject to an external (environmental) force, $\boldsymbol{f}_\alpha^{\mathrm{env}}$, and no other forces act on or within the system.
+
+#+REVEAL: split
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- To the configuration $\Omega_t$ of the system of $N$ particles at any time $t\leq 0$, we associate:
+  #+ATTR_REVEAL: :frag (appear)
+  + a total mass
+    $$M[\Omega_t] = \sum_{\alpha\in N} m_\alpha$$
+  + linear momentum
+    $$\boldsymbol{l}[\Omega_t] = \sum_{\alpha\in N} m_\alpha \dot{\boldsymbol{x}}_\alpha$$
+  + angular momentum
+    $$\boldsymbol{j}[\Omega_t] = \sum_{\alpha\in N} \boldsymbol{x}_\alpha \times m_\alpha \dot{\boldsymbol{x}}_\alpha$$
+  + internal energy
+    $$U[\Omega_t] = \sum_{\begin{array}{@{}l@{}}
+      \alpha,\beta \in N \\
+      \alpha < \beta
+    \end{array}} U_{\alpha\beta}$$
+  + and kinetic energy
+    $$K[\Omega_t] = \sum_{\alpha\in N} \tfrac{1}{2} m_\alpha |\dot{\boldsymbol{x}}_\alpha|^2$$
+
+*** Balance Laws for the $N$ Particle System
+From the definitions above we state the fundamental balance principles as
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+1. the mass of $\Omega_t$ does not change with time
+   $$ \frac{d}{dt} M[\Omega_t] = 0, $$
+2. the rate of change of linear momentum is equal to the resultant external force on $\Omega_t$
+   $$ \frac{d}{dt} \boldsymbol{l}[\Omega_t] = \sum_{\alpha \in N} \boldsymbol{f}_\alpha^\mathrm{env}, $$
+3. the rate of change of angular momentum is equal to the resultant external torque on $\Omega_t$
+   $$ \frac{d}{dt} \boldsymbol{j}[\Omega_t] = \sum_{\alpha \in N} \boldsymbol{x}_\alpha \times \boldsymbol{f}_\alpha^\mathrm{env}, $$
+4. and the rate of change of the sum of potential (internal) and kinetic energy is equal to the power of external forces on $\Omega_t$
+   $$ \frac{d}{dt}(U[\Omega_t] + K[\Omega_t]) = \sum_{\alpha \in N} \dot{\boldsymbol{x}}_\alpha \cdot \boldsymbol{f}_\alpha^\mathrm{env}. $$
+
+*** Argumemts Concerning Temperature and Heat
+#+ATTR_REVEAL: :frag (appear)
+- The balance laws for mass, linear momentum and angular momentum can readily be generalized to continuum bodies by replacing the summation by an integral.
+- However, balance of energy will require the introduction of two new terms.
+- The continuum assumption cannot represent the detail that occurs at length scales comparable to, or shorter than, inter-atomic spacings.
+- In particular, the velocity at a point is to be interpreted as the average velocity of atoms in the vicinity of that point.
+- Fluctuations in the velocities (vibrations) of atoms about the mean velocity are not represented in the continuum velocity field.
+- To account for these fluctuations, we introduce new concepts:
+  #+ATTR_REVEAL: :frag (appear)
+  + *temperature*: measure of the size of velocity fluctuations.
+  + *heat*: measure of the energy of fluctuations.
+
+** Questions for next session
+Ask AI:
+- How do temperature and heat enter the conservation of energy principle for a continuum body?
+  
+** Deliverables
+Students should be able to:
+- [ ] state the balance laws for a system of particles
+
+  
