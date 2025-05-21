@@ -72,10 +72,77 @@ From the definitions above we state the fundamental balance principles as
 
 ** Questions for next session
 Ask AI:
-- How do temperature and heat enter the conservation of energy principle for a continuum body?
+- Explain the physical nature of temperature and heat to an engineering undergraduate learning about continuum mechanics?
   
 ** Deliverables
 Students should be able to:
 - [ ] state the balance laws for a system of particles
 
+* ($\S 5.2$) Balance Laws in Integral Form (Session 15)
+Consider a continuum body $\mathcal{B}$ in configuration $\Omega_t$, with its material element at $\boldsymbol{x}$ having a density $\rho$, an average velocity $\boldsymbol{v}$. We define:
+#+ATTR_REVEAL: :frag (appear)
+- the mass
+  $$ \mathrm{mass}[\Omega_t] = $$
+- the linear momentum
+  $$ \boldsymbol{l}[\Omega_t] = $$
+- the angular momentum about point
+    $$ \boldsymbol{j}[\Omega_t] = $$
+
+** Conservation Principles
+*** [Axiom 5.1] Conservation of Mass
+#+ATTR_REVEAL: :frag (appear)
+- The mass of $\mathcal{B}$ or any of its subsets does not change as a result of undergoing motion subject to a force field.
+$$ \frac{d}{dt} \mathrm{mass}[\Omega_t] = $$
+
+*** [Axiom 5.2] Laws of Inertia
+#+ATTR_REVEAL: :frag (appear)
+- Suppose the body $\mathcal{B}$ in configuration $\Omega_t$ is subject to external traction field $\bar{\boldsymbol{t}}$ and an external body force field $\boldsymbol{b}$.
+- the rate of change of linear momentum equals the resultant external force applied to it
+  $$ \frac{d}{dt} \quad = $$
+- the rate of change of angular momentum about a point equals the resultant external torque about the same point
+  $$ \frac{d}{dt} \quad = $$
+
+** $(\S 5.2.2)$ Thermodynamics
+#+ATTR_REVEAL: :frag (appear)
+- We defined the *temperature*, $\theta(\boldsymbol{x},t) > 0$, and *heat* (thermal energy) in a broad sense, now they will be included as actors in mechanical principles.
+- Define the net heating as the rate per unit time at which heat is added to $\mathcal{B}$
+  $$ Q[\Omega_t] = Q_b[\Omega_t] + Q_s[\Omega_t] $$
+- There is a *heat source* (or sink) per unit mass, $r(\boldsymbol{x},t)$, so that,
+  $$ Q_b = \int_\mathcal{B} \rho r\, dV.$$
+- Also, there exists a heat flux vector field, $\boldsymbol{q}(\boldsymbol{x},t)$, such that its dot product with the unit outward normal to the boundary surface $\partial\mathcal{B}$,  $\boldsymbol{n}$, yield the *heat transfer field* per unit area, $h(\boldsymbol{x},t)$ as:
+  $$ h = - \boldsymbol{q} \cdot \boldsymbol{n}$$
+- The surface heating is found as
+  $$ Q_s = \int_{\partial\mathcal{B}} h \,dA.$$
+- Thus the net heating can be evaluated as:
+  $$ Q[\Omega_t] = $$
+
+*** Energy, Work, Power
+#+ATTR_REVEAL: :frag (appear)
+- The Kinetic Energy of body $\mathcal{B}$ is
+  $$ K[\Omega_t] = \int_\mathcal{B} $$
+- The Power of External Forces is
+  $$ \mathcal{P}[\Omega_t] = \int_\mathcal{B} \quad dV + \int_{\partial\mathcal{B}} \quad dA. $$
+- By the Net Working, $\mathcal{W}[\Omega_t]$, we mean the mechanical power delivered by external forces that is not used up in producing motion
+  $$ \mathcal{W}[\Omega_t] = \mathcal{P}[\Omega_t] - \frac{d}{dt} K[\Omega_t] $$
+
+*** [$\S 5.2.2.3$] Internal Energy and the First Law
+#+ATTR_REVEAL: :frag (appear)
+- The energy content not associated with kinetic energy is called *internal energy*, $U[\Omega_t]$.
+- In particular, we assume there exists an *integral energy density field* per unit mass $\phi(\boldsymbol{x},t)$ such that
+  $$ U[\Omega_t] = \int_\mathcal{B} \rho\phi \, dV. $$
+
+*** [Axiom 5.3] First Law of Thermodynamics
+#+ATTR_REVEAL: :frag (appear)
+- The rate of change of internal energy of body $\mathcal{B}$ equals the sum of the net heating and net working applied to it
+  $$ \frac{d}{dt} U[\Omega_t] = Q[\Omega_t] + \mathcal{W}[\Omega_t] $$
+- This can alternatively be stated in terms of the kinetic energy and power of external forces as
+  $$ \frac{d}{dt} (U[\Omega_t] + K[\Omega_t]) = Q[\Omega_t] + \mathcal{P}[\Omega_t] $$
+
+** Questions for next session
+Ask AI:
+- Show the reduction of mechanical principles from their integral (global) form to their differential (local) form?
   
+** Deliverables
+Students should be able to:
+- [ ] state the balance laws for a continuum (integral form)
+- [ ] identify mechanical variables in the first law of thermodynamics

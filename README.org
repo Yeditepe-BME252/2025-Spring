@@ -54,8 +54,8 @@ Jove: a scientific educational video content provider with free access through Y
 - [X] apply the divergence theorem to integral forms
 - [X] obtain the local form of static equilibrium using the divergence theorem
 - [X] explain the concept of material time derivative
-- [ ] state the balance laws for a system of particles
-- [ ] state the balance laws for a continuum (integral form)
+- [X] state the balance laws for a system of particles
+- [X] state the balance laws for a continuum (integral form)
 - [ ] identify mechanical variables in the first law of thermodynamics
 - [ ] state the local (differential) form of balance laws for a continuum 
 

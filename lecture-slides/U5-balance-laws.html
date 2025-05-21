@@ -36,14 +36,15 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#/slide-org66f4c56">(Chapter 5) Motivation (Session 14)</a></li>
+<li><a href="#/slide-orgefa069b">(Chapter 5) Motivation (Session 14)</a></li>
+<li><a href="#/slide-orgfaedd5a">(\(\S 5.2\)) Balance Laws in Integral Form (Session 15)</a></li>
 </ul>
 </div>
 </div>
 </section>
 <section>
-<section id="slide-org66f4c56">
-<h2 id="org66f4c56">(Chapter 5) Motivation (Session 14)</h2>
+<section id="slide-orgefa069b">
+<h2 id="orgefa069b">(Chapter 5) Motivation (Session 14)</h2>
 <ul>
 <li class="fragment appear">In this final chapter, the fundamental principles of mechanics are laid out.</li>
 <li class="fragment appear">First, these ideas are developed for a system of particles.</li>
@@ -54,10 +55,10 @@
 
 </ul>
 </section>
-<section id="slide-org12bcc92">
-<h3 id="org12bcc92">(\(\S 5.1\)) Ideas from Particle Mechanics</h3>
+<section id="slide-org7f6e083">
+<h3 id="org7f6e083">(\(\S 5.1\)) Ideas from Particle Mechanics</h3>
 
-<div id="org6840e94" class="figure">
+<div id="orge60ae2d" class="figure">
 <p><img src="../images/AFC-5.1.png" alt="AFC-5.1.png" width="1200px" />
 </p>
 </div>
@@ -70,7 +71,7 @@
 </ul>
 
 </section>
-<section id="slide-org12bcc92-split">
+<section id="slide-org7f6e083-split">
 <ul>
 <li class="fragment appear">To the configuration \(\Omega_t\) of the system of \(N\) particles at any time \(t\leq 0\), we associate:
 <ul>
@@ -92,8 +93,8 @@
 
 </ul>
 </section>
-<section id="slide-org923e2d7">
-<h4 id="org923e2d7">Balance Laws for the \(N\) Particle System</h4>
+<section id="slide-org12bbc9d">
+<h4 id="org12bbc9d">Balance Laws for the \(N\) Particle System</h4>
 <p>
 From the definitions above we state the fundamental balance principles as
 </p>
@@ -109,8 +110,8 @@ From the definitions above we state the fundamental balance principles as
 
 </ol>
 </section>
-<section id="slide-org891c5f1">
-<h4 id="org891c5f1">Argumemts Concerning Temperature and Heat</h4>
+<section id="slide-org5787868">
+<h4 id="org5787868">Argumemts Concerning Temperature and Heat</h4>
 <ul>
 <li class="fragment appear">The balance laws for mass, linear momentum and angular momentum can readily be generalized to continuum bodies by replacing the summation by an integral.</li>
 <li class="fragment appear">However, balance of energy will require the introduction of two new terms.</li>
@@ -126,23 +127,135 @@ From the definitions above we state the fundamental balance principles as
 
 </ul>
 </section>
-<section id="slide-org570ebc2">
-<h3 id="org570ebc2">Questions for next session</h3>
+<section id="slide-org4e6ec2c">
+<h3 id="org4e6ec2c">Questions for next session</h3>
 <p>
 Ask AI:
 </p>
 <ul>
-<li>How do temperature and heat enter the conservation of energy principle for a continuum body?</li>
+<li>Explain the physical nature of temperature and heat to an engineering undergraduate learning about continuum mechanics?</li>
 
 </ul>
 </section>
-<section id="slide-orgf6a38ab">
-<h3 id="orgf6a38ab">Deliverables</h3>
+<section id="slide-orga7c6a89">
+<h3 id="orga7c6a89">Deliverables</h3>
 <p>
 Students should be able to:
 </p>
 <ul>
 <li class="off"><code>[&#xa0;]</code> state the balance laws for a system of particles</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgfaedd5a">
+<h2 id="orgfaedd5a">(\(\S 5.2\)) Balance Laws in Integral Form (Session 15)</h2>
+<p>
+Consider a continuum body \(\mathcal{B}\) in configuration \(\Omega_t\), with its material element at \(\boldsymbol{x}\) having a density \(\rho\), an average velocity \(\boldsymbol{v}\). We define:
+</p>
+<ul>
+<li class="fragment appear">the mass
+\[ \mathrm{mass}[\Omega_t] = \]</li>
+<li class="fragment appear">the linear momentum
+\[ \boldsymbol{l}[\Omega_t] = \]</li>
+<li class="fragment appear">the angular momentum about point
+\[ \boldsymbol{j}[\Omega_t] = \]</li>
+
+</ul>
+</section>
+<section id="slide-orgfc8270f">
+<h3 id="orgfc8270f">Conservation Principles</h3>
+<div class="outline-text-3" id="text-orgfc8270f">
+</div>
+</section>
+<section id="slide-orgbf4a9ae">
+<h4 id="orgbf4a9ae">[Axiom 5.1] Conservation of Mass</h4>
+<ul>
+<li class="fragment appear">The mass of \(\mathcal{B}\) or any of its subsets does not change as a result of undergoing motion subject to a force field.</li>
+
+</ul>
+<p>
+\[ \frac{d}{dt} \mathrm{mass}[\Omega_t] = \]
+</p>
+</section>
+<section id="slide-org533e9cc">
+<h4 id="org533e9cc">[Axiom 5.2] Laws of Inertia</h4>
+<ul>
+<li class="fragment appear">Suppose the body \(\mathcal{B}\) in configuration \(\Omega_t\) is subject to external traction field \(\bar{\boldsymbol{t}}\) and an external body force field \(\boldsymbol{b}\).</li>
+<li class="fragment appear">the rate of change of linear momentum equals the resultant external force applied to it
+\[ \frac{d}{dt} \quad = \]</li>
+<li class="fragment appear">the rate of change of angular momentum about a point equals the resultant external torque about the same point
+\[ \frac{d}{dt} \quad = \]</li>
+
+</ul>
+</section>
+<section id="slide-orge0988b8">
+<h3 id="orge0988b8">\((\S 5.2.2)\) Thermodynamics</h3>
+<ul>
+<li class="fragment appear">We defined the <b>temperature</b>, \(\theta(\boldsymbol{x},t) > 0\), and <b>heat</b> (thermal energy) in a broad sense, now they will be included as actors in mechanical principles.</li>
+<li class="fragment appear">Define the net heating as the rate per unit time at which heat is added to \(\mathcal{B}\)
+\[ Q[\Omega_t] = Q_b[\Omega_t] + Q_s[\Omega_t] \]</li>
+<li class="fragment appear">There is a <b>heat source</b> (or sink) per unit mass, \(r(\boldsymbol{x},t)\), so that,
+\[ Q_b = \int_\mathcal{B} \rho r\, dV.\]</li>
+<li class="fragment appear">Also, there exists a heat flux vector field, \(\boldsymbol{q}(\boldsymbol{x},t)\), such that its dot product with the unit outward normal to the boundary surface \(\partial\mathcal{B}\),  \(\boldsymbol{n}\), yield the <b>heat transfer field</b> per unit area, \(h(\boldsymbol{x},t)\) as:
+\[ h = - \boldsymbol{q} \cdot \boldsymbol{n}\]</li>
+<li class="fragment appear">The surface heating is found as
+\[ Q_s = \int_{\partial\mathcal{B}} h \,dA.\]</li>
+<li class="fragment appear">Thus the net heating can be evaluated as:
+\[ Q[\Omega_t] = \]</li>
+
+</ul>
+</section>
+<section id="slide-orged644cc">
+<h4 id="orged644cc">Energy, Work, Power</h4>
+<ul>
+<li class="fragment appear">The Kinetic Energy of body \(\mathcal{B}\) is
+\[ K[\Omega_t] = \int_\mathcal{B} \]</li>
+<li class="fragment appear">The Power of External Forces is
+\[ \mathcal{P}[\Omega_t] = \int_\mathcal{B} \quad dV + \int_{\partial\mathcal{B}} \quad dA. \]</li>
+<li class="fragment appear">By the Net Working, \(\mathcal{W}[\Omega_t]\), we mean the mechanical power delivered by external forces that is not used up in producing motion
+\[ \mathcal{W}[\Omega_t] = \mathcal{P}[\Omega_t] - \frac{d}{dt} K[\Omega_t] \]</li>
+
+</ul>
+</section>
+<section id="slide-orgec41aa3">
+<h4 id="orgec41aa3">[\(\S 5.2.2.3\)] Internal Energy and the First Law</h4>
+<ul>
+<li class="fragment appear">The energy content not associated with kinetic energy is called <b>internal energy</b>, \(U[\Omega_t]\).</li>
+<li class="fragment appear">In particular, we assume there exists an <b>integral energy density field</b> per unit mass \(\phi(\boldsymbol{x},t)\) such that
+\[ U[\Omega_t] = \int_\mathcal{B} \rho\phi \, dV. \]</li>
+
+</ul>
+</section>
+<section id="slide-orgcdf14ed">
+<h4 id="orgcdf14ed">[Axiom 5.3] First Law of Thermodynamics</h4>
+<ul>
+<li class="fragment appear">The rate of change of internal energy of body \(\mathcal{B}\) equals the sum of the net heating and net working applied to it
+\[ \frac{d}{dt} U[\Omega_t] = Q[\Omega_t] + \mathcal{W}[\Omega_t] \]</li>
+<li class="fragment appear">This can alternatively be stated in terms of the kinetic energy and power of external forces as
+\[ \frac{d}{dt} (U[\Omega_t] + K[\Omega_t]) = Q[\Omega_t] + \mathcal{P}[\Omega_t] \]</li>
+
+</ul>
+</section>
+<section id="slide-orgca0dda9">
+<h3 id="orgca0dda9">Questions for next session</h3>
+<p>
+Ask AI:
+</p>
+<ul>
+<li>Show the reduction of mechanical principles from their integral (global) form to their differential (local) form?</li>
+
+</ul>
+</section>
+<section id="slide-orgb8963a6">
+<h3 id="orgb8963a6">Deliverables</h3>
+<p>
+Students should be able to:
+</p>
+<ul>
+<li class="off"><code>[&#xa0;]</code> state the balance laws for a continuum (integral form)</li>
+<li class="off"><code>[&#xa0;]</code> identify mechanical variables in the first law of thermodynamics</li>
 
 </ul>
 </section>
