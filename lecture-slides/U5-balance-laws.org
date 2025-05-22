@@ -58,7 +58,7 @@ From the definitions above we state the fundamental balance principles as
 4. and the rate of change of the sum of potential (internal) and kinetic energy is equal to the power of external forces on $\Omega_t$
    $$ \frac{d}{dt}(U[\Omega_t] + K[\Omega_t]) = \sum_{\alpha \in N} \dot{\boldsymbol{x}}_\alpha \cdot \boldsymbol{f}_\alpha^\mathrm{env}. $$
 
-*** Argumemts Concerning Temperature and Heat
+*** Arguments Concerning Temperature and Heat
 #+ATTR_REVEAL: :frag (appear)
 - The balance laws for mass, linear momentum and angular momentum can readily be generalized to continuum bodies by replacing the summation by an integral.
 - However, balance of energy will require the introduction of two new terms.
@@ -78,7 +78,7 @@ Ask AI:
 Students should be able to:
 - [ ] state the balance laws for a system of particles
 
-* ($\S 5.2$) Balance Laws in Integral Form (Session 15)
+* ($\S 5.2$) Thermodynamics and Balance Laws (Session 15)
 Consider a continuum body $\mathcal{B}$ in configuration $\Omega_t$, with its material element at $\boldsymbol{x}$ having a density $\rho$, an average velocity $\boldsymbol{v}$. We define:
 #+ATTR_REVEAL: :frag (appear)
 - the mass
@@ -89,10 +89,11 @@ Consider a continuum body $\mathcal{B}$ in configuration $\Omega_t$, with its ma
     $$ \boldsymbol{j}[\Omega_t] = $$
 
 ** Conservation Principles
+The principles that can be declared without the need to introduce the concepts of temperature and heat are the ones related with *mass* and *inertia*.
 *** [Axiom 5.1] Conservation of Mass
 #+ATTR_REVEAL: :frag (appear)
 - The mass of $\mathcal{B}$ or any of its subsets does not change as a result of undergoing motion subject to a force field.
-$$ \frac{d}{dt} \mathrm{mass}[\Omega_t] = $$
+  $$ \frac{d}{dt} \mathrm{mass}[\Omega_t] = $$
 
 *** [Axiom 5.2] Laws of Inertia
 #+ATTR_REVEAL: :frag (appear)
@@ -125,7 +126,7 @@ $$ \frac{d}{dt} \mathrm{mass}[\Omega_t] = $$
 - By the Net Working, $\mathcal{W}[\Omega_t]$, we mean the mechanical power delivered by external forces that is not used up in producing motion
   $$ \mathcal{W}[\Omega_t] = \mathcal{P}[\Omega_t] - \frac{d}{dt} K[\Omega_t] $$
 
-*** [$\S 5.2.2.3$] Internal Energy and the First Law
+*** ($\S 5.2.2.3$) Internal Energy and the First Law
 #+ATTR_REVEAL: :frag (appear)
 - The energy content not associated with kinetic energy is called *internal energy*, $U[\Omega_t]$.
 - In particular, we assume there exists an *integral energy density field* per unit mass $\phi(\boldsymbol{x},t)$ such that
