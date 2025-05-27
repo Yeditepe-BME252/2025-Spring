@@ -56,7 +56,7 @@ Jove: a scientific educational video content provider with free access through Y
 - [X] explain the concept of material time derivative
 - [X] state the balance laws for a system of particles
 - [X] state the balance laws for a continuum (integral form)
-- [ ] identify mechanical variables in the first law of thermodynamics
+- [X] identify mechanical variables in the first law of thermodynamics
 - [ ] state the local (differential) form of balance laws for a continuum 
 
 ** Weekly outline

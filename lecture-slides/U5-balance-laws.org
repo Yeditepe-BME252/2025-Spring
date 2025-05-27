@@ -30,7 +30,7 @@
 
 #+REVEAL: split
 #+ATTR_REVEAL: :frag (appear appear appear ...)
-- To the configuration $\Omega_t$ of the system of $N$ particles at any time $t\leq 0$, we associate:
+- To the configuration $\Omega_t$ of the system of $N$ particles at any time $t\geq 0$, we associate:
   #+ATTR_REVEAL: :frag (appear)
   + a total mass
     $$M[\Omega_t] = \sum_{\alpha\in N} m_\alpha$$
@@ -112,10 +112,9 @@ The principles that can be declared without the need to introduce the concepts o
   $$ Q_b = \int_\mathcal{B} \rho r\, dV.$$
 - Also, there exists a heat flux vector field, $\boldsymbol{q}(\boldsymbol{x},t)$, such that its dot product with the unit outward normal to the boundary surface $\partial\mathcal{B}$,  $\boldsymbol{n}$, yield the *heat transfer field* per unit area, $h(\boldsymbol{x},t)$ as:
   $$ h = - \boldsymbol{q} \cdot \boldsymbol{n}$$
-- The surface heating is found as
+- From this the surface heating is found as
   $$ Q_s = \int_{\partial\mathcal{B}} h \,dA.$$
-- Thus the net heating can be evaluated as:
-  $$ Q[\Omega_t] = $$
+- Thus the net heating will be found as the sum of $Q_b$ and $Q_s$.
 
 *** Energy, Work, Power
 #+ATTR_REVEAL: :frag (appear)
@@ -147,3 +146,49 @@ Ask AI:
 Students should be able to:
 - [ ] state the balance laws for a continuum (integral form)
 - [ ] identify mechanical variables in the first law of thermodynamics
+
+* ($\S 5.3$) Localization of Balance Laws (Session 16)
+** ($\S 5.3.1$) Conservation of Mass in Local (Differential) Form
+#+ATTR_REVEAL: :frag (appear)
+- The integral statement of the conservation of mass principle
+  $$ \frac{d}{dt} \int_{\Omega_t} \rho\,dV = 0, $$
+- can be transformed using the *Reynolds Transport Theorem* [Result 4.6] by carrying out the differentiation of the mass integral with respect to time as
+  $$ \frac{d}{dt} \int_{\Omega_t} \rho\,dV = \int_{\Omega_t} \dot\rho + \rho (\nabla \cdot \boldsymbol{v}) dV = 0. $$
+- Based on the argument of localization, for the above equation to be true for all subdomains $\Omega_t$ of $\mathcal{B}$, we require $\forall \boldsymbol{x} \in \mathcal{B},\,t>0$ that
+  $$ \dot\rho + \rho (\nabla \cdot \boldsymbol{v}) = 0. \quad \mathrm{or} \quad \dot\rho + \rho v_{k,k} = 0 $$
+- Sample Problem: By using the indicial notation show that the differential form of mass continuity can alternatively be stated as:
+  $$ \frac{\partial\rho}{\partial t} + \nabla \cdot (\rho \boldsymbol{v}) = 0 $$
+
+*** [IB:SFAD/15, $\S 10.2.2$] Analysis of Mean Flows in an Arterial Bifurcation
+#+ATTR_HTML: :width 1000px
+[[../images/IB-10.4.png]]
+#+ATTR_REVEAL: :frag (appear appear appear ...)
+- A control volume analysis of the bifurcation, wherein an atherosclerotic plaque occludes a vessel distal to the bifurcation.
+- A steady flow (no change in flow field in time).
+- Incompressible flow ($\nabla \cdot \boldsymbol{v} = 0$).
+- Constant density, $\rho$, in large vessels.
+- A fully developed entrance velocity, $\boldsymbol{v}_1$ (look into Eq.(9.44) for details).
+- mean velocities $\boldsymbol{v}_2 = \bar{v}_2 \boldsymbol{e}_{z'}$, and $\boldsymbol{v}_3 = \bar{v}_3 \boldsymbol{e}_{z''}$.
+
+** ($\S 5.3.2$) Conservation of Linear Momentum in Local Form
+The conservation of linear momentum for an arbitrary open subset $\Omega_t$ of $\mathcal{B}$
+$$ \frac{d}{dt} \int_{\Omega_t} \quad dV = \int_{\partial\Omega_t} \quad dA + \int_{\Omega_t} \quad dV.$$
+#+ATTR_REVEAL: :frag (appear)
+1. Use the relation between traction and stress.
+2. Use the divergence theorem.
+3. Use localization to find the differential form
+   $$ \rho \dot{\boldsymbol{v}} = \nabla \cdot \boldsymbol{\sigma} + \rho \boldsymbol{b}$$
+
+*** ($\S 5.3.3$) Conservation of Angular Momentum in Local Form
+Longer proof reveals $$\boldsymbol{\sigma} = \boldsymbol{\sigma}^T \quad \mathrm{or} \quad \sigma_{ij} = \sigma_{ji}$$
+
+** ($\S 5.3.4$) Characterization of Net Working
+work in progress
+
+** Questions for next session
+Ask AI:
+- Show the reduction of mechanical principles from their integral (global) form to their differential (local) form?
+  
+** Deliverables
+Students should be able to:
+- [ ] state the local (differential) form of balance laws for a continuum
