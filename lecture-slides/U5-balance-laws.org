@@ -9,6 +9,8 @@
 #+OPTIONS: timestamp:nil toc:1 num:nil
 #+REVEAL_EXTRA_CSS: ../style.css
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_MATHJAX_URL: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+#+OPTIONS: tex:t
 
 * (Chapter 5) Motivation (Session 14)
 #+ATTR_REVEAL: :frag (appear appear appear ...)
@@ -153,7 +155,7 @@ Students should be able to:
 - The integral statement of the conservation of mass principle
   $$ \frac{d}{dt} \int_{\Omega_t} \rho\,dV = 0, $$
 - can be transformed using the *Reynolds Transport Theorem* [Result 4.6] by carrying out the differentiation of the mass integral with respect to time as
-  $$ \frac{d}{dt} \int_{\Omega_t} \rho\,dV = \int_{\Omega_t} \dot\rho + \rho (\nabla \cdot \boldsymbol{v}) dV = 0. $$
+  $$ \frac{d}{dt} \int_{\Omega_t} \rho\,dV = \int_{\Omega_t} \underbrace{\dot\rho + \rho (\nabla \cdot \boldsymbol{v})}_{\text{0}} dV = 0. $$
 - Based on the argument of localization, for the above equation to be true for all subdomains $\Omega_t$ of $\mathcal{B}$, we require $\forall \boldsymbol{x} \in \mathcal{B},\,t>0$ that
   $$ \dot\rho + \rho (\nabla \cdot \boldsymbol{v}) = 0. \quad \mathrm{or} \quad \dot\rho + \rho v_{k,k} = 0 $$
 - Sample Problem: By using the indicial notation show that the differential form of mass continuity can alternatively be stated as:
@@ -182,13 +184,31 @@ $$ \frac{d}{dt} \int_{\Omega_t} \quad dV = \int_{\partial\Omega_t} \quad dA + \i
 *** ($\S 5.3.3$) Conservation of Angular Momentum in Local Form
 Longer proof reveals $$\boldsymbol{\sigma} = \boldsymbol{\sigma}^T \quad \mathrm{or} \quad \sigma_{ij} = \sigma_{ji}$$
 
+* The First Law of Thermodynamics (Session 17)
+#+ATTR_REVEAL: :frag (appear)
+- This is also known as the principle of /conservation of energy/.
+- It was defined in global (integral) form and here it will be converted into the local (differential) form.
+- In order to utilize the principle, the term related with the /net working/ in $\frac{d}{dt} U[\Omega_t] = Q[\Omega_t] + \mathcal{W}[\Omega_t]$, needs to be worked out in terms of mechanical variables. 
 ** ($\S 5.3.4$) Characterization of Net Working
-work in progress
-
-** Questions for next session
-Ask AI:
-- Show the reduction of mechanical principles from their integral (global) form to their differential (local) form?
-  
+#+ATTR_REVEAL: :frag (appear)
+- Here we derive a relation between the rate of change of kinetic energy and the power of external and internal forces.
+- To begin, we take the dot product of the conservation of linear momentum equation with the spatial velocity field (from the right) and integrate the resulting equation over  $\mathcal{B}_t$
+  $$ \int_{\mathcal{B}_t} \rho \dot{\boldsymbol{v}} \cdot \boldsymbol{v}\, dV = \int_{\mathcal{B}_t} [(\nabla \cdot \boldsymbol{\sigma}) \cdot \boldsymbol{v} + \rho \boldsymbol{b} \cdot \boldsymbol{v}]\, dV$$
+- The term $(\nabla \cdot \boldsymbol{\sigma}) \cdot \boldsymbol{v}$ can be obtained from $\nabla \cdot (\boldsymbol{\sigma} \cdot \boldsymbol{v})$. Using this identity and by applying the divergence theorem, the above integral can  be converted to
+  $$ \int_{\mathcal{B}_t} \rho \dot{\boldsymbol{v}} \cdot \boldsymbol{v}\, dV + \int_{\mathcal{B}_t} \boldsymbol{\sigma} : \nabla \boldsymbol{v} \, dV= \int_{\partial\mathcal{B}_t} \boldsymbol{n} \cdot (\boldsymbol{\sigma} \cdot \boldsymbol{v}) dA + \int_{\mathcal{B}_t} \rho \boldsymbol{b} \cdot \boldsymbol{v}\, dV$$
+- Noting that $\boldsymbol{n} \cdot \boldsymbol{\sigma} = \bar{\boldsymbol{t}}$ over the boundary $\partial\mathcal{B}$, we write the above expression as
+  $$ \frac{d}{dt} \mathcal{K}[\mathcal{B}_t] + \int_{\mathcal{B}_t} \boldsymbol{\sigma} : \nabla\boldsymbol{v}\, dV = \mathcal{P}[\mathcal{B}_t].$$
+- The term $\int_{\mathcal{B}_t} \boldsymbol{\sigma} : \nabla\boldsymbol{v}\, dV$ known as the *stress power* is identified as $\mathcal{W}[\mathcal{B}_t]$, in view of the definition of /net working/.
+** ($\S 5.3.5$) The First Law in its Local Form
+#+ATTR_REVEAL: :frag (appear)
+- The balance of energy for the body $\mathcal{B}_t$ is
+  $$ \frac{d}{dt} U[\Omega_t] = \mathcal{W}[\Omega_t] + Q[\Omega_t] $$
+- Using the stress power obtained in the previous step for the net working, and the net heating which was previously derived in the above expression, we get
+  $$ \frac{d}{dt} \int_{\mathcal{B}_t} \rho\phi\, dV = \int_{\mathcal{B}_t} \boldsymbol{\sigma} : \nabla\boldsymbol{v}\, dV - \int_{\partial\mathcal{B}_t} \boldsymbol{q} \cdot \boldsymbol{n}\, dA + \int_{\mathcal{B}} \rho r\, dV. $$
+- Using the divergence theorem to convert the surface integral to a boundary integral, the above integral is converted to read
+  $$ \int_{\mathcal{B}_t} \rho \dot{\phi}\, dV = \int_{\mathcal{B}_t} [\boldsymbol{\sigma} : \nabla\boldsymbol{v} - \nabla \cdot \boldsymbol{q} + \rho r]\, dV. $$
+- The localization principle applied to the balance of energy integral yields the same principle in its local form
+  $$ \rho \dot{\phi} = \boldsymbol{\sigma} : \nabla\boldsymbol{v} - \nabla \cdot \boldsymbol{q} + \rho r, \quad \forall \boldsymbol{x} \in \mathcal{B}_t,\; t\geq 0. $$
 ** Deliverables
 Students should be able to:
 - [ ] state the local (differential) form of balance laws for a continuum

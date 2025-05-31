@@ -9,6 +9,8 @@
 #+OPTIONS: timestamp:nil toc:1 num:nil
 #+REVEAL_EXTRA_CSS: ../style.css
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_MATHJAX_URL: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+#+OPTIONS: tex:t
 
 
 * ($\S 3.1$) Continuum Bodies (Session 9)
@@ -152,8 +154,8 @@ Students should be able to:
 #+ATTR_HTML: :width 1000 px
 [[../images/stress_tetrahedra.jpg]]
 #+ATTR_REVEAL: :frag (appear)
-- There exists a second-order tensor field, $\boldsymbol{\sigma} (\boldsymbol{x}):\mathcal{B} \to \mathcal{V}^2$, called the *stress field*, which transforms the unit normal field  into the traction field as $$\boldsymbol{t} = \boldsymbol{\sigma} \cdot \boldsymbol{n} \quad \mathrm{or} \quad t_i = \sigma_{ij} n_j$$  where $\sigma_{ij} = t_i(\boldsymbol{e}_j, \boldsymbol{x})$
-- the stress component $\sigma_{ij}$ corresponds to the $i^\mathrm{th}$ component of the traction on the plane with normal $\boldsymbol{e}_j$
+- There exists a second-order tensor field, $\boldsymbol{\sigma} (\boldsymbol{x}):\mathcal{B} \to \mathcal{V}^2$, called the *stress field*, which transforms the unit normal field  into the traction field as $$\cancel{\boldsymbol{t} = \boldsymbol{\sigma} \cdot \boldsymbol{n} \quad \mathrm{or} \quad t_i = \sigma_{ij} n_j} \quad \boldsymbol{t} = \boldsymbol{n} \cdot \boldsymbol{\sigma} = \boldsymbol{\sigma}^T \cdot \boldsymbol{n} \quad \mathrm{or} \quad t_j = n_i \sigma_{ij}$$  where $\cancel{\sigma_{ij} = t_i(\boldsymbol{e}_j, \boldsymbol{x})} \; \sigma_{ij} = t_j(\boldsymbol{e}_i, \boldsymbol{x})$
+- the stress component $\sigma_{ij}$ corresponds to the $j^\mathrm{th}$ component of traction on the  plane with normal $\boldsymbol{e}_i$.
 - The diagonal and off-diagonal components are termed as, /normal/ and /shear/ stresses, respectively.
   
 ** ($\S 3.5.1$) Simple States of Stress
@@ -168,7 +170,7 @@ Students should be able to:
   $$\boldsymbol{\sigma} = -p \boldsymbol{I}, \quad \mathrm{or} \quad \sigma_{ij} = -p \, \delta_{ij},$$
   where $p$ denotes the hydrostatic pressure. Note that, /compressive/ pressures are taken as ($-$) while /expansive/ pressures are ($+$). 
 - For this state of stress, we find the tractions on any surface with normal $\boldsymbol{n}$ at $\boldsymbol{x}$ is given by
-  $$\boldsymbol{t} = \boldsymbol{\sigma} \boldsymbol{n} = -p \boldsymbol{n} \quad \mathrm{or} \quad t_i = -p \,n_i.$$
+  $$\boldsymbol{t} = \boldsymbol{n} \cdot \boldsymbol{\sigma} = -p \boldsymbol{n} \quad \mathrm{or} \quad t_i = -p \,n_i.$$
   
 *** Uniaxial State of Stress
 #+ATTR_REVEAL: :frag (appear)
@@ -176,7 +178,7 @@ Students should be able to:
   $$\boldsymbol{\sigma} = \sigma\,\boldsymbol{\gamma} \otimes \boldsymbol{\gamma} \quad \mathrm{or} \quad \sigma_{ij} = \sigma \,n_i\,n_j,$$
   where $\boldsymbol{\gamma}$ is a unit vector that denotes the axis of loading and $\sigma$ is the stress magnitude.
 - For a uniaxial stress state the traction on any surface with normal $\boldsymbol{n}$ at $\boldsymbol{x}$ is given by
-  $$\boldsymbol{t} = \boldsymbol{\sigma} \boldsymbol{n} = (\boldsymbol{\gamma} \cdot \boldsymbol{n}) \sigma \boldsymbol{\gamma} \quad \mathrm{or} \quad t_i = (\gamma_j n_j) \sigma \gamma_i$$
+  $$\boldsymbol{t} = \boldsymbol{n} \cdot \boldsymbol{\sigma} = (\boldsymbol{n} \cdot \boldsymbol{\gamma}) \sigma \boldsymbol{\gamma} \quad \mathrm{or} \quad t_i = (\gamma_j n_j) \sigma \gamma_i$$
   Notice that no matter in which direction $\boldsymbol{n}$ points, the traction is always parallel to $\boldsymbol{\gamma}$.
   
 *** The State of Pure Shear
@@ -187,7 +189,7 @@ Students should be able to:
   $$\boldsymbol{\sigma} = \tau (\boldsymbol{\gamma} \otimes \boldsymbol{\eta} + \boldsymbol{\eta} \otimes \boldsymbol{\gamma}) \quad \mathrm{or} \quad \sigma_{ij} = \tau (\gamma_i \eta_j + \gamma_j \eta_i),$$
   we say that a state of *pure shear* exists.
 - For this stress state the traction on any surface with normal $\boldsymbol{n}$ is given by
-  $$\boldsymbol{t} = \boldsymbol{\sigma} \boldsymbol{n} = (\boldsymbol{\eta} \cdot \boldsymbol{n}) \tau \boldsymbol{\gamma} + (\boldsymbol{\gamma} \cdot \boldsymbol{n}) \tau \boldsymbol{\eta} \quad \mathrm{or} \quad t_i = (\eta_j n_j) \tau \gamma_i + (\gamma_j n_j) \tau \eta_i.$$
+  $$\boldsymbol{t} = \boldsymbol{n} \cdot \boldsymbol{\sigma} = (\boldsymbol{n} \cdot \boldsymbol{\eta}) \tau \boldsymbol{\gamma} + (\boldsymbol{n} \cdot \boldsymbol{\gamma}) \tau \boldsymbol{\eta} \quad \mathrm{or} \quad t_i = (n_j \eta_j) \tau \gamma_i + (n_j \gamma_j) \tau \eta_i.$$
   
 ** Questions for Next Session
 Ask AI:
@@ -231,15 +233,15 @@ Let $\mathcal{B}$ denote a regular region in $\mathbb{E}^3$ with boundary $\part
 1. for an arbitrary vector field $\boldsymbol{v}: \mathcal{B} \to \mathcal{V}$,
    $$ \int_{\partial\mathcal{B}} \boldsymbol{v} \cdot \boldsymbol{n}\, dA = \int_\mathcal{B} \nabla \cdot \boldsymbol{v}\, dV \quad \mathrm{or} \quad \int_{\partial\mathcal{B}} v_i n_i\, dA = \int_\mathcal{B} v_{i,i}\, dV, $$
 2. and, for a second order tensor field $\boldsymbol{S}: \mathcal{B} \to \mathcal{V}^2$
-   $$ \int_{\partial\mathcal{B}} \boldsymbol{S} \cdot \boldsymbol{n}\, dA = \int_\mathcal{B} \nabla \cdot \boldsymbol{S}\, dV \quad \mathrm{or} \quad \int_{\partial\mathcal{B}} S_{ij} n_j\, dA = \int_\mathcal{B} S_{ji,j}\, dV $$
+   $$ \int_{\partial\mathcal{B}} \boldsymbol{n} \cdot \boldsymbol{S}\, dA = \int_\mathcal{B} \nabla \cdot \boldsymbol{S}\, dV \quad \mathrm{or} \quad \int_{\partial\mathcal{B}} n_i S_{ij}\, dA = \int_\mathcal{B} S_{ij,i}\, dV $$
 
 ** ($\S 3.4.3$) Localization
 #+ATTR_REVEAL: :frag (appear)
 - The global (/integral/) condition of (/linear/) force equilibrium in stationary bodies reads:
   $$ \int_\mathcal{B} \boldsymbol{b}\, \rho\,dV + \int_{\partial\mathcal{B}} \bar{\boldsymbol{t}} \, dA = \boldsymbol{0}. $$
-- It is implied that $\bar{\boldsymbol{t}}$ over the boundary is equilibrated by the internal traction $\boldsymbol{t} = \boldsymbol{\sigma} \cdot \boldsymbol{n}$.
+- It is implied that $\bar{\boldsymbol{t}}$ over the boundary is equilibrated by the internal traction $\boldsymbol{t} = \boldsymbol{n} \cdot \boldsymbol{\sigma}$.
 - Substituting the internal tractions into the second term, the *linear equilibrium equation* becomes
-  $$ \int_\mathcal{B} \boldsymbol{b}\, \rho\,dV + \int_{\partial\mathcal{B}} \boldsymbol{\sigma} \cdot \boldsymbol{n} \, dA = \boldsymbol{0}. $$
+  $$ \int_\mathcal{B} \boldsymbol{b}\, \rho\,dV + \int_{\partial\mathcal{B}} \boldsymbol{n} \cdot \boldsymbol{\sigma} \, dA = \boldsymbol{0}. $$
 - But the second term involving the surface integral can be replaced with a volume integral by issuing the /divergence theorem/, which results in rewriting the linear equilibrium as
   $$ \int_{\mathcal{B}} (\nabla \cdot \boldsymbol{\sigma} + \rho\,\boldsymbol{b})\, dV = \boldsymbol{0}. $$
 - Since the above equation must hold for any arbitrary region $\Omega$ in $\mathcal{B}$, we conclude that
@@ -252,8 +254,8 @@ Let $\mathcal{B}$ denote a regular region in $\mathbb{E}^3$ with boundary $\part
 *** Equations of Equilibrium (in expanded form)
 #+ATTR_REVEAL: :frag (appear)
 - In [IB:SFAD/15] ($\S 3.1$) the equations of equilibrium in a Cartesian frame are provided as
-  $$ \frac{\partial\sigma_{xx}}{\partial x} + \frac{\partial\sigma_{yx}}{\partial y} + \frac{\partial\sigma_{zx}}{\partial z} + \rho g_x = 0 \\
-  \frac{\partial\sigma_{xy}}{\partial x} + \frac{\partial\sigma_{yy}}{\partial y} + \frac{\partial\sigma_{zy}}{\partial z} + \rho g_y = 0 \\
+  $$ \frac{\partial\sigma_{xx}}{\partial x} + \frac{\partial\sigma_{yx}}{\partial y} + \frac{\partial\sigma_{zx}}{\partial z} + \rho g_x = 0 $$ $$
+  \frac{\partial\sigma_{xy}}{\partial x} + \frac{\partial\sigma_{yy}}{\partial y} + \frac{\partial\sigma_{zy}}{\partial z} + \rho g_y = 0 $$ $$
   \frac{\partial\sigma_{zx}}{\partial x} + \frac{\partial\sigma_{zy}}{\partial y} + \frac{\partial\sigma_{zz}}{\partial z} + \rho g_z = 0 $$
 - Note that this is equivalent to the indicial expression
   $$ \sigma_{ji,j} + \rho b_i = 0 $$

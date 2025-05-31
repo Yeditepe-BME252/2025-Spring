@@ -25,7 +25,7 @@
         document.getElementsByTagName( 'head' )[0].appendChild( link );
     }
 </script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 <div class="reveal">
@@ -36,16 +36,17 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#/slide-org4beab0e">(Chapter 5) Motivation (Session 14)</a></li>
-<li><a href="#/slide-orgb82bb37">(\(\S 5.2\)) Thermodynamics and Balance Laws (Session 15)</a></li>
-<li><a href="#/slide-orgef6fd3d">(\(\S 5.3\)) Localization of Balance Laws (Session 16)</a></li>
+<li><a href="#/slide-orgc8421f4">(Chapter 5) Motivation (Session 14)</a></li>
+<li><a href="#/slide-org669db45">(\(\S 5.2\)) Thermodynamics and Balance Laws (Session 15)</a></li>
+<li><a href="#/slide-org98ed7ae">(\(\S 5.3\)) Localization of Balance Laws (Session 16)</a></li>
+<li><a href="#/slide-orga1fb5fc">The First Law of Thermodynamics (Session 17)</a></li>
 </ul>
 </div>
 </div>
 </section>
 <section>
-<section id="slide-org4beab0e">
-<h2 id="org4beab0e">(Chapter 5) Motivation (Session 14)</h2>
+<section id="slide-orgc8421f4">
+<h2 id="orgc8421f4">(Chapter 5) Motivation (Session 14)</h2>
 <ul>
 <li class="fragment appear">In this final chapter, the fundamental principles of mechanics are laid out.</li>
 <li class="fragment appear">First, these ideas are developed for a system of particles.</li>
@@ -56,10 +57,10 @@
 
 </ul>
 </section>
-<section id="slide-orgffd5364">
-<h3 id="orgffd5364">(\(\S 5.1\)) Ideas from Particle Mechanics</h3>
+<section id="slide-org5155af0">
+<h3 id="org5155af0">(\(\S 5.1\)) Ideas from Particle Mechanics</h3>
 
-<div id="orgcbb51c7" class="figure">
+<div id="org9d11404" class="figure">
 <p><img src="../images/AFC-5.1.png" alt="AFC-5.1.png" width="1200px" />
 </p>
 </div>
@@ -72,7 +73,7 @@
 </ul>
 
 </section>
-<section id="slide-orgffd5364-split">
+<section id="slide-org5155af0-split">
 <ul>
 <li class="fragment appear">To the configuration \(\Omega_t\) of the system of \(N\) particles at any time \(t\geq 0\), we associate:
 <ul>
@@ -94,8 +95,8 @@
 
 </ul>
 </section>
-<section id="slide-org73eaa74">
-<h4 id="org73eaa74">Balance Laws for the \(N\) Particle System</h4>
+<section id="slide-org493c859">
+<h4 id="org493c859">Balance Laws for the \(N\) Particle System</h4>
 <p>
 From the definitions above we state the fundamental balance principles as
 </p>
@@ -111,8 +112,8 @@ From the definitions above we state the fundamental balance principles as
 
 </ol>
 </section>
-<section id="slide-org52cab77">
-<h4 id="org52cab77">Arguments Concerning Temperature and Heat</h4>
+<section id="slide-orge026e80">
+<h4 id="orge026e80">Arguments Concerning Temperature and Heat</h4>
 <ul>
 <li class="fragment appear">The balance laws for mass, linear momentum and angular momentum can readily be generalized to continuum bodies by replacing the summation by an integral.</li>
 <li class="fragment appear">However, balance of energy will require the introduction of two new terms.</li>
@@ -128,8 +129,8 @@ From the definitions above we state the fundamental balance principles as
 
 </ul>
 </section>
-<section id="slide-org7ca1c48">
-<h3 id="org7ca1c48">Questions for next session</h3>
+<section id="slide-org09fb372">
+<h3 id="org09fb372">Questions for next session</h3>
 <p>
 Ask AI:
 </p>
@@ -138,8 +139,8 @@ Ask AI:
 
 </ul>
 </section>
-<section id="slide-orgecdad64">
-<h3 id="orgecdad64">Deliverables</h3>
+<section id="slide-org3e06243">
+<h3 id="org3e06243">Deliverables</h3>
 <p>
 Students should be able to:
 </p>
@@ -150,8 +151,8 @@ Students should be able to:
 </section>
 </section>
 <section>
-<section id="slide-orgb82bb37">
-<h2 id="orgb82bb37">(\(\S 5.2\)) Thermodynamics and Balance Laws (Session 15)</h2>
+<section id="slide-org669db45">
+<h2 id="org669db45">(\(\S 5.2\)) Thermodynamics and Balance Laws (Session 15)</h2>
 <p>
 Consider a continuum body \(\mathcal{B}\) in configuration \(\Omega_t\), with its material element at \(\boldsymbol{x}\) having a density \(\rho\), an average velocity \(\boldsymbol{v}\). We define:
 </p>
@@ -165,22 +166,22 @@ Consider a continuum body \(\mathcal{B}\) in configuration \(\Omega_t\), with it
 
 </ul>
 </section>
-<section id="slide-orga08eeaa">
-<h3 id="orga08eeaa">Conservation Principles</h3>
+<section id="slide-orgf80313b">
+<h3 id="orgf80313b">Conservation Principles</h3>
 <p>
 The principles that can be declared without the need to introduce the concepts of temperature and heat are the ones related with <b>mass</b> and <b>inertia</b>.
 </p>
 </section>
-<section id="slide-org5ea03ab">
-<h4 id="org5ea03ab">[Axiom 5.1] Conservation of Mass</h4>
+<section id="slide-org227a99a">
+<h4 id="org227a99a">[Axiom 5.1] Conservation of Mass</h4>
 <ul>
 <li class="fragment appear">The mass of \(\mathcal{B}\) or any of its subsets does not change as a result of undergoing motion subject to a force field.
 \[ \frac{d}{dt} \mathrm{mass}[\Omega_t] = \]</li>
 
 </ul>
 </section>
-<section id="slide-org6165437">
-<h4 id="org6165437">[Axiom 5.2] Laws of Inertia</h4>
+<section id="slide-org39f2fdd">
+<h4 id="org39f2fdd">[Axiom 5.2] Laws of Inertia</h4>
 <ul>
 <li class="fragment appear">Suppose the body \(\mathcal{B}\) in configuration \(\Omega_t\) is subject to external traction field \(\bar{\boldsymbol{t}}\) and an external body force field \(\boldsymbol{b}\).</li>
 <li class="fragment appear">the rate of change of linear momentum equals the resultant external force applied to it
@@ -190,8 +191,8 @@ The principles that can be declared without the need to introduce the concepts o
 
 </ul>
 </section>
-<section id="slide-orgc73b41a">
-<h3 id="orgc73b41a">\((\S 5.2.2)\) Thermodynamics</h3>
+<section id="slide-orgeefe232">
+<h3 id="orgeefe232">\((\S 5.2.2)\) Thermodynamics</h3>
 <ul>
 <li class="fragment appear">We defined the <b>temperature</b>, \(\theta(\boldsymbol{x},t) > 0\), and <b>heat</b> (thermal energy) in a broad sense, now they will be included as actors in mechanical principles.</li>
 <li class="fragment appear">Define the net heating as the rate per unit time at which heat is added to \(\mathcal{B}\)
@@ -206,8 +207,8 @@ The principles that can be declared without the need to introduce the concepts o
 
 </ul>
 </section>
-<section id="slide-org0b090c6">
-<h4 id="org0b090c6">Energy, Work, Power</h4>
+<section id="slide-org3ddb227">
+<h4 id="org3ddb227">Energy, Work, Power</h4>
 <ul>
 <li class="fragment appear">The Kinetic Energy of body \(\mathcal{B}\) is
 \[ K[\Omega_t] = \int_\mathcal{B} \]</li>
@@ -218,8 +219,8 @@ The principles that can be declared without the need to introduce the concepts o
 
 </ul>
 </section>
-<section id="slide-orgb099da6">
-<h4 id="orgb099da6">(\(\S 5.2.2.3\)) Internal Energy and the First Law</h4>
+<section id="slide-orgd94be9a">
+<h4 id="orgd94be9a">(\(\S 5.2.2.3\)) Internal Energy and the First Law</h4>
 <ul>
 <li class="fragment appear">The energy content not associated with kinetic energy is called <b>internal energy</b>, \(U[\Omega_t]\).</li>
 <li class="fragment appear">In particular, we assume there exists an <b>integral energy density field</b> per unit mass \(\phi(\boldsymbol{x},t)\) such that
@@ -227,8 +228,8 @@ The principles that can be declared without the need to introduce the concepts o
 
 </ul>
 </section>
-<section id="slide-org331ee99">
-<h4 id="org331ee99">[Axiom 5.3] First Law of Thermodynamics</h4>
+<section id="slide-orga9d6340">
+<h4 id="orga9d6340">[Axiom 5.3] First Law of Thermodynamics</h4>
 <ul>
 <li class="fragment appear">The rate of change of internal energy of body \(\mathcal{B}\) equals the sum of the net heating and net working applied to it
 \[ \frac{d}{dt} U[\Omega_t] = Q[\Omega_t] + \mathcal{W}[\Omega_t] \]</li>
@@ -237,8 +238,8 @@ The principles that can be declared without the need to introduce the concepts o
 
 </ul>
 </section>
-<section id="slide-orga2e6bbe">
-<h3 id="orga2e6bbe">Questions for next session</h3>
+<section id="slide-orgb22d7f3">
+<h3 id="orgb22d7f3">Questions for next session</h3>
 <p>
 Ask AI:
 </p>
@@ -247,8 +248,8 @@ Ask AI:
 
 </ul>
 </section>
-<section id="slide-org4ec4c79">
-<h3 id="org4ec4c79">Deliverables</h3>
+<section id="slide-org67e7b56">
+<h3 id="org67e7b56">Deliverables</h3>
 <p>
 Students should be able to:
 </p>
@@ -260,18 +261,18 @@ Students should be able to:
 </section>
 </section>
 <section>
-<section id="slide-orgef6fd3d">
-<h2 id="orgef6fd3d">(\(\S 5.3\)) Localization of Balance Laws (Session 16)</h2>
-<div class="outline-text-2" id="text-orgef6fd3d">
+<section id="slide-org98ed7ae">
+<h2 id="org98ed7ae">(\(\S 5.3\)) Localization of Balance Laws (Session 16)</h2>
+<div class="outline-text-2" id="text-org98ed7ae">
 </div>
 </section>
-<section id="slide-orgba0e3eb">
-<h3 id="orgba0e3eb">(\(\S 5.3.1\)) Conservation of Mass in Local (Differential) Form</h3>
+<section id="slide-orgdecbfdf">
+<h3 id="orgdecbfdf">(\(\S 5.3.1\)) Conservation of Mass in Local (Differential) Form</h3>
 <ul>
 <li class="fragment appear">The integral statement of the conservation of mass principle
 \[ \frac{d}{dt} \int_{\Omega_t} \rho\,dV = 0, \]</li>
 <li class="fragment appear">can be transformed using the <b>Reynolds Transport Theorem</b> [Result 4.6] by carrying out the differentiation of the mass integral with respect to time as
-\[ \frac{d}{dt} \int_{\Omega_t} \rho\,dV = \int_{\Omega_t} \dot\rho + \rho (\nabla \cdot \boldsymbol{v}) dV = 0. \]</li>
+\[ \frac{d}{dt} \int_{\Omega_t} \rho\,dV = \int_{\Omega_t} \underbrace{\dot\rho + \rho (\nabla \cdot \boldsymbol{v})}_{\text{0}} dV = 0. \]</li>
 <li class="fragment appear">Based on the argument of localization, for the above equation to be true for all subdomains \(\Omega_t\) of \(\mathcal{B}\), we require \(\forall \boldsymbol{x} \in \mathcal{B},\,t>0\) that
 \[ \dot\rho + \rho (\nabla \cdot \boldsymbol{v}) = 0. \quad \mathrm{or} \quad \dot\rho + \rho v_{k,k} = 0 \]</li>
 <li class="fragment appear">Sample Problem: By using the indicial notation show that the differential form of mass continuity can alternatively be stated as:
@@ -279,10 +280,10 @@ Students should be able to:
 
 </ul>
 </section>
-<section id="slide-orgfb92898">
-<h4 id="orgfb92898">[IB:SFAD/15, \(\S 10.2.2\)] Analysis of Mean Flows in an Arterial Bifurcation</h4>
+<section id="slide-org8936025">
+<h4 id="org8936025">[IB:SFAD/15, \(\S 10.2.2\)] Analysis of Mean Flows in an Arterial Bifurcation</h4>
 
-<div id="orgc2a7db0" class="figure">
+<div id="org70486e6" class="figure">
 <p><img src="../images/IB-10.4.png" alt="IB-10.4.png" width="1000px" />
 </p>
 </div>
@@ -296,8 +297,8 @@ Students should be able to:
 
 </ul>
 </section>
-<section id="slide-org8a02825">
-<h3 id="org8a02825">(\(\S 5.3.2\)) Conservation of Linear Momentum in Local Form</h3>
+<section id="slide-org584c9b7">
+<h3 id="org584c9b7">(\(\S 5.3.2\)) Conservation of Linear Momentum in Local Form</h3>
 <p>
 The conservation of linear momentum for an arbitrary open subset \(\Omega_t\) of \(\mathcal{B}\)
 \[ \frac{d}{dt} \int_{\Omega_t} \quad dV = \int_{\partial\Omega_t} \quad dA + \int_{\Omega_t} \quad dV.\]
@@ -310,30 +311,53 @@ The conservation of linear momentum for an arbitrary open subset \(\Omega_t\) of
 
 </ol>
 </section>
-<section id="slide-org99ba94f">
-<h4 id="org99ba94f">(\(\S 5.3.3\)) Conservation of Angular Momentum in Local Form</h4>
+<section id="slide-orgcd6e713">
+<h4 id="orgcd6e713">(\(\S 5.3.3\)) Conservation of Angular Momentum in Local Form</h4>
 <p>
 Longer proof reveals \[\boldsymbol{\sigma} = \boldsymbol{\sigma}^T \quad \mathrm{or} \quad \sigma_{ij} = \sigma_{ji}\]
 </p>
 </section>
-<section id="slide-org5d07044">
-<h3 id="org5d07044">(\(\S 5.3.4\)) Characterization of Net Working</h3>
-<p>
-work in progress
-</p>
 </section>
-<section id="slide-orge7f7933">
-<h3 id="orge7f7933">Questions for next session</h3>
-<p>
-Ask AI:
-</p>
+<section>
+<section id="slide-orga1fb5fc">
+<h2 id="orga1fb5fc">The First Law of Thermodynamics (Session 17)</h2>
 <ul>
-<li>Show the reduction of mechanical principles from their integral (global) form to their differential (local) form?</li>
+<li class="fragment appear">This is also known as the principle of <i>conservation of energy</i>.</li>
+<li class="fragment appear">It was defined in global (integral) form and here it will be converted into the local (differential) form.</li>
+<li class="fragment appear">In order to utilize the principle, the term related with the <i>net working</i> in \(\frac{d}{dt} U[\Omega_t] = Q[\Omega_t] + \mathcal{W}[\Omega_t]\), needs to be worked out in terms of mechanical variables.</li>
 
 </ul>
 </section>
-<section id="slide-org6bdd69e">
-<h3 id="org6bdd69e">Deliverables</h3>
+<section id="slide-org0daeed6">
+<h3 id="org0daeed6">(\(\S 5.3.4\)) Characterization of Net Working</h3>
+<ul>
+<li class="fragment appear">Here we derive a relation between the rate of change of kinetic energy and the power of external and internal forces.</li>
+<li class="fragment appear">To begin, we take the dot product of the conservation of linear momentum equation with the spatial velocity field (from the right) and integrate the resulting equation over  \(\mathcal{B}_t\)
+\[ \int_{\mathcal{B}_t} \rho \dot{\boldsymbol{v}} \cdot \boldsymbol{v}\, dV = \int_{\mathcal{B}_t} [(\nabla \cdot \boldsymbol{\sigma}) \cdot \boldsymbol{v} + \rho \boldsymbol{b} \cdot \boldsymbol{v}]\, dV\]</li>
+<li class="fragment appear">The term \((\nabla \cdot \boldsymbol{\sigma}) \cdot \boldsymbol{v}\) can be obtained from \(\nabla \cdot (\boldsymbol{\sigma} \cdot \boldsymbol{v})\). Using this identity and by applying the divergence theorem, the above integral can  be converted to
+\[ \int_{\mathcal{B}_t} \rho \dot{\boldsymbol{v}} \cdot \boldsymbol{v}\, dV + \int_{\mathcal{B}_t} \boldsymbol{\sigma} : \nabla \boldsymbol{v} \, dV= \int_{\partial\mathcal{B}_t} \boldsymbol{n} \cdot (\boldsymbol{\sigma} \cdot \boldsymbol{v}) dA + \int_{\mathcal{B}_t} \rho \boldsymbol{b} \cdot \boldsymbol{v}\, dV\]</li>
+<li class="fragment appear">Noting that \(\boldsymbol{n} \cdot \boldsymbol{\sigma} = \bar{\boldsymbol{t}}\) over the boundary \(\partial\mathcal{B}\), we write the above expression as
+\[ \frac{d}{dt} \mathcal{K}[\mathcal{B}_t] + \int_{\mathcal{B}_t} \boldsymbol{\sigma} : \nabla\boldsymbol{v}\, dV = \mathcal{P}[\mathcal{B}_t].\]</li>
+<li class="fragment appear">The term \(\int_{\mathcal{B}_t} \boldsymbol{\sigma} : \nabla\boldsymbol{v}\, dV\) known as the <b>stress power</b> is identified as \(\mathcal{W}[\mathcal{B}_t]\), in view of the definition of <i>net working</i>.</li>
+
+</ul>
+</section>
+<section id="slide-org1b90c97">
+<h3 id="org1b90c97">(\(\S 5.3.5\)) The First Law in its Local Form</h3>
+<ul>
+<li class="fragment appear">The balance of energy for the body \(\mathcal{B}_t\) is
+\[ \frac{d}{dt} U[\Omega_t] = \mathcal{W}[\Omega_t] + Q[\Omega_t] \]</li>
+<li class="fragment appear">Using the stress power obtained in the previous step for the net working, and the net heating which was previously derived in the above expression, we get
+\[ \frac{d}{dt} \int_{\mathcal{B}_t} \rho\phi\, dV = \int_{\mathcal{B}_t} \boldsymbol{\sigma} : \nabla\boldsymbol{v}\, dV - \int_{\partial\mathcal{B}_t} \boldsymbol{q} \cdot \boldsymbol{n}\, dA + \int_{\mathcal{B}} \rho r\, dV. \]</li>
+<li class="fragment appear">Using the divergence theorem to convert the surface integral to a boundary integral, the above integral is converted to read
+\[ \int_{\mathcal{B}_t} \rho \dot{\phi}\, dV = \int_{\mathcal{B}_t} [\boldsymbol{\sigma} : \nabla\boldsymbol{v} - \nabla \cdot \boldsymbol{q} + \rho r]\, dV. \]</li>
+<li class="fragment appear">The localization principle applied to the balance of energy integral yields the same principle in its local form
+\[ \rho \dot{\phi} = \boldsymbol{\sigma} : \nabla\boldsymbol{v} - \nabla \cdot \boldsymbol{q} + \rho r, \quad \forall \boldsymbol{x} \in \mathcal{B}_t,\; t\geq 0. \]</li>
+
+</ul>
+</section>
+<section id="slide-org7eb843a">
+<h3 id="org7eb843a">Deliverables</h3>
 <p>
 Students should be able to:
 </p>

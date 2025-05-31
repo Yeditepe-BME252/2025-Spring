@@ -9,6 +9,8 @@
 #+OPTIONS: timestamp:nil toc:1 num:nil
 #+REVEAL_EXTRA_CSS: ../style.css
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_MATHJAX_URL: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+#+OPTIONS: tex:t
 
 * ($\S 4.4$) Motions (Session 13)
 #+ATTR_HTML: :width 1330px
